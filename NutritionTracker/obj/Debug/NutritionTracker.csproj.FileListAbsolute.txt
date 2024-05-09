@@ -19,3 +19,8 @@ C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\Nutritio
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.loginForm.resources
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Signup.resources
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.login.resources
+C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.StepsForm.resources
+C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Step2Form.resources
+C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Step3Macros.resources
+C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Step4Macros.resources
+C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.SplashScreenForm.resources

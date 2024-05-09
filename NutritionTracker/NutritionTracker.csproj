@@ -114,6 +114,36 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Step2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step2Form.Designer.cs">
+      <DependentUpon>Step2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Step3Macros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step3Macros.Designer.cs">
+      <DependentUpon>Step3Macros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Step4Macros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step4Macros.Designer.cs">
+      <DependentUpon>Step4Macros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StepsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StepsForm.Designer.cs">
+      <DependentUpon>StepsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateFood.resx">
       <DependentUpon>CreateFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +183,21 @@
     </Compile>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step2Form.resx">
+      <DependentUpon>Step2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step3Macros.resx">
+      <DependentUpon>Step3Macros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step4Macros.resx">
+      <DependentUpon>Step4Macros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StepsForm.resx">
+      <DependentUpon>StepsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

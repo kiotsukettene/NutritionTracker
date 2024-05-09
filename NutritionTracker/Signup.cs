@@ -16,5 +16,23 @@ namespace NutritionTracker
         {
             InitializeComponent();
         }
+
+        private void miniBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void loginBtn(object sender, EventArgs e)
+        {
+            this.Dispose();
+            loginForm login = new loginForm();
+            login.Show();
+            
+        }
     }
 }

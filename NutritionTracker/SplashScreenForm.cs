@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace NutritionTracker
 {
-    public partial class loginForm : Form
+    public partial class SplashScreenForm : Form
     {
-        public loginForm()
+        public SplashScreenForm()
         {
             InitializeComponent();
         }
@@ -41,32 +41,17 @@ namespace NutritionTracker
         }
         #endregion
 
-        
-        private void loginForm_Load(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            RoundCorners();
-        
-        }
-
-        private void minimize(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;   
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Dispose();
-         
-        }
-
-        private void signup(object sender, EventArgs e)
-        {  
-           
-            this.Hide();
-           
-            Signup sign = new Signup();
-            sign.Show();
-
+            timer.Enabled = true;
+            ProgressBar.Increment(2);
+            if (ProgressBar.Value == 100)
+            {
+                timer.Enabled = false;
+                MainForm _main = new MainForm();
+                _main.Show(); 
+                this.Hide();
+            }
         }
     }
 }

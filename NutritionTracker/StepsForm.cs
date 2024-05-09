@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace NutritionTracker
 {
-    public partial class loginForm : Form
+    public partial class StepsForm : Form
     {
-        public loginForm()
+        public StepsForm()
         {
             InitializeComponent();
         }
@@ -41,32 +41,17 @@ namespace NutritionTracker
         }
         #endregion
 
-        
-        private void loginForm_Load(object sender, EventArgs e)
+        private void StepsForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
-        
         }
 
-        private void minimize(object sender, EventArgs e)
+        private void step1Btn(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;   
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Dispose();
-         
-        }
-
-        private void signup(object sender, EventArgs e)
-        {  
-           
             this.Hide();
-           
-            Signup sign = new Signup();
-            sign.Show();
-
+            Step2Form step2 = new Step2Form();
+            step2.Show();
+            step2.RoundCorners();
         }
     }
 }
