@@ -24,3 +24,28 @@ C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\Nutritio
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Step3Macros.resources
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.Step4Macros.resources
 C:\Users\admin\source\repos\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.SplashScreenForm.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\bin\Debug\NutritionTracker.exe.config
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\bin\Debug\NutritionTracker.exe
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\bin\Debug\NutritionTracker.pdb
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.csproj.AssemblyReference.cache
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.CreateFood.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Dashboard.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.FoodDiary.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.FormAddFood.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.login.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.loginForm.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.MainForm.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.MyPersonalFood.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Personalization.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Properties.Resources.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Signup.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.SplashScreenForm.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Step2Form.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Step3Macros.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.Step4Macros.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.StepsForm.resources
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.csproj.GenerateResource.cache
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.csproj.CoreCompileInputs.cache
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.csproj.CopyComplete
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.exe
+C:\Users\celest\Dropbox\PC\Desktop\Nutrition Tracker New\NutritionTracker\obj\Debug\NutritionTracker.pdb

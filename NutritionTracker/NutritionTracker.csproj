@@ -275,5 +275,35 @@
   <ItemGroup>
     <None Include="Resources\showpass.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waterDash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleepDash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\streakDash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userLog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showpassHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showPassword.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
