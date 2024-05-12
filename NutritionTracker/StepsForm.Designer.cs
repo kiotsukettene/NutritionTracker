@@ -143,6 +143,7 @@
             this.ageTxtBox.ShadowDecoration.Parent = this.ageTxtBox;
             this.ageTxtBox.Size = new System.Drawing.Size(198, 45);
             this.ageTxtBox.TabIndex = 143;
+            this.ageTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ageTxtBox_KeyPress);
             // 
             // label9
             // 
@@ -207,6 +208,7 @@
             this.currentHeightTxtBox.ShadowDecoration.Parent = this.currentHeightTxtBox;
             this.currentHeightTxtBox.Size = new System.Drawing.Size(399, 45);
             this.currentHeightTxtBox.TabIndex = 139;
+            this.currentHeightTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.currentHeightTxtBox_KeyPress);
             // 
             // label12
             // 
@@ -271,6 +273,7 @@
             this.currentWeightTxtBox.ShadowDecoration.Parent = this.currentWeightTxtBox;
             this.currentWeightTxtBox.Size = new System.Drawing.Size(399, 45);
             this.currentWeightTxtBox.TabIndex = 135;
+            this.currentWeightTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.currentWeightTxtBox_KeyPress);
             // 
             // label15
             // 

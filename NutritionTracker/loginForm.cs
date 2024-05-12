@@ -1,14 +1,19 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Diagnostics.Eventing.Reader;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace NutritionTracker
 {
@@ -16,11 +21,16 @@ namespace NutritionTracker
     public partial class loginForm : Form
     {
         DBConnection myCon = new DBConnection();
-        
+        MainForm main = new MainForm();
+
         public loginForm()
         {
             InitializeComponent();
+            string username = loginUserBox.Text;
+            string password = loginPassBox.Text;
+           
         }
+
         #region RoundForm
         public void RoundCorners()
         {
@@ -64,51 +74,126 @@ namespace NutritionTracker
         }
 
         public void Login()
+
         {
-            try
+            string username = loginUserBox.Text.Trim();
+            string password = loginPassBox.Text.Trim();
+
+            if (username == "" || password == "")
             {
-                string username = loginUserBox.Text;
-                string password = loginPassBox.Text;
-                string userDisplay = "";
-                string fname = "";
-                string lname = "";
-                myCon.openCon();
-
-                string loginQuery = "SELECT * FROM user WHERE username=@username AND password=@password";
-                MySqlCommand cmd = new MySqlCommand(loginQuery, myCon.getCon());
-
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                if (dataReader.HasRows)
+                MessageBox.Show("Username and Password required!");
+                return;
+            }
+            else
+            {
+                try
                 {
-                    while (dataReader.Read())
+
+                    string userDisplay = "";
+                    string fname = "";
+                    string lname = "";
+                    myCon.openCon();
+
+                    string loginQuery = "SELECT * FROM user WHERE username=@username AND password=@password";
+                    MySqlCommand cmd = new MySqlCommand(loginQuery, myCon.getCon());
+
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    MySqlDataReader DR = cmd.ExecuteReader();
+
+                    if (DR.HasRows)
                     {
-                        userDisplay = dataReader.GetString("username");
-                        fname = dataReader.GetString("firstname");
-                        lname = dataReader.GetString("lastname");
+                        while (DR.Read())
+                        {
+                            userDisplay = DR.GetString("username");
+                            fname = DR.GetString("firstname");
+                            lname = DR.GetString("lastname");
+                            //int weight = DR.GetInt32("weight");
+                            //int targetWeight = DR.GetInt32("target_weight");
+                            //int calories = DR.GetInt32("calories");
+                            //int carbs = DR.GetInt32("carbs");
+                            //int fat = DR.GetInt32("fat");
+                            //int protein = DR.GetInt32("protein");
+                            //int water = DR.GetInt32("water");
+                            //int sleep = DR.GetInt32("sleep");
+
+                            main.DashboardRetrieveValues(fname);
+                            main.PersonalizationRetrieveUserValues(fname, lname, userDisplay);
+                            //main.RetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
+                        }
+                        
+                        DR.Close();
+
+                        string selectQuery = "SELECT data_filled FROM user WHERE username = @username";
+                        MySqlCommand selectCmd = new MySqlCommand(selectQuery, myCon.getCon());
+                        selectCmd.Parameters.AddWithValue("@username", username);
+                        int dataFilled = Convert.ToInt32(selectCmd.ExecuteScalar());
+
+                        
+                        if (dataFilled == 1)
+                        {
+                            string userDataQuery = @"SELECT u.weight, u.age, u.gender, u.weight_goal, u.target_weight, m.calories, m.carbs, m.fat, m.protein, l.water, l.sleep
+                                                    FROM user_fitnessdata u
+                                                    JOIN user_macros m ON u.user_id = m.user_id
+                                                    JOIN user_lifestyle l ON u.user_id = l.user_id
+                                                    JOIN user usr ON u.user_id = usr.id
+                                                    WHERE usr.username = @username";
+                            MySqlCommand userDataCmd = new MySqlCommand(userDataQuery, myCon.getCon());
+                            userDataCmd.Parameters.AddWithValue("@username", username);
+
+                            MySqlDataReader dataReader = userDataCmd.ExecuteReader();
+
+                                if (dataReader.HasRows)
+                                {
+                                    dataReader.Read();
+                                    int weight = dataReader.GetInt32("weight");
+                                    int age = dataReader.GetInt32("age");
+                                    int gender = dataReader.GetInt32("gender");
+                                    string weightGoal = dataReader.GetString("weight_goal");
+                                    int targetWeight = dataReader.GetInt32("target_weight");
+                                    int calories = dataReader.GetInt32("calories");
+                                    int carbs = dataReader.GetInt32("carbs");
+                                    int fat = dataReader.GetInt32("fat");
+                                    int protein = dataReader.GetInt32("protein");
+                                    int water = dataReader.GetInt32("water");
+                                    int sleep = dataReader.GetInt32("sleep");
+    
+                                    main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight,weight, water, sleep);
+                                    main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
+                                    main.Show();
+                                    dataReader.Close();
+                                }
+
+                        }
+                        else
+                        {
+                        StepsForm step1 = new StepsForm(username);
+                        step1.Show();
+                          
+                                }
+                    this.Hide();
+                                  
+                           
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password");
                     }
 
-                   
-                    MainForm main = new MainForm();
-                    main.RetrieveValues(fname);
-                    main.Show();
-                }
-                dataReader.Close();
+                    myCon.closeCon();
 
-                myCon.closeCon();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error: " + e);
+                }
+                finally
+                {
+                    myCon.closeCon();
+                }
+
             }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e);
-            }
-            finally
-            {
-                myCon.closeCon();
-            }
-           
         }
         
 
@@ -131,10 +216,19 @@ namespace NutritionTracker
 
         private void LoginBtn(object sender, EventArgs e)
         {
+            string username = loginUserBox.Text;
+            string password = loginPassBox.Text;
             Login();
-            this.Hide();
+            
 
            
+        }
+
+        private void redirectSignForm(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+            signup.Show();
+            this.Hide();
         }
     }
 }

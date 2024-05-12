@@ -15,12 +15,12 @@ namespace NutritionTracker
     public partial class StepsForm : Form
     {
 
-        
+        public string username { get;set; }
         public double BMR;
-        public StepsForm() 
+        public StepsForm(string  username) 
         {
             InitializeComponent();
-        
+            this.username = username;
             
         }
         #region RoundForm
@@ -58,21 +58,86 @@ namespace NutritionTracker
        
         private void step1Btn(object sender, EventArgs e)
         {
-            try
+            if (currentWeightTxtBox.Text == "" || currentHeightTxtBox.Text == "" || ageTxtBox.Text == "")
             {
-                int weight = int.Parse(currentWeightTxtBox.Text);
-                int height = int.Parse(currentHeightTxtBox.Text);
-                int age = int.Parse(ageTxtBox.Text);
-                int gender = genderBox.SelectedIndex;
+                MessageBox.Show("All fields are required!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                this.Hide();
-                Step2Form step2 = new Step2Form(weight, height, age, gender);
-                step2.Show();
-                step2.RoundCorners();
             }
-            catch (Exception ex)
+            else if (genderBox.SelectedItem == null)
             {
-                Console.WriteLine("Error: " + ex);
+                MessageBox.Show("Please choose your Gender!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+
+                    int weight = int.Parse(currentWeightTxtBox.Text);
+                    int height = int.Parse(currentHeightTxtBox.Text);
+                    int age = int.Parse(ageTxtBox.Text);
+                    int gender = genderBox.SelectedIndex;
+
+                    this.Hide();
+                    Step2Form step2 = new Step2Form(weight, height, age, gender, username);
+                    step2.Show();
+                    step2.RoundCorners();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex);
+                }
+            }
+           
+        }
+
+        private void currentWeightTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void currentHeightTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ageTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

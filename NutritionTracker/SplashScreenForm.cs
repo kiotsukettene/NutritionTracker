@@ -1,18 +1,22 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace NutritionTracker
 {
     public partial class SplashScreenForm : Form
     {
+        DBConnection myCon = new DBConnection();
         public SplashScreenForm()
         {
             InitializeComponent();
@@ -49,14 +53,14 @@ namespace NutritionTracker
             {
                 this.Hide();
                 timer.Enabled = false;
-                MainForm _main = new MainForm();
+                loginForm login = new loginForm();
 
-                _main.Show();
+                login.Show();
 
 
             }
         }
-
+     
         private void ProgressBar_ValueChanged(object sender, EventArgs e)
         {
 

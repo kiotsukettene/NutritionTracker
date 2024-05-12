@@ -54,7 +54,7 @@
             this.proteinPercent = new System.Windows.Forms.Label();
             this.carbPercent = new System.Windows.Forms.Label();
             this.fatPercent = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.step3nextBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // panel7
@@ -364,28 +364,28 @@
             this.fatPercent.Text = "1500";
             this.fatPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button3
+            // step3nextBtn
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.guna2Button3.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(464, 528);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(110, 38);
-            this.guna2Button3.TabIndex = 127;
-            this.guna2Button3.Text = "Next Step";
-            this.guna2Button3.Click += new System.EventHandler(this.step3nxtBtn);
+            this.step3nextBtn.BorderColor = System.Drawing.Color.White;
+            this.step3nextBtn.BorderRadius = 10;
+            this.step3nextBtn.CheckedState.Parent = this.step3nextBtn;
+            this.step3nextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.step3nextBtn.CustomBorderColor = System.Drawing.Color.White;
+            this.step3nextBtn.CustomImages.Parent = this.step3nextBtn;
+            this.step3nextBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.step3nextBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step3nextBtn.ForeColor = System.Drawing.Color.White;
+            this.step3nextBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
+            this.step3nextBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step3nextBtn.HoverState.Parent = this.step3nextBtn;
+            this.step3nextBtn.Location = new System.Drawing.Point(464, 528);
+            this.step3nextBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.step3nextBtn.Name = "step3nextBtn";
+            this.step3nextBtn.ShadowDecoration.Parent = this.step3nextBtn;
+            this.step3nextBtn.Size = new System.Drawing.Size(110, 38);
+            this.step3nextBtn.TabIndex = 127;
+            this.step3nextBtn.Text = "Next Step";
+            this.step3nextBtn.Click += new System.EventHandler(this.step3nxtBtn);
             // 
             // Step3Macros
             // 
@@ -393,7 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(731, 594);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.step3nextBtn);
             this.Controls.Add(this.fatPercent);
             this.Controls.Add(this.carbPercent);
             this.Controls.Add(this.proteinPercent);
@@ -451,7 +451,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button step3nextBtn;
         public System.Windows.Forms.Label calorieLabel;
         public System.Windows.Forms.Label carbsLabel;
         public System.Windows.Forms.Label fatsLabel;

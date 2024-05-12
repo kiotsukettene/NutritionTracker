@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace NutritionTracker
 {
+
   
-    
     public partial class Step3Macros : Form
     {
+        DBConnection myCon = new DBConnection();
         private int TDEE;
         private int carbs;
         private int protein;
@@ -24,9 +27,9 @@ namespace NutritionTracker
         private double carbspercentage;
         private double proteinpercentage;
         private double fatpercentage;
-        private Step2Form step2form;
+        private string username;
 
-        public Step3Macros(int tDEE, int carbs, int protein, int fat, double carbspercentage, double proteinpercentage, double fatpercentage, int targetWeight, int weight, Step2Form step2form)
+        public Step3Macros(int tDEE, int carbs, int protein, int fat, double carbspercentage, double proteinpercentage, double fatpercentage, int targetWeight, int weight, string username)
         {
             InitializeComponent();
             TDEE = tDEE;
@@ -38,7 +41,8 @@ namespace NutritionTracker
             this.fatpercentage = fatpercentage;
             this.targetWeight = targetWeight;
             this.weight = weight;
-            this.step2form = step2form;
+            this.username = username;
+           
         }
         #region RoundForm
         public void RoundCorners()
@@ -63,12 +67,51 @@ namespace NutritionTracker
             this.Region = new Region(graphicsPath);
         }
         #endregion
+        public void InsertMacros()
+        {
+            try
+            {
+                myCon.openCon();
+
+                int totalCalories = TDEE;
+                int carbsData = this.carbs;
+                int proteinData = this.protein;
+                int fatData = this.fat;
+                string username = this.username;
+                string macroQuery = "INSERT into user_macros (user_id, calories, carbs, fat, protein)" +
+                    "SELECT user.id, @calories, @carbs, @fat, @protein FROM user WHERE user.username=@username";
+                MySqlCommand cmd = new MySqlCommand(macroQuery, myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@calories", totalCalories);
+                cmd.Parameters.AddWithValue("@carbs", carbsData);
+                cmd.Parameters.AddWithValue("@fat", fatData);
+                cmd.Parameters.AddWithValue("@protein", proteinData);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0 )
+                {
+                    MessageBox.Show("Insert Success");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+                myCon.closeCon();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                myCon.closeCon();
+            }
+        }
         private void step3nxtBtn(object sender, EventArgs e)
         {
             this.Dispose();
 
-            Step4Macros step4 = new Step4Macros();
-          
+            Step4Macros step4 = new Step4Macros(TDEE, carbs, protein, fat, carbspercentage, proteinpercentage, fatpercentage, targetWeight, weight, username);
+            InsertMacros();
 
             step4.Show();
             step4.RoundCorners();

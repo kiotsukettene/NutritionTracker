@@ -127,7 +127,7 @@
             this.showPassBox.HoverState.Parent = this.showPassBox;
             this.showPassBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
             this.showPassBox.Location = new System.Drawing.Point(366, 231);
-            this.showPassBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.showPassBox.Margin = new System.Windows.Forms.Padding(2);
             this.showPassBox.Name = "showPassBox";
             this.showPassBox.PressedState.Parent = this.showPassBox;
             this.showPassBox.Size = new System.Drawing.Size(36, 31);
@@ -141,15 +141,17 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(249, 389);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(94, 15);
             this.guna2Button1.TabIndex = 102;
             this.guna2Button1.Text = "Sign up Now";
-            
+            this.guna2Button1.Click += new System.EventHandler(this.redirectSignForm);
             // 
             // label4
             // 
@@ -166,7 +168,7 @@
             // 
             this.guna2PictureBox4.Image = global::NutritionTracker.Properties.Resources.password;
             this.guna2PictureBox4.Location = new System.Drawing.Point(51, 236);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
             this.guna2PictureBox4.Size = new System.Drawing.Size(17, 18);
@@ -178,7 +180,7 @@
             // 
             this.guna2PictureBox3.Image = global::NutritionTracker.Properties.Resources.userLog1;
             this.guna2PictureBox3.Location = new System.Drawing.Point(51, 141);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
             this.guna2PictureBox3.Size = new System.Drawing.Size(17, 18);
@@ -211,7 +213,7 @@
             // guna2Button3
             // 
             this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 15;
+            this.guna2Button3.BorderRadius = 10;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.CustomBorderColor = System.Drawing.Color.White;
@@ -223,7 +225,7 @@
             this.guna2Button3.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Location = new System.Drawing.Point(276, 323);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(137, 37);
@@ -320,7 +322,7 @@
             // 
             this.guna2PictureBox2.Image = global::NutritionTracker.Properties.Resources.LogoName;
             this.guna2PictureBox2.Location = new System.Drawing.Point(106, 349);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(208, 36);
@@ -333,7 +335,7 @@
             this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.big_logo;
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox1.Location = new System.Drawing.Point(69, 73);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(292, 261);

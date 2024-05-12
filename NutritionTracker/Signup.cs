@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 
 namespace NutritionTracker
@@ -32,7 +33,7 @@ namespace NutritionTracker
         #endregion
         public void SignUp()
         {
-           try
+            try
             {
                 myCon.openCon();
                 string firstname = firstNameTxtBox.Text;
@@ -41,34 +42,58 @@ namespace NutritionTracker
                 string password = passwordTxtBox.Text;
                 string confirmPass = confirmTxtBox.Text;
 
-                if (password != confirmPass)
+                string checkUsernameQuery = "SELECT COUNT(*) FROM `user` WHERE `username` = @username";
+                MySqlCommand checkUsernameCmd = new MySqlCommand(checkUsernameQuery, myCon.getCon());
+                checkUsernameCmd.Parameters.AddWithValue("@username", username);
+                int count = Convert.ToInt32(checkUsernameCmd.ExecuteScalar());
+
+                if (count > 0)
                 {
-                    MessageBox.Show("Passwords do not match. Please re-enter.");
-                    return; 
-                }
-
-                string query = "INSERT INTO `user`(`firstname`, `lastname`, `username`, `password`) VALUES (@firstname, @lastname, @username, @password)";
-                MySqlCommand cmd = new MySqlCommand(query, myCon.getCon());
-                cmd.Parameters.AddWithValue("@firstname", firstname);
-                cmd.Parameters.AddWithValue("@lastname", lastname);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                int rows = cmd.ExecuteNonQuery();
-
-                if (rows > 0)
-                {
-                    MessageBox.Show("Successful");
-
-                    myCon.closeCon();
+                    userNameTxtBox.Text = "";
+                    userNameTxtBox.PlaceholderText = "Username already exist";
+                    userNameTxtBox.PlaceholderForeColor = Color.Red;
+                    userNameTxtBox.BorderColor = Color.Red;
+                    
                 }
                 else
                 {
-                    Console.WriteLine("Failed to Insert");
-                    myCon.closeCon();
+                    if (firstname == "" || lastname == "" || username == "" || password == "" || confirmPass == "")
+                    {
+                        MessageBox.Show("All fields are required!");
+                        
+                    }
+                    else {
+                        string query = "INSERT INTO `user`(`firstname`, `lastname`, `username`, `password`) VALUES (@firstname, @lastname, @username, @password)";
+                        MySqlCommand cmd = new MySqlCommand(query, myCon.getCon());
+                        cmd.Parameters.AddWithValue("@firstname", firstname);
+                        cmd.Parameters.AddWithValue("@lastname", lastname);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        int rows = cmd.ExecuteNonQuery();
+
+                        if (rows > 0)
+                        {
+                            if (password != confirmPass)
+                            {
+                                MessageBox.Show("Passwords do not match. Please re-enter.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Successful");
+                                loginForm login = new loginForm();
+                                login.Show();
+                                this.Dispose();
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed to Insert");
+                        }
+                    }
                 }
             }
-           catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Error:" + e);
             }
@@ -76,15 +101,11 @@ namespace NutritionTracker
             {
                 myCon.closeCon();
             }
-
         }
+
         private void loginBtn(object sender, EventArgs e)
         {
             SignUp();
-            this.Dispose();
-
-            loginForm login = new loginForm();
-            login.Show();
             
         }
 
@@ -107,6 +128,21 @@ namespace NutritionTracker
         private void passwordTxtBox_Enter(object sender, EventArgs e)
         {
             passwordTxtBox.PlaceholderText = "";
+        }
+
+        private void userNameTxtBox_Enter(object sender, EventArgs e)
+        {
+            userNameTxtBox.BorderColor = Color.Gray;
+            userNameTxtBox.PlaceholderText = "Username";
+            userNameTxtBox.PlaceholderForeColor = Color.White;
+            
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            loginForm login = new loginForm();
+            login.Show();
+            this.Dispose();
         }
     }
 }

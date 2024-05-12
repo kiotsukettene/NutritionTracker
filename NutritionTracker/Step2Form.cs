@@ -10,12 +10,13 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace NutritionTracker
 {
     public partial class Step2Form : Form
     {
-       
+        DBConnection myCon = new DBConnection();
        public int activityLevel { get; set; }
        public int weightGoal { get; set; }
         public int targetWeightGoal { get; set; }
@@ -32,18 +33,20 @@ namespace NutritionTracker
         public double carbsPercentage;
         public double proteinPercentage;
         public double fatPercentage;
+        public string username;
 
 
 
 
 
-        public Step2Form(int weight, int height, int age, int gender)
+        public Step2Form(int weight, int height, int age, int gender, string username)
         {
             InitializeComponent();
             this.weight = weight;
             this.height = height;
             this.age = age;
             this.gender = gender;
+            this.username = username;
 
            
         }
@@ -70,7 +73,54 @@ namespace NutritionTracker
             this.Region = new Region(graphicsPath);
         }
         #endregion
+        public void InsertUserData()
+        {
+           try
+            {
+                int weightData = this.weight;
+                int heightData = this.height;
+                int ageData = this.age;
+                int genderData = this.gender;
+                string activitylvlData = activityLevelBox.Text;
+                string weightGoalData = weightGoalBox.Text;
+                int targetWeightData = int.Parse(targetWeightTxtBox.Text);
+                string username = this.username;
 
+                myCon.openCon();
+
+                string stepsDataQuery = "INSERT INTO user_fitnessdata (user_id, weight, height, age, gender, activity_level, weight_goal, target_weight)\r\nSELECT user.id, @weight, @height, @age, @gender, @activity_level, @weight_goal, @target_weight\r\nFROM user\r\nWHERE user.username =@username;";
+
+                MySqlCommand cmd = new MySqlCommand(stepsDataQuery, myCon.getCon());
+
+                cmd.Parameters.AddWithValue("@weight", weightData);
+                cmd.Parameters.AddWithValue("@height", heightData);
+                cmd.Parameters.AddWithValue("@age", ageData);
+                cmd.Parameters.AddWithValue("@gender", genderData);
+                cmd.Parameters.AddWithValue("@activity_level", activitylvlData);
+                cmd.Parameters.AddWithValue("@weight_goal", weightGoalData);
+                cmd.Parameters.AddWithValue("@target_weight", targetWeightData);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    MessageBox.Show("Insert Successfuly");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Error Insert");
+                   
+                }
+                myCon.closeCon();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+
+        }
         public void CalculateBMR()
         {
             try
@@ -181,27 +231,38 @@ namespace NutritionTracker
             }
         }
         
+       
         private void step2nxtBtn(object sender, EventArgs e)
         {
 
+            if (activityLevelBox.Text == "" || weightGoalBox.Text == "" || targetWeightTxtBox.Text == "")
+            {
+                MessageBox.Show("All fields are required!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            CalculateBMR();
-            CalculateTDEE();
-            WeightGoal();
-            CalculatePercentage();
-            this.Hide();
+            }
 
-            int targetWeight = int.Parse(targetWeightTxtBox.Text);
-            Step3Macros step3 = new Step3Macros(TDEE, carbs, protein, fat, carbsPercentage, proteinPercentage, fatPercentage, targetWeight, weight, this);
-            step3.calorieLabel.Text = TDEE.ToString();
-            step3.carbsLabel.Text = carbs.ToString();
-            step3.proteinLabel.Text = protein.ToString();
-            step3.fatsLabel.Text = fat.ToString();
-            step3.carbPercent.Text = carbsPercentage.ToString() + "%";
-            step3.proteinPercent.Text = proteinPercentage.ToString() + "%";
-            step3.fatPercent.Text = fatPercentage.ToString() + "%";
-            step3.RoundCorners();
-            step3.Show();
+            else
+            {
+                CalculateBMR();
+                CalculateTDEE();
+                WeightGoal();
+                CalculatePercentage();
+                InsertUserData();
+                this.Hide();
+
+                int targetWeight = int.Parse(targetWeightTxtBox.Text);
+                Step3Macros step3 = new Step3Macros(TDEE, carbs, protein, fat, carbsPercentage, proteinPercentage, fatPercentage, targetWeight, weight, username);
+                step3.calorieLabel.Text = TDEE.ToString();
+                step3.carbsLabel.Text = carbs.ToString();
+                step3.proteinLabel.Text = protein.ToString();
+                step3.fatsLabel.Text = fat.ToString();
+                step3.carbPercent.Text = carbsPercentage.ToString() + "%";
+                step3.proteinPercent.Text = proteinPercentage.ToString() + "%";
+                step3.fatPercent.Text = fatPercentage.ToString() + "%";
+                step3.RoundCorners();
+                step3.Show();
+
+            }
 
 
 

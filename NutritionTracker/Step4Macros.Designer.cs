@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.waterBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.submitLastStep = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // loginLbl
@@ -220,6 +220,7 @@
             this.sleepBox.ShadowDecoration.Parent = this.sleepBox;
             this.sleepBox.Size = new System.Drawing.Size(399, 45);
             this.sleepBox.TabIndex = 125;
+            this.sleepBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sleepBox_KeyPress);
             // 
             // label5
             // 
@@ -284,6 +285,7 @@
             this.waterBox.ShadowDecoration.Parent = this.waterBox;
             this.waterBox.Size = new System.Drawing.Size(399, 45);
             this.waterBox.TabIndex = 121;
+            this.waterBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.waterBox_KeyPress);
             // 
             // label1
             // 
@@ -296,28 +298,28 @@
             this.label1.TabIndex = 120;
             this.label1.Text = "Water";
             // 
-            // guna2Button3
+            // submitLastStep
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.guna2Button3.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(435, 411);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(110, 38);
-            this.guna2Button3.TabIndex = 128;
-            this.guna2Button3.Text = "Submit";
-            this.guna2Button3.Click += new System.EventHandler(this.step4submitBtn);
+            this.submitLastStep.BorderColor = System.Drawing.Color.White;
+            this.submitLastStep.BorderRadius = 10;
+            this.submitLastStep.CheckedState.Parent = this.submitLastStep;
+            this.submitLastStep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitLastStep.CustomBorderColor = System.Drawing.Color.White;
+            this.submitLastStep.CustomImages.Parent = this.submitLastStep;
+            this.submitLastStep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.submitLastStep.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitLastStep.ForeColor = System.Drawing.Color.White;
+            this.submitLastStep.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
+            this.submitLastStep.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitLastStep.HoverState.Parent = this.submitLastStep;
+            this.submitLastStep.Location = new System.Drawing.Point(435, 411);
+            this.submitLastStep.Margin = new System.Windows.Forms.Padding(2);
+            this.submitLastStep.Name = "submitLastStep";
+            this.submitLastStep.ShadowDecoration.Parent = this.submitLastStep;
+            this.submitLastStep.Size = new System.Drawing.Size(110, 38);
+            this.submitLastStep.TabIndex = 128;
+            this.submitLastStep.Text = "Submit";
+            this.submitLastStep.Click += new System.EventHandler(this.step4submitBtn);
             // 
             // Step4Macros
             // 
@@ -325,7 +327,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(731, 594);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.submitLastStep);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.sleepBox);
             this.Controls.Add(this.label5);
@@ -372,6 +374,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox waterBox;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button submitLastStep;
     }
 }

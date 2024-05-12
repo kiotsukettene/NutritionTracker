@@ -35,15 +35,17 @@
             this.passwordTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.userNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.showBox = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.showBox = new Guna.UI2.WinForms.Guna2ImageButton();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -53,7 +55,7 @@
             // signUpBtn
             // 
             this.signUpBtn.BorderColor = System.Drawing.Color.White;
-            this.signUpBtn.BorderRadius = 15;
+            this.signUpBtn.BorderRadius = 10;
             this.signUpBtn.CheckedState.Parent = this.signUpBtn;
             this.signUpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signUpBtn.CustomBorderColor = System.Drawing.Color.White;
@@ -64,8 +66,8 @@
             this.signUpBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.signUpBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.HoverState.Parent = this.signUpBtn;
-            this.signUpBtn.Location = new System.Drawing.Point(276, 323);
-            this.signUpBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signUpBtn.Location = new System.Drawing.Point(302, 354);
+            this.signUpBtn.Margin = new System.Windows.Forms.Padding(2);
             this.signUpBtn.Name = "signUpBtn";
             this.signUpBtn.ShadowDecoration.Parent = this.signUpBtn;
             this.signUpBtn.Size = new System.Drawing.Size(110, 38);
@@ -77,7 +79,7 @@
             // 
             this.confirmTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.confirmTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.confirmTxtBox.BorderRadius = 12;
+            this.confirmTxtBox.BorderRadius = 10;
             this.confirmTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.confirmTxtBox.DefaultText = "";
             this.confirmTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -88,26 +90,27 @@
             this.confirmTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.confirmTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmTxtBox.FocusedState.Parent = this.confirmTxtBox;
-            this.confirmTxtBox.Font = new System.Drawing.Font("Poppins", 10F);
+            this.confirmTxtBox.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmTxtBox.ForeColor = System.Drawing.Color.White;
             this.confirmTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmTxtBox.HoverState.Parent = this.confirmTxtBox;
-            this.confirmTxtBox.Location = new System.Drawing.Point(38, 269);
-            this.confirmTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.confirmTxtBox.Location = new System.Drawing.Point(38, 301);
+            this.confirmTxtBox.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.confirmTxtBox.Name = "confirmTxtBox";
-            this.confirmTxtBox.PasswordChar = '*';
+            this.confirmTxtBox.PasswordChar = '\0';
             this.confirmTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.confirmTxtBox.PlaceholderText = "Confirm Password";
+            this.confirmTxtBox.PlaceholderText = "";
             this.confirmTxtBox.SelectedText = "";
             this.confirmTxtBox.ShadowDecoration.Parent = this.confirmTxtBox;
             this.confirmTxtBox.Size = new System.Drawing.Size(374, 45);
             this.confirmTxtBox.TabIndex = 87;
+            this.confirmTxtBox.UseSystemPasswordChar = true;
             // 
             // lastNameTxtBox
             // 
             this.lastNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.lastNameTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.lastNameTxtBox.BorderRadius = 12;
+            this.lastNameTxtBox.BorderRadius = 10;
             this.lastNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lastNameTxtBox.DefaultText = "";
             this.lastNameTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -122,7 +125,7 @@
             this.lastNameTxtBox.ForeColor = System.Drawing.Color.White;
             this.lastNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lastNameTxtBox.HoverState.Parent = this.lastNameTxtBox;
-            this.lastNameTxtBox.Location = new System.Drawing.Point(38, 77);
+            this.lastNameTxtBox.Location = new System.Drawing.Point(38, 86);
             this.lastNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lastNameTxtBox.Name = "lastNameTxtBox";
             this.lastNameTxtBox.PasswordChar = '\0';
@@ -137,7 +140,7 @@
             // 
             this.firstNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.firstNameTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.firstNameTxtBox.BorderRadius = 12;
+            this.firstNameTxtBox.BorderRadius = 10;
             this.firstNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.firstNameTxtBox.DefaultText = "";
             this.firstNameTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -152,7 +155,7 @@
             this.firstNameTxtBox.ForeColor = System.Drawing.Color.White;
             this.firstNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstNameTxtBox.HoverState.Parent = this.firstNameTxtBox;
-            this.firstNameTxtBox.Location = new System.Drawing.Point(38, 16);
+            this.firstNameTxtBox.Location = new System.Drawing.Point(38, 29);
             this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.firstNameTxtBox.Name = "firstNameTxtBox";
             this.firstNameTxtBox.PasswordChar = '\0';
@@ -167,7 +170,7 @@
             // 
             this.passwordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.passwordTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.passwordTxtBox.BorderRadius = 12;
+            this.passwordTxtBox.BorderRadius = 10;
             this.passwordTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordTxtBox.DefaultText = "";
             this.passwordTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -178,16 +181,16 @@
             this.passwordTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.passwordTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTxtBox.FocusedState.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Font = new System.Drawing.Font("Poppins", 10F);
+            this.passwordTxtBox.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTxtBox.ForeColor = System.Drawing.Color.White;
             this.passwordTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTxtBox.HoverState.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Location = new System.Drawing.Point(38, 206);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.passwordTxtBox.Location = new System.Drawing.Point(38, 221);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '\0';
             this.passwordTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.passwordTxtBox.PlaceholderText = "Password";
+            this.passwordTxtBox.PlaceholderText = "";
             this.passwordTxtBox.SelectedText = "";
             this.passwordTxtBox.ShadowDecoration.Parent = this.passwordTxtBox;
             this.passwordTxtBox.Size = new System.Drawing.Size(374, 45);
@@ -198,7 +201,7 @@
             // 
             this.userNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.userNameTxtBox.BorderColor = System.Drawing.Color.Gray;
-            this.userNameTxtBox.BorderRadius = 12;
+            this.userNameTxtBox.BorderRadius = 10;
             this.userNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.userNameTxtBox.DefaultText = "";
             this.userNameTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -213,7 +216,7 @@
             this.userNameTxtBox.ForeColor = System.Drawing.Color.White;
             this.userNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNameTxtBox.HoverState.Parent = this.userNameTxtBox;
-            this.userNameTxtBox.Location = new System.Drawing.Point(38, 141);
+            this.userNameTxtBox.Location = new System.Drawing.Point(38, 143);
             this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.userNameTxtBox.Name = "userNameTxtBox";
             this.userNameTxtBox.PasswordChar = '\0';
@@ -223,10 +226,13 @@
             this.userNameTxtBox.ShadowDecoration.Parent = this.userNameTxtBox;
             this.userNameTxtBox.Size = new System.Drawing.Size(374, 45);
             this.userNameTxtBox.TabIndex = 83;
+            this.userNameTxtBox.Enter += new System.EventHandler(this.userNameTxtBox_Enter);
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.showBox);
             this.guna2Panel2.Controls.Add(this.guna2Button1);
             this.guna2Panel2.Controls.Add(this.label4);
@@ -242,6 +248,19 @@
             this.guna2Panel2.Size = new System.Drawing.Size(448, 431);
             this.guna2Panel2.TabIndex = 93;
             // 
+            // showBox
+            // 
+            this.showBox.CheckedState.Parent = this.showBox;
+            this.showBox.HoverState.Parent = this.showBox;
+            this.showBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
+            this.showBox.Location = new System.Drawing.Point(369, 229);
+            this.showBox.Margin = new System.Windows.Forms.Padding(2);
+            this.showBox.Name = "showBox";
+            this.showBox.PressedState.Parent = this.showBox;
+            this.showBox.Size = new System.Drawing.Size(36, 31);
+            this.showBox.TabIndex = 104;
+            this.showBox.Click += new System.EventHandler(this.showBtn);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
@@ -251,20 +270,22 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(260, 390);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(268, 405);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(46, 15);
             this.guna2Button1.TabIndex = 103;
             this.guna2Button1.Text = "Login";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(109, 389);
+            this.label4.Location = new System.Drawing.Point(117, 404);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 15);
             this.label4.TabIndex = 102;
@@ -280,43 +301,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(484, 38);
             this.guna2Panel1.TabIndex = 92;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(436, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 48);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Create your Account";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::NutritionTracker.Properties.Resources.LogoName;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(106, 349);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(208, 36);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 89;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // showBox
-            // 
-            this.showBox.CheckedState.Parent = this.showBox;
-            this.showBox.HoverState.Parent = this.showBox;
-            this.showBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
-            this.showBox.Location = new System.Drawing.Point(368, 213);
-            this.showBox.Margin = new System.Windows.Forms.Padding(2);
-            this.showBox.Name = "showBox";
-            this.showBox.PressedState.Parent = this.showBox;
-            this.showBox.Size = new System.Drawing.Size(36, 31);
-            this.showBox.TabIndex = 104;
-            this.showBox.Click += new System.EventHandler(this.showBtn);
             // 
             // exitBtn
             // 
@@ -354,6 +338,30 @@
             this.miniBtn.TabIndex = 19;
             this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(436, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 48);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Create your Account";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::NutritionTracker.Properties.Resources.LogoName;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(106, 349);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(208, 36);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 89;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.big_logo;
@@ -366,6 +374,28 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 90;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(34, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "Password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(34, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 23);
+            this.label3.TabIndex = 105;
+            this.label3.Text = "Current Password";
             // 
             // Signup
             // 
@@ -409,5 +439,7 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ImageButton showBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
