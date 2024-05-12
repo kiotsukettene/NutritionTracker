@@ -117,6 +117,7 @@ namespace NutritionTracker
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
             loadForm(dash);
+            calculatorBtn.Image = Properties.Resources.calc_gray;
             this.dashboardBtn.Image = global::NutritionTracker.Properties.Resources.home__1_;
             this.fdBtn.Image = global::NutritionTracker.Properties.Resources.add_gray;
             this.personalizationBtn.Image = global::NutritionTracker.Properties.Resources.settings_gray;
@@ -129,6 +130,7 @@ namespace NutritionTracker
         private void fdBtn_Click(object sender, EventArgs e)
         {
             loadForm(new FoodDiary());
+            calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
             this.personalizationBtn.Image = Properties.Resources.settings_gray;
@@ -141,6 +143,7 @@ namespace NutritionTracker
         private void personalizationBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalize);
+            calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
             this.personalizationBtn.Image = Properties.Resources.settings;
@@ -153,6 +156,20 @@ namespace NutritionTracker
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void calculatorBtn_Click(object sender, EventArgs e)
+        {
+            loadForm(new CreateFood());
+            calculatorBtn.Image = Properties.Resources.calc;
+            this.fdBtn.Image = Properties.Resources.add_gray;
+            this.dashboardBtn.Image = Properties.Resources.home_gray;
+            this.personalizationBtn.Image = Properties.Resources.settings_gray;
+            dashboardBtn.BackColor = System.Drawing.Color.Transparent;
+            fdBtn.BackColor = System.Drawing.Color.Transparent;
+            personalizationBtn.BackColor = Color.Transparent;
+            calculatorBtn.BackColor = Color.Black;
+            
         }
     }
 }

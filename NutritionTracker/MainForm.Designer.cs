@@ -170,6 +170,7 @@
             this.calculatorBtn.ShadowDecoration.Parent = this.calculatorBtn;
             this.calculatorBtn.Size = new System.Drawing.Size(74, 55);
             this.calculatorBtn.TabIndex = 3;
+            this.calculatorBtn.Click += new System.EventHandler(this.calculatorBtn_Click);
             // 
             // dashboardBtn
             // 
