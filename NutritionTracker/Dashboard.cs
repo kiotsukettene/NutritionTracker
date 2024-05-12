@@ -13,10 +13,30 @@ namespace NutritionTracker
 {
     public partial class Dashboard : Form
     {
+        public string water { get; set; }
+        public string sleep { get; set; }
+        public int TDEE { get; set; }
+        public int carbs { get; set; }
+        public int protein { get; set; }
+        public int fat { get; set; }
+        public double carbspercentage { get; set; }
+        public double proteinpercentage { get; set; }
+        public double fatpercentage { get; set; }
+        public int targetweight { get; set; }
+        public int weight { get; set; }
         public Dashboard()
         {
             InitializeComponent();
+          
+            //this.TDEE = TDEE;
+            //this.carbs = carbs;
+            //this.protein = protein;
+            //this .fat = fat;
+            //this.carbspercentage = carbspercentage;
+            //this.proteinpercentage = proteinpercentage;
+            //this.fatpercentage = fatpercentage;
         }
+        
         private void chartData()
         {
             chart1.Series["Series1"].Points.AddXY("04/03/2024", 2000);

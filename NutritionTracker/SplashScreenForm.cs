@@ -44,14 +44,27 @@ namespace NutritionTracker
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Enabled = true;
-            ProgressBar.Increment(2);
+            ProgressBar.Increment(5);
             if (ProgressBar.Value == 100)
             {
+                this.Hide();
                 timer.Enabled = false;
                 MainForm _main = new MainForm();
-                _main.Show(); 
-                this.Hide();
+
+                _main.Show();
+
+
             }
+        }
+
+        private void ProgressBar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SplashScreenForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

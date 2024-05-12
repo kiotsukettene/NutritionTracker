@@ -39,11 +39,11 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.sleepBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.waterBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -191,36 +191,35 @@
             this.label4.TabIndex = 126;
             this.label4.Text = "hrs";
             // 
-            // guna2TextBox1
+            // sleepBox
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Enabled = false;
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(146, 339);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Turquoise;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(399, 45);
-            this.guna2TextBox1.TabIndex = 125;
+            this.sleepBox.BackColor = System.Drawing.Color.Transparent;
+            this.sleepBox.BorderColor = System.Drawing.Color.Gray;
+            this.sleepBox.BorderRadius = 12;
+            this.sleepBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sleepBox.DefaultText = "";
+            this.sleepBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.sleepBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.sleepBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
+            this.sleepBox.DisabledState.Parent = this.sleepBox;
+            this.sleepBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sleepBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.sleepBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sleepBox.FocusedState.Parent = this.sleepBox;
+            this.sleepBox.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sleepBox.ForeColor = System.Drawing.Color.White;
+            this.sleepBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sleepBox.HoverState.Parent = this.sleepBox;
+            this.sleepBox.Location = new System.Drawing.Point(146, 339);
+            this.sleepBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.sleepBox.Name = "sleepBox";
+            this.sleepBox.PasswordChar = '\0';
+            this.sleepBox.PlaceholderForeColor = System.Drawing.Color.Turquoise;
+            this.sleepBox.PlaceholderText = "";
+            this.sleepBox.SelectedText = "";
+            this.sleepBox.ShadowDecoration.Parent = this.sleepBox;
+            this.sleepBox.Size = new System.Drawing.Size(399, 45);
+            this.sleepBox.TabIndex = 125;
             // 
             // label5
             // 
@@ -252,40 +251,39 @@
             this.label2.Location = new System.Drawing.Point(494, 236);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 25);
+            this.label2.Size = new System.Drawing.Size(46, 25);
             this.label2.TabIndex = 122;
-            this.label2.Text = "liters";
+            this.label2.Text = "cups";
             // 
-            // guna2TextBox4
+            // waterBox
             // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox4.BorderRadius = 12;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.Enabled = false;
-            this.guna2TextBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(146, 225);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderForeColor = System.Drawing.Color.Turquoise;
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(399, 45);
-            this.guna2TextBox4.TabIndex = 121;
+            this.waterBox.BackColor = System.Drawing.Color.Transparent;
+            this.waterBox.BorderColor = System.Drawing.Color.Gray;
+            this.waterBox.BorderRadius = 12;
+            this.waterBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.waterBox.DefaultText = "";
+            this.waterBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.waterBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.waterBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
+            this.waterBox.DisabledState.Parent = this.waterBox;
+            this.waterBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.waterBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.waterBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.waterBox.FocusedState.Parent = this.waterBox;
+            this.waterBox.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterBox.ForeColor = System.Drawing.Color.White;
+            this.waterBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.waterBox.HoverState.Parent = this.waterBox;
+            this.waterBox.Location = new System.Drawing.Point(146, 225);
+            this.waterBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.waterBox.Name = "waterBox";
+            this.waterBox.PasswordChar = '\0';
+            this.waterBox.PlaceholderForeColor = System.Drawing.Color.Turquoise;
+            this.waterBox.PlaceholderText = "";
+            this.waterBox.SelectedText = "";
+            this.waterBox.ShadowDecoration.Parent = this.waterBox;
+            this.waterBox.Size = new System.Drawing.Size(399, 45);
+            this.waterBox.TabIndex = 121;
             // 
             // label1
             // 
@@ -301,7 +299,7 @@
             // guna2Button3
             // 
             this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 15;
+            this.guna2Button3.BorderRadius = 10;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.CustomBorderColor = System.Drawing.Color.White;
@@ -312,7 +310,7 @@
             this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.guna2Button3.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(435, 438);
+            this.guna2Button3.Location = new System.Drawing.Point(435, 411);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
@@ -329,11 +327,11 @@
             this.ClientSize = new System.Drawing.Size(731, 594);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.sleepBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.waterBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginLbl);
             this.Controls.Add(this.panel7);
@@ -368,11 +366,11 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox sleepBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox waterBox;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }

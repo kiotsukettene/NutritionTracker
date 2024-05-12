@@ -13,6 +13,7 @@ namespace NutritionTracker
 {
     public partial class MainForm : Form
     {
+        Dashboard dash = new Dashboard();
         public MainForm()
         {
             InitializeComponent();
@@ -47,36 +48,33 @@ namespace NutritionTracker
         }
         private void closeBtn(object sender, EventArgs e)
         {
-            Dispose();
+            Application.Exit();
         }
         #endregion
         #region TabPanels
-        private void loadForm(object Form)
+        void loadForm(Form panel)
         {
-            if (mainPanel.Controls.Count > 0)
-                mainPanel.Controls.RemoveAt(0);
-
-            Form f = Form as Form;
-            if (f != null)
-            {
-                f.TopLevel = false;
-                f.Dock = DockStyle.Fill;
-                mainPanel.Controls.Add(f);
-                mainPanel.Tag = f;
-                f.Show();
-            }
+            mainPanel.Controls.Clear();
+            panel.TopLevel = false;
+            mainPanel.Controls.Add(panel);
+            panel.Dock = DockStyle.Fill;
+            panel.Show();
         }
-        #endregion 
+        #endregion
 
+        public void RetrieveValues(string firstname)
+        {
+            dash.welcomeLabel.Text = $"Hello, {firstname}";
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
-            loadForm(new Dashboard());
+            loadForm(dash);
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new Dashboard());
+            loadForm(dash);
             this.dashboardBtn.Image = global::NutritionTracker.Properties.Resources.home__1_;
             this.fdBtn.Image = global::NutritionTracker.Properties.Resources.add_gray;
             this.personalizationBtn.Image = global::NutritionTracker.Properties.Resources.settings_gray;
@@ -108,6 +106,11 @@ namespace NutritionTracker
             fdBtn.BackColor = System.Drawing.Color.Transparent;
             personalizationBtn.BackColor = Color.Black;
             calculatorBtn.BackColor = Color.Transparent;
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

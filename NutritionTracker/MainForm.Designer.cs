@@ -30,15 +30,15 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.personalizationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.fdBtn = new Guna.UI2.WinForms.Guna2Button();
             this.calculatorBtn = new Guna.UI2.WinForms.Guna2Button();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,28 +61,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panel1.Controls.Add(this.personalizationBtn);
-            this.panel1.Controls.Add(this.fdBtn);
-            this.panel1.Controls.Add(this.calculatorBtn);
-            this.panel1.Controls.Add(this.dashboardBtn);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(74, 700);
-            this.panel1.TabIndex = 1;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Location = new System.Drawing.Point(74, 31);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
-            this.mainPanel.Size = new System.Drawing.Size(1110, 669);
-            this.mainPanel.TabIndex = 2;
             // 
             // exitBtn
             // 
@@ -119,6 +97,20 @@
             this.miniBtn.Size = new System.Drawing.Size(33, 28);
             this.miniBtn.TabIndex = 2;
             this.miniBtn.Click += new System.EventHandler(this.minBtn);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panel1.Controls.Add(this.personalizationBtn);
+            this.panel1.Controls.Add(this.fdBtn);
+            this.panel1.Controls.Add(this.calculatorBtn);
+            this.panel1.Controls.Add(this.dashboardBtn);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(74, 700);
+            this.panel1.TabIndex = 1;
             // 
             // personalizationBtn
             // 
@@ -207,6 +199,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(60, 52);
             this.panel3.TabIndex = 4;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Location = new System.Drawing.Point(74, 31);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
+            this.mainPanel.Size = new System.Drawing.Size(1110, 669);
+            this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // MainForm
             // 

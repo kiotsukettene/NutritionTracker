@@ -42,10 +42,13 @@ namespace NutritionTracker
         #endregion
         private void step4submitBtn(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
+            string sleep = sleepBox.Text;
+            string water = waterBox.Text;
             SplashScreenForm splashScreen = new SplashScreenForm();
             splashScreen.Show();
             splashScreen.RoundCorners();
+       
         }
 
         private void Step4Macros_Load(object sender, EventArgs e)

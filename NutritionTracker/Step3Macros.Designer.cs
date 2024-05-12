@@ -47,13 +47,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.calorieLabel = new System.Windows.Forms.Label();
+            this.carbsLabel = new System.Windows.Forms.Label();
+            this.fatsLabel = new System.Windows.Forms.Label();
+            this.proteinLabel = new System.Windows.Forms.Label();
+            this.proteinPercent = new System.Windows.Forms.Label();
+            this.carbPercent = new System.Windows.Forms.Label();
+            this.fatPercent = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
@@ -287,87 +287,87 @@
             this.label9.TabIndex = 116;
             this.label9.Text = "Carbohydrates";
             // 
-            // label10
+            // calorieLabel
             // 
-            this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label10.Location = new System.Drawing.Point(475, 192);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 34);
-            this.label10.TabIndex = 119;
-            this.label10.Text = "1500";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.calorieLabel.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calorieLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.calorieLabel.Location = new System.Drawing.Point(475, 192);
+            this.calorieLabel.Name = "calorieLabel";
+            this.calorieLabel.Size = new System.Drawing.Size(135, 34);
+            this.calorieLabel.TabIndex = 119;
+            this.calorieLabel.Text = "1500";
+            this.calorieLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // carbsLabel
             // 
-            this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label12.Location = new System.Drawing.Point(475, 256);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 34);
-            this.label12.TabIndex = 121;
-            this.label12.Text = "1500";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.carbsLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.carbsLabel.Location = new System.Drawing.Point(475, 256);
+            this.carbsLabel.Name = "carbsLabel";
+            this.carbsLabel.Size = new System.Drawing.Size(135, 34);
+            this.carbsLabel.TabIndex = 121;
+            this.carbsLabel.Text = "1500";
+            this.carbsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // fatsLabel
             // 
-            this.label11.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label11.Location = new System.Drawing.Point(475, 289);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 34);
-            this.label11.TabIndex = 122;
-            this.label11.Text = "1500";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fatsLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.fatsLabel.Location = new System.Drawing.Point(475, 289);
+            this.fatsLabel.Name = "fatsLabel";
+            this.fatsLabel.Size = new System.Drawing.Size(135, 34);
+            this.fatsLabel.TabIndex = 122;
+            this.fatsLabel.Text = "1500";
+            this.fatsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // proteinLabel
             // 
-            this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label13.Location = new System.Drawing.Point(475, 321);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 34);
-            this.label13.TabIndex = 123;
-            this.label13.Text = "1500";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.proteinLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.proteinLabel.Location = new System.Drawing.Point(475, 321);
+            this.proteinLabel.Name = "proteinLabel";
+            this.proteinLabel.Size = new System.Drawing.Size(135, 34);
+            this.proteinLabel.TabIndex = 123;
+            this.proteinLabel.Text = "1500";
+            this.proteinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // proteinPercent
             // 
-            this.label14.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label14.Location = new System.Drawing.Point(476, 472);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 34);
-            this.label14.TabIndex = 124;
-            this.label14.Text = "1500";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.proteinPercent.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.proteinPercent.Location = new System.Drawing.Point(476, 472);
+            this.proteinPercent.Name = "proteinPercent";
+            this.proteinPercent.Size = new System.Drawing.Size(135, 34);
+            this.proteinPercent.TabIndex = 124;
+            this.proteinPercent.Text = "1500";
+            this.proteinPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // carbPercent
             // 
-            this.label15.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label15.Location = new System.Drawing.Point(475, 412);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(135, 34);
-            this.label15.TabIndex = 125;
-            this.label15.Text = "1500";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.carbPercent.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.carbPercent.Location = new System.Drawing.Point(475, 412);
+            this.carbPercent.Name = "carbPercent";
+            this.carbPercent.Size = new System.Drawing.Size(135, 34);
+            this.carbPercent.TabIndex = 125;
+            this.carbPercent.Text = "1500";
+            this.carbPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // fatPercent
             // 
-            this.label16.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label16.Location = new System.Drawing.Point(476, 441);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(135, 34);
-            this.label16.TabIndex = 126;
-            this.label16.Text = "1500";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.fatPercent.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatPercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.fatPercent.Location = new System.Drawing.Point(476, 441);
+            this.fatPercent.Name = "fatPercent";
+            this.fatPercent.Size = new System.Drawing.Size(135, 34);
+            this.fatPercent.TabIndex = 126;
+            this.fatPercent.Text = "1500";
+            this.fatPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button3
             // 
             this.guna2Button3.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 15;
+            this.guna2Button3.BorderRadius = 10;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button3.CustomBorderColor = System.Drawing.Color.White;
@@ -394,13 +394,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(731, 594);
             this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.fatPercent);
+            this.Controls.Add(this.carbPercent);
+            this.Controls.Add(this.proteinPercent);
+            this.Controls.Add(this.proteinLabel);
+            this.Controls.Add(this.fatsLabel);
+            this.Controls.Add(this.carbsLabel);
+            this.Controls.Add(this.calorieLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -451,13 +451,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        public System.Windows.Forms.Label calorieLabel;
+        public System.Windows.Forms.Label carbsLabel;
+        public System.Windows.Forms.Label fatsLabel;
+        public System.Windows.Forms.Label proteinLabel;
+        public System.Windows.Forms.Label proteinPercent;
+        public System.Windows.Forms.Label carbPercent;
+        public System.Windows.Forms.Label fatPercent;
     }
 }

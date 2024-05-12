@@ -11,11 +11,34 @@ using System.Windows.Forms;
 
 namespace NutritionTracker
 {
+  
+    
     public partial class Step3Macros : Form
     {
-        public Step3Macros()
+        private int TDEE;
+        private int carbs;
+        private int protein;
+        private int fat;
+        private int targetWeight;
+        private int weight;
+        private double carbspercentage;
+        private double proteinpercentage;
+        private double fatpercentage;
+        private Step2Form step2form;
+
+        public Step3Macros(int tDEE, int carbs, int protein, int fat, double carbspercentage, double proteinpercentage, double fatpercentage, int targetWeight, int weight, Step2Form step2form)
         {
             InitializeComponent();
+            TDEE = tDEE;
+            this.carbs = carbs;
+            this.protein = protein;
+            this.fat = fat;
+            this.carbspercentage = carbspercentage;
+            this.proteinpercentage = proteinpercentage;
+            this.fatpercentage = fatpercentage;
+            this.targetWeight = targetWeight;
+            this.weight = weight;
+            this.step2form = step2form;
         }
         #region RoundForm
         public void RoundCorners()
@@ -43,7 +66,10 @@ namespace NutritionTracker
         private void step3nxtBtn(object sender, EventArgs e)
         {
             this.Dispose();
+
             Step4Macros step4 = new Step4Macros();
+          
+
             step4.Show();
             step4.RoundCorners();
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +12,11 @@ using System.Windows.Forms;
 
 namespace NutritionTracker
 {
+    
     public partial class loginForm : Form
     {
+        DBConnection myCon = new DBConnection();
+        
         public loginForm()
         {
             InitializeComponent();
@@ -41,32 +45,96 @@ namespace NutritionTracker
         }
         #endregion
 
-        
+        #region Min and Close
+        private void minimize(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+        #endregion
         private void loginForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
         
         }
 
-        private void minimize(object sender, EventArgs e)
+        public void Login()
         {
-            this.WindowState = FormWindowState.Minimized;   
-        }
+            try
+            {
+                string username = loginUserBox.Text;
+                string password = loginPassBox.Text;
+                string userDisplay = "";
+                string fname = "";
+                string lname = "";
+                myCon.openCon();
 
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Dispose();
-         
-        }
+                string loginQuery = "SELECT * FROM user WHERE username=@username AND password=@password";
+                MySqlCommand cmd = new MySqlCommand(loginQuery, myCon.getCon());
 
-        private void signup(object sender, EventArgs e)
-        {  
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        userDisplay = dataReader.GetString("username");
+                        fname = dataReader.GetString("firstname");
+                        lname = dataReader.GetString("lastname");
+                    }
+
+                   
+                    MainForm main = new MainForm();
+                    main.RetrieveValues(fname);
+                    main.Show();
+                }
+                dataReader.Close();
+
+                myCon.closeCon();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+            finally
+            {
+                myCon.closeCon();
+            }
            
+        }
+        
+
+        private void loginShowBtn(object sender, EventArgs e)
+        {
+            if (loginPassBox.UseSystemPasswordChar)
+            {
+                loginPassBox.UseSystemPasswordChar = false;
+                showPassBox.Image = Properties.Resources.hidePassword;
+                loginPassBox.Font = new Font("Poppins", 10);
+
+            }
+            else
+            {
+                loginPassBox.UseSystemPasswordChar = true;
+                loginPassBox.Font = new Font("Poppins", 6);
+                showPassBox.Image = Properties.Resources.showPassword;
+            }
+        }
+
+        private void LoginBtn(object sender, EventArgs e)
+        {
+            Login();
             this.Hide();
-           
-            Signup sign = new Signup();
-            sign.Show();
 
+           
         }
     }
 }
