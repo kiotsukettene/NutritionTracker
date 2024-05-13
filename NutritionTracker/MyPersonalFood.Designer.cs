@@ -37,7 +37,7 @@
             // guna2Button1
             // 
             this.guna2Button1.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.CustomBorderColor = System.Drawing.Color.White;
