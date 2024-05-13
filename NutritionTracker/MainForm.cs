@@ -130,6 +130,16 @@ namespace NutritionTracker
             dash.welcomeLabel.Text = "Hello, " + personalize.personNameTxtBox.Text;
             dash.targetWeightLabel.Text = personalize.personWeightTxtBox.Text;
             dash.weightLbl.Text = personalize.personTargetWeight.Text;
+            dash.calorieNum.Text = personalize.pCalLabel.Text;
+            dash.calRemain.Text = personalize.pCalLabel.Text;
+            dash.carbRemain.Text = personalize.pCarbLabel.Text;
+            dash.fatRemain.Text = personalize.pFatLabel.Text;
+            dash.proteinRemain.Text = personalize.pProteinLabel.Text;
+            dash.carbNum.Text = personalize.pCarbLabel.Text;
+
+
+
+            
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.dashboardBtn.Image = global::NutritionTracker.Properties.Resources.home__1_;
             this.fdBtn.Image = global::NutritionTracker.Properties.Resources.add_gray;

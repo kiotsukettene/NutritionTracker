@@ -10,7 +10,7 @@ namespace NutritionTracker
 {
     internal class DBConnection
     {
-        public MySqlConnection con = new MySqlConnection("Datasource=localhost; user=root; password=;database=nutrition_tracker");
+        public MySqlConnection con = new MySqlConnection("Datasource=localhost; user=root; password=;database=nutriTrack");
         
         public MySqlConnection getCon()
         {
