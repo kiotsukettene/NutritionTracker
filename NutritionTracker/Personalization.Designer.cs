@@ -28,26 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personalization));
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.updateChangesBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.personLastNTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.personTargetWeight = new Guna.UI2.WinForms.Guna2TextBox();
+            this.personWeightTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personInfoEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.personGoal2TxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.personGoal1TxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personAgeTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personGenderTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personUserNTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.aboutMeTxtBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.aboutMeTxtBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AboutMeLbl = new System.Windows.Forms.Label();
-            this.personAboutEdittBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -66,11 +71,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.personFitnessGoalsEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.personWeightTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.personTargetWeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2ShadowPanel2.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +91,7 @@
             this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Location = new System.Drawing.Point(320, 57);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(136, 40);
@@ -113,7 +114,7 @@
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Location = new System.Drawing.Point(170, 57);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(136, 40);
@@ -134,7 +135,7 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(20, 57);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(136, 40);
@@ -155,44 +156,279 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.updateChangesBtn);
+            this.guna2ShadowPanel1.Controls.Add(this.label18);
+            this.guna2ShadowPanel1.Controls.Add(this.personLastNTxtBox);
+            this.guna2ShadowPanel1.Controls.Add(this.label16);
+            this.guna2ShadowPanel1.Controls.Add(this.label11);
+            this.guna2ShadowPanel1.Controls.Add(this.label10);
+            this.guna2ShadowPanel1.Controls.Add(this.label9);
+            this.guna2ShadowPanel1.Controls.Add(this.label8);
+            this.guna2ShadowPanel1.Controls.Add(this.label4);
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.personTargetWeight);
             this.guna2ShadowPanel1.Controls.Add(this.personWeightTxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personInfoEditBtn);
             this.guna2ShadowPanel1.Controls.Add(this.personGoal2TxtBox);
-            this.guna2ShadowPanel1.Controls.Add(this.personGoal1TxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personAgeTxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personGenderTxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personUserNTxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personNameTxtBox);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(30, 110);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 13;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.ShadowDepth = 0;
             this.guna2ShadowPanel1.ShadowShift = 0;
             this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(494, 258);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(494, 527);
             this.guna2ShadowPanel1.TabIndex = 14;
+            // 
+            // updateChangesBtn
+            // 
+            this.updateChangesBtn.BorderRadius = 8;
+            this.updateChangesBtn.CheckedState.Parent = this.updateChangesBtn;
+            this.updateChangesBtn.CustomImages.Parent = this.updateChangesBtn;
+            this.updateChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.updateChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateChangesBtn.ForeColor = System.Drawing.Color.White;
+            this.updateChangesBtn.HoverState.Parent = this.updateChangesBtn;
+            this.updateChangesBtn.Location = new System.Drawing.Point(304, 461);
+            this.updateChangesBtn.Name = "updateChangesBtn";
+            this.updateChangesBtn.ShadowDecoration.Parent = this.updateChangesBtn;
+            this.updateChangesBtn.Size = new System.Drawing.Size(123, 36);
+            this.updateChangesBtn.TabIndex = 36;
+            this.updateChangesBtn.Text = "Update Changes";
+            this.updateChangesBtn.Visible = false;
+            this.updateChangesBtn.Click += new System.EventHandler(this.updateChangesBtn_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(265, 372);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(48, 26);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "Goal";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // personLastNTxtBox
+            // 
+            this.personLastNTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personLastNTxtBox.BorderRadius = 8;
+            this.personLastNTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.personLastNTxtBox.DefaultText = "Maloi Momo";
+            this.personLastNTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.personLastNTxtBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.personLastNTxtBox.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.personLastNTxtBox.DisabledState.Parent = this.personLastNTxtBox;
+            this.personLastNTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.personLastNTxtBox.Enabled = false;
+            this.personLastNTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.personLastNTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personLastNTxtBox.FocusedState.Parent = this.personLastNTxtBox;
+            this.personLastNTxtBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personLastNTxtBox.ForeColor = System.Drawing.Color.White;
+            this.personLastNTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personLastNTxtBox.HoverState.Parent = this.personLastNTxtBox;
+            this.personLastNTxtBox.Location = new System.Drawing.Point(75, 232);
+            this.personLastNTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personLastNTxtBox.Name = "personLastNTxtBox";
+            this.personLastNTxtBox.PasswordChar = '\0';
+            this.personLastNTxtBox.PlaceholderText = "";
+            this.personLastNTxtBox.SelectedText = "";
+            this.personLastNTxtBox.SelectionStart = 10;
+            this.personLastNTxtBox.ShadowDecoration.Parent = this.personLastNTxtBox;
+            this.personLastNTxtBox.Size = new System.Drawing.Size(158, 40);
+            this.personLastNTxtBox.TabIndex = 34;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(265, 285);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(157, 26);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Target Weight (kg)";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(264, 201);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 26);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Weight (kg)";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(72, 372);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 26);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Gender";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(264, 116);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 26);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Age";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(70, 285);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 26);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Username";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(71, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 26);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Last Name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(72, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "First Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 48);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "About Me";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // personTargetWeight
+            // 
+            this.personTargetWeight.BorderColor = System.Drawing.Color.Gray;
+            this.personTargetWeight.BorderRadius = 8;
+            this.personTargetWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.personTargetWeight.DefaultText = "46 kg";
+            this.personTargetWeight.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.personTargetWeight.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.personTargetWeight.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.personTargetWeight.DisabledState.Parent = this.personTargetWeight;
+            this.personTargetWeight.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.personTargetWeight.Enabled = false;
+            this.personTargetWeight.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.personTargetWeight.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personTargetWeight.FocusedState.Parent = this.personTargetWeight;
+            this.personTargetWeight.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personTargetWeight.ForeColor = System.Drawing.Color.White;
+            this.personTargetWeight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personTargetWeight.HoverState.Parent = this.personTargetWeight;
+            this.personTargetWeight.Location = new System.Drawing.Point(269, 315);
+            this.personTargetWeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personTargetWeight.Name = "personTargetWeight";
+            this.personTargetWeight.PasswordChar = '\0';
+            this.personTargetWeight.PlaceholderText = "";
+            this.personTargetWeight.SelectedText = "";
+            this.personTargetWeight.SelectionStart = 5;
+            this.personTargetWeight.ShadowDecoration.Parent = this.personTargetWeight;
+            this.personTargetWeight.Size = new System.Drawing.Size(158, 40);
+            this.personTargetWeight.TabIndex = 9;
+            // 
+            // personWeightTxtBox
+            // 
+            this.personWeightTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personWeightTxtBox.BorderRadius = 8;
+            this.personWeightTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.personWeightTxtBox.DefaultText = "46 kg";
+            this.personWeightTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.personWeightTxtBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.personWeightTxtBox.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.personWeightTxtBox.DisabledState.Parent = this.personWeightTxtBox;
+            this.personWeightTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.personWeightTxtBox.Enabled = false;
+            this.personWeightTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.personWeightTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personWeightTxtBox.FocusedState.Parent = this.personWeightTxtBox;
+            this.personWeightTxtBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personWeightTxtBox.ForeColor = System.Drawing.Color.White;
+            this.personWeightTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.personWeightTxtBox.HoverState.Parent = this.personWeightTxtBox;
+            this.personWeightTxtBox.Location = new System.Drawing.Point(268, 232);
+            this.personWeightTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personWeightTxtBox.Name = "personWeightTxtBox";
+            this.personWeightTxtBox.PasswordChar = '\0';
+            this.personWeightTxtBox.PlaceholderText = "";
+            this.personWeightTxtBox.SelectedText = "";
+            this.personWeightTxtBox.SelectionStart = 5;
+            this.personWeightTxtBox.ShadowDecoration.Parent = this.personWeightTxtBox;
+            this.personWeightTxtBox.Size = new System.Drawing.Size(158, 40);
+            this.personWeightTxtBox.TabIndex = 8;
             // 
             // personInfoEditBtn
             // 
             this.personInfoEditBtn.CheckedState.Parent = this.personInfoEditBtn;
             this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Image = global::NutritionTracker.Properties.Resources.edit;
+            this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
             this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
-            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
             this.personInfoEditBtn.Name = "personInfoEditBtn";
             this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
             this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
             this.personInfoEditBtn.TabIndex = 7;
+            this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
             // 
             // personGoal2TxtBox
             // 
-            this.personGoal2TxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personGoal2TxtBox.BorderThickness = 0;
+            this.personGoal2TxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personGoal2TxtBox.BorderRadius = 8;
             this.personGoal2TxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personGoal2TxtBox.DefaultText = "Weight Loss";
             this.personGoal2TxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -208,7 +444,7 @@
             this.personGoal2TxtBox.ForeColor = System.Drawing.Color.White;
             this.personGoal2TxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personGoal2TxtBox.HoverState.Parent = this.personGoal2TxtBox;
-            this.personGoal2TxtBox.Location = new System.Drawing.Point(205, 209);
+            this.personGoal2TxtBox.Location = new System.Drawing.Point(268, 403);
             this.personGoal2TxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.personGoal2TxtBox.Name = "personGoal2TxtBox";
             this.personGoal2TxtBox.PasswordChar = '\0';
@@ -216,42 +452,13 @@
             this.personGoal2TxtBox.SelectedText = "";
             this.personGoal2TxtBox.SelectionStart = 11;
             this.personGoal2TxtBox.ShadowDecoration.Parent = this.personGoal2TxtBox;
-            this.personGoal2TxtBox.Size = new System.Drawing.Size(158, 29);
+            this.personGoal2TxtBox.Size = new System.Drawing.Size(158, 40);
             this.personGoal2TxtBox.TabIndex = 6;
-            // 
-            // personGoal1TxtBox
-            // 
-            this.personGoal1TxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personGoal1TxtBox.BorderThickness = 0;
-            this.personGoal1TxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.personGoal1TxtBox.DefaultText = "Goal:";
-            this.personGoal1TxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.personGoal1TxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.personGoal1TxtBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.personGoal1TxtBox.DisabledState.Parent = this.personGoal1TxtBox;
-            this.personGoal1TxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.personGoal1TxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.personGoal1TxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personGoal1TxtBox.FocusedState.Parent = this.personGoal1TxtBox;
-            this.personGoal1TxtBox.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.personGoal1TxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.personGoal1TxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personGoal1TxtBox.HoverState.Parent = this.personGoal1TxtBox;
-            this.personGoal1TxtBox.Location = new System.Drawing.Point(205, 180);
-            this.personGoal1TxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.personGoal1TxtBox.Name = "personGoal1TxtBox";
-            this.personGoal1TxtBox.PasswordChar = '\0';
-            this.personGoal1TxtBox.PlaceholderText = "";
-            this.personGoal1TxtBox.SelectedText = "";
-            this.personGoal1TxtBox.SelectionStart = 5;
-            this.personGoal1TxtBox.ShadowDecoration.Parent = this.personGoal1TxtBox;
-            this.personGoal1TxtBox.Size = new System.Drawing.Size(158, 29);
-            this.personGoal1TxtBox.TabIndex = 5;
             // 
             // personAgeTxtBox
             // 
-            this.personAgeTxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personAgeTxtBox.BorderThickness = 0;
+            this.personAgeTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personAgeTxtBox.BorderRadius = 8;
             this.personAgeTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personAgeTxtBox.DefaultText = "20 years old";
             this.personAgeTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -267,20 +474,21 @@
             this.personAgeTxtBox.ForeColor = System.Drawing.Color.White;
             this.personAgeTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personAgeTxtBox.HoverState.Parent = this.personAgeTxtBox;
-            this.personAgeTxtBox.Location = new System.Drawing.Point(205, 120);
+            this.personAgeTxtBox.Location = new System.Drawing.Point(269, 147);
             this.personAgeTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.personAgeTxtBox.Name = "personAgeTxtBox";
             this.personAgeTxtBox.PasswordChar = '\0';
             this.personAgeTxtBox.PlaceholderText = "";
             this.personAgeTxtBox.SelectedText = "";
+            this.personAgeTxtBox.SelectionStart = 12;
             this.personAgeTxtBox.ShadowDecoration.Parent = this.personAgeTxtBox;
-            this.personAgeTxtBox.Size = new System.Drawing.Size(158, 29);
+            this.personAgeTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personAgeTxtBox.TabIndex = 4;
             // 
             // personGenderTxtBox
             // 
-            this.personGenderTxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personGenderTxtBox.BorderThickness = 0;
+            this.personGenderTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personGenderTxtBox.BorderRadius = 8;
             this.personGenderTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personGenderTxtBox.DefaultText = "female";
             this.personGenderTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -296,7 +504,7 @@
             this.personGenderTxtBox.ForeColor = System.Drawing.Color.White;
             this.personGenderTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personGenderTxtBox.HoverState.Parent = this.personGenderTxtBox;
-            this.personGenderTxtBox.Location = new System.Drawing.Point(205, 92);
+            this.personGenderTxtBox.Location = new System.Drawing.Point(75, 403);
             this.personGenderTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.personGenderTxtBox.Name = "personGenderTxtBox";
             this.personGenderTxtBox.PasswordChar = '\0';
@@ -304,13 +512,13 @@
             this.personGenderTxtBox.SelectedText = "";
             this.personGenderTxtBox.SelectionStart = 6;
             this.personGenderTxtBox.ShadowDecoration.Parent = this.personGenderTxtBox;
-            this.personGenderTxtBox.Size = new System.Drawing.Size(158, 29);
+            this.personGenderTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personGenderTxtBox.TabIndex = 3;
             // 
             // personUserNTxtBox
             // 
-            this.personUserNTxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personUserNTxtBox.BorderThickness = 0;
+            this.personUserNTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personUserNTxtBox.BorderRadius = 8;
             this.personUserNTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personUserNTxtBox.DefaultText = "Maloi";
             this.personUserNTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -326,20 +534,21 @@
             this.personUserNTxtBox.ForeColor = System.Drawing.Color.White;
             this.personUserNTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personUserNTxtBox.HoverState.Parent = this.personUserNTxtBox;
-            this.personUserNTxtBox.Location = new System.Drawing.Point(205, 63);
+            this.personUserNTxtBox.Location = new System.Drawing.Point(76, 315);
             this.personUserNTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.personUserNTxtBox.Name = "personUserNTxtBox";
             this.personUserNTxtBox.PasswordChar = '\0';
             this.personUserNTxtBox.PlaceholderText = "";
             this.personUserNTxtBox.SelectedText = "";
+            this.personUserNTxtBox.SelectionStart = 5;
             this.personUserNTxtBox.ShadowDecoration.Parent = this.personUserNTxtBox;
-            this.personUserNTxtBox.Size = new System.Drawing.Size(158, 29);
+            this.personUserNTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personUserNTxtBox.TabIndex = 2;
             // 
             // personNameTxtBox
             // 
-            this.personNameTxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personNameTxtBox.BorderThickness = 0;
+            this.personNameTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.personNameTxtBox.BorderRadius = 8;
             this.personNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personNameTxtBox.DefaultText = "Maloi Momo";
             this.personNameTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -355,7 +564,7 @@
             this.personNameTxtBox.ForeColor = System.Drawing.Color.White;
             this.personNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personNameTxtBox.HoverState.Parent = this.personNameTxtBox;
-            this.personNameTxtBox.Location = new System.Drawing.Point(205, 34);
+            this.personNameTxtBox.Location = new System.Drawing.Point(76, 147);
             this.personNameTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.personNameTxtBox.Name = "personNameTxtBox";
             this.personNameTxtBox.PasswordChar = '\0';
@@ -363,151 +572,8 @@
             this.personNameTxtBox.SelectedText = "";
             this.personNameTxtBox.SelectionStart = 10;
             this.personNameTxtBox.ShadowDecoration.Parent = this.personNameTxtBox;
-            this.personNameTxtBox.Size = new System.Drawing.Size(158, 29);
+            this.personNameTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personNameTxtBox.TabIndex = 1;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::NutritionTracker.Properties.Resources.Maloi;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(32, 34);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(155, 175);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2ShadowPanel2
-            // 
-            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel2.Controls.Add(this.aboutMeTxtBox2);
-            this.guna2ShadowPanel2.Controls.Add(this.label2);
-            this.guna2ShadowPanel2.Controls.Add(this.aboutMeTxtBox1);
-            this.guna2ShadowPanel2.Controls.Add(this.label1);
-            this.guna2ShadowPanel2.Controls.Add(this.AboutMeLbl);
-            this.guna2ShadowPanel2.Controls.Add(this.personAboutEdittBtn);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.guna2ShadowPanel2.Location = new System.Drawing.Point(30, 384);
-            this.guna2ShadowPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            this.guna2ShadowPanel2.Radius = 13;
-            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel2.ShadowDepth = 0;
-            this.guna2ShadowPanel2.ShadowShift = 0;
-            this.guna2ShadowPanel2.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(494, 258);
-            this.guna2ShadowPanel2.TabIndex = 15;
-            // 
-            // aboutMeTxtBox2
-            // 
-            this.aboutMeTxtBox2.Animated = true;
-            this.aboutMeTxtBox2.AutoSize = true;
-            this.aboutMeTxtBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.aboutMeTxtBox2.BorderThickness = 0;
-            this.aboutMeTxtBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.aboutMeTxtBox2.DefaultText = "I haven\'t filled this out yet.";
-            this.aboutMeTxtBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.aboutMeTxtBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.aboutMeTxtBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.aboutMeTxtBox2.DisabledState.Parent = this.aboutMeTxtBox2;
-            this.aboutMeTxtBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.aboutMeTxtBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.aboutMeTxtBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.aboutMeTxtBox2.FocusedState.Parent = this.aboutMeTxtBox2;
-            this.aboutMeTxtBox2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutMeTxtBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(107)))), ((int)(((byte)(110)))));
-            this.aboutMeTxtBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.aboutMeTxtBox2.HoverState.Parent = this.aboutMeTxtBox2;
-            this.aboutMeTxtBox2.Location = new System.Drawing.Point(24, 179);
-            this.aboutMeTxtBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.aboutMeTxtBox2.Name = "aboutMeTxtBox2";
-            this.aboutMeTxtBox2.PasswordChar = '\0';
-            this.aboutMeTxtBox2.PlaceholderText = "";
-            this.aboutMeTxtBox2.SelectedText = "";
-            this.aboutMeTxtBox2.SelectionStart = 30;
-            this.aboutMeTxtBox2.ShadowDecoration.Parent = this.aboutMeTxtBox2;
-            this.aboutMeTxtBox2.Size = new System.Drawing.Size(194, 32);
-            this.aboutMeTxtBox2.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 150);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "My Inspirations:";
-            // 
-            // aboutMeTxtBox1
-            // 
-            this.aboutMeTxtBox1.Animated = true;
-            this.aboutMeTxtBox1.AutoSize = true;
-            this.aboutMeTxtBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.aboutMeTxtBox1.BorderThickness = 0;
-            this.aboutMeTxtBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.aboutMeTxtBox1.DefaultText = "I haven\'t filled this out yet.";
-            this.aboutMeTxtBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.aboutMeTxtBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.aboutMeTxtBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.aboutMeTxtBox1.DisabledState.Parent = this.aboutMeTxtBox1;
-            this.aboutMeTxtBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.aboutMeTxtBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.aboutMeTxtBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.aboutMeTxtBox1.FocusedState.Parent = this.aboutMeTxtBox1;
-            this.aboutMeTxtBox1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutMeTxtBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(107)))), ((int)(((byte)(110)))));
-            this.aboutMeTxtBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.aboutMeTxtBox1.HoverState.Parent = this.aboutMeTxtBox1;
-            this.aboutMeTxtBox1.Location = new System.Drawing.Point(24, 99);
-            this.aboutMeTxtBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.aboutMeTxtBox1.Name = "aboutMeTxtBox1";
-            this.aboutMeTxtBox1.PasswordChar = '\0';
-            this.aboutMeTxtBox1.PlaceholderText = "";
-            this.aboutMeTxtBox1.SelectedText = "";
-            this.aboutMeTxtBox1.SelectionStart = 30;
-            this.aboutMeTxtBox1.ShadowDecoration.Parent = this.aboutMeTxtBox1;
-            this.aboutMeTxtBox1.Size = new System.Drawing.Size(194, 32);
-            this.aboutMeTxtBox1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 25);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Why I want to get in shape:";
-            // 
-            // AboutMeLbl
-            // 
-            this.AboutMeLbl.AutoSize = true;
-            this.AboutMeLbl.Font = new System.Drawing.Font("Poppins SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutMeLbl.ForeColor = System.Drawing.Color.White;
-            this.AboutMeLbl.Location = new System.Drawing.Point(18, 11);
-            this.AboutMeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AboutMeLbl.Name = "AboutMeLbl";
-            this.AboutMeLbl.Size = new System.Drawing.Size(125, 39);
-            this.AboutMeLbl.TabIndex = 9;
-            this.AboutMeLbl.Text = "About Me";
-            // 
-            // personAboutEdittBtn
-            // 
-            this.personAboutEdittBtn.CheckedState.Parent = this.personAboutEdittBtn;
-            this.personAboutEdittBtn.HoverState.Parent = this.personAboutEdittBtn;
-            this.personAboutEdittBtn.Image = global::NutritionTracker.Properties.Resources.edit;
-            this.personAboutEdittBtn.Location = new System.Drawing.Point(443, 11);
-            this.personAboutEdittBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.personAboutEdittBtn.Name = "personAboutEdittBtn";
-            this.personAboutEdittBtn.PressedState.Parent = this.personAboutEdittBtn;
-            this.personAboutEdittBtn.Size = new System.Drawing.Size(38, 28);
-            this.personAboutEdittBtn.TabIndex = 8;
             // 
             // guna2ShadowPanel3
             // 
@@ -532,7 +598,7 @@
             this.guna2ShadowPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.guna2ShadowPanel3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(551, 190);
-            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             this.guna2ShadowPanel3.Radius = 13;
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Transparent;
@@ -636,7 +702,7 @@
             this.fatComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fatComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
             this.fatComboBox.Location = new System.Drawing.Point(381, 222);
-            this.fatComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fatComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.fatComboBox.Name = "fatComboBox";
             this.fatComboBox.ShadowDecoration.Parent = this.fatComboBox;
             this.fatComboBox.Size = new System.Drawing.Size(84, 36);
@@ -690,7 +756,7 @@
             this.proteinComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proteinComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
             this.proteinComboBox.Location = new System.Drawing.Point(381, 281);
-            this.proteinComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.proteinComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.proteinComboBox.Name = "proteinComboBox";
             this.proteinComboBox.ShadowDecoration.Parent = this.proteinComboBox;
             this.proteinComboBox.Size = new System.Drawing.Size(84, 36);
@@ -744,7 +810,7 @@
             this.carbsComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbsComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
             this.carbsComboBox.Location = new System.Drawing.Point(381, 166);
-            this.carbsComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.carbsComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.carbsComboBox.Name = "carbsComboBox";
             this.carbsComboBox.ShadowDecoration.Parent = this.carbsComboBox;
             this.carbsComboBox.Size = new System.Drawing.Size(84, 36);
@@ -802,7 +868,7 @@
             this.caloComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caloComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
             this.caloComboBox.Location = new System.Drawing.Point(381, 113);
-            this.caloComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.caloComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.caloComboBox.Name = "caloComboBox";
             this.caloComboBox.ShadowDecoration.Parent = this.caloComboBox;
             this.caloComboBox.Size = new System.Drawing.Size(84, 36);
@@ -910,73 +976,13 @@
             // 
             this.personFitnessGoalsEditBtn.CheckedState.Parent = this.personFitnessGoalsEditBtn;
             this.personFitnessGoalsEditBtn.HoverState.Parent = this.personFitnessGoalsEditBtn;
-            this.personFitnessGoalsEditBtn.Image = global::NutritionTracker.Properties.Resources.edit;
+            this.personFitnessGoalsEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personFitnessGoalsEditBtn.Image")));
             this.personFitnessGoalsEditBtn.Location = new System.Drawing.Point(449, 11);
-            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(2);
             this.personFitnessGoalsEditBtn.Name = "personFitnessGoalsEditBtn";
             this.personFitnessGoalsEditBtn.PressedState.Parent = this.personFitnessGoalsEditBtn;
             this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(38, 28);
             this.personFitnessGoalsEditBtn.TabIndex = 9;
-            // 
-            // personWeightTxtBox
-            // 
-            this.personWeightTxtBox.BorderColor = System.Drawing.Color.Transparent;
-            this.personWeightTxtBox.BorderThickness = 0;
-            this.personWeightTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.personWeightTxtBox.DefaultText = "46 kg";
-            this.personWeightTxtBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.personWeightTxtBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.personWeightTxtBox.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.personWeightTxtBox.DisabledState.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.personWeightTxtBox.Enabled = false;
-            this.personWeightTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.personWeightTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personWeightTxtBox.FocusedState.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.personWeightTxtBox.ForeColor = System.Drawing.Color.White;
-            this.personWeightTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personWeightTxtBox.HoverState.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.Location = new System.Drawing.Point(205, 150);
-            this.personWeightTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.personWeightTxtBox.Name = "personWeightTxtBox";
-            this.personWeightTxtBox.PasswordChar = '\0';
-            this.personWeightTxtBox.PlaceholderText = "";
-            this.personWeightTxtBox.SelectedText = "";
-            this.personWeightTxtBox.SelectionStart = 5;
-            this.personWeightTxtBox.ShadowDecoration.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.Size = new System.Drawing.Size(112, 29);
-            this.personWeightTxtBox.TabIndex = 8;
-            // 
-            // personTargetWeight
-            // 
-            this.personTargetWeight.BorderColor = System.Drawing.Color.Transparent;
-            this.personTargetWeight.BorderThickness = 0;
-            this.personTargetWeight.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.personTargetWeight.DefaultText = "46 kg";
-            this.personTargetWeight.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.personTargetWeight.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.personTargetWeight.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.personTargetWeight.DisabledState.Parent = this.personTargetWeight;
-            this.personTargetWeight.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.personTargetWeight.Enabled = false;
-            this.personTargetWeight.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.personTargetWeight.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personTargetWeight.FocusedState.Parent = this.personTargetWeight;
-            this.personTargetWeight.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.personTargetWeight.ForeColor = System.Drawing.Color.White;
-            this.personTargetWeight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personTargetWeight.HoverState.Parent = this.personTargetWeight;
-            this.personTargetWeight.Location = new System.Drawing.Point(356, 150);
-            this.personTargetWeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.personTargetWeight.Name = "personTargetWeight";
-            this.personTargetWeight.PasswordChar = '\0';
-            this.personTargetWeight.PlaceholderText = "";
-            this.personTargetWeight.SelectedText = "";
-            this.personTargetWeight.SelectionStart = 5;
-            this.personTargetWeight.ShadowDecoration.Parent = this.personTargetWeight;
-            this.personTargetWeight.Size = new System.Drawing.Size(112, 29);
-            this.personTargetWeight.TabIndex = 9;
             // 
             // Personalization
             // 
@@ -985,7 +991,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1095, 669);
             this.Controls.Add(this.guna2ShadowPanel3);
-            this.Controls.Add(this.guna2ShadowPanel2);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
@@ -995,9 +1000,7 @@
             this.Name = "Personalization";
             this.Text = "Personalization";
             this.guna2ShadowPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.guna2ShadowPanel2.ResumeLayout(false);
-            this.guna2ShadowPanel2.PerformLayout();
+            this.guna2ShadowPanel1.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel3.PerformLayout();
             this.ResumeLayout(false);
@@ -1013,15 +1016,6 @@
         private System.Windows.Forms.Label DashboardLabel;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ImageButton personInfoEditBtn;
-        private Guna.UI2.WinForms.Guna2TextBox personGoal1TxtBox;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.UI2.WinForms.Guna2TextBox aboutMeTxtBox2;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox aboutMeTxtBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label AboutMeLbl;
-        private Guna.UI2.WinForms.Guna2ImageButton personAboutEdittBtn;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -1047,5 +1041,16 @@
         public Guna.UI2.WinForms.Guna2TextBox personWeightTxtBox;
         public Guna.UI2.WinForms.Guna2TextBox personGoal2TxtBox;
         public Guna.UI2.WinForms.Guna2TextBox personTargetWeight;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2TextBox personLastNTxtBox;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2Button updateChangesBtn;
     }
 }

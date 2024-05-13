@@ -15,6 +15,7 @@ namespace NutritionTracker
     {
         Dashboard dash = new Dashboard();
         Personalization personalize = new Personalization();
+       
         public MainForm()
         {
             InitializeComponent();
@@ -74,8 +75,8 @@ namespace NutritionTracker
             dash.carbNum.Text = carbs.ToString();
             dash.proteinNum.Text = protein.ToString();
             dash.fatNum.Text = fat.ToString();
-            dash.targetWeightLabel.Text = targetWeight.ToString() + " kg";
-            dash.weightLbl.Text = weight.ToString() + " kg";
+            dash.targetWeightLabel.Text = targetWeight.ToString();
+            dash.weightLbl.Text = weight.ToString();
             dash.waternum.Text = water.ToString();
             dash.sleepNum.Text = sleep.ToString();
             dash.calRemain.Text = TDEE.ToString();
@@ -88,10 +89,10 @@ namespace NutritionTracker
             personalize.pCarbLabel.Text = carbs.ToString();
             personalize.pProteinLabel.Text = protein.ToString();
             personalize.pFatLabel.Text = fat.ToString();
-            personalize.personAgeTxtBox.Text = age.ToString() + " years old"; 
-            personalize.personWeightTxtBox.Text = weight.ToString() + " kg";
+            personalize.personAgeTxtBox.Text = age.ToString();
+            personalize.personWeightTxtBox.Text = weight.ToString();
             personalize.personGoal2TxtBox.Text = weightGoal;
-            personalize.personTargetWeight.Text = targetWeight.ToString() + " kg";
+            personalize.personTargetWeight.Text = targetWeight.ToString();
 
             if (gender == 0)
             {
@@ -105,9 +106,18 @@ namespace NutritionTracker
         }
         public void PersonalizationRetrieveUserValues(string firstname, string lastname, string username)
         {
-            personalize.personNameTxtBox.Text = firstname + " " + lastname;
+            personalize.personNameTxtBox.Text = firstname;
+            personalize.personLastNTxtBox.Text = lastname;
             personalize.personUserNTxtBox.Text = username;
         }
+       
+        public void PersonalizationUpdateWeights(int targetWeight, int weight)
+        {
+            dash.targetWeightLabel.Text = targetWeight.ToString();
+            dash.weightLbl.Text = weight.ToString();
+        }
+        
+      
         private void MainForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
@@ -117,6 +127,9 @@ namespace NutritionTracker
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
             loadForm(dash);
+            dash.welcomeLabel.Text = "Hello, " + personalize.personNameTxtBox.Text;
+            dash.targetWeightLabel.Text = personalize.personWeightTxtBox.Text;
+            dash.weightLbl.Text = personalize.personTargetWeight.Text;
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.dashboardBtn.Image = global::NutritionTracker.Properties.Resources.home__1_;
             this.fdBtn.Image = global::NutritionTracker.Properties.Resources.add_gray;
