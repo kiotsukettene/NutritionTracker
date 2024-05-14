@@ -183,7 +183,7 @@ namespace NutritionTracker
 
         private void calculatorBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new CreateFood());
+            loadForm(new MyPersonalFood());
             calculatorBtn.Image = Properties.Resources.calc;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;

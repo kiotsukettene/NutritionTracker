@@ -217,3 +217,4 @@ C:\Users\celest\Dropbox\PC\Desktop\NutriTrack_LEGIT\NutritionTracker\obj\Debug\N
 C:\Users\celest\Dropbox\PC\Desktop\NutriTrack_LEGIT\NutritionTracker\obj\Debug\NutritionTracker.csproj.CopyComplete
 C:\Users\celest\Dropbox\PC\Desktop\NutriTrack_LEGIT\NutritionTracker\obj\Debug\NutritionTracker.exe
 C:\Users\celest\Dropbox\PC\Desktop\NutriTrack_LEGIT\NutritionTracker\obj\Debug\NutritionTracker.pdb
+E:\C# PROGRAMS\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.PersonalFoodControl.resources

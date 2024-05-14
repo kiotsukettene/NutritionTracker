@@ -152,6 +152,12 @@
     <Compile Include="MyPersonalFood.Designer.cs">
       <DependentUpon>MyPersonalFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonalFoodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonalFoodControl.Designer.cs">
+      <DependentUpon>PersonalFoodControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personalization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyPersonalFood.resx">
       <DependentUpon>MyPersonalFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalFoodControl.resx">
+      <DependentUpon>PersonalFoodControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personalization.resx">
       <DependentUpon>Personalization.cs</DependentUpon>

@@ -208,7 +208,6 @@
             this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
             this.mainPanel.Size = new System.Drawing.Size(1110, 669);
             this.mainPanel.TabIndex = 2;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // MainForm
             // 
