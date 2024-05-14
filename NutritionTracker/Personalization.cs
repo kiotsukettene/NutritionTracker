@@ -14,7 +14,7 @@ namespace NutritionTracker
     public partial class Personalization : Form
         
     {
-        public event EventHandler DataUpdated;
+   
         DBConnection myCon = new DBConnection();
         
         public Personalization()
@@ -139,68 +139,6 @@ namespace NutritionTracker
             }
         }
 
-        //public void updateMacros()
-        //{
-        //    try
-        //    {
-        //        int carbsPercentage = (carbsComboBox.SelectedIndex + 1) * 5 + 45;
-        //        int fatsPercentage = (fatComboBox.SelectedIndex * 5) + 25; // 25% for fat
-        //        int proteinPercentage = (proteinComboBox.SelectedIndex * 5) + 25; // 25% for protein
-
-        //        int updateCalories = int.Parse(pCalLabel.Text);
-        //        int updateCarbs = int.Parse(pCarbLabel.Text);
-        //        int updateFats = int.Parse(pFatLabel.Text);
-        //        int updateProtein = int.Parse(pProteinLabel.Text);
-        //        string username = personUserNTxtBox.Text;
-
-
-
-        //        updateCarbs=(int)((carbsPercentage / 100) * updateCalories) / 4;
-        //        myCon.openCon();
-
-
-
-        //        //query
-        //        string updateMacrosQuery = @"UPDATE `user_macros` 
-        //                                JOIN user ON user.id = user_macros.user_id 
-        //                                SET user_macros.calories = @new_calories,
-        //                                user_macros.carbs = @new_carbs,
-        //                                user_macros.fat = @new_fat,
-        //                                user_macros.protein = @new_protein 
-        //                                WHERE user.username = @username
-        //                                ";
-
-        //        MySqlCommand updateMacrosCmd = new MySqlCommand(updateMacrosQuery, myCon.getCon());
-        //        updateMacrosCmd.Parameters.Clear();
-        //        updateMacrosCmd.Parameters.AddWithValue("@new_calories", updateCalories);
-        //        updateMacrosCmd.Parameters.AddWithValue("@new_carbs", updateCarbs);
-        //        updateMacrosCmd.Parameters.AddWithValue("@new_fat", updateFats);
-        //        updateMacrosCmd.Parameters.AddWithValue("@new_protein", updateProtein);
-        //        updateMacrosCmd.Parameters.AddWithValue("@username", username);
-
-        //        int rows = updateMacrosCmd.ExecuteNonQuery();
-        //        if (rows > 0)
-        //        {
-        //            MessageBox.Show("Update Successfully");
-        //            UpdateMacrosChangesBtn.Visible = false;
-        //            pCalLabel.BorderThickness = 0;
-
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Error Update");
-        //        }myCon.closeCon();
-        //    }
-
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error:" + ex.Message);
-
-        //    }
-
-
-
-        //}
 
         public void updateMacros()
         {

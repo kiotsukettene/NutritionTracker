@@ -13,12 +13,17 @@ namespace NutritionTracker
 {
     public partial class MainForm : Form
     {
+        
         Dashboard dash = new Dashboard();
         Personalization personalize = new Personalization();
+        CreateFood create = new CreateFood();
+        FoodDiary fd = new FoodDiary();
+        MyPersonalFood personalFood = new MyPersonalFood();
        
         public MainForm()
         {
             InitializeComponent();
+            
         }
         #region Round Corner for Form
         public void RoundCorners()
@@ -117,6 +122,7 @@ namespace NutritionTracker
             dash.weightLbl.Text = weight.ToString();
         }
         
+     
       
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -152,7 +158,8 @@ namespace NutritionTracker
 
         private void fdBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new FoodDiary());
+            loadForm(fd);
+            
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -166,6 +173,7 @@ namespace NutritionTracker
         private void personalizationBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalize);
+            
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -183,7 +191,9 @@ namespace NutritionTracker
 
         private void calculatorBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new MyPersonalFood());
+            loadForm(personalFood);
+            personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
+            create.label43.Text = personalize.personUserNTxtBox.Text;
             calculatorBtn.Image = Properties.Resources.calc;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;

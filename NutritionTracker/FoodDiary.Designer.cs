@@ -442,7 +442,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dbDateTime;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ShadowPanel fdTotalPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
@@ -464,5 +463,6 @@
         private Guna.UI2.WinForms.Guna2Button addFoodBtn;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel totalTxtPanel;
+        public System.Windows.Forms.Label label6;
     }
 }

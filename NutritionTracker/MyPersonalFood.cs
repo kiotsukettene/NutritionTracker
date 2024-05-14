@@ -10,13 +10,25 @@ using System.Windows.Forms;
 
 namespace NutritionTracker
 {
+    
     public partial class MyPersonalFood : Form
     {
+        CreateFood create = new CreateFood();
         public MyPersonalFood()
         {
             InitializeComponent();
+           
         }
-
+        #region TabPanels
+        void loadForm(Form panel)
+        {
+            mainPanel.Controls.Clear();
+            panel.TopLevel = false;
+            mainPanel.Controls.Add(panel);
+            panel.Dock = DockStyle.Fill;
+            panel.Show();
+        }
+        #endregion
         private void DynamicPersonalFoodList()
         {
             FoodListPanel.Controls.Clear();
@@ -44,6 +56,20 @@ namespace NutritionTracker
         private void MyPersonalFood_Load(object sender, EventArgs e)
         {
             DynamicPersonalFoodList();
+            usernameLbl.Visible = false;
+        }
+
+        private void createFood(object sender, EventArgs e)
+        {
+            loadForm(create);
+            create.label43.Text = usernameLbl.Text;
+            PersonalFoodLbl.Visible = false;
+            foodListLbl.Visible = false;
+            viewLbl.Visible = false;
+            createFoodBtn.Visible = false;
+            nutritionFactsPanel.Visible = false;
+            FoodListPanel.Visible = false;
+            
         }
     }
 }

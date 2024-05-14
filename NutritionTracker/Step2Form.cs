@@ -88,6 +88,7 @@ namespace NutritionTracker
 
                 myCon.openCon();
 
+
                 string stepsDataQuery = "INSERT INTO user_fitnessdata (user_id, weight, height, age, gender, activity_level, weight_goal, target_weight)\r\nSELECT user.id, @weight, @height, @age, @gender, @activity_level, @weight_goal, @target_weight\r\nFROM user\r\nWHERE user.username =@username;";
 
                 MySqlCommand cmd = new MySqlCommand(stepsDataQuery, myCon.getCon());

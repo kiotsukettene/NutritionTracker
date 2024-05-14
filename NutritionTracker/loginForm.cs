@@ -20,14 +20,14 @@ namespace NutritionTracker
     
     public partial class loginForm : Form
     {
+        public string username;
         DBConnection myCon = new DBConnection();
         MainForm main = new MainForm();
 
         public loginForm()
         {
             InitializeComponent();
-            string username = loginUserBox.Text;
-            string password = loginPassBox.Text;
+           
            
         }
 
@@ -76,7 +76,8 @@ namespace NutritionTracker
         public void Login()
 
         {
-            string username = loginUserBox.Text.Trim();
+            
+            username = loginUserBox.Text.Trim();
             string password = loginPassBox.Text.Trim();
 
             if (username == "" || password == "")
@@ -117,9 +118,10 @@ namespace NutritionTracker
                             //int protein = DR.GetInt32("protein");
                             //int water = DR.GetInt32("water");
                             //int sleep = DR.GetInt32("sleep");
-
+                           
                             main.DashboardRetrieveValues(fname);
                             main.PersonalizationRetrieveUserValues(fname, lname, userDisplay);
+                            
                             //main.RetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
                         }
                         
@@ -131,7 +133,7 @@ namespace NutritionTracker
                         int dataFilled = Convert.ToInt32(selectCmd.ExecuteScalar());
 
                         
-                        if (dataFilled == 1)
+                       if (dataFilled == 1)
                         {
                             string userDataQuery = @"SELECT u.weight, u.age, u.gender, u.weight_goal, u.target_weight, m.calories, m.carbs, m.fat, m.protein, l.water, l.sleep
                                                     FROM user_fitnessdata u
@@ -158,11 +160,12 @@ namespace NutritionTracker
                                     int protein = dataReader.GetInt32("protein");
                                     int water = dataReader.GetInt32("water");
                                     int sleep = dataReader.GetInt32("sleep");
-    
+                                    
                                     main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight,weight, water, sleep);
                                     main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
                                     main.Show();
-                                    dataReader.Close();
+                                    
+                                dataReader.Close();
                                 }
 
                         }

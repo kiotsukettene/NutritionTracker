@@ -34,7 +34,7 @@ namespace NutritionTracker
         public string username;
         public int sleep;
         public int water;
-        string firstname;
+      
         public Step4Macros(int tDEE, int carbs, int protein, int fat, double carbspercentage, double proteinpercentage, double fatpercentage, int targetWeight, int weight, string username)
         {
             InitializeComponent();
@@ -187,14 +187,16 @@ namespace NutritionTracker
                         int sleep = DR.GetInt32("sleep");
                         string firstname = DR.GetString("firstname");
                         string lastname = DR.GetString("lastname");
+                        
                         main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
                         main.DashboardRetrieveValues(firstname);
                         main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
                         main.PersonalizationRetrieveUserValues(firstname, lastname, username);
+                       
 
                     }
-                    
-                    main.Show();
+                   
+                 
                     
                     this.Hide();
                 }

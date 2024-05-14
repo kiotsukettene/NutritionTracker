@@ -307,6 +307,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(104, 37);
             this.guna2Button1.TabIndex = 18;
             this.guna2Button1.Text = "Search";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // addFoodSearchBox
             // 
@@ -320,7 +321,6 @@
             this.addFoodSearchBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
             this.addFoodSearchBox.DisabledState.Parent = this.addFoodSearchBox;
             this.addFoodSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addFoodSearchBox.Enabled = false;
             this.addFoodSearchBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addFoodSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addFoodSearchBox.FocusedState.Parent = this.addFoodSearchBox;

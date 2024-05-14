@@ -53,6 +53,7 @@ namespace NutritionTracker
             {
                 this.Hide();
                 timer.Enabled = false;
+               
                 loginForm login = new loginForm();
 
                 login.Show();
