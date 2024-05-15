@@ -125,6 +125,12 @@
     <Compile Include="FoodDiary.Designer.cs">
       <DependentUpon>FoodDiary.cs</DependentUpon>
     </Compile>
+    <Compile Include="FoodDiaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FoodDiaryControl.Designer.cs">
+      <DependentUpon>FoodDiaryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FoodDiary.resx">
       <DependentUpon>FoodDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodDiaryControl.resx">
+      <DependentUpon>FoodDiaryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddFood.resx">
       <DependentUpon>FormAddFood.cs</DependentUpon>
@@ -372,6 +381,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hidePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

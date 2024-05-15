@@ -32,21 +32,23 @@ namespace NutritionTracker
             get { return foodDescription; }
             set { foodDescription = value; foodDescLbl.Text = value; }
         }
+        [Category("Custom Props")]
         public string BrandName
         {
             get { return brandName; }
             set { brandName = value; brandNameLbl.Text = value; }
         }
-        
+        [Category("Custom Props")]
         public int ServingSize
         {
             get { return servingSize; }
-            set { servingSize = value; servingSizeLbl.Text = value.ToString(); }
+            set { servingSize = value; servingSizeLbl.Text = value.ToString() + " grams"; }
         }
+        [Category("Custom Props")]
         public int Calories
         {
             get { return calories; }
-            set { calories = value; caloriesLbl.Text = value.ToString(); }
+            set { calories = value; caloriesLbl.Text = value.ToString() + " calories"; }
         }
         #endregion
     }

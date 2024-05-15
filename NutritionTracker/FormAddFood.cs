@@ -21,7 +21,16 @@ namespace NutritionTracker
         {
             InitializeComponent();
         }
-
+        #region TabPanels
+        void loadForm(Form panel)
+        {
+            mainPanel.Controls.Clear();
+            panel.TopLevel = false;
+            mainPanel.Controls.Add(panel);
+            panel.Dock = DockStyle.Fill;
+            panel.Show();
+        }
+        #endregion
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             string foodItem = addFoodSearchBox.Text;
@@ -74,6 +83,16 @@ namespace NutritionTracker
                 }
             }
 
+        }
+
+        private void FormAddFood_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            loadForm(new FoodDiary());
         }
     }
 }

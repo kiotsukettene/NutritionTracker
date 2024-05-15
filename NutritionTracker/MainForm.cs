@@ -23,7 +23,7 @@ namespace NutritionTracker
         public MainForm()
         {
             InitializeComponent();
-            
+          
         }
         #region Round Corner for Form
         public void RoundCorners()
@@ -128,6 +128,7 @@ namespace NutritionTracker
         {
             RoundCorners();
             loadForm(dash);
+            personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
@@ -155,11 +156,11 @@ namespace NutritionTracker
             personalizationBtn.BackColor = Color.Transparent;
             calculatorBtn.BackColor = Color.Transparent;
         }
-
+          
         private void fdBtn_Click(object sender, EventArgs e)
         {
             loadForm(fd);
-            
+            fd.DynamicFoodDiary();
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -192,6 +193,7 @@ namespace NutritionTracker
         private void calculatorBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalFood);
+            
             personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
             create.label43.Text = personalize.personUserNTxtBox.Text;
             calculatorBtn.Image = Properties.Resources.calc;

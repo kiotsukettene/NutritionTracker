@@ -88,7 +88,7 @@
             this.PersonalFoodLbl.AutoSize = true;
             this.PersonalFoodLbl.Font = new System.Drawing.Font("Poppins SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonalFoodLbl.ForeColor = System.Drawing.Color.White;
-            this.PersonalFoodLbl.Location = new System.Drawing.Point(14, 1);
+            this.PersonalFoodLbl.Location = new System.Drawing.Point(12, 0);
             this.PersonalFoodLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PersonalFoodLbl.Name = "PersonalFoodLbl";
             this.PersonalFoodLbl.Size = new System.Drawing.Size(351, 56);
@@ -99,7 +99,7 @@
             // 
             this.FoodListPanel.AutoScroll = true;
             this.FoodListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.FoodListPanel.Location = new System.Drawing.Point(21, 131);
+            this.FoodListPanel.Location = new System.Drawing.Point(19, 130);
             this.FoodListPanel.Name = "FoodListPanel";
             this.FoodListPanel.Size = new System.Drawing.Size(492, 490);
             this.FoodListPanel.TabIndex = 18;
@@ -117,7 +117,7 @@
             this.createFoodBtn.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createFoodBtn.ForeColor = System.Drawing.Color.White;
             this.createFoodBtn.HoverState.Parent = this.createFoodBtn;
-            this.createFoodBtn.Location = new System.Drawing.Point(930, 12);
+            this.createFoodBtn.Location = new System.Drawing.Point(928, 11);
             this.createFoodBtn.Name = "createFoodBtn";
             this.createFoodBtn.ShadowDecoration.Parent = this.createFoodBtn;
             this.createFoodBtn.Size = new System.Drawing.Size(138, 45);
@@ -170,7 +170,7 @@
             this.nutritionFactsPanel.Controls.Add(this.label4);
             this.nutritionFactsPanel.Controls.Add(this.brandNameLbl);
             this.nutritionFactsPanel.Controls.Add(this.label3);
-            this.nutritionFactsPanel.Location = new System.Drawing.Point(557, 63);
+            this.nutritionFactsPanel.Location = new System.Drawing.Point(555, 62);
             this.nutritionFactsPanel.Name = "nutritionFactsPanel";
             this.nutritionFactsPanel.Size = new System.Drawing.Size(511, 594);
             this.nutritionFactsPanel.TabIndex = 20;
@@ -676,7 +676,7 @@
             this.foodListLbl.AutoSize = true;
             this.foodListLbl.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodListLbl.ForeColor = System.Drawing.Color.White;
-            this.foodListLbl.Location = new System.Drawing.Point(16, 63);
+            this.foodListLbl.Location = new System.Drawing.Point(14, 62);
             this.foodListLbl.Name = "foodListLbl";
             this.foodListLbl.Size = new System.Drawing.Size(137, 48);
             this.foodListLbl.TabIndex = 101;
@@ -686,7 +686,7 @@
             // 
             this.viewLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewLbl.ForeColor = System.Drawing.Color.White;
-            this.viewLbl.Location = new System.Drawing.Point(20, 103);
+            this.viewLbl.Location = new System.Drawing.Point(18, 102);
             this.viewLbl.Name = "viewLbl";
             this.viewLbl.Size = new System.Drawing.Size(502, 25);
             this.viewLbl.TabIndex = 102;
@@ -694,7 +694,13 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.viewLbl);
             this.mainPanel.Controls.Add(this.usernameLbl);
+            this.mainPanel.Controls.Add(this.foodListLbl);
+            this.mainPanel.Controls.Add(this.PersonalFoodLbl);
+            this.mainPanel.Controls.Add(this.nutritionFactsPanel);
+            this.mainPanel.Controls.Add(this.FoodListPanel);
+            this.mainPanel.Controls.Add(this.createFoodBtn);
             this.mainPanel.Location = new System.Drawing.Point(1, 1);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1109, 671);
@@ -716,12 +722,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1110, 669);
-            this.Controls.Add(this.viewLbl);
-            this.Controls.Add(this.foodListLbl);
-            this.Controls.Add(this.nutritionFactsPanel);
-            this.Controls.Add(this.createFoodBtn);
-            this.Controls.Add(this.FoodListPanel);
-            this.Controls.Add(this.PersonalFoodLbl);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MyPersonalFood";
@@ -730,8 +730,8 @@
             this.nutritionFactsPanel.ResumeLayout(false);
             this.nutritionFactsPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
