@@ -6,9 +6,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace NutritionTracker
 {
@@ -17,6 +20,7 @@ namespace NutritionTracker
     {
         CreateFood create = new CreateFood();
         DBConnection myCon = new DBConnection();
+        NutritionFacts nf = new NutritionFacts();
         public string username;
         public MyPersonalFood()
         {
@@ -58,140 +62,196 @@ namespace NutritionTracker
             }
         }
 
-        //public void FoodSelection()
-        //{
-        //    try
-        //    {
-        //        myCon.openCon();
-
-        //        username = usernameLbl.Text;
-        //        string selectFoodQuery = @"SELECT user_personalfood.user_id,  user_personalfood.brand,  user_personalfood.food_desc,  user_personalfood.serving_size,  user_personalfood.calories
-        //                           FROM user_personalfood
-        //                           JOIN user ON user.id = user_personalfood.user_id
-        //                           WHERE user.username = @username;";
-
-        //        MySqlCommand selectCmd = new MySqlCommand(selectFoodQuery, myCon.getCon());
-        //        selectCmd.Parameters.AddWithValue("@username", username);
-
-        //        MySqlDataAdapter adapter = new MySqlDataAdapter(selectCmd);
-        //        DataTable dataTable = new DataTable();
-        //        adapter.Fill(dataTable);
-
-        //        // Clear any existing controls in the panel before adding new ones
-        //        FoodListPanel.Controls.Clear();
-
-        //        int rowCount = dataTable.Rows.Count;
-        //        if (rowCount > 0)
-        //        {
-        //            PersonalFoodControl[] foodList = new PersonalFoodControl[rowCount];
-
-        //            for (int i = 0; i < foodList.Length; i++)
-        //            {
-        //                foodList[i] = new PersonalFoodControl
-        //                {
-        //                    FoodDescription = dataTable.Rows[i]["food_desc"].ToString(),
-        //                    BrandName = dataTable.Rows[i]["brand"].ToString(),
-        //                    ServingSize = (int)(dataTable.Rows[i]["serving_size"]),
-        //                    Calories = (int)(dataTable.Rows[i]["calories"])
-        //                };
-
-        //                // Add the control to the panel
-        //                FoodListPanel.Controls.Add(foodList[i]);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("No food items found for the specified user.");
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show("Error: " + e.Message);
-        //    }
-        //    finally
-        //    {
-        //        // Ensure the connection is closed properly
-        //        myCon.closeCon();
-        //    }
-        //}
-
-        public void FoodSelection(string username)
+        public void FoodSelection()
         {
             try
             {
-                username = usernameLbl.Text;
+                string username = usernameLbl.Text;
+                
                 myCon.openCon();
-               
-                string checkUserQuery = "SELECT id FROM user WHERE username = @username";
-                MySqlCommand checkUserCmd = new MySqlCommand(checkUserQuery, myCon.getCon());
-                checkUserCmd.Parameters.AddWithValue("@username", username);
-                object userId = checkUserCmd.ExecuteScalar();
-
-                if (userId == null)
-                {
-                    MessageBox.Show("Username does not exist.");
-                    myCon.closeCon();
-                    return;
-                }
-
-                string selectFoodQuery = @"SELECT user.id, brand, food_desc, serving_size, calories  FROM user_personalfood
+            
+                string selectFoodQuery = @"SELECT brand, food_desc, serving_size, serving_unit, calories, carbs, total_fat, protein 
+                                    FROM user_personalfood
                                   JOIN user ON user.id = user_personalfood.user_id
                                  WHERE user.username = @username;";
 
                 MySqlCommand selectCmd = new MySqlCommand(selectFoodQuery, myCon.getCon());
-               
-                selectCmd.Parameters.AddWithValue("@username", username);
-
                 MySqlDataAdapter adapter = new MySqlDataAdapter(selectCmd);
+                selectCmd.Parameters.AddWithValue("@username", username);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
                 int rowCount = dataTable.Rows.Count;
                 if (rowCount != 0)
                 {
-                    PersonalFoodControl[] foodList = new PersonalFoodControl[rowCount];
-
+                    FoodListPanel.Controls.Clear();
                     for (int i = 0; i < rowCount; i++)
                     {
-                        foodList[i] = new PersonalFoodControl();
 
-                        foodList[i].FoodDescription = dataTable.Rows[i]["food_desc"].ToString();
-                        foodList[i].BrandName = dataTable.Rows[i]["brand"].ToString(); ;
-                        foodList[i].ServingSize = (int)dataTable.Rows[i]["serving_size"];
-                        foodList[i].Calories = ((int)dataTable.Rows[i]["calories"]);
-
-                        FoodListPanel.Controls.Add(foodList[i]);
+                        PersonalFoodControl foodList = new PersonalFoodControl
+                        {
+                            FoodDescription = dataTable.Rows[i]["food_desc"].ToString(),
+                            BrandName = dataTable.Rows[i]["brand"].ToString(),
+                            ServingSize = (int)dataTable.Rows[i]["serving_size"],
+                            Calories = ((int)dataTable.Rows[i]["calories"]),
+                            ServingUnit = dataTable.Rows[i]["serving_unit"].ToString(),
+                            Carbs = (int)dataTable.Rows[i]["carbs"],
+                            Fat = (int)dataTable.Rows[i]["total_fat"],
+                            Protein = (int)dataTable.Rows[i]["protein"]
+                        };
+                            FoodListPanel.Controls.Add(foodList);
+                            foodList.Click += PersonalFood_Click ;
+                        
+                            
+                        //foodList.Tag = new
+                        //{
+                        //    ServingUnit = dataTable.Rows[i]["serving_unit"],
+                        //    Carbs = (int)dataTable.Rows[i]["carbs"],
+                        //    Fat = (int)dataTable.Rows[i]["total_fat"],
+                        //    Protein = (int)dataTable.Rows[i]["protein"]
+                        //};
                     }
 
-                    
                 }
-                else
-                {
-                    MessageBox.Show("Error selection");
-                }
+
+                myCon.closeCon();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Error:" + e.Message);
             }
+        }
+
+        public void PersonalFood_Click(object sender, EventArgs e)
+        {
+            PersonalFoodControl obj = (PersonalFoodControl)sender;
+            loadForm(nf);
+            panel1.Visible = false;
+            createFoodBtn.Visible = true;
+            nf.foodName.Text = (obj.FoodDescription);
+            nf.servingsBox.Text = obj.ServingSize.ToString();
+            nf.chartCal.Text = obj.Calories.ToString();
+            nf.calLabel.Text = obj.Calories.ToString() + " kcal";
+            nf.unitBox.Text = obj.ServingUnit;
+            nf.carbLabel.Text = obj.Carbs.ToString() + " g";
+            nf.fatLabel.Text = obj.Fat.ToString() + " g";
+            nf.totalProteinLabel.Text = obj.Protein.ToString() + " g";
+            //dynamic additionalData = obj.Tag;
+            //if (additionalData != null)
+            //{
+            //    nf.unitBox.Text = additionalData.ServingUnit;
+            //    nf.carbLabel.Text = additionalData.Carbs.ToString();
+            //    nf.fatLabel.Text = additionalData.Fat.ToString();
+            //    nf.totalProteinLabel.Text = additionalData.Protein.ToString();
+            //}
+
+            double totalMacronutrients = obj.Carbs + obj.Fat +obj.Protein;
+
+            double proteinPercentage = totalMacronutrients > 0 ? (obj.Protein / totalMacronutrients) * 100 : 0;
+            double fatPercentage = totalMacronutrients > 0 ? (obj.Fat / totalMacronutrients) * 100 : 0;
+            double carbohydratesPercentage = totalMacronutrients > 0 ? (obj.Carbs/ totalMacronutrients) * 100 : 0;
+
+            nf.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}% Fat";
+            nf.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}% Protein";
+            nf.carbPercentLbl.Text = $"{carbohydratesPercentage.ToString("F2")}% Carb";
+        }
+        public void InsertFood()
+        {
 
 
+            myCon.openCon();
+            try
+            {
+                string brandname = brandTxtBox.Text;
+                string foodDesc = foodDescTxtBox.Text;
+                int servingSize = int.Parse(servingValueBox.Text);
+                string servingUnit = servingUnitBox.Text;
+                int servingContainer = int.Parse(servingContainerBox.Text);
+                int cal = int.Parse(caloriesCreateBox.Text);
+                int carb = int.Parse(totalCarbCreateBox.Text);
+                int fat = int.Parse(totalFatCreateBox.Text);
+                int protein = int.Parse(totalProteinCreateBox.Text);
+                string username = usernameLbl.Text;
 
+                string insertFoodQuery = @"INSERT INTO `user_personalfood`(`user_id`, `brand`, `food_desc`, `serving_size`, `serving_unit`, `serving_container`, `calories`, `carbs`, `total_fat`, `protein`)
+                                        SELECT user.id, @brand, @food_desc, @serving_size, @serving_unit, @serving_container, @calories, @carbs, @total_fat, @protein
+                                        FROM user
+                                        WHERE user.username = @username;";
+                MySqlCommand insertCommand = new MySqlCommand(insertFoodQuery, myCon.getCon());
+
+                insertCommand.Parameters.Clear();
+                insertCommand.Parameters.AddWithValue("@brand", brandname);
+                insertCommand.Parameters.AddWithValue("@food_desc", foodDesc);
+                insertCommand.Parameters.AddWithValue("@serving_size", servingSize);
+                insertCommand.Parameters.AddWithValue("@serving_unit", servingUnit);
+                insertCommand.Parameters.AddWithValue("@serving_container", servingContainer);
+                insertCommand.Parameters.AddWithValue("@calories", cal);
+                insertCommand.Parameters.AddWithValue("@carbs", carb);
+                insertCommand.Parameters.AddWithValue("@total_fat", fat);
+                insertCommand.Parameters.AddWithValue("@protein", protein);
+                insertCommand.Parameters.AddWithValue("@username", username);
+
+                int rows = insertCommand.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    MessageBox.Show("Insert Success");
+                    brandTxtBox.Text = "";
+                    foodDescTxtBox.Text = "";
+                    servingValueBox.Text = "";
+                    servingUnitBox.Text = "";
+                    servingContainerBox.Text = "";
+                    caloriesCreateBox.Text = "";
+                    totalCarbCreateBox.Text = "";
+                    totalFatCreateBox.Text = "";
+                    totalProteinCreateBox.Text = "";
+                    myCon.closeCon();
+                    FoodSelection();
+
+                }
+                else
+                {
+                    MessageBox.Show("Insert not success");
+                }
+
+                myCon.closeCon();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+            finally
+            {
+                myCon.closeCon();
+            }
 
 
         }
         private void MyPersonalFood_Load(object sender, EventArgs e)
         {
-            FoodSelection(username);
-            
+
         }
 
         private void createFood(object sender, EventArgs e)
         {
-            loadForm(create);
-            create.label43.Text = usernameLbl.Text;
-            
-            
+            //loadForm(create);
+            //create.createUserLabel.Text = usernameLbl.Text;
+            panel1.Visible = true;
+            createFoodBtn.Visible = false;
+        }
+
+        private void saveChangesBtn_Click(object sender, EventArgs e)
+        {
+            InsertFood();
+        }
+
+        private void usernameLbl_TextChanged(object sender, EventArgs e)
+        {
+            FoodSelection();
+            panel1.Visible = true;
+            createFoodBtn.Visible = false;
+            //create.label43.Text = usernameLbl.Text;
         }
     }
 }

@@ -114,6 +114,7 @@ namespace NutritionTracker
             personalize.personNameTxtBox.Text = firstname;
             personalize.personLastNTxtBox.Text = lastname;
             personalize.personUserNTxtBox.Text = username;
+            
         }
        
         public void PersonalizationUpdateWeights(int targetWeight, int weight)
@@ -129,11 +130,13 @@ namespace NutritionTracker
             RoundCorners();
             loadForm(dash);
             personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
+            create.createUserLabel.Text = personalize.personUserNTxtBox.Text;
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
             loadForm(dash);
+            
             dash.welcomeLabel.Text = "Hello, " + personalize.personNameTxtBox.Text;
             dash.targetWeightLabel.Text = personalize.personWeightTxtBox.Text;
             dash.weightLbl.Text = personalize.personTargetWeight.Text;
@@ -160,6 +163,7 @@ namespace NutritionTracker
         private void fdBtn_Click(object sender, EventArgs e)
         {
             loadForm(fd);
+           
             fd.DynamicFoodDiary();
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
@@ -174,7 +178,7 @@ namespace NutritionTracker
         private void personalizationBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalize);
-            
+          
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -193,9 +197,10 @@ namespace NutritionTracker
         private void calculatorBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalFood);
+
             
             personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
-            create.label43.Text = personalize.personUserNTxtBox.Text;
+            create.createUserLabel.Text = personalize.personUserNTxtBox.Text;
             calculatorBtn.Image = Properties.Resources.calc;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;

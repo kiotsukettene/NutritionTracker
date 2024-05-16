@@ -68,8 +68,9 @@ namespace NutritionTracker
         }
         private void addFoodBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new FormAddFood());
-            
+            FormAddFood add = new FormAddFood();
+            loadForm(add);
+            add.panel1.Visible = false;
             FDLabel.Visible = false;
 
             

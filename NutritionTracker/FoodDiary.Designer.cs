@@ -32,6 +32,7 @@
             this.dbDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.addFoodBtn = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.foodDiaryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fdTotalPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label25 = new System.Windows.Forms.Label();
@@ -63,8 +64,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
             this.fdTotalPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -131,7 +130,6 @@
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.panel2);
-            this.mainPanel.Controls.Add(this.guna2ComboBox1);
             this.mainPanel.Controls.Add(this.FDLabel);
             this.mainPanel.Controls.Add(this.addFoodBtn);
             this.mainPanel.Controls.Add(this.foodDiaryPanel);
@@ -143,6 +141,14 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1109, 668);
             this.mainPanel.TabIndex = 43;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(22, 533);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1059, 2);
+            this.panel2.TabIndex = 60;
             // 
             // foodDiaryPanel
             // 
@@ -524,43 +530,6 @@
             this.label8.TabIndex = 43;
             this.label8.Text = "Remaining";
             // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownHeight = 100;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.IntegralHeight = false;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Breakfast",
-            "Lunch",
-            "Dinner",
-            "Snacks"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(809, 9);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(133, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 59;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(22, 533);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 2);
-            this.panel2.TabIndex = 60;
-            // 
             // FoodDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +589,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Panel panel2;
     }
 }

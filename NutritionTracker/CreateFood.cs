@@ -15,7 +15,7 @@ namespace NutritionTracker
     public partial class CreateFood : Form
     {
         DBConnection myCon = new DBConnection();
-
+      
 
 
         public CreateFood()
@@ -33,21 +33,24 @@ namespace NutritionTracker
             panel.Show();
         }
         #endregion
+        
         public void InsertFood()
         {
-            string brandname = brandTxtBox.Text;
-            string foodDesc = foodDescTxtBox.Text;
-            int servingSize = int.Parse(servingValueBox.Text);
-            string servingUnit = servingUnitBox.Text;
-            int servingContainer = int.Parse(servingContainerBox.Text);
-            int cal = int.Parse(caloriesCreateBox.Text);
-            int carb = int.Parse(totalCarbCreateBox.Text);
-            int fat = int.Parse(totalFatCreateBox.Text);
-            int protein = int.Parse(totalProteinCreateBox.Text);
-            string username = label43.Text;
+
 
             myCon.openCon();
-            try {
+            try
+            {
+                string brandname = brandTxtBox.Text;
+                string foodDesc = foodDescTxtBox.Text;
+                int servingSize = int.Parse(servingValueBox.Text);
+                string servingUnit = servingUnitBox.Text;
+                int servingContainer = int.Parse(servingContainerBox.Text);
+                int cal = int.Parse(caloriesCreateBox.Text);
+                int carb = int.Parse(totalCarbCreateBox.Text);
+                int fat = int.Parse(totalFatCreateBox.Text);
+                int protein = int.Parse(totalProteinCreateBox.Text);
+                string username = createUserLabel.Text;
 
                 string insertFoodQuery = @"INSERT INTO `user_personalfood`(`user_id`, `brand`, `food_desc`, `serving_size`, `serving_unit`, `serving_container`, `calories`, `carbs`, `total_fat`, `protein`)
                                         SELECT user.id, @brand, @food_desc, @serving_size, @serving_unit, @serving_container, @calories, @carbs, @total_fat, @protein
@@ -81,8 +84,11 @@ namespace NutritionTracker
                     totalCarbCreateBox.Text = "";
                     totalFatCreateBox.Text = "";
                     totalProteinCreateBox.Text = "";
-
+                    
+                    myCon.closeCon();
+                    MessageBox.Show("Username after insert: " + username);
                    
+
                 }
                 else
                 {
@@ -95,19 +101,27 @@ namespace NutritionTracker
             catch (Exception e)
             {
                 MessageBox.Show("Error: " + e);
-            } 
-
-            
+            }
+            finally
+            {
+                myCon.closeCon();
+            }
         }
 
-        private void insertFoodBtn(object sender, EventArgs e)
+            private void insertFoodBtn(object sender, EventArgs e)
         {
             InsertFood();
+            
         }
 
         private void CreateFood_Load(object sender, EventArgs e)
         {
            
+            
+        }
+
+        private void label43_TextChanged(object sender, EventArgs e)
+        {
             
         }
     }

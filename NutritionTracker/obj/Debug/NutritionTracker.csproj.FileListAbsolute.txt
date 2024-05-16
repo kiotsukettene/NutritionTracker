@@ -280,3 +280,6 @@ C:\Users\admin\Desktop\NutritionTrackerLEGIT\NutritionTracker\obj\Debug\Nutritio
 C:\Users\admin\Desktop\NutritionTrackerLEGIT\NutritionTracker\obj\Debug\Nutritio.AD6C3C66.Up2Date
 C:\Users\admin\Desktop\NutritionTrackerLEGIT\NutritionTracker\obj\Debug\NutritionTracker.exe
 C:\Users\admin\Desktop\NutritionTrackerLEGIT\NutritionTracker\obj\Debug\NutritionTracker.pdb
+E:\C# PROGRAMS\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.FoodDiaryControl.resources
+E:\C# PROGRAMS\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.NutritionFacts.resources
+E:\C# PROGRAMS\NutritionTracker\NutritionTracker\obj\Debug\NutritionTracker.AddFoodConrol.resources

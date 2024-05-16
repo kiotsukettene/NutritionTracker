@@ -54,7 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.servingContainerBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.CFLabel = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.createUserLabel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -572,17 +572,18 @@
             this.CFLabel.TabIndex = 78;
             this.CFLabel.Text = "Create Foods";
             // 
-            // label43
+            // createUserLabel
             // 
-            this.label43.AutoSize = true;
-            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label43.ForeColor = System.Drawing.Color.Silver;
-            this.label43.Location = new System.Drawing.Point(423, 10);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(73, 17);
-            this.label43.TabIndex = 87;
-            this.label43.Text = "Username";
+            this.createUserLabel.AutoSize = true;
+            this.createUserLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.createUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.createUserLabel.ForeColor = System.Drawing.Color.Silver;
+            this.createUserLabel.Location = new System.Drawing.Point(423, 10);
+            this.createUserLabel.Name = "createUserLabel";
+            this.createUserLabel.Size = new System.Drawing.Size(73, 17);
+            this.createUserLabel.TabIndex = 87;
+            this.createUserLabel.Text = "Username";
+            this.createUserLabel.TextChanged += new System.EventHandler(this.label43_TextChanged);
             // 
             // mainPanel
             // 
@@ -590,7 +591,7 @@
             this.mainPanel.Controls.Add(this.foodDescTxtBox);
             this.mainPanel.Controls.Add(this.label4);
             this.mainPanel.Controls.Add(this.label5);
-            this.mainPanel.Controls.Add(this.label43);
+            this.mainPanel.Controls.Add(this.createUserLabel);
             this.mainPanel.Controls.Add(this.brandTxtBox);
             this.mainPanel.Controls.Add(this.CFLabel);
             this.mainPanel.Controls.Add(this.label3);
@@ -671,7 +672,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Label createUserLabel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

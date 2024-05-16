@@ -24,6 +24,11 @@ namespace NutritionTracker
         private string brandName;
         private int servingSize;
         private int calories;
+        private string servingUnit;
+        private int servingContainer;
+        private int carbs;
+        private int total_fat;
+        private int protein;
 
         [Category("Custom Props")]
 
@@ -50,6 +55,54 @@ namespace NutritionTracker
             get { return calories; }
             set { calories = value; caloriesLbl.Text = value.ToString() + " calories"; }
         }
+        [Category("Custom Props")]
+        public string ServingUnit
+        {
+            get { return servingUnit; }
+            set { servingUnit = value; }
+        }
+        [Category("Custom Props")]
+        public int ServingContainer
+        {
+            get { return servingContainer; }
+            set { servingContainer = value; }
+        }
+        [Category("Custom Props")]
+        public int Carbs
+        {
+            get { return carbs; }
+            set { carbs = value; }
+        }
+        [Category("Custom Props")]
+        public int Fat
+        {
+            get { return total_fat  ; }
+            set { total_fat = value; }
+        }
+        [Category("Custom Props")]
+        public int Protein
+        {
+            get { return protein; }
+            set { protein = value; }
+        }
+        private object tag;
+
+        public object Tag
+        {
+            get { return tag; }
+            set { tag = value; }
+        }
         #endregion
+
+
+        private void foodDescLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PersonalFoodControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

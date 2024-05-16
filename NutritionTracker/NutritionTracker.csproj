@@ -106,6 +106,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFoodConrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddFoodConrol.Designer.cs">
+      <DependentUpon>AddFoodConrol.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,12 @@
     <Compile Include="MyPersonalFood.Designer.cs">
       <DependentUpon>MyPersonalFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="NutritionFacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NutritionFacts.Designer.cs">
+      <DependentUpon>NutritionFacts.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalFoodControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +223,9 @@
     <Compile Include="StepsForm.Designer.cs">
       <DependentUpon>StepsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddFoodConrol.resx">
+      <DependentUpon>AddFoodConrol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateFood.resx">
       <DependentUpon>CreateFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyPersonalFood.resx">
       <DependentUpon>MyPersonalFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NutritionFacts.resx">
+      <DependentUpon>NutritionFacts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalFoodControl.resx">
       <DependentUpon>PersonalFoodControl.cs</DependentUpon>
