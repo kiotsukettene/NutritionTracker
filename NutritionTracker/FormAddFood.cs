@@ -14,16 +14,23 @@ using Newtonsoft.Json.Linq;
 using ZstdSharp.Unsafe;
 using static Mysqlx.Datatypes.Scalar.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using Mysqlx.Connection;
+using MySql.Data.MySqlClient;
 
 
 namespace NutritionTracker
 {
     public partial class FormAddFood : Form
     {
+        DBConnection myCon = new DBConnection();
+        FoodDiary fd = new FoodDiary();
+
+        
         public FormAddFood()
         {
             InitializeComponent();
-            nutritionChart();
+           
+
         }
         #region TabPanels
         void loadForm(Form panel)
@@ -113,8 +120,8 @@ namespace NutritionTracker
                         //carbPercentLbl.Text = carbohydratesPercentage.ToString();
                         //fatPercentLbl.Text = fatPercentage.ToString();
                         //proteinPercentLbl.Text = proteinPercentage.ToString();
+
                         AddFoodConrol add = new AddFoodConrol();
-                        
                         add.FoodName = foodName;
                         add.Calories = (int)calories;
                         add.Brand = brandName;
@@ -137,9 +144,10 @@ namespace NutritionTracker
         public void AddFood_Click(object sender, EventArgs e)
         {
             AddFoodConrol add = (AddFoodConrol)sender;
+            int servings = 100;
             foodNameLbl.Text = add.FoodName;
-            servingsBox.Text = 100.ToString();
-            unitBox.Text = "grams";
+            servingsBox.Text = servings.ToString();
+            unitBox.Text = "1 gram";
             calLabel.Text = add.Calories.ToString();
             carbLabel.Text = add.Carbs.ToString();
             fatLabel.Text = add.Fat.ToString();
@@ -159,29 +167,110 @@ namespace NutritionTracker
             chart1.DataBind();
             panel1.Visible = true;
 
+            
+
+           
+
+        }
+
+        public void InsertToFoodDiary()
+        {
+            try
+            {
+                myCon.openCon();
+               DateTime date = DateTime.Now;
+                string addDate = date.ToString("yyyy-MM-dd");
+                string foodname = foodNameLbl.Text;
+                string username = usernameLbl.Text;
+                int servingSize = int.Parse(servingsBox.Text);
+                string unit = unitBox.Text;
+                string meal = mealBox.Text;
+                int cals = int.Parse(calLabel.Text);
+                int fats = int.Parse(fatLabel.Text);
+                int carbs = int.Parse(carbLabel.Text);
+                int proteins = int.Parse(totalProteinLabel.Text);
+
+                string insertFoodQuery = @"INSERT INTO `user_food_diary`(user_id, `food_name`, `serving_size`, `serving_unit`, `meal`, `calories`, carbs, `fat`, `protein`, added_at) 
+                                        SELECT user.id, @food_name, @serving_size, @serving_unit, @meal, @calories,@carbs, @fat, @protein, @added_at
+                                        FROM user WHere user.username = @username;
+                                        ";
+                MySqlCommand insertFoodCmd = new MySqlCommand(insertFoodQuery, myCon.getCon());
+
+                insertFoodCmd.Parameters.Clear();
+                insertFoodCmd.Parameters.AddWithValue("@food_name", foodname);
+                insertFoodCmd.Parameters.AddWithValue("@serving_size", servingSize);
+                insertFoodCmd.Parameters.AddWithValue("@serving_unit", unit);
+                insertFoodCmd.Parameters.AddWithValue("@meal", meal);
+                insertFoodCmd.Parameters.AddWithValue("@calories", cals);
+                insertFoodCmd.Parameters.AddWithValue("@carbs", carbs);
+                insertFoodCmd.Parameters.AddWithValue("@fat", fats);
+                insertFoodCmd.Parameters.AddWithValue("@protein", proteins);
+                insertFoodCmd.Parameters.AddWithValue("@added_at", addDate);
+                insertFoodCmd.Parameters.AddWithValue("@username", username);
+
+                int rows = insertFoodCmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    MessageBox.Show("Success");
+                }
+                else
+                {
+                    MessageBox.Show("Failed");
+                }
+                myCon.closeCon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            
+        }
+
+        public void UpdateNutritionValues()
+        {
+
+            
+
+            //int basecals = int.Parse(calLabel.Text);
+            //int basefats = int.Parse(fatLabel.Text);
+            //int basecarbs = int.Parse(carbLabel.Text);
+            //int baseproteins = int.Parse(totalProteinLabel.Text);
+            //int lastcal = add.Calories;
+            //int lastfat = add.Fat;
+            //int lastproteins = add.Protein;
+            //int lastcarbs = add.Carbs;
+            AddFoodConrol add = new AddFoodConrol();
+            int servingSize = int.Parse(servingsBox.Text);
+
+            add.Calories = int.Parse(calLabel.Text);
+            add.Carbs = int.Parse(carbLabel.Text);
+            add.Fat = int.Parse(fatLabel.Text);
+            add.Protein = int.Parse(totalProteinLabel.Text);
+            double factor  = servingSize / 100;
+
+
+            int calories = (int)(add.Calories * factor) ;
+            int fats = (int)(add.Fat * factor);
+            int carbs = (int)(add.Carbs * factor);  
+            int protein = (int)(add.Protein * factor);
+
+            calLabel.Text = calories.ToString();
+            fatLabel.Text = fats.ToString();
+            carbLabel.Text = carbs.ToString();
+            totalProteinLabel.Text = protein.ToString();
+          
+
         }
         private void FormAddFood_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
         }
-        public void nutritionChart()
-        {
-            AddFoodConrol add = new AddFoodConrol();
-
-            
-            int protein = add.Protein;
-            int fat = add.Fat;
-            int carbs = add.Carbs;
-            // Add new points
-            chart1.Series["Series1"].Points.AddXY("Protein", protein);
-            chart1.Series["Series1"].Points.AddXY("Fat", fat);
-            chart1.Series["Series1"].Points.AddXY("Protein", carbs);
-            chart1.DataBind();
-        }
        
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            loadForm(new FoodDiary());
+            loadForm(fd);
+            fd.fdUsername.Text = usernameLbl.Text;
+
         }
 
         private void searchBtn(object sender, EventArgs e)
@@ -189,132 +278,24 @@ namespace NutritionTracker
          
             API();
             searchFoodPanel.Controls.Clear();
-            //nutritionChart();
+            panel1.Visible = false;
         }
 
-        private void foodNameLbl_Click(object sender, EventArgs e)
+        private void AddToFoodDiaryBtn(object sender, EventArgs e)
         {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chartCal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fatPercentLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CircleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void carbPercentLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CircleButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void proteinPercentLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            InsertToFoodDiary();
+            
+            
         }
 
         private void servingsBox_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void unitBox_TextChanged(object sender, EventArgs e)
+        private void updateValues_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void servingUnitBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void calLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalProteinLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fatLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void carbLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            //UpdateNutritionValues();
         }
     }
 }

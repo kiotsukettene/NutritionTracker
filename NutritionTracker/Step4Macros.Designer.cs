@@ -52,7 +52,7 @@
             // 
             this.loginLbl.AutoSize = true;
             this.loginLbl.Font = new System.Drawing.Font("Poppins", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLbl.ForeColor = System.Drawing.Color.White;
+            this.loginLbl.ForeColor = System.Drawing.Color.Black;
             this.loginLbl.Location = new System.Drawing.Point(111, 139);
             this.loginLbl.Name = "loginLbl";
             this.loginLbl.Size = new System.Drawing.Size(382, 39);
@@ -185,8 +185,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.label4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(497, 350);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -196,7 +197,7 @@
             // 
             // sleepBox
             // 
-            this.sleepBox.BackColor = System.Drawing.Color.Transparent;
+            this.sleepBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.sleepBox.BorderColor = System.Drawing.Color.Gray;
             this.sleepBox.BorderRadius = 12;
             this.sleepBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -206,11 +207,11 @@
             this.sleepBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
             this.sleepBox.DisabledState.Parent = this.sleepBox;
             this.sleepBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sleepBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.sleepBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.sleepBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.sleepBox.FocusedState.Parent = this.sleepBox;
             this.sleepBox.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sleepBox.ForeColor = System.Drawing.Color.White;
+            this.sleepBox.ForeColor = System.Drawing.Color.Black;
             this.sleepBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.sleepBox.HoverState.Parent = this.sleepBox;
             this.sleepBox.Location = new System.Drawing.Point(146, 339);
@@ -229,7 +230,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(147, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 28);
@@ -240,7 +241,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(136)))), ((int)(((byte)(140)))));
+            this.label23.ForeColor = System.Drawing.Color.DimGray;
             this.label23.Location = new System.Drawing.Point(144, 276);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(416, 34);
@@ -250,8 +251,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.label2.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(494, 236);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -261,7 +263,7 @@
             // 
             // waterBox
             // 
-            this.waterBox.BackColor = System.Drawing.Color.Transparent;
+            this.waterBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.waterBox.BorderColor = System.Drawing.Color.Gray;
             this.waterBox.BorderRadius = 12;
             this.waterBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -271,11 +273,11 @@
             this.waterBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
             this.waterBox.DisabledState.Parent = this.waterBox;
             this.waterBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.waterBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.waterBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.waterBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.waterBox.FocusedState.Parent = this.waterBox;
             this.waterBox.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterBox.ForeColor = System.Drawing.Color.White;
+            this.waterBox.ForeColor = System.Drawing.Color.Black;
             this.waterBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.waterBox.HoverState.Parent = this.waterBox;
             this.waterBox.Location = new System.Drawing.Point(146, 225);
@@ -294,7 +296,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(142, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 28);
@@ -311,7 +313,7 @@
             this.submitLastStep.CustomImages.Parent = this.submitLastStep;
             this.submitLastStep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.submitLastStep.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitLastStep.ForeColor = System.Drawing.Color.White;
+            this.submitLastStep.ForeColor = System.Drawing.Color.Black;
             this.submitLastStep.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.submitLastStep.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitLastStep.HoverState.Parent = this.submitLastStep;
@@ -328,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(731, 594);
             this.Controls.Add(this.submitLastStep);
             this.Controls.Add(this.label4);

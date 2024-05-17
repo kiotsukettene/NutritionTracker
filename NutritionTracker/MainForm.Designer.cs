@@ -39,12 +39,15 @@
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.usernameLbl = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.guna2Panel1.Controls.Add(this.usernameLbl);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Controls.Add(this.exitBtn);
             this.guna2Panel1.Controls.Add(this.miniBtn);
@@ -203,11 +206,22 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mainPanel.Location = new System.Drawing.Point(74, 31);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
             this.mainPanel.Size = new System.Drawing.Size(1110, 669);
             this.mainPanel.TabIndex = 2;
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.ForeColor = System.Drawing.Color.Black;
+            this.usernameLbl.Location = new System.Drawing.Point(3, 3);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(88, 25);
+            this.usernameLbl.TabIndex = 104;
+            this.usernameLbl.Text = "username";
             // 
             // MainForm
             // 
@@ -243,6 +257,7 @@
   
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
+        public System.Windows.Forms.Label usernameLbl;
     }
 }
 

@@ -145,5 +145,16 @@ namespace NutritionTracker
             login.Show();
             this.Dispose();
         }
+
+        private void exitBtn_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void miniBtn_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
     }
 }

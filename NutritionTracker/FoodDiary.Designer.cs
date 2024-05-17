@@ -32,19 +32,20 @@
             this.dbDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.addFoodBtn = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.fdUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.foodDiaryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fdTotalPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.fdProtein = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.fdFat = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.fdCarbs = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.fdCal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,7 +75,7 @@
             // 
             this.FDLabel.AutoSize = true;
             this.FDLabel.Font = new System.Drawing.Font("Poppins SemiBold", 24.75F, System.Drawing.FontStyle.Bold);
-            this.FDLabel.ForeColor = System.Drawing.Color.White;
+            this.FDLabel.ForeColor = System.Drawing.Color.Black;
             this.FDLabel.Location = new System.Drawing.Point(20, -2);
             this.FDLabel.Name = "FDLabel";
             this.FDLabel.Size = new System.Drawing.Size(202, 58);
@@ -92,7 +93,7 @@
             this.dbDateTime.CustomFormat = "";
             this.dbDateTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(181)))));
             this.dbDateTime.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbDateTime.ForeColor = System.Drawing.Color.White;
+            this.dbDateTime.ForeColor = System.Drawing.Color.Black;
             this.dbDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dbDateTime.HoverState.Parent = this.dbDateTime;
             this.dbDateTime.Location = new System.Drawing.Point(948, 9);
@@ -114,7 +115,7 @@
             this.addFoodBtn.CustomImages.Parent = this.addFoodBtn;
             this.addFoodBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.addFoodBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addFoodBtn.ForeColor = System.Drawing.Color.White;
+            this.addFoodBtn.ForeColor = System.Drawing.Color.Black;
             this.addFoodBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.addFoodBtn.HoverState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addFoodBtn.HoverState.Parent = this.addFoodBtn;
@@ -129,6 +130,8 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.mainPanel.Controls.Add(this.fdUsername);
             this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.FDLabel);
             this.mainPanel.Controls.Add(this.addFoodBtn);
@@ -142,6 +145,18 @@
             this.mainPanel.Size = new System.Drawing.Size(1109, 668);
             this.mainPanel.TabIndex = 43;
             // 
+            // fdUsername
+            // 
+            this.fdUsername.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdUsername.ForeColor = System.Drawing.Color.Black;
+            this.fdUsername.Location = new System.Drawing.Point(837, 9);
+            this.fdUsername.Name = "fdUsername";
+            this.fdUsername.Size = new System.Drawing.Size(91, 25);
+            this.fdUsername.TabIndex = 104;
+            this.fdUsername.Text = "username";
+            this.fdUsername.TextChanged += new System.EventHandler(this.fdUsername_TextChanged);
+            this.fdUsername.Click += new System.EventHandler(this.fdUsername_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -152,6 +167,8 @@
             // 
             // foodDiaryPanel
             // 
+            this.foodDiaryPanel.AutoScroll = true;
+            this.foodDiaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.foodDiaryPanel.Location = new System.Drawing.Point(22, 109);
             this.foodDiaryPanel.Name = "foodDiaryPanel";
             this.foodDiaryPanel.Size = new System.Drawing.Size(1059, 421);
@@ -160,19 +177,19 @@
             // fdTotalPanel
             // 
             this.fdTotalPanel.BackColor = System.Drawing.Color.Transparent;
-            this.fdTotalPanel.Controls.Add(this.label25);
+            this.fdTotalPanel.Controls.Add(this.fdProtein);
             this.fdTotalPanel.Controls.Add(this.label26);
             this.fdTotalPanel.Controls.Add(this.label27);
-            this.fdTotalPanel.Controls.Add(this.label22);
+            this.fdTotalPanel.Controls.Add(this.fdFat);
             this.fdTotalPanel.Controls.Add(this.label23);
             this.fdTotalPanel.Controls.Add(this.label24);
-            this.fdTotalPanel.Controls.Add(this.label1);
+            this.fdTotalPanel.Controls.Add(this.fdCarbs);
             this.fdTotalPanel.Controls.Add(this.label16);
             this.fdTotalPanel.Controls.Add(this.label17);
-            this.fdTotalPanel.Controls.Add(this.label11);
+            this.fdTotalPanel.Controls.Add(this.fdCal);
             this.fdTotalPanel.Controls.Add(this.label10);
             this.fdTotalPanel.Controls.Add(this.label9);
-            this.fdTotalPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.fdTotalPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.fdTotalPanel.Location = new System.Drawing.Point(554, 540);
             this.fdTotalPanel.Margin = new System.Windows.Forms.Padding(2);
             this.fdTotalPanel.Name = "fdTotalPanel";
@@ -184,17 +201,17 @@
             this.fdTotalPanel.Size = new System.Drawing.Size(527, 125);
             this.fdTotalPanel.TabIndex = 40;
             // 
-            // label25
+            // fdProtein
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(261, 50);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(30, 22);
-            this.label25.TabIndex = 46;
-            this.label25.Text = "100";
+            this.fdProtein.AutoSize = true;
+            this.fdProtein.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdProtein.ForeColor = System.Drawing.Color.Black;
+            this.fdProtein.Location = new System.Drawing.Point(261, 50);
+            this.fdProtein.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fdProtein.Name = "fdProtein";
+            this.fdProtein.Size = new System.Drawing.Size(30, 22);
+            this.fdProtein.TabIndex = 46;
+            this.fdProtein.Text = "100";
             // 
             // label26
             // 
@@ -212,7 +229,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(261, 13);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
@@ -220,17 +237,17 @@
             this.label27.TabIndex = 44;
             this.label27.Text = "100";
             // 
-            // label22
+            // fdFat
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(184, 50);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(30, 22);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "100";
+            this.fdFat.AutoSize = true;
+            this.fdFat.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdFat.ForeColor = System.Drawing.Color.Black;
+            this.fdFat.Location = new System.Drawing.Point(184, 50);
+            this.fdFat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fdFat.Name = "fdFat";
+            this.fdFat.Size = new System.Drawing.Size(30, 22);
+            this.fdFat.TabIndex = 43;
+            this.fdFat.Text = "100";
             // 
             // label23
             // 
@@ -248,7 +265,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(184, 13);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
@@ -256,17 +273,17 @@
             this.label24.TabIndex = 41;
             this.label24.Text = "100";
             // 
-            // label1
+            // fdCarbs
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(113, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 22);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "100";
+            this.fdCarbs.AutoSize = true;
+            this.fdCarbs.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdCarbs.ForeColor = System.Drawing.Color.Black;
+            this.fdCarbs.Location = new System.Drawing.Point(113, 50);
+            this.fdCarbs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fdCarbs.Name = "fdCarbs";
+            this.fdCarbs.Size = new System.Drawing.Size(30, 22);
+            this.fdCarbs.TabIndex = 40;
+            this.fdCarbs.Text = "100";
             // 
             // label16
             // 
@@ -284,7 +301,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(113, 13);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -292,17 +309,17 @@
             this.label17.TabIndex = 38;
             this.label17.Text = "100";
             // 
-            // label11
+            // fdCal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(28, 50);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 22);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "100";
+            this.fdCal.AutoSize = true;
+            this.fdCal.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdCal.ForeColor = System.Drawing.Color.Black;
+            this.fdCal.Location = new System.Drawing.Point(28, 50);
+            this.fdCal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fdCal.Name = "fdCal";
+            this.fdCal.Size = new System.Drawing.Size(30, 22);
+            this.fdCal.TabIndex = 37;
+            this.fdCal.Text = "100";
             // 
             // label10
             // 
@@ -320,7 +337,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(28, 13);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
@@ -351,7 +368,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(4, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -362,7 +379,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(156, 11);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -373,7 +390,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(481, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -384,7 +401,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(391, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -407,7 +424,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(716, 11);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
@@ -430,7 +447,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(550, 11);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
@@ -453,7 +470,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(633, 11);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
@@ -476,7 +493,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(784, 11);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
@@ -534,7 +551,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(1110, 669);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -570,25 +587,26 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel totalTxtPanel;
         public System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ShadowPanel fdTotalPanel;
         private System.Windows.Forms.FlowLayoutPanel foodDiaryPanel;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label fdUsername;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label fdCal;
+        public System.Windows.Forms.Label fdProtein;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.Label fdFat;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label fdCarbs;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label4;
     }
 }

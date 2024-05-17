@@ -77,6 +77,11 @@ namespace NutritionTracker
             get { return protein; }
             set { protein = value; proteinLbl.Text = value.ToString(); }
         }
-        #endregion 
+        #endregion
+
+        private void FoodDiaryControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

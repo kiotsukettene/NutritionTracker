@@ -192,10 +192,11 @@ namespace NutritionTracker
                         main.DashboardRetrieveValues(firstname);
                         main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
                         main.PersonalizationRetrieveUserValues(firstname, lastname, username);
-                       
+                        main.Show();
+
 
                     }
-                   
+                  
                  
                     
                     this.Hide();

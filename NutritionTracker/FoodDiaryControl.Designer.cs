@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mealLbl = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.fdLbl = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -63,10 +63,11 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel1.Controls.Add(this.mealLbl);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -74,10 +75,18 @@
             this.guna2Panel1.Size = new System.Drawing.Size(140, 44);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 48);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1056, 10);
+            this.flowLayoutPanel1.TabIndex = 70;
+            // 
             // mealLbl
             // 
-            this.mealLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mealLbl.ForeColor = System.Drawing.Color.White;
+            this.mealLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealLbl.ForeColor = System.Drawing.Color.Black;
             this.mealLbl.Location = new System.Drawing.Point(2, 11);
             this.mealLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.mealLbl.Name = "mealLbl";
@@ -87,9 +96,10 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.fdLbl);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel2.Location = new System.Drawing.Point(141, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -99,8 +109,8 @@
             // 
             // fdLbl
             // 
-            this.fdLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fdLbl.ForeColor = System.Drawing.Color.White;
+            this.fdLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdLbl.ForeColor = System.Drawing.Color.Black;
             this.fdLbl.Location = new System.Drawing.Point(2, 11);
             this.fdLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fdLbl.Name = "fdLbl";
@@ -110,9 +120,10 @@
             // 
             // guna2Panel3
             // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel3.BorderThickness = 1;
             this.guna2Panel3.Controls.Add(this.sizeLbl);
-            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel3.Location = new System.Drawing.Point(400, 0);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -122,8 +133,8 @@
             // 
             // sizeLbl
             // 
-            this.sizeLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeLbl.ForeColor = System.Drawing.Color.White;
+            this.sizeLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizeLbl.ForeColor = System.Drawing.Color.Black;
             this.sizeLbl.Location = new System.Drawing.Point(2, 11);
             this.sizeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sizeLbl.Name = "sizeLbl";
@@ -133,9 +144,10 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.unitLbl);
-            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel4.Location = new System.Drawing.Point(479, 0);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -145,8 +157,8 @@
             // 
             // unitLbl
             // 
-            this.unitLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unitLbl.ForeColor = System.Drawing.Color.White;
+            this.unitLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitLbl.ForeColor = System.Drawing.Color.Black;
             this.unitLbl.Location = new System.Drawing.Point(2, 11);
             this.unitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unitLbl.Name = "unitLbl";
@@ -156,9 +168,10 @@
             // 
             // guna2Panel5
             // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.Controls.Add(this.calLbl);
-            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel5.Location = new System.Drawing.Point(558, 0);
             this.guna2Panel5.Name = "guna2Panel5";
@@ -168,8 +181,8 @@
             // 
             // calLbl
             // 
-            this.calLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calLbl.ForeColor = System.Drawing.Color.White;
+            this.calLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calLbl.ForeColor = System.Drawing.Color.Black;
             this.calLbl.Location = new System.Drawing.Point(2, 11);
             this.calLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.calLbl.Name = "calLbl";
@@ -179,9 +192,10 @@
             // 
             // guna2Panel6
             // 
+            this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel6.BorderThickness = 1;
             this.guna2Panel6.Controls.Add(this.carbLbl);
-            this.guna2Panel6.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel6.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel6.Location = new System.Drawing.Point(637, 0);
             this.guna2Panel6.Name = "guna2Panel6";
@@ -191,8 +205,8 @@
             // 
             // carbLbl
             // 
-            this.carbLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carbLbl.ForeColor = System.Drawing.Color.White;
+            this.carbLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbLbl.ForeColor = System.Drawing.Color.Black;
             this.carbLbl.Location = new System.Drawing.Point(2, 11);
             this.carbLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.carbLbl.Name = "carbLbl";
@@ -202,9 +216,10 @@
             // 
             // guna2Panel7
             // 
+            this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel7.BorderThickness = 1;
             this.guna2Panel7.Controls.Add(this.fatLbl);
-            this.guna2Panel7.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel7.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel7.Location = new System.Drawing.Point(716, 0);
             this.guna2Panel7.Name = "guna2Panel7";
@@ -214,8 +229,8 @@
             // 
             // fatLbl
             // 
-            this.fatLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatLbl.ForeColor = System.Drawing.Color.White;
+            this.fatLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatLbl.ForeColor = System.Drawing.Color.Black;
             this.fatLbl.Location = new System.Drawing.Point(2, 11);
             this.fatLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fatLbl.Name = "fatLbl";
@@ -225,9 +240,10 @@
             // 
             // guna2Panel8
             // 
+            this.guna2Panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel8.BorderThickness = 1;
             this.guna2Panel8.Controls.Add(this.proteinLbl);
-            this.guna2Panel8.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel8.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel8.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel8.Location = new System.Drawing.Point(795, 0);
             this.guna2Panel8.Name = "guna2Panel8";
@@ -237,8 +253,8 @@
             // 
             // proteinLbl
             // 
-            this.proteinLbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proteinLbl.ForeColor = System.Drawing.Color.White;
+            this.proteinLbl.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinLbl.ForeColor = System.Drawing.Color.Black;
             this.proteinLbl.Location = new System.Drawing.Point(2, 11);
             this.proteinLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.proteinLbl.Name = "proteinLbl";
@@ -248,6 +264,7 @@
             // 
             // guna2Panel9
             // 
+            this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel9.BorderThickness = 1;
             this.guna2Panel9.Controls.Add(this.label9);
             this.guna2Panel9.CustomBorderColor = System.Drawing.Color.White;
@@ -272,6 +289,7 @@
             // 
             // guna2Panel10
             // 
+            this.guna2Panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel10.BorderThickness = 1;
             this.guna2Panel10.Controls.Add(this.label10);
             this.guna2Panel10.CustomBorderColor = System.Drawing.Color.White;
@@ -294,19 +312,11 @@
             this.label10.Text = "Delete";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 48);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1056, 10);
-            this.flowLayoutPanel1.TabIndex = 70;
-            // 
             // FoodDiaryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.guna2Panel10);
             this.Controls.Add(this.guna2Panel9);
             this.Controls.Add(this.guna2Panel8);
@@ -318,7 +328,8 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FoodDiaryControl";
-            this.Size = new System.Drawing.Size(1059, 47);
+            this.Size = new System.Drawing.Size(1059, 45);
+            this.Load += new System.EventHandler(this.FoodDiaryControl_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);

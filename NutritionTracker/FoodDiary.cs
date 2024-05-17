@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms.Suite;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,14 @@ namespace NutritionTracker
 {
     public partial class FoodDiary : Form
     {
+        DBConnection myCon = new DBConnection();
+        
         public FoodDiary()
         {
             InitializeComponent();
             addFoodBtn.Visible = true;
             FDLabel.Visible = true;
-            DynamicFoodDiary();
+            
             totalTxtPanel.Visible = true;
             foodDiaryPanel.Visible = true;
             fdTotalPanel.Visible = true;
@@ -66,12 +69,73 @@ namespace NutritionTracker
             }
 
         }
+
+        public void DisplayFoodDiary()
+        {
+            try
+            {
+                myCon.openCon();
+                DateTime date = DateTime.Now;
+                string username = fdUsername.Text;
+                string added_at = date.ToString("yyyy-MM-dd");
+
+                string selectQuery = @"SELECT food_name, serving_size, serving_unit, meal, calories, carbs, fat, protein 
+                                    FROM user_food_diary
+                                    JOIN user ON user.id = user_food_diary.user_id 
+                                    WHERE user.username = @username AND user_food_diary.added_at = @added_at
+                                    ORDER by meal;";
+
+                MySqlCommand selectCmd = new MySqlCommand(selectQuery, myCon.getCon());
+                selectCmd.Parameters.Clear();
+                selectCmd.Parameters.AddWithValue("@username", username);
+                selectCmd.Parameters.AddWithValue("@added_at", added_at);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(selectCmd);
+
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                int rowCount = dt.Rows.Count;
+
+                if (rowCount > 0)
+                {
+                    foodDiaryPanel.Controls.Clear();
+
+                    for (int i = 0; i < rowCount; i++)
+                    {
+                        FoodDiaryControl fdc = new FoodDiaryControl
+                        {
+                            Meal = dt.Rows[i]["meal"].ToString(),
+                            FoodDesc = dt.Rows[i]["food_name"].ToString(),
+                            ServingSize = (int)dt.Rows[i]["serving_size"],
+                            ServingUnit = dt.Rows[i]["serving_unit"].ToString(),
+                            Calories = (int)dt.Rows[i]["calories"],
+                            Carbs = (int)dt.Rows[i]["carbs"],
+                            Protein = (int)dt.Rows[i]["protein"],
+                            Fat = (int)dt.Rows[i]["fat"]
+                        };
+
+                        foodDiaryPanel.Controls.Add(fdc);
+                        
+                    }
+
+                }
+                myCon.closeCon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+           
+        }
+            
         private void addFoodBtn_Click(object sender, EventArgs e)
         {
             FormAddFood add = new FormAddFood();
             loadForm(add);
             add.panel1.Visible = false;
             FDLabel.Visible = false;
+            add.usernameLbl.Text = fdUsername.Text;
 
             
         }
@@ -79,7 +143,8 @@ namespace NutritionTracker
         
         private void FoodDiary_Load(object sender, EventArgs e)
         {
-            DynamicFoodDiary();
+            //DynamicFoodDiary();
+       
             addFoodBtn.Visible = true;
             FDLabel.Visible = true;
             totalTxtPanel.Visible = true;
@@ -88,6 +153,17 @@ namespace NutritionTracker
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fdUsername_TextChanged(object sender, EventArgs e)
+        {
+            
+            DisplayFoodDiary();
+        }
+
+        private void fdUsername_Click(object sender, EventArgs e)
         {
 
         }

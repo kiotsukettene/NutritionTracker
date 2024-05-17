@@ -114,7 +114,7 @@ namespace NutritionTracker
             personalize.personNameTxtBox.Text = firstname;
             personalize.personLastNTxtBox.Text = lastname;
             personalize.personUserNTxtBox.Text = username;
-            
+            usernameLbl.Text = username;   
         }
        
         public void PersonalizationUpdateWeights(int targetWeight, int weight)
@@ -128,9 +128,13 @@ namespace NutritionTracker
         private void MainForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
+
+           
             loadForm(dash);
+            
             personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
             create.createUserLabel.Text = personalize.personUserNTxtBox.Text;
+            fd.fdUsername.Text = personalize.personUserNTxtBox.Text;
         }
 
         private void dashboardBtn_Click(object sender, EventArgs e)
@@ -164,7 +168,15 @@ namespace NutritionTracker
         {
             loadForm(fd);
            
-            fd.DynamicFoodDiary();
+            fd.DisplayFoodDiary();
+            fd.fdCal.Text = personalize.pCalLabel.Text;
+            fd.fdCarbs.Text = personalize.pCarbLabel.Text;
+            fd.fdFat.Text = personalize.pFatLabel.Text;
+            fd.fdProtein.Text = personalize.pProteinLabel.Text;
+            fd.fdUsername.Text = usernameLbl.Text;
+
+
+
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -199,7 +211,7 @@ namespace NutritionTracker
             loadForm(personalFood);
 
             
-            personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
+            personalFood.usernameLbl.Text = usernameLbl.Text;
             create.createUserLabel.Text = personalize.personUserNTxtBox.Text;
             calculatorBtn.Image = Properties.Resources.calc;
             this.fdBtn.Image = Properties.Resources.add_gray;

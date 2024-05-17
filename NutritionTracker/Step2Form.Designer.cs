@@ -56,7 +56,7 @@
             this.calculateMacrosBtn.CustomImages.Parent = this.calculateMacrosBtn;
             this.calculateMacrosBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.calculateMacrosBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateMacrosBtn.ForeColor = System.Drawing.Color.White;
+            this.calculateMacrosBtn.ForeColor = System.Drawing.Color.Black;
             this.calculateMacrosBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.calculateMacrosBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateMacrosBtn.HoverState.Parent = this.calculateMacrosBtn;
@@ -73,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(168, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 28);
@@ -83,15 +83,16 @@
             // weightGoalBox
             // 
             this.weightGoalBox.BackColor = System.Drawing.Color.Transparent;
+            this.weightGoalBox.BorderColor = System.Drawing.Color.DimGray;
             this.weightGoalBox.BorderRadius = 10;
             this.weightGoalBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.weightGoalBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.weightGoalBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.weightGoalBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.weightGoalBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weightGoalBox.FocusedColor = System.Drawing.Color.Empty;
             this.weightGoalBox.FocusedState.Parent = this.weightGoalBox;
             this.weightGoalBox.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weightGoalBox.ForeColor = System.Drawing.Color.White;
+            this.weightGoalBox.ForeColor = System.Drawing.Color.Black;
             this.weightGoalBox.FormattingEnabled = true;
             this.weightGoalBox.HoverState.Parent = this.weightGoalBox;
             this.weightGoalBox.ItemHeight = 40;
@@ -111,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(168, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 28);
@@ -121,15 +122,16 @@
             // activityLevelBox
             // 
             this.activityLevelBox.BackColor = System.Drawing.Color.Transparent;
+            this.activityLevelBox.BorderColor = System.Drawing.Color.DimGray;
             this.activityLevelBox.BorderRadius = 10;
             this.activityLevelBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.activityLevelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.activityLevelBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.activityLevelBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.activityLevelBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.activityLevelBox.FocusedColor = System.Drawing.Color.Empty;
             this.activityLevelBox.FocusedState.Parent = this.activityLevelBox;
             this.activityLevelBox.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activityLevelBox.ForeColor = System.Drawing.Color.White;
+            this.activityLevelBox.ForeColor = System.Drawing.Color.Black;
             this.activityLevelBox.FormattingEnabled = true;
             this.activityLevelBox.HoverState.Parent = this.activityLevelBox;
             this.activityLevelBox.ItemHeight = 40;
@@ -150,7 +152,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(167, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 28);
@@ -168,7 +170,8 @@
             // guna2Panel4
             // 
             this.guna2Panel4.BorderRadius = 5;
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.FillColor = System.Drawing.Color.DimGray;
+            this.guna2Panel4.ForeColor = System.Drawing.Color.White;
             this.guna2Panel4.Location = new System.Drawing.Point(534, 101);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -180,9 +183,9 @@
             // 
             this.guna2CircleButton4.CheckedState.Parent = this.guna2CircleButton4;
             this.guna2CircleButton4.CustomImages.Parent = this.guna2CircleButton4;
-            this.guna2CircleButton4.FillColor = System.Drawing.Color.White;
+            this.guna2CircleButton4.FillColor = System.Drawing.Color.DimGray;
             this.guna2CircleButton4.Font = new System.Drawing.Font("Poppins SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CircleButton4.ForeColor = System.Drawing.Color.DimGray;
+            this.guna2CircleButton4.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton4.HoverState.Parent = this.guna2CircleButton4;
             this.guna2CircleButton4.Location = new System.Drawing.Point(496, 87);
             this.guna2CircleButton4.Margin = new System.Windows.Forms.Padding(2);
@@ -196,7 +199,8 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BorderRadius = 5;
-            this.guna2Panel3.FillColor = System.Drawing.Color.White;
+            this.guna2Panel3.FillColor = System.Drawing.Color.DimGray;
+            this.guna2Panel3.ForeColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(408, 101);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -208,9 +212,9 @@
             // 
             this.guna2CircleButton3.CheckedState.Parent = this.guna2CircleButton3;
             this.guna2CircleButton3.CustomImages.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.FillColor = System.Drawing.Color.White;
+            this.guna2CircleButton3.FillColor = System.Drawing.Color.DimGray;
             this.guna2CircleButton3.Font = new System.Drawing.Font("Poppins SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CircleButton3.ForeColor = System.Drawing.Color.DimGray;
+            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton3.HoverState.Parent = this.guna2CircleButton3;
             this.guna2CircleButton3.Location = new System.Drawing.Point(370, 87);
             this.guna2CircleButton3.Margin = new System.Windows.Forms.Padding(2);
@@ -280,7 +284,7 @@
             // targetWeightTxtBox
             // 
             this.targetWeightTxtBox.BackColor = System.Drawing.Color.Transparent;
-            this.targetWeightTxtBox.BorderColor = System.Drawing.Color.Gray;
+            this.targetWeightTxtBox.BorderColor = System.Drawing.Color.DimGray;
             this.targetWeightTxtBox.BorderRadius = 12;
             this.targetWeightTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.targetWeightTxtBox.DefaultText = "";
@@ -289,11 +293,11 @@
             this.targetWeightTxtBox.DisabledState.ForeColor = System.Drawing.Color.Transparent;
             this.targetWeightTxtBox.DisabledState.Parent = this.targetWeightTxtBox;
             this.targetWeightTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.targetWeightTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.targetWeightTxtBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.targetWeightTxtBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.targetWeightTxtBox.FocusedState.Parent = this.targetWeightTxtBox;
             this.targetWeightTxtBox.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.targetWeightTxtBox.ForeColor = System.Drawing.Color.White;
+            this.targetWeightTxtBox.ForeColor = System.Drawing.Color.Black;
             this.targetWeightTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.targetWeightTxtBox.HoverState.Parent = this.targetWeightTxtBox;
             this.targetWeightTxtBox.Location = new System.Drawing.Point(173, 399);
@@ -311,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(731, 594);
             this.Controls.Add(this.targetWeightTxtBox);
             this.Controls.Add(this.calculateMacrosBtn);

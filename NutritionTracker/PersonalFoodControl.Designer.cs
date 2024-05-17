@@ -60,7 +60,7 @@
             // 
             this.brandNameLbl.AutoSize = true;
             this.brandNameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brandNameLbl.ForeColor = System.Drawing.Color.DarkGray;
+            this.brandNameLbl.ForeColor = System.Drawing.Color.DimGray;
             this.brandNameLbl.Location = new System.Drawing.Point(22, 42);
             this.brandNameLbl.Name = "brandNameLbl";
             this.brandNameLbl.Size = new System.Drawing.Size(91, 23);
@@ -71,7 +71,7 @@
             // 
             this.servingSizeLbl.AutoSize = true;
             this.servingSizeLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servingSizeLbl.ForeColor = System.Drawing.Color.DarkGray;
+            this.servingSizeLbl.ForeColor = System.Drawing.Color.DimGray;
             this.servingSizeLbl.Location = new System.Drawing.Point(22, 65);
             this.servingSizeLbl.Name = "servingSizeLbl";
             this.servingSizeLbl.Size = new System.Drawing.Size(86, 23);
@@ -82,7 +82,7 @@
             // 
             this.caloriesLbl.AutoSize = true;
             this.caloriesLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caloriesLbl.ForeColor = System.Drawing.Color.DarkGray;
+            this.caloriesLbl.ForeColor = System.Drawing.Color.DimGray;
             this.caloriesLbl.Location = new System.Drawing.Point(22, 88);
             this.caloriesLbl.Name = "caloriesLbl";
             this.caloriesLbl.Size = new System.Drawing.Size(63, 23);
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.Controls.Add(this.caloriesLbl);
             this.Controls.Add(this.servingSizeLbl);
             this.Controls.Add(this.brandNameLbl);
