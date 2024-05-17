@@ -72,7 +72,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(140, 44);
+            this.guna2Panel1.Size = new System.Drawing.Size(142, 44);
             this.guna2Panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -104,7 +104,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(141, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(258, 44);
+            this.guna2Panel2.Size = new System.Drawing.Size(260, 44);
             this.guna2Panel2.TabIndex = 1;
             // 
             // fdLbl
@@ -128,7 +128,7 @@
             this.guna2Panel3.Location = new System.Drawing.Point(400, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel3.Size = new System.Drawing.Size(80, 44);
             this.guna2Panel3.TabIndex = 2;
             // 
             // sizeLbl
@@ -152,7 +152,7 @@
             this.guna2Panel4.Location = new System.Drawing.Point(479, 0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
-            this.guna2Panel4.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel4.Size = new System.Drawing.Size(79, 44);
             this.guna2Panel4.TabIndex = 3;
             // 
             // unitLbl
@@ -176,7 +176,7 @@
             this.guna2Panel5.Location = new System.Drawing.Point(558, 0);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
-            this.guna2Panel5.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel5.Size = new System.Drawing.Size(79, 44);
             this.guna2Panel5.TabIndex = 4;
             // 
             // calLbl
@@ -200,7 +200,7 @@
             this.guna2Panel6.Location = new System.Drawing.Point(637, 0);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
-            this.guna2Panel6.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel6.Size = new System.Drawing.Size(79, 44);
             this.guna2Panel6.TabIndex = 5;
             // 
             // carbLbl
@@ -224,7 +224,7 @@
             this.guna2Panel7.Location = new System.Drawing.Point(716, 0);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.ShadowDecoration.Parent = this.guna2Panel7;
-            this.guna2Panel7.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel7.Size = new System.Drawing.Size(79, 44);
             this.guna2Panel7.TabIndex = 6;
             // 
             // fatLbl
@@ -248,7 +248,7 @@
             this.guna2Panel8.Location = new System.Drawing.Point(795, 0);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.ShadowDecoration.Parent = this.guna2Panel8;
-            this.guna2Panel8.Size = new System.Drawing.Size(78, 44);
+            this.guna2Panel8.Size = new System.Drawing.Size(80, 44);
             this.guna2Panel8.TabIndex = 7;
             // 
             // proteinLbl
@@ -267,7 +267,7 @@
             this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel9.BorderThickness = 1;
             this.guna2Panel9.Controls.Add(this.label9);
-            this.guna2Panel9.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel9.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel9.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel9.Location = new System.Drawing.Point(887, 0);
             this.guna2Panel9.Name = "guna2Panel9";
@@ -292,7 +292,7 @@
             this.guna2Panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2Panel10.BorderThickness = 1;
             this.guna2Panel10.Controls.Add(this.label10);
-            this.guna2Panel10.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Panel10.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel10.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel10.Location = new System.Drawing.Point(968, 0);
             this.guna2Panel10.Name = "guna2Panel10";
@@ -328,7 +328,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "FoodDiaryControl";
-            this.Size = new System.Drawing.Size(1059, 45);
+            this.Size = new System.Drawing.Size(1047, 45);
             this.Load += new System.EventHandler(this.FoodDiaryControl_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);

@@ -152,16 +152,16 @@
             chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisX.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.AxisY.IsLabelAutoFit = false;
             chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisY.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.DimGray;
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.BorderColor = System.Drawing.Color.DimGray;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(20, 57);
@@ -221,7 +221,7 @@
             this.dbDateTime.Size = new System.Drawing.Size(133, 28);
             this.dbDateTime.TabIndex = 7;
             this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dbDateTime.Value = new System.DateTime(2024, 5, 12, 0, 0, 0, 0);
+            this.dbDateTime.Value = new System.DateTime(2024, 5, 18, 0, 0, 0, 0);
             // 
             // label7
             // 
@@ -354,7 +354,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel5.BackColor = System.Drawing.Color.DimGray;
             this.panel5.Location = new System.Drawing.Point(13, 371);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(220, 1);
@@ -429,7 +429,7 @@
             // guna2CircleProgressBar1
             // 
             this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.DarkBlue;
             this.guna2CircleProgressBar1.Location = new System.Drawing.Point(59, 59);
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
@@ -672,7 +672,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel7.BackColor = System.Drawing.Color.DimGray;
             this.panel7.Location = new System.Drawing.Point(7, 83);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(300, 1);
@@ -808,7 +808,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel8.BackColor = System.Drawing.Color.DimGray;
             this.panel8.Location = new System.Drawing.Point(6, 140);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(300, 1);
@@ -816,7 +816,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel9.BackColor = System.Drawing.Color.DimGray;
             this.panel9.Location = new System.Drawing.Point(6, 200);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(300, 1);
@@ -824,7 +824,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel10.BackColor = System.Drawing.Color.DimGray;
             this.panel10.Location = new System.Drawing.Point(7, 260);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(300, 1);
@@ -832,7 +832,7 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel11.BackColor = System.Drawing.Color.DimGray;
             this.panel11.Location = new System.Drawing.Point(6, 320);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(300, 1);
@@ -872,7 +872,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Location = new System.Drawing.Point(6, 385);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 1);

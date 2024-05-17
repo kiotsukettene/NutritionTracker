@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.nutritionFactsPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.chartCal = new System.Windows.Forms.Label();
             this.proteinPercentLbl = new System.Windows.Forms.Label();
@@ -55,41 +55,51 @@
             this.label1 = new System.Windows.Forms.Label();
             this.foodName = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.nutritionFactsPanel.SuspendLayout();
+            this.addToFDBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.updateValues = new Guna.UI2.WinForms.Guna2Button();
+            this.nfUsername = new System.Windows.Forms.Label();
+            this.mealBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // nutritionFactsPanel
+            // mainPanel
             // 
-            this.nutritionFactsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.nutritionFactsPanel.Controls.Add(this.label3);
-            this.nutritionFactsPanel.Controls.Add(this.chartCal);
-            this.nutritionFactsPanel.Controls.Add(this.proteinPercentLbl);
-            this.nutritionFactsPanel.Controls.Add(this.carbPercentLbl);
-            this.nutritionFactsPanel.Controls.Add(this.fatPercentLbl);
-            this.nutritionFactsPanel.Controls.Add(this.guna2CircleButton3);
-            this.nutritionFactsPanel.Controls.Add(this.guna2CircleButton2);
-            this.nutritionFactsPanel.Controls.Add(this.guna2CircleButton1);
-            this.nutritionFactsPanel.Controls.Add(this.unitBox);
-            this.nutritionFactsPanel.Controls.Add(this.totalProteinLabel);
-            this.nutritionFactsPanel.Controls.Add(this.label12);
-            this.nutritionFactsPanel.Controls.Add(this.fatLabel);
-            this.nutritionFactsPanel.Controls.Add(this.label10);
-            this.nutritionFactsPanel.Controls.Add(this.carbLabel);
-            this.nutritionFactsPanel.Controls.Add(this.label8);
-            this.nutritionFactsPanel.Controls.Add(this.calLabel);
-            this.nutritionFactsPanel.Controls.Add(this.label6);
-            this.nutritionFactsPanel.Controls.Add(this.panel3);
-            this.nutritionFactsPanel.Controls.Add(this.servingsBox);
-            this.nutritionFactsPanel.Controls.Add(this.label5);
-            this.nutritionFactsPanel.Controls.Add(this.panel2);
-            this.nutritionFactsPanel.Controls.Add(this.label1);
-            this.nutritionFactsPanel.Controls.Add(this.foodName);
-            this.nutritionFactsPanel.Controls.Add(this.chart1);
-            this.nutritionFactsPanel.Location = new System.Drawing.Point(-1, 0);
-            this.nutritionFactsPanel.Name = "nutritionFactsPanel";
-            this.nutritionFactsPanel.Size = new System.Drawing.Size(522, 594);
-            this.nutritionFactsPanel.TabIndex = 0;
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.mainPanel.Controls.Add(this.label7);
+            this.mainPanel.Controls.Add(this.mealBox);
+            this.mainPanel.Controls.Add(this.nfUsername);
+            this.mainPanel.Controls.Add(this.updateValues);
+            this.mainPanel.Controls.Add(this.addToFDBtn);
+            this.mainPanel.Controls.Add(this.label3);
+            this.mainPanel.Controls.Add(this.chartCal);
+            this.mainPanel.Controls.Add(this.proteinPercentLbl);
+            this.mainPanel.Controls.Add(this.carbPercentLbl);
+            this.mainPanel.Controls.Add(this.fatPercentLbl);
+            this.mainPanel.Controls.Add(this.guna2CircleButton3);
+            this.mainPanel.Controls.Add(this.guna2CircleButton2);
+            this.mainPanel.Controls.Add(this.guna2CircleButton1);
+            this.mainPanel.Controls.Add(this.unitBox);
+            this.mainPanel.Controls.Add(this.totalProteinLabel);
+            this.mainPanel.Controls.Add(this.label12);
+            this.mainPanel.Controls.Add(this.fatLabel);
+            this.mainPanel.Controls.Add(this.label10);
+            this.mainPanel.Controls.Add(this.carbLabel);
+            this.mainPanel.Controls.Add(this.label8);
+            this.mainPanel.Controls.Add(this.calLabel);
+            this.mainPanel.Controls.Add(this.label6);
+            this.mainPanel.Controls.Add(this.panel3);
+            this.mainPanel.Controls.Add(this.servingsBox);
+            this.mainPanel.Controls.Add(this.label5);
+            this.mainPanel.Controls.Add(this.panel2);
+            this.mainPanel.Controls.Add(this.label1);
+            this.mainPanel.Controls.Add(this.foodName);
+            this.mainPanel.Controls.Add(this.chart1);
+            this.mainPanel.Location = new System.Drawing.Point(-1, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(522, 594);
+            this.mainPanel.TabIndex = 0;
             // 
             // label3
             // 
@@ -431,17 +441,112 @@
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
             // 
+            // addToFDBtn
+            // 
+            this.addToFDBtn.BorderColor = System.Drawing.Color.White;
+            this.addToFDBtn.BorderRadius = 5;
+            this.addToFDBtn.CheckedState.Parent = this.addToFDBtn;
+            this.addToFDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addToFDBtn.CustomBorderColor = System.Drawing.Color.White;
+            this.addToFDBtn.CustomImages.Parent = this.addToFDBtn;
+            this.addToFDBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.addToFDBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToFDBtn.ForeColor = System.Drawing.Color.Black;
+            this.addToFDBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.addToFDBtn.HoverState.Parent = this.addToFDBtn;
+            this.addToFDBtn.Location = new System.Drawing.Point(374, 546);
+            this.addToFDBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addToFDBtn.Name = "addToFDBtn";
+            this.addToFDBtn.ShadowDecoration.Parent = this.addToFDBtn;
+            this.addToFDBtn.Size = new System.Drawing.Size(127, 37);
+            this.addToFDBtn.TabIndex = 196;
+            this.addToFDBtn.Text = "Add to Diary";
+            this.addToFDBtn.Click += new System.EventHandler(this.addToFDBtn_Click);
+            // 
+            // updateValues
+            // 
+            this.updateValues.BorderColor = System.Drawing.Color.White;
+            this.updateValues.BorderRadius = 5;
+            this.updateValues.CheckedState.Parent = this.updateValues;
+            this.updateValues.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateValues.CustomBorderColor = System.Drawing.Color.White;
+            this.updateValues.CustomImages.Parent = this.updateValues;
+            this.updateValues.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.updateValues.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateValues.ForeColor = System.Drawing.Color.Black;
+            this.updateValues.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.updateValues.HoverState.Parent = this.updateValues;
+            this.updateValues.Location = new System.Drawing.Point(240, 546);
+            this.updateValues.Margin = new System.Windows.Forms.Padding(2);
+            this.updateValues.Name = "updateValues";
+            this.updateValues.ShadowDecoration.Parent = this.updateValues;
+            this.updateValues.Size = new System.Drawing.Size(127, 37);
+            this.updateValues.TabIndex = 197;
+            this.updateValues.Text = "Update";
+            // 
+            // nfUsername
+            // 
+            this.nfUsername.AutoSize = true;
+            this.nfUsername.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nfUsername.ForeColor = System.Drawing.Color.Black;
+            this.nfUsername.Location = new System.Drawing.Point(441, 312);
+            this.nfUsername.Name = "nfUsername";
+            this.nfUsername.Size = new System.Drawing.Size(63, 23);
+            this.nfUsername.TabIndex = 198;
+            this.nfUsername.Text = "Calories";
+            // 
+            // mealBox
+            // 
+            this.mealBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.mealBox.BorderColor = System.Drawing.Color.Gray;
+            this.mealBox.BorderRadius = 5;
+            this.mealBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.mealBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mealBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.mealBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mealBox.FocusedColor = System.Drawing.Color.Empty;
+            this.mealBox.FocusedState.Parent = this.mealBox;
+            this.mealBox.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealBox.ForeColor = System.Drawing.Color.Black;
+            this.mealBox.FormattingEnabled = true;
+            this.mealBox.HoverState.Parent = this.mealBox;
+            this.mealBox.ItemHeight = 28;
+            this.mealBox.Items.AddRange(new object[] {
+            "Breakfast",
+            "Lunch",
+            "Dinner",
+            "Snacks"});
+            this.mealBox.ItemsAppearance.Parent = this.mealBox;
+            this.mealBox.Location = new System.Drawing.Point(358, 360);
+            this.mealBox.Margin = new System.Windows.Forms.Padding(2);
+            this.mealBox.Name = "mealBox";
+            this.mealBox.ShadowDecoration.Parent = this.mealBox;
+            this.mealBox.Size = new System.Drawing.Size(135, 34);
+            this.mealBox.StartIndex = 0;
+            this.mealBox.TabIndex = 199;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(323, 366);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(27, 23);
+            this.label7.TabIndex = 200;
+            this.label7.Text = "for";
+            // 
             // NutritionFacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 594);
-            this.Controls.Add(this.nutritionFactsPanel);
+            this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NutritionFacts";
             this.Text = "NutritionFacts";
-            this.nutritionFactsPanel.ResumeLayout(false);
-            this.nutritionFactsPanel.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
@@ -449,7 +554,7 @@
 
         #endregion
 
-        public System.Windows.Forms.Panel nutritionFactsPanel;
+        public System.Windows.Forms.Panel mainPanel;
         public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label foodName;
         public System.Windows.Forms.Label label1;
@@ -474,5 +579,10 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label chartCal;
+        private Guna.UI2.WinForms.Guna2Button addToFDBtn;
+        private Guna.UI2.WinForms.Guna2Button updateValues;
+        public System.Windows.Forms.Label nfUsername;
+        private Guna.UI2.WinForms.Guna2ComboBox mealBox;
+        public System.Windows.Forms.Label label7;
     }
 }

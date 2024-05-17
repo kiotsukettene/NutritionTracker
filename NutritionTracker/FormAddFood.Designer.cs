@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.addFoodSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.usernameLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.updateValues = new Guna.UI2.WinForms.Guna2Button();
+            this.addToFDBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.chartCal = new System.Windows.Forms.Label();
             this.mealBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -65,10 +66,8 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label4 = new System.Windows.Forms.Label();
             this.searchFoodPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.addToFDBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.updateValues = new Guna.UI2.WinForms.Guna2Button();
             this.BackBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.dbDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.usernameLbl = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -94,7 +93,7 @@
             this.guna2Button1.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
@@ -152,7 +151,6 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
-            this.mainPanel.Controls.Add(this.dbDateTime);
             this.mainPanel.Controls.Add(this.usernameLbl);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.label4);
@@ -167,17 +165,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1110, 669);
             this.mainPanel.TabIndex = 24;
-            // 
-            // usernameLbl
-            // 
-            this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLbl.ForeColor = System.Drawing.Color.Black;
-            this.usernameLbl.Location = new System.Drawing.Point(955, 22);
-            this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(77, 23);
-            this.usernameLbl.TabIndex = 195;
-            this.usernameLbl.Text = "Username";
             // 
             // panel1
             // 
@@ -214,6 +201,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 590);
             this.panel1.TabIndex = 195;
+            // 
+            // updateValues
+            // 
+            this.updateValues.BorderColor = System.Drawing.Color.White;
+            this.updateValues.BorderRadius = 5;
+            this.updateValues.CheckedState.Parent = this.updateValues;
+            this.updateValues.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateValues.CustomBorderColor = System.Drawing.Color.White;
+            this.updateValues.CustomImages.Parent = this.updateValues;
+            this.updateValues.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.updateValues.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateValues.ForeColor = System.Drawing.Color.Black;
+            this.updateValues.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.updateValues.HoverState.Parent = this.updateValues;
+            this.updateValues.Location = new System.Drawing.Point(300, 544);
+            this.updateValues.Margin = new System.Windows.Forms.Padding(2);
+            this.updateValues.Name = "updateValues";
+            this.updateValues.ShadowDecoration.Parent = this.updateValues;
+            this.updateValues.Size = new System.Drawing.Size(127, 37);
+            this.updateValues.TabIndex = 196;
+            this.updateValues.Text = "Update";
+            this.updateValues.Click += new System.EventHandler(this.updateValues_Click);
+            // 
+            // addToFDBtn
+            // 
+            this.addToFDBtn.BorderColor = System.Drawing.Color.White;
+            this.addToFDBtn.BorderRadius = 5;
+            this.addToFDBtn.CheckedState.Parent = this.addToFDBtn;
+            this.addToFDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addToFDBtn.CustomBorderColor = System.Drawing.Color.White;
+            this.addToFDBtn.CustomImages.Parent = this.addToFDBtn;
+            this.addToFDBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.addToFDBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToFDBtn.ForeColor = System.Drawing.Color.Black;
+            this.addToFDBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.addToFDBtn.HoverState.Parent = this.addToFDBtn;
+            this.addToFDBtn.Location = new System.Drawing.Point(431, 544);
+            this.addToFDBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addToFDBtn.Name = "addToFDBtn";
+            this.addToFDBtn.ShadowDecoration.Parent = this.addToFDBtn;
+            this.addToFDBtn.Size = new System.Drawing.Size(127, 37);
+            this.addToFDBtn.TabIndex = 195;
+            this.addToFDBtn.Text = "Add to Diary";
+            this.addToFDBtn.Click += new System.EventHandler(this.AddToFoodDiaryBtn);
             // 
             // label7
             // 
@@ -265,6 +296,7 @@
             this.mealBox.Name = "mealBox";
             this.mealBox.ShadowDecoration.Parent = this.mealBox;
             this.mealBox.Size = new System.Drawing.Size(135, 34);
+            this.mealBox.StartIndex = 0;
             this.mealBox.TabIndex = 193;
             // 
             // label3
@@ -558,23 +590,23 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea5.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea5.AxisX.IsLabelAutoFit = false;
-            chartArea5.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea5.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.AxisY.IsLabelAutoFit = false;
-            chartArea5.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea5.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
+            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisY.IsLabelAutoFit = false;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(105, 77);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -582,15 +614,15 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))))};
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            series5.CustomProperties = "DoughnutRadius=30, PieLabelStyle=Disabled";
-            series5.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.IsValueShownAsLabel = true;
-            series5.LabelForeColor = System.Drawing.Color.White;
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            series1.CustomProperties = "DoughnutRadius=30, PieLabelStyle=Disabled";
+            series1.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(357, 230);
             this.chart1.TabIndex = 169;
             this.chart1.Text = "chart1";
@@ -615,52 +647,6 @@
             this.searchFoodPanel.Size = new System.Drawing.Size(487, 453);
             this.searchFoodPanel.TabIndex = 90;
             // 
-            // addToFDBtn
-            // 
-            this.addToFDBtn.BorderColor = System.Drawing.Color.White;
-            this.addToFDBtn.BorderRadius = 5;
-            this.addToFDBtn.CheckedState.Parent = this.addToFDBtn;
-            this.addToFDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addToFDBtn.CustomBorderColor = System.Drawing.Color.White;
-            this.addToFDBtn.CustomImages.Parent = this.addToFDBtn;
-            this.addToFDBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.addToFDBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToFDBtn.ForeColor = System.Drawing.Color.Black;
-            this.addToFDBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.addToFDBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToFDBtn.HoverState.Parent = this.addToFDBtn;
-            this.addToFDBtn.Location = new System.Drawing.Point(431, 544);
-            this.addToFDBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addToFDBtn.Name = "addToFDBtn";
-            this.addToFDBtn.ShadowDecoration.Parent = this.addToFDBtn;
-            this.addToFDBtn.Size = new System.Drawing.Size(127, 37);
-            this.addToFDBtn.TabIndex = 195;
-            this.addToFDBtn.Text = "Add to Diary";
-            this.addToFDBtn.Click += new System.EventHandler(this.AddToFoodDiaryBtn);
-            // 
-            // updateValues
-            // 
-            this.updateValues.BorderColor = System.Drawing.Color.White;
-            this.updateValues.BorderRadius = 5;
-            this.updateValues.CheckedState.Parent = this.updateValues;
-            this.updateValues.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateValues.CustomBorderColor = System.Drawing.Color.White;
-            this.updateValues.CustomImages.Parent = this.updateValues;
-            this.updateValues.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.updateValues.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateValues.ForeColor = System.Drawing.Color.Black;
-            this.updateValues.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.updateValues.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateValues.HoverState.Parent = this.updateValues;
-            this.updateValues.Location = new System.Drawing.Point(300, 544);
-            this.updateValues.Margin = new System.Windows.Forms.Padding(2);
-            this.updateValues.Name = "updateValues";
-            this.updateValues.ShadowDecoration.Parent = this.updateValues;
-            this.updateValues.Size = new System.Drawing.Size(127, 37);
-            this.updateValues.TabIndex = 196;
-            this.updateValues.Text = "Update";
-            this.updateValues.Click += new System.EventHandler(this.updateValues_Click);
-            // 
             // BackBtn
             // 
             this.BackBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.previous;
@@ -683,30 +669,16 @@
             this.BackBtn.TabIndex = 89;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // dbDateTime
+            // usernameLbl
             // 
-            this.dbDateTime.Animated = true;
-            this.dbDateTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.dbDateTime.BorderColor = System.Drawing.Color.Transparent;
-            this.dbDateTime.BorderRadius = 10;
-            this.dbDateTime.BorderThickness = 1;
-            this.dbDateTime.CheckedState.Parent = this.dbDateTime;
-            this.dbDateTime.CustomFormat = "";
-            this.dbDateTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(181)))));
-            this.dbDateTime.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbDateTime.ForeColor = System.Drawing.Color.Black;
-            this.dbDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dbDateTime.HoverState.Parent = this.dbDateTime;
-            this.dbDateTime.Location = new System.Drawing.Point(803, 9);
-            this.dbDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dbDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dbDateTime.Name = "dbDateTime";
-            this.dbDateTime.ShadowDecoration.Parent = this.dbDateTime;
-            this.dbDateTime.Size = new System.Drawing.Size(133, 36);
-            this.dbDateTime.TabIndex = 197;
-            this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dbDateTime.Value = new System.DateTime(2024, 5, 8, 0, 0, 0, 0);
-            this.dbDateTime.Visible = false;
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.ForeColor = System.Drawing.Color.Black;
+            this.usernameLbl.Location = new System.Drawing.Point(955, 22);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(77, 23);
+            this.usernameLbl.TabIndex = 195;
+            this.usernameLbl.Text = "Username";
             // 
             // FormAddFood
             // 
@@ -765,9 +737,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox mealBox;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Label usernameLbl;
         private Guna.UI2.WinForms.Guna2Button addToFDBtn;
         private Guna.UI2.WinForms.Guna2Button updateValues;
-        public Guna.UI2.WinForms.Guna2DateTimePicker dbDateTime;
+        public System.Windows.Forms.Label usernameLbl;
     }
 }

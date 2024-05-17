@@ -85,13 +85,7 @@ namespace NutritionTracker
             get { return protein; }
             set { protein = value; }
         }
-        private object tag;
-
-        public object Tag
-        {
-            get { return tag; }
-            set { tag = value; }
-        }
+       
         #endregion
 
 

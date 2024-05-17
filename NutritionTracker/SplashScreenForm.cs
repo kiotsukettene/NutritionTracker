@@ -48,7 +48,7 @@ namespace NutritionTracker
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Enabled = true;
-            ProgressBar.Increment(5);
+            ProgressBar.Increment(7);
             if (ProgressBar.Value == 100)
             {
                 this.Hide();

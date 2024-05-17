@@ -44,7 +44,8 @@
             this.ProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.ProgressBar.Location = new System.Drawing.Point(197, 433);
             this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(76)))), ((int)(((byte)(51)))));
+            this.ProgressBar.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
+            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(152)))), ((int)(((byte)(107)))));
             this.ProgressBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(152)))), ((int)(((byte)(107)))));
             this.ProgressBar.ShadowDecoration.Parent = this.ProgressBar;
             this.ProgressBar.Size = new System.Drawing.Size(318, 28);

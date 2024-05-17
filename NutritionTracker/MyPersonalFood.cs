@@ -128,22 +128,16 @@ namespace NutritionTracker
             loadForm(nf);
             panel1.Visible = false;
             createFoodBtn.Visible = true;
+            nf.nfUsername.Text = usernameLbl.Text;
             nf.foodName.Text = (obj.FoodDescription);
             nf.servingsBox.Text = obj.ServingSize.ToString();
             nf.chartCal.Text = obj.Calories.ToString();
-            nf.calLabel.Text = obj.Calories.ToString() + " kcal";
+            nf.calLabel.Text = obj.Calories.ToString();
             nf.unitBox.Text = obj.ServingUnit;
-            nf.carbLabel.Text = obj.Carbs.ToString() + " g";
-            nf.fatLabel.Text = obj.Fat.ToString() + " g";
-            nf.totalProteinLabel.Text = obj.Protein.ToString() + " g";
-            //dynamic additionalData = obj.Tag;
-            //if (additionalData != null)
-            //{
-            //    nf.unitBox.Text = additionalData.ServingUnit;
-            //    nf.carbLabel.Text = additionalData.Carbs.ToString();
-            //    nf.fatLabel.Text = additionalData.Fat.ToString();
-            //    nf.totalProteinLabel.Text = additionalData.Protein.ToString();
-            //}
+            nf.carbLabel.Text = obj.Carbs.ToString();
+            nf.fatLabel.Text = obj.Fat.ToString();
+            nf.totalProteinLabel.Text = obj.Protein.ToString();
+            
 
             double totalMacronutrients = obj.Carbs + obj.Fat +obj.Protein;
 
@@ -154,11 +148,10 @@ namespace NutritionTracker
             nf.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}% Fat";
             nf.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}% Protein";
             nf.carbPercentLbl.Text = $"{carbohydratesPercentage.ToString("F2")}% Carb";
+
         }
-        public void InsertFood()
+        public void InsertCreatedFood()
         {
-
-
             myCon.openCon();
             try
             {
@@ -243,7 +236,7 @@ namespace NutritionTracker
 
         private void saveChangesBtn_Click(object sender, EventArgs e)
         {
-            InsertFood();
+            InsertCreatedFood();
         }
 
         private void usernameLbl_TextChanged(object sender, EventArgs e)

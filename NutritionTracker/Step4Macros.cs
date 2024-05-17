@@ -190,7 +190,7 @@ namespace NutritionTracker
                         
                         main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
                         main.DashboardRetrieveValues(firstname);
-                        main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
+                        main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, water, sleep);
                         main.PersonalizationRetrieveUserValues(firstname, lastname, username);
                         main.Show();
 

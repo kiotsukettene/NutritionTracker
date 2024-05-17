@@ -162,7 +162,7 @@ namespace NutritionTracker
                                     int sleep = dataReader.GetInt32("sleep");
                                     
                                     main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight,weight, water, sleep);
-                                    main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal);
+                                    main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, water, sleep);
                                     main.Show();
                                     
                                 dataReader.Close();

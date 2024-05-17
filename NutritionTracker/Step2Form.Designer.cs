@@ -55,10 +55,8 @@
             this.calculateMacrosBtn.CustomBorderColor = System.Drawing.Color.White;
             this.calculateMacrosBtn.CustomImages.Parent = this.calculateMacrosBtn;
             this.calculateMacrosBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.calculateMacrosBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateMacrosBtn.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateMacrosBtn.ForeColor = System.Drawing.Color.Black;
-            this.calculateMacrosBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.calculateMacrosBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateMacrosBtn.HoverState.Parent = this.calculateMacrosBtn;
             this.calculateMacrosBtn.Location = new System.Drawing.Point(445, 478);
             this.calculateMacrosBtn.Margin = new System.Windows.Forms.Padding(2);

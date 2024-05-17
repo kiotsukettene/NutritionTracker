@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.usernameLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.personalizationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.fdBtn = new Guna.UI2.WinForms.Guna2Button();
             this.calculatorBtn = new Guna.UI2.WinForms.Guna2Button();
             this.dashboardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.usernameLbl = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,8 +55,18 @@
             this.guna2Panel1.Location = new System.Drawing.Point(74, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1110, 39);
+            this.guna2Panel1.Size = new System.Drawing.Size(1110, 35);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLbl.ForeColor = System.Drawing.Color.Black;
+            this.usernameLbl.Location = new System.Drawing.Point(3, 3);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(88, 25);
+            this.usernameLbl.TabIndex = 104;
+            this.usernameLbl.Text = "username";
             // 
             // panel2
             // 
@@ -64,42 +74,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 2;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.close;
-            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.exitBtn.CheckedState.Parent = this.exitBtn;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitBtn.CustomImages.Parent = this.exitBtn;
-            this.exitBtn.FillColor = System.Drawing.Color.Transparent;
-            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.HoverState.Parent = this.exitBtn;
-            this.exitBtn.Location = new System.Drawing.Point(1072, 6);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
-            this.exitBtn.Size = new System.Drawing.Size(33, 28);
-            this.exitBtn.TabIndex = 3;
-            this.exitBtn.Click += new System.EventHandler(this.closeBtn);
-            // 
-            // miniBtn
-            // 
-            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minus;
-            this.miniBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.miniBtn.CheckedState.Parent = this.miniBtn;
-            this.miniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.miniBtn.CustomImages.Parent = this.miniBtn;
-            this.miniBtn.FillColor = System.Drawing.Color.Transparent;
-            this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.miniBtn.ForeColor = System.Drawing.Color.White;
-            this.miniBtn.HoverState.Parent = this.miniBtn;
-            this.miniBtn.Location = new System.Drawing.Point(1033, 6);
-            this.miniBtn.Name = "miniBtn";
-            this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
-            this.miniBtn.Size = new System.Drawing.Size(33, 28);
-            this.miniBtn.TabIndex = 2;
-            this.miniBtn.Click += new System.EventHandler(this.minBtn);
             // 
             // panel1
             // 
@@ -114,6 +88,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(74, 700);
             this.panel1.TabIndex = 1;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Location = new System.Drawing.Point(74, 31);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
+            this.mainPanel.Size = new System.Drawing.Size(1110, 669);
+            this.mainPanel.TabIndex = 2;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.reject;
+            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.exitBtn.CheckedState.Parent = this.exitBtn;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBtn.CustomImages.Parent = this.exitBtn;
+            this.exitBtn.FillColor = System.Drawing.Color.Transparent;
+            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.exitBtn.HoverState.Parent = this.exitBtn;
+            this.exitBtn.Location = new System.Drawing.Point(1072, 2);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.PressedColor = System.Drawing.Color.Empty;
+            this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
+            this.exitBtn.Size = new System.Drawing.Size(33, 28);
+            this.exitBtn.TabIndex = 3;
+            this.exitBtn.Click += new System.EventHandler(this.closeBtn);
+            // 
+            // miniBtn
+            // 
+            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minus11;
+            this.miniBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.miniBtn.CheckedState.Parent = this.miniBtn;
+            this.miniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.miniBtn.CustomImages.Parent = this.miniBtn;
+            this.miniBtn.FillColor = System.Drawing.Color.Transparent;
+            this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.miniBtn.ForeColor = System.Drawing.Color.White;
+            this.miniBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.miniBtn.HoverState.Parent = this.miniBtn;
+            this.miniBtn.Location = new System.Drawing.Point(1031, 2);
+            this.miniBtn.Name = "miniBtn";
+            this.miniBtn.PressedColor = System.Drawing.Color.Empty;
+            this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
+            this.miniBtn.Size = new System.Drawing.Size(35, 28);
+            this.miniBtn.TabIndex = 2;
+            this.miniBtn.Click += new System.EventHandler(this.minBtn);
             // 
             // personalizationBtn
             // 
@@ -203,25 +226,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(60, 52);
             this.panel3.TabIndex = 4;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mainPanel.Location = new System.Drawing.Point(74, 31);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
-            this.mainPanel.Size = new System.Drawing.Size(1110, 669);
-            this.mainPanel.TabIndex = 2;
-            // 
-            // usernameLbl
-            // 
-            this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLbl.ForeColor = System.Drawing.Color.Black;
-            this.usernameLbl.Location = new System.Drawing.Point(3, 3);
-            this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(88, 25);
-            this.usernameLbl.TabIndex = 104;
-            this.usernameLbl.Text = "username";
             // 
             // MainForm
             // 

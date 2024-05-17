@@ -35,13 +35,20 @@ namespace NutritionTracker
         {
             try
             {
-                myCon.openCon();
+                
+        
                 string firstname = firstNameTxtBox.Text;
                 string lastname = lastNameTxtBox.Text;
                 string username = userNameTxtBox.Text;
                 string password = passwordTxtBox.Text;
                 string confirmPass = confirmTxtBox.Text;
 
+                if (password != confirmPass)
+                {
+                    MessageBox.Show("Password doesn't match. Please re-enter");
+                    return;
+                }
+                myCon.openCon();
                 string checkUsernameQuery = "SELECT COUNT(*) FROM `user` WHERE `username` = @username";
                 MySqlCommand checkUsernameCmd = new MySqlCommand(checkUsernameQuery, myCon.getCon());
                 checkUsernameCmd.Parameters.AddWithValue("@username", username);
@@ -74,17 +81,11 @@ namespace NutritionTracker
 
                         if (rows > 0)
                         {
-                            if (password != confirmPass)
-                            {
-                                MessageBox.Show("Passwords do not match. Please re-enter.");
-                            }
-                            else
-                            {
                                 MessageBox.Show("Successful");
                                 loginForm login = new loginForm();
                                 login.Show();
                                 this.Dispose();
-                            }
+                            
                         }
                         else
                         {

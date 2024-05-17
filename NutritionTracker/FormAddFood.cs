@@ -16,6 +16,7 @@ using static Mysqlx.Datatypes.Scalar.Types;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using Mysqlx.Connection;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace NutritionTracker
@@ -24,6 +25,8 @@ namespace NutritionTracker
     {
         DBConnection myCon = new DBConnection();
         FoodDiary fd = new FoodDiary();
+        
+    
 
         
         public FormAddFood()
@@ -147,7 +150,7 @@ namespace NutritionTracker
             int servings = 100;
             foodNameLbl.Text = add.FoodName;
             servingsBox.Text = servings.ToString();
-            unitBox.Text = "1 gram";
+            unitBox.Text = "gram";
             calLabel.Text = add.Calories.ToString();
             carbLabel.Text = add.Carbs.ToString();
             fatLabel.Text = add.Fat.ToString();
@@ -178,7 +181,7 @@ namespace NutritionTracker
             try
             {
                 myCon.openCon();
-               DateTime date = DateTime.Now;
+                DateTime date = DateTime.Now;
                 string addDate = date.ToString("yyyy-MM-dd");
                 string foodname = foodNameLbl.Text;
                 string username = usernameLbl.Text;
@@ -212,6 +215,8 @@ namespace NutritionTracker
                 if (rows > 0)
                 {
                     MessageBox.Show("Success");
+                    loadForm(fd);
+                    fd.fdUsername.Text = usernameLbl.Text;
                 }
                 else
                 {
@@ -261,6 +266,50 @@ namespace NutritionTracker
           
 
         }
+        public void SelectMacros()
+        {
+            myCon.openCon();
+            string username = usernameLbl.Text;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(@"SELECT calories, carbs, fat, protein 
+                                                            FROM user_macros 
+                                                            JOIN user ON user.id = user_macros.user_id 
+                                                            WHERE username = @username;", myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@username", username);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                
+                if (dr.HasRows)
+                {
+                    while(dr.Read())
+                    {
+                        int calGoal = dr.GetInt32("calories");
+                        int carbGoal = dr.GetInt32("carbs");
+                        int fatGoal = dr.GetInt32("fat");
+                        int proteinGoal = dr.GetInt32("protein");
+
+                        fd.RemainCal.Text = calGoal.ToString();
+                        fd.RemainCarb.Text = carbGoal.ToString();
+                        fd.RemainFat.Text = fatGoal.ToString();
+                        fd.RemainProtein.Text = proteinGoal.ToString();
+                        fd.fdCal.Text = calGoal.ToString();
+                        fd.fdCarbs.Text = carbGoal.ToString();
+                        fd.fdFat.Text = fatGoal.ToString();
+                        fd.fdProtein.Text = proteinGoal.ToString();
+
+
+                    }
+                    dr.Close();
+                }
+                myCon.closeCon();
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
         private void FormAddFood_Load(object sender, EventArgs e)
         {
             panel1.Visible = false;
@@ -269,7 +318,10 @@ namespace NutritionTracker
         private void BackBtn_Click(object sender, EventArgs e)
         {
             loadForm(fd);
+            SelectMacros();
             fd.fdUsername.Text = usernameLbl.Text;
+           
+            
 
         }
 

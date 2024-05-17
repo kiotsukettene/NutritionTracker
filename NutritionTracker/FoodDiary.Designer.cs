@@ -33,21 +33,20 @@
             this.addFoodBtn = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.fdUsername = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.foodDiaryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.fdTotalPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.fdProtein = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.RemainProtein = new System.Windows.Forms.Label();
+            this.TotalProtein = new System.Windows.Forms.Label();
             this.fdFat = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.RemainFat = new System.Windows.Forms.Label();
+            this.TotalFat = new System.Windows.Forms.Label();
             this.fdCarbs = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.RemainCarb = new System.Windows.Forms.Label();
+            this.TotalCarb = new System.Windows.Forms.Label();
             this.fdCal = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.RemainCal = new System.Windows.Forms.Label();
+            this.TotalCal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -116,8 +115,6 @@
             this.addFoodBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.addFoodBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addFoodBtn.ForeColor = System.Drawing.Color.Black;
-            this.addFoodBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.addFoodBtn.HoverState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addFoodBtn.HoverState.Parent = this.addFoodBtn;
             this.addFoodBtn.Location = new System.Drawing.Point(22, 549);
             this.addFoodBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -132,7 +129,6 @@
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.mainPanel.Controls.Add(this.fdUsername);
-            this.mainPanel.Controls.Add(this.panel2);
             this.mainPanel.Controls.Add(this.FDLabel);
             this.mainPanel.Controls.Add(this.addFoodBtn);
             this.mainPanel.Controls.Add(this.foodDiaryPanel);
@@ -157,38 +153,30 @@
             this.fdUsername.TextChanged += new System.EventHandler(this.fdUsername_TextChanged);
             this.fdUsername.Click += new System.EventHandler(this.fdUsername_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(22, 533);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 2);
-            this.panel2.TabIndex = 60;
-            // 
             // foodDiaryPanel
             // 
             this.foodDiaryPanel.AutoScroll = true;
             this.foodDiaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.foodDiaryPanel.Location = new System.Drawing.Point(22, 109);
             this.foodDiaryPanel.Name = "foodDiaryPanel";
-            this.foodDiaryPanel.Size = new System.Drawing.Size(1059, 421);
+            this.foodDiaryPanel.Size = new System.Drawing.Size(1084, 421);
             this.foodDiaryPanel.TabIndex = 58;
             // 
             // fdTotalPanel
             // 
             this.fdTotalPanel.BackColor = System.Drawing.Color.Transparent;
             this.fdTotalPanel.Controls.Add(this.fdProtein);
-            this.fdTotalPanel.Controls.Add(this.label26);
-            this.fdTotalPanel.Controls.Add(this.label27);
+            this.fdTotalPanel.Controls.Add(this.RemainProtein);
+            this.fdTotalPanel.Controls.Add(this.TotalProtein);
             this.fdTotalPanel.Controls.Add(this.fdFat);
-            this.fdTotalPanel.Controls.Add(this.label23);
-            this.fdTotalPanel.Controls.Add(this.label24);
+            this.fdTotalPanel.Controls.Add(this.RemainFat);
+            this.fdTotalPanel.Controls.Add(this.TotalFat);
             this.fdTotalPanel.Controls.Add(this.fdCarbs);
-            this.fdTotalPanel.Controls.Add(this.label16);
-            this.fdTotalPanel.Controls.Add(this.label17);
+            this.fdTotalPanel.Controls.Add(this.RemainCarb);
+            this.fdTotalPanel.Controls.Add(this.TotalCarb);
             this.fdTotalPanel.Controls.Add(this.fdCal);
-            this.fdTotalPanel.Controls.Add(this.label10);
-            this.fdTotalPanel.Controls.Add(this.label9);
+            this.fdTotalPanel.Controls.Add(this.RemainCal);
+            this.fdTotalPanel.Controls.Add(this.TotalCal);
             this.fdTotalPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.fdTotalPanel.Location = new System.Drawing.Point(554, 540);
             this.fdTotalPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -209,33 +197,33 @@
             this.fdProtein.Location = new System.Drawing.Point(261, 50);
             this.fdProtein.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fdProtein.Name = "fdProtein";
-            this.fdProtein.Size = new System.Drawing.Size(30, 22);
+            this.fdProtein.Size = new System.Drawing.Size(18, 22);
             this.fdProtein.TabIndex = 46;
-            this.fdProtein.Text = "100";
+            this.fdProtein.Text = "0";
             // 
-            // label26
+            // RemainProtein
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label26.Location = new System.Drawing.Point(261, 89);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(30, 22);
-            this.label26.TabIndex = 45;
-            this.label26.Text = "100";
+            this.RemainProtein.AutoSize = true;
+            this.RemainProtein.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemainProtein.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.RemainProtein.Location = new System.Drawing.Point(261, 89);
+            this.RemainProtein.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RemainProtein.Name = "RemainProtein";
+            this.RemainProtein.Size = new System.Drawing.Size(18, 22);
+            this.RemainProtein.TabIndex = 45;
+            this.RemainProtein.Text = "0";
             // 
-            // label27
+            // TotalProtein
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(261, 13);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(30, 22);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "100";
+            this.TotalProtein.AutoSize = true;
+            this.TotalProtein.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalProtein.ForeColor = System.Drawing.Color.Black;
+            this.TotalProtein.Location = new System.Drawing.Point(261, 13);
+            this.TotalProtein.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalProtein.Name = "TotalProtein";
+            this.TotalProtein.Size = new System.Drawing.Size(18, 22);
+            this.TotalProtein.TabIndex = 44;
+            this.TotalProtein.Text = "0";
             // 
             // fdFat
             // 
@@ -245,33 +233,33 @@
             this.fdFat.Location = new System.Drawing.Point(184, 50);
             this.fdFat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fdFat.Name = "fdFat";
-            this.fdFat.Size = new System.Drawing.Size(30, 22);
+            this.fdFat.Size = new System.Drawing.Size(18, 22);
             this.fdFat.TabIndex = 43;
-            this.fdFat.Text = "100";
+            this.fdFat.Text = "0";
             // 
-            // label23
+            // RemainFat
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label23.Location = new System.Drawing.Point(184, 89);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 22);
-            this.label23.TabIndex = 42;
-            this.label23.Text = "100";
+            this.RemainFat.AutoSize = true;
+            this.RemainFat.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemainFat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.RemainFat.Location = new System.Drawing.Point(184, 89);
+            this.RemainFat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RemainFat.Name = "RemainFat";
+            this.RemainFat.Size = new System.Drawing.Size(18, 22);
+            this.RemainFat.TabIndex = 42;
+            this.RemainFat.Text = "0";
             // 
-            // label24
+            // TotalFat
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(184, 13);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(30, 22);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "100";
+            this.TotalFat.AutoSize = true;
+            this.TotalFat.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalFat.ForeColor = System.Drawing.Color.Black;
+            this.TotalFat.Location = new System.Drawing.Point(184, 13);
+            this.TotalFat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalFat.Name = "TotalFat";
+            this.TotalFat.Size = new System.Drawing.Size(18, 22);
+            this.TotalFat.TabIndex = 41;
+            this.TotalFat.Text = "0";
             // 
             // fdCarbs
             // 
@@ -281,33 +269,33 @@
             this.fdCarbs.Location = new System.Drawing.Point(113, 50);
             this.fdCarbs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fdCarbs.Name = "fdCarbs";
-            this.fdCarbs.Size = new System.Drawing.Size(30, 22);
+            this.fdCarbs.Size = new System.Drawing.Size(18, 22);
             this.fdCarbs.TabIndex = 40;
-            this.fdCarbs.Text = "100";
+            this.fdCarbs.Text = "0";
             // 
-            // label16
+            // RemainCarb
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label16.Location = new System.Drawing.Point(113, 89);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 22);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "100";
+            this.RemainCarb.AutoSize = true;
+            this.RemainCarb.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemainCarb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.RemainCarb.Location = new System.Drawing.Point(113, 89);
+            this.RemainCarb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RemainCarb.Name = "RemainCarb";
+            this.RemainCarb.Size = new System.Drawing.Size(18, 22);
+            this.RemainCarb.TabIndex = 39;
+            this.RemainCarb.Text = "0";
             // 
-            // label17
+            // TotalCarb
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(113, 13);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 22);
-            this.label17.TabIndex = 38;
-            this.label17.Text = "100";
+            this.TotalCarb.AutoSize = true;
+            this.TotalCarb.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCarb.ForeColor = System.Drawing.Color.Black;
+            this.TotalCarb.Location = new System.Drawing.Point(113, 13);
+            this.TotalCarb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCarb.Name = "TotalCarb";
+            this.TotalCarb.Size = new System.Drawing.Size(18, 22);
+            this.TotalCarb.TabIndex = 38;
+            this.TotalCarb.Text = "0";
             // 
             // fdCal
             // 
@@ -317,33 +305,33 @@
             this.fdCal.Location = new System.Drawing.Point(28, 50);
             this.fdCal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fdCal.Name = "fdCal";
-            this.fdCal.Size = new System.Drawing.Size(30, 22);
+            this.fdCal.Size = new System.Drawing.Size(18, 22);
             this.fdCal.TabIndex = 37;
-            this.fdCal.Text = "100";
+            this.fdCal.Text = "0";
             // 
-            // label10
+            // RemainCal
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.label10.Location = new System.Drawing.Point(28, 89);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 22);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "100";
+            this.RemainCal.AutoSize = true;
+            this.RemainCal.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemainCal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.RemainCal.Location = new System.Drawing.Point(28, 89);
+            this.RemainCal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RemainCal.Name = "RemainCal";
+            this.RemainCal.Size = new System.Drawing.Size(18, 22);
+            this.RemainCal.TabIndex = 36;
+            this.RemainCal.Text = "0";
             // 
-            // label9
+            // TotalCal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(28, 13);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 22);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "100";
+            this.TotalCal.AutoSize = true;
+            this.TotalCal.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCal.ForeColor = System.Drawing.Color.Black;
+            this.TotalCal.Location = new System.Drawing.Point(28, 13);
+            this.TotalCal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCal.Name = "TotalCal";
+            this.TotalCal.Size = new System.Drawing.Size(18, 22);
+            this.TotalCal.TabIndex = 35;
+            this.TotalCal.Text = "0";
             // 
             // panel1
             // 
@@ -593,20 +581,19 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ShadowPanel fdTotalPanel;
         private System.Windows.Forms.FlowLayoutPanel foodDiaryPanel;
-        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label fdUsername;
-        public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label TotalCal;
+        public System.Windows.Forms.Label RemainCal;
         public System.Windows.Forms.Label fdCal;
         public System.Windows.Forms.Label fdProtein;
-        public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.Label RemainProtein;
+        public System.Windows.Forms.Label TotalProtein;
         public System.Windows.Forms.Label fdFat;
-        public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label RemainFat;
+        public System.Windows.Forms.Label TotalFat;
         public System.Windows.Forms.Label fdCarbs;
-        public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label RemainCarb;
+        public System.Windows.Forms.Label TotalCarb;
         private System.Windows.Forms.Label label4;
     }
 }

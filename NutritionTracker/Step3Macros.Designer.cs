@@ -374,14 +374,13 @@
             this.step3nextBtn.CustomBorderColor = System.Drawing.Color.White;
             this.step3nextBtn.CustomImages.Parent = this.step3nextBtn;
             this.step3nextBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.step3nextBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.step3nextBtn.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.step3nextBtn.ForeColor = System.Drawing.Color.Black;
-            this.step3nextBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.step3nextBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.step3nextBtn.HoverState.Parent = this.step3nextBtn;
             this.step3nextBtn.Location = new System.Drawing.Point(464, 528);
             this.step3nextBtn.Margin = new System.Windows.Forms.Padding(2);
             this.step3nextBtn.Name = "step3nextBtn";
+            this.step3nextBtn.PressedColor = System.Drawing.Color.Transparent;
             this.step3nextBtn.ShadowDecoration.Parent = this.step3nextBtn;
             this.step3nextBtn.Size = new System.Drawing.Size(110, 38);
             this.step3nextBtn.TabIndex = 127;

@@ -9,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace NutritionTracker
 {
     public partial class FoodDiary : Form
     {
         DBConnection myCon = new DBConnection();
-        
+       
         public FoodDiary()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace NutritionTracker
             fdTotalPanel.Visible = true;
         }
         #region TabPanels
-        void loadForm(Form panel)
+        public void loadForm(Form panel)
         {
             mainPanel.Controls.Clear();
             panel.TopLevel = false;
@@ -100,7 +101,11 @@ namespace NutritionTracker
                 if (rowCount > 0)
                 {
                     foodDiaryPanel.Controls.Clear();
-
+                    int totalCalories = 0;
+                    int totalCarbs = 0;
+                    int totalFat = 0;
+                    int totalProtein = 0;
+                    
                     for (int i = 0; i < rowCount; i++)
                     {
                         FoodDiaryControl fdc = new FoodDiaryControl
@@ -115,9 +120,80 @@ namespace NutritionTracker
                             Fat = (int)dt.Rows[i]["fat"]
                         };
 
-                        foodDiaryPanel.Controls.Add(fdc);
-                        
+                        foodDiaryPanel.Controls.Add(fdc);       
+                        totalCalories += (int)dt.Rows[i]["calories"];
+                        totalCarbs += (int)dt.Rows[i]["carbs"];
+                        totalFat += (int)dt.Rows[i]["fat"];
+                        totalProtein += (int)dt.Rows[i]["protein"];
                     }
+                    TotalCal.Text = totalCalories.ToString();
+                    TotalCarb.Text = totalCarbs.ToString();
+                    TotalProtein.Text = totalProtein.ToString();
+                    TotalFat.Text = totalFat.ToString();
+                    try
+                    {
+                        MySqlCommand cmd = new MySqlCommand(@"SELECT calories, carbs, fat, protein 
+                                                            FROM user_macros 
+                                                            JOIN user ON user.id = user_macros.user_id 
+                                                            WHERE username = @username;", myCon.getCon());
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@username", username);
+                        MySqlDataReader dr = cmd.ExecuteReader();
+
+                        if (dr.HasRows)
+                        {
+                          while(dr.Read())
+                            {
+                                int calGoal = dr.GetInt32("calories");
+                                int carbGoal = dr.GetInt32("carbs");
+                                int fatGoal = dr.GetInt32("fat");
+                                int proteinGoal = dr.GetInt32("protein");
+
+                                fdCal.Text = calGoal.ToString();
+                                fdCarbs.Text = carbGoal.ToString();
+                                fdFat.Text = fatGoal.ToString();
+                                fdProtein.Text = proteinGoal.ToString();
+
+                                int calRemain = (calGoal - totalCalories);
+                                int carbRemain = (carbGoal - totalCarbs);
+                                int fatRemain = (fatGoal - totalFat);
+                                int proteinRemain = (proteinGoal - totalProtein);
+
+                                RemainCal.Text = calRemain.ToString();
+                                RemainCarb.Text = carbRemain.ToString();
+                                RemainFat.Text = fatRemain.ToString();
+                                RemainProtein.Text = proteinRemain.ToString();
+
+                               
+                                if (totalCalories > calGoal)
+                                {
+                                    RemainCal.ForeColor = Color.Red;
+                                }
+                                if (totalCarbs > carbGoal)
+                                {
+                                    RemainCarb.ForeColor = Color.Red;
+                                }
+                                 if (totalFat > fatGoal)
+                                {
+                                    RemainFat.ForeColor = Color.Red;
+                                }
+                                if (totalProtein > proteinGoal)
+                                {
+                                    RemainProtein.ForeColor = Color.Red;
+                                }
+                            }
+
+
+                            dr.Close();
+                           
+
+                        }
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
+                   
 
                 }
                 myCon.closeCon();
@@ -128,7 +204,72 @@ namespace NutritionTracker
             }
            
         }
-            
+        public void SelectMacros()
+        {
+            myCon.openCon();
+            string username = fdUsername.Text;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(@"SELECT calories, carbs, fat, protein 
+                                                            FROM user_macros 
+                                                            JOIN user ON user.id = user_macros.user_id 
+                                                            WHERE username = @username;", myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@username", username);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        int calGoal = dr.GetInt32("calories");
+                        int carbGoal = dr.GetInt32("carbs");
+                        int fatGoal = dr.GetInt32("fat");
+                        int proteinGoal = dr.GetInt32("protein");
+
+                        RemainCal.Text = calGoal.ToString();
+                        RemainCarb.Text = carbGoal.ToString();
+                        RemainFat.Text = fatGoal.ToString();
+                       RemainProtein.Text = proteinGoal.ToString();
+                        fdCal.Text = calGoal.ToString();
+                        fdCarbs.Text = carbGoal.ToString();
+                        fdFat.Text = fatGoal.ToString();
+                        fdProtein.Text = proteinGoal.ToString();
+
+
+                    }
+                    dr.Close();
+                }
+                myCon.closeCon();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
+        public void FoodDiaryCalculation()
+        {
+
+            //int calGoal = int.Parse(fdCal.Text);
+            //int carbGoal = int.Parse(fdCarbs.Text);
+            //int fatGoal = int.Parse(fdFat.Text);
+            //int proteinGoal = int.Parse(fdProtein.Text);
+
+            //int calRemain = (calGoal - totalCalories);
+            //int carbRemain = (carbGoal - totalCarbs);
+            //int fatRemain = (fatGoal - totalFat);
+            //int proteinRemain = (proteinGoal - totalProtein);
+
+            //RemainCal.Text = calRemain.ToString();
+            //RemainCarb.Text = carbRemain.ToString();
+            //RemainFat.Text = fatRemain.ToString();
+            //RemainProtein.Text = proteinRemain.ToString();
+
+
+
+        }
+        
         private void addFoodBtn_Click(object sender, EventArgs e)
         {
             FormAddFood add = new FormAddFood();
@@ -144,7 +285,8 @@ namespace NutritionTracker
         private void FoodDiary_Load(object sender, EventArgs e)
         {
             //DynamicFoodDiary();
-       
+            SelectMacros();
+            DisplayFoodDiary();
             addFoodBtn.Visible = true;
             FDLabel.Visible = true;
             totalTxtPanel.Visible = true;

@@ -34,6 +34,8 @@ namespace NutritionTracker
                 int weight = int.Parse(personWeightTxtBox.Text);
                 int targetWeight = int.Parse(personTargetWeight.Text);
                 string weightGoal = personGoal2TxtBox.Text;
+                int water = int.Parse(waterBox.Text);
+                int sleep = int.Parse(sleepBox.Text);
                 int gender;
                 if (personGenderTxtBox.Text == "Male")
                 {
@@ -52,12 +54,15 @@ namespace NutritionTracker
 
                 string updateFitnessDataQuery = @"UPDATE user_fitnessdata
                                 JOIN user ON user.id = user_fitnessdata.user_id
+                                JOIN user_lifestyle ON user_lifestyle.user_id = user_fitnessdata.user_id
                                 SET 
                                     user_fitnessdata.weight = @new_weight,
                                     user_fitnessdata.age = @new_age,
                                     user_fitnessdata.gender = @new_gender,
                                     user_fitnessdata.weight_goal = @new_weight_goal,
-                                    user_fitnessdata.target_weight = @new_target_weight
+                                    user_fitnessdata.target_weight = @new_target_weight,
+                                    user_lifestyle.water = @new_water,
+                                    user_lifestyle.sleep = @new_sleep
                                 WHERE user.username = @username;";
 
                 MySqlCommand updateFitnessDataCmd = new MySqlCommand(updateFitnessDataQuery, myCon.getCon());
@@ -66,6 +71,8 @@ namespace NutritionTracker
                 updateFitnessDataCmd.Parameters.AddWithValue("@new_gender", gender);
                 updateFitnessDataCmd.Parameters.AddWithValue("@new_weight_goal", weightGoal);
                 updateFitnessDataCmd.Parameters.AddWithValue("@new_target_weight", targetWeight);
+                updateFitnessDataCmd.Parameters.AddWithValue("@new_water", water);
+                updateFitnessDataCmd.Parameters.AddWithValue("@new_sleep", sleep);
                 updateFitnessDataCmd.Parameters.AddWithValue("@username", username);
 
 
@@ -127,6 +134,9 @@ namespace NutritionTracker
                 personTargetWeight.Enabled = false;
                 personGoal2TxtBox.Enabled = false;
                 updateChangesBtn.Visible = false;
+                waterBox.Enabled = false;
+                sleepBox.Enabled = false;
+
 
                 
 
@@ -228,7 +238,8 @@ namespace NutritionTracker
             personTargetWeight.Enabled = true;
             personGoal2TxtBox.Enabled = true;
             updateChangesBtn.Visible = true;
-
+            waterBox.Enabled = true;
+            sleepBox.Enabled = true;
 
 
         }

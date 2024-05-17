@@ -319,8 +319,6 @@
             this.saveChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.saveChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveChangesBtn.ForeColor = System.Drawing.Color.Black;
-            this.saveChangesBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.saveChangesBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveChangesBtn.HoverState.Parent = this.saveChangesBtn;
             this.saveChangesBtn.Location = new System.Drawing.Point(24, 356);
             this.saveChangesBtn.Margin = new System.Windows.Forms.Padding(2);

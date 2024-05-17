@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace NutritionTracker
 {
@@ -88,7 +89,7 @@ namespace NutritionTracker
             dash.proteinRemain.Text = protein.ToString();
             dash.carbRemain.Text = carbs.ToString();
         }
-         public void PersonalizationRetrieveData(int TDEE, int carbs, int protein, int fat, int targetWeight, int weight, int age, int gender, string weightGoal)
+         public void PersonalizationRetrieveData(int TDEE, int carbs, int protein, int fat, int targetWeight, int weight, int age, int gender, string weightGoal, int water, int sleep)
          {
             personalize.pCalLabel.Text = TDEE.ToString();
             personalize.pCarbLabel.Text = carbs.ToString();
@@ -98,6 +99,8 @@ namespace NutritionTracker
             personalize.personWeightTxtBox.Text = weight.ToString();
             personalize.personGoal2TxtBox.Text = weightGoal;
             personalize.personTargetWeight.Text = targetWeight.ToString();
+            personalize.waterBox.Text = water.ToString();
+            personalize.sleepBox.Text = sleep.ToString();
 
             if (gender == 0)
             {
@@ -150,7 +153,8 @@ namespace NutritionTracker
             dash.fatRemain.Text = personalize.pFatLabel.Text;
             dash.proteinRemain.Text = personalize.pProteinLabel.Text;
             dash.carbNum.Text = personalize.pCarbLabel.Text;
-
+            dash.waternum.Text = personalize.waterBox.Text;
+            dash.sleepNum.Text = personalize.sleepBox.Text;
 
 
             
@@ -167,16 +171,16 @@ namespace NutritionTracker
         private void fdBtn_Click(object sender, EventArgs e)
         {
             loadForm(fd);
-           
             fd.DisplayFoodDiary();
+            fd.SelectMacros();
             fd.fdCal.Text = personalize.pCalLabel.Text;
             fd.fdCarbs.Text = personalize.pCarbLabel.Text;
             fd.fdFat.Text = personalize.pFatLabel.Text;
             fd.fdProtein.Text = personalize.pProteinLabel.Text;
             fd.fdUsername.Text = usernameLbl.Text;
-
-
-
+           
+           
+            fd.DisplayFoodDiary();
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;
@@ -190,7 +194,8 @@ namespace NutritionTracker
         private void personalizationBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalize);
-          
+            
+
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add_gray;
             this.dashboardBtn.Image = Properties.Resources.home_gray;

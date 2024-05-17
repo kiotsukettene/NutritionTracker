@@ -312,14 +312,13 @@
             this.submitLastStep.CustomBorderColor = System.Drawing.Color.White;
             this.submitLastStep.CustomImages.Parent = this.submitLastStep;
             this.submitLastStep.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.submitLastStep.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitLastStep.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitLastStep.ForeColor = System.Drawing.Color.Black;
-            this.submitLastStep.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
-            this.submitLastStep.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitLastStep.HoverState.Parent = this.submitLastStep;
             this.submitLastStep.Location = new System.Drawing.Point(435, 411);
             this.submitLastStep.Margin = new System.Windows.Forms.Padding(2);
             this.submitLastStep.Name = "submitLastStep";
+            this.submitLastStep.PressedColor = System.Drawing.Color.Transparent;
             this.submitLastStep.ShadowDecoration.Parent = this.submitLastStep;
             this.submitLastStep.Size = new System.Drawing.Size(110, 38);
             this.submitLastStep.TabIndex = 128;
