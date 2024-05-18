@@ -19,7 +19,7 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
+       
         public int activityLevel { get; set; }
        public int weightGoal { get; set; }
         public int targetWeightGoal { get; set; }
@@ -114,7 +114,9 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Error Insert");
+                    fm.Show();
+                    fm.failedLbl.Text = "Error Insert";
+                    
                    
                 }
                 myCon.closeCon();

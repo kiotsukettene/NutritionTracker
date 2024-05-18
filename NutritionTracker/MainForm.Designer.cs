@@ -35,6 +35,7 @@
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.personalizationBtn = new Guna.UI2.WinForms.Guna2Button();
             this.fdBtn = new Guna.UI2.WinForms.Guna2Button();
             this.calculatorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +47,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.usernameLbl);
             this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Controls.Add(this.exitBtn);
@@ -78,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panel1.Controls.Add(this.logOutBtn);
             this.panel1.Controls.Add(this.personalizationBtn);
             this.panel1.Controls.Add(this.fdBtn);
             this.panel1.Controls.Add(this.calculatorBtn);
@@ -91,7 +93,7 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.BackColor = System.Drawing.Color.White;
             this.mainPanel.Location = new System.Drawing.Point(74, 31);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.ShadowDecoration.Parent = this.mainPanel;
@@ -137,6 +139,26 @@
             this.miniBtn.Size = new System.Drawing.Size(35, 28);
             this.miniBtn.TabIndex = 2;
             this.miniBtn.Click += new System.EventHandler(this.minBtn);
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.logOutBtn.CheckedState.Parent = this.logOutBtn;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.CustomImages.Parent = this.logOutBtn;
+            this.logOutBtn.FillColor = System.Drawing.Color.Transparent;
+            this.logOutBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.logOutBtn.ForeColor = System.Drawing.Color.White;
+            this.logOutBtn.HoverState.FillColor = System.Drawing.Color.Black;
+            this.logOutBtn.HoverState.Image = global::NutritionTracker.Properties.Resources.exit__1_;
+            this.logOutBtn.HoverState.Parent = this.logOutBtn;
+            this.logOutBtn.Image = global::NutritionTracker.Properties.Resources.exit;
+            this.logOutBtn.Location = new System.Drawing.Point(0, 383);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.ShadowDecoration.Parent = this.logOutBtn;
+            this.logOutBtn.Size = new System.Drawing.Size(74, 55);
+            this.logOutBtn.TabIndex = 4;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // personalizationBtn
             // 
@@ -262,6 +284,7 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
         public System.Windows.Forms.Label usernameLbl;
+        private Guna.UI2.WinForms.Guna2Button logOutBtn;
     }
 }
 

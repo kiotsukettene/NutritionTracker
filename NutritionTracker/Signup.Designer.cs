@@ -265,8 +265,9 @@
             // showBox
             // 
             this.showBox.CheckedState.Parent = this.showBox;
+            this.showBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showBox.HoverState.Parent = this.showBox;
-            this.showBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
+            this.showBox.Image = global::NutritionTracker.Properties.Resources.hidePassword;
             this.showBox.Location = new System.Drawing.Point(369, 229);
             this.showBox.Margin = new System.Windows.Forms.Padding(2);
             this.showBox.Name = "showBox";
@@ -279,6 +280,7 @@
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.White;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
@@ -323,8 +325,8 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.close2;
-            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.reject;
+            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.exitBtn.CheckedState.Parent = this.exitBtn;
             this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitBtn.CustomImages.Parent = this.exitBtn;
@@ -332,16 +334,16 @@
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.exitBtn.ForeColor = System.Drawing.Color.White;
             this.exitBtn.HoverState.Parent = this.exitBtn;
-            this.exitBtn.Location = new System.Drawing.Point(452, 13);
+            this.exitBtn.Location = new System.Drawing.Point(437, 3);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
-            this.exitBtn.Size = new System.Drawing.Size(15, 13);
+            this.exitBtn.Size = new System.Drawing.Size(35, 28);
             this.exitBtn.TabIndex = 22;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
             // 
             // miniBtn
             // 
-            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minimize;
+            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minus11;
             this.miniBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.miniBtn.CheckedState.Parent = this.miniBtn;
             this.miniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -350,10 +352,10 @@
             this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.miniBtn.ForeColor = System.Drawing.Color.White;
             this.miniBtn.HoverState.Parent = this.miniBtn;
-            this.miniBtn.Location = new System.Drawing.Point(421, 7);
+            this.miniBtn.Location = new System.Drawing.Point(396, 3);
             this.miniBtn.Name = "miniBtn";
             this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
-            this.miniBtn.Size = new System.Drawing.Size(18, 23);
+            this.miniBtn.Size = new System.Drawing.Size(35, 28);
             this.miniBtn.TabIndex = 21;
             this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click_1);
             // 

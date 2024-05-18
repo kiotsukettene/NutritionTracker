@@ -463,5 +463,38 @@
   <ItemGroup>
     <None Include="Resources\warning.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green and Beige Illustrative Healthy Food Presentation %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newSplash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

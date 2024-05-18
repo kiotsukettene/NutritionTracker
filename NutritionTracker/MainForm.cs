@@ -172,7 +172,7 @@ namespace NutritionTracker
         {
             loadForm(fd);
             fd.DisplayFoodDiary();
-            fd.SelectMacros();
+            //fd.SelectMacros();
             fd.fdCal.Text = personalize.pCalLabel.Text;
             fd.fdCarbs.Text = personalize.pCarbLabel.Text;
             fd.fdFat.Text = personalize.pFatLabel.Text;
@@ -227,6 +227,13 @@ namespace NutritionTracker
             personalizationBtn.BackColor = Color.Transparent;
             calculatorBtn.BackColor = Color.Black;
             
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            loginForm login = new loginForm();
+            login.Show();
         }
     }
 }

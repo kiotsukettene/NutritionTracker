@@ -14,7 +14,8 @@ namespace NutritionTracker
     public partial class Personalization : Form
         
     {
-   
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
         DBConnection myCon = new DBConnection();
         
         public Personalization()
@@ -48,7 +49,10 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Invalid gender. Please enter 'Male' or 'Female'.");
+
+                    fm.Show();
+                    fm.failedLbl.Text = "Invalid gender. Please enter 'Male' or 'Female'.";
+
                     return;
                 }
 
@@ -92,7 +96,9 @@ namespace NutritionTracker
                 else
                 {
 
-                    MessageBox.Show("Error updating user fitness data");
+                    fm.Show();
+                    fm.failedLbl.Text = "Error updating user fitness data";
+                   
                 }
                 myCon.closeCon();
             }
@@ -125,7 +131,9 @@ namespace NutritionTracker
             if (userRowsAffected > 0)
             {
 
-                MessageBox.Show("Update Successful");
+                sm.Show();
+                sm.successLbl.Text = "Update Successful";
+
                 personNameTxtBox.Enabled = false;
                 personLastNTxtBox.Enabled = false;
                 personGenderTxtBox.Enabled = false;
@@ -144,8 +152,9 @@ namespace NutritionTracker
             }
             else
             {
-
-                MessageBox.Show("Error updating user information");
+              
+                fm.Show();
+                fm.failedLbl.Text = "Error updating user information";
             }
         }
 
@@ -164,13 +173,31 @@ namespace NutritionTracker
                 double fatsPercentage = (fatsPercentageIndex + 1) * 5; // 25% for fats
                 double proteinPercentage = (proteinPercentageIndex + 1) * 5; // 25% for protein
 
+                double totalPercentage = (carbsPercentage + fatsPercentage + proteinPercentage);
+
+                if (Math.Abs(totalPercentage - 100) > 0.01) // Consider a small margin of error
+                {
+                    throw new InvalidOperationException("The total percentage must be 100%. Please adjust the combo box selections.");
+
+                }
+
+                if (!int.TryParse(pCalLabel.Text, out int updateCalories))
+                {
+                    throw new FormatException("Invalid calorie value.");
+                }
+
+
                 // Get the updated calorie value
-                int updateCalories = int.Parse(pCalLabel.Text);
+                //int updateCalories = int.Parse(pCalLabel.Text);
 
                 // Calculate the macros based on the updated calorie value
                 int updateCarbs = (int)((carbsPercentage / 100) * updateCalories / 4);
                 int updateFats = (int)((fatsPercentage / 100) * updateCalories / 9);
                 int updateProtein = (int)((proteinPercentage / 100) * updateCalories / 4);
+
+                pCarbLabel.Text = updateCarbs.ToString();
+                pFatLabel.Text = updateFats.ToString();
+                pProteinLabel.Text = updateProtein.ToString();
 
                 string username = personUserNTxtBox.Text;
 
@@ -197,7 +224,9 @@ namespace NutritionTracker
                 int rows = updateMacrosCmd.ExecuteNonQuery();
                 if (rows > 0)
                 {
-                    MessageBox.Show("Update Successfully");
+                    
+                    sm.Show();
+                    sm.successLbl.Text = "Update Successfully";
                     UpdateMacrosChangesBtn.Visible = false;
                     pCalLabel.BorderThickness = 0;
                     pCarbLabel.Text = updateCarbs.ToString();
@@ -207,7 +236,8 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Error Update");
+                    fm.Show();
+                    fm.failedLbl.Text = "Error Update";
                 }
                 myCon.closeCon();
             }
@@ -223,6 +253,7 @@ namespace NutritionTracker
 
         private void updateChangesBtn_Click(object sender, EventArgs e)
         {
+            
             UpdateFitnessData();
             UpdateOnDashboard();
         }
@@ -260,6 +291,119 @@ namespace NutritionTracker
         private void UpdateMacrosChangesBtn_Click(object sender, EventArgs e)
         {
             updateMacros();
+        }
+
+        private void waterBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void personAgeTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void personWeightTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void personTargetWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void sleepBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void pCalLabel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

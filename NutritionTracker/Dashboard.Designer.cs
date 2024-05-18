@@ -34,7 +34,6 @@
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dbDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -55,17 +54,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sleepNum = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.liters = new System.Windows.Forms.Label();
             this.waternum = new System.Windows.Forms.Label();
             this.waterLabel = new System.Windows.Forms.Label();
@@ -95,23 +91,27 @@
             this.sugarP = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2ShadowPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2ShadowPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DashboardLabel
             // 
             this.DashboardLabel.AutoSize = true;
             this.DashboardLabel.Font = new System.Drawing.Font("Poppins SemiBold", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashboardLabel.ForeColor = System.Drawing.Color.Black;
+            this.DashboardLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.DashboardLabel.Location = new System.Drawing.Point(14, 1);
             this.DashboardLabel.Name = "DashboardLabel";
             this.DashboardLabel.Size = new System.Drawing.Size(211, 58);
@@ -122,7 +122,7 @@
             // 
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Black;
+            this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.welcomeLabel.Location = new System.Drawing.Point(19, 59);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(110, 28);
@@ -168,37 +168,14 @@
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(249)))), ((int)(((byte)(211)))))};
             series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(222)))), ((int)(((byte)(164)))));
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(424, 329);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::NutritionTracker.Properties.Resources.download;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(16, 16);
-            this.guna2Button1.Location = new System.Drawing.Point(409, 20);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.Bisque;
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(35, 28);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dbDateTime
             // 
@@ -207,7 +184,8 @@
             this.dbDateTime.BorderRadius = 5;
             this.dbDateTime.BorderThickness = 1;
             this.dbDateTime.CheckedState.Parent = this.dbDateTime;
-            this.dbDateTime.CustomFormat = "";
+            this.dbDateTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dbDateTime.CustomFormat = "yyyy-MM-dd";
             this.dbDateTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(181)))));
             this.dbDateTime.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dbDateTime.ForeColor = System.Drawing.Color.Black;
@@ -221,13 +199,13 @@
             this.dbDateTime.Size = new System.Drawing.Size(133, 28);
             this.dbDateTime.TabIndex = 7;
             this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dbDateTime.Value = new System.DateTime(2024, 5, 18, 0, 0, 0, 0);
+            this.dbDateTime.Value = new System.DateTime(2024, 5, 19, 0, 0, 0, 0);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label7.Location = new System.Drawing.Point(15, 20);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(173, 28);
@@ -253,7 +231,7 @@
             this.guna2ShadowPanel4.Controls.Add(this.label10);
             this.guna2ShadowPanel4.Controls.Add(this.label9);
             this.guna2ShadowPanel4.Controls.Add(this.guna2CircleProgressBar1);
-            this.guna2ShadowPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.guna2ShadowPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.guna2ShadowPanel4.Location = new System.Drawing.Point(838, 98);
             this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
             this.guna2ShadowPanel4.Radius = 13;
@@ -334,7 +312,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label16.Location = new System.Drawing.Point(17, 451);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(105, 23);
@@ -345,7 +323,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label15.Location = new System.Drawing.Point(17, 391);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 23);
@@ -364,7 +342,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label14.Location = new System.Drawing.Point(17, 337);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 23);
@@ -375,7 +353,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label13.Location = new System.Drawing.Point(17, 310);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(31, 23);
@@ -386,7 +364,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label12.Location = new System.Drawing.Point(17, 283);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(111, 23);
@@ -397,7 +375,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label11.Location = new System.Drawing.Point(17, 256);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 23);
@@ -408,7 +386,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label10.Location = new System.Drawing.Point(16, 225);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 21);
@@ -419,7 +397,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label9.Location = new System.Drawing.Point(15, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 28);
@@ -429,7 +407,7 @@
             // guna2CircleProgressBar1
             // 
             this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.DarkBlue;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.guna2CircleProgressBar1.Location = new System.Drawing.Point(59, 59);
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
@@ -449,7 +427,7 @@
             this.guna2ShadowPanel3.Controls.Add(this.label4);
             this.guna2ShadowPanel3.Controls.Add(this.label6);
             this.guna2ShadowPanel3.Controls.Add(this.label5);
-            this.guna2ShadowPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.guna2ShadowPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(249)))), ((int)(((byte)(211)))));
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(562, 100);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             this.guna2ShadowPanel3.Radius = 13;
@@ -459,22 +437,11 @@
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel3.TabIndex = 23;
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackgroundImage = global::NutritionTracker.Properties.Resources.streakDash;
-            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(100, 8);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(125, 115);
-            this.guna2PictureBox3.TabIndex = 18;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label4.Location = new System.Drawing.Point(25, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 28);
@@ -485,7 +452,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label6.Location = new System.Drawing.Point(25, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 28);
@@ -496,7 +463,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label5.Location = new System.Drawing.Point(25, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 36);
@@ -511,7 +478,7 @@
             this.guna2ShadowPanel2.Controls.Add(this.label1);
             this.guna2ShadowPanel2.Controls.Add(this.label3);
             this.guna2ShadowPanel2.Controls.Add(this.sleepNum);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(244)))), ((int)(((byte)(200)))));
+            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(222)))), ((int)(((byte)(164)))));
             this.guna2ShadowPanel2.Location = new System.Drawing.Point(292, 100);
             this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             this.guna2ShadowPanel2.Radius = 13;
@@ -521,23 +488,11 @@
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel2.TabIndex = 22;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackgroundImage = global::NutritionTracker.Properties.Resources.sleepDash;
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(119, 8);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(112, 107);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2PictureBox2.TabIndex = 17;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label1.Location = new System.Drawing.Point(25, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 28);
@@ -548,7 +503,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label3.Location = new System.Drawing.Point(25, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 28);
@@ -559,7 +514,7 @@
             // 
             this.sleepNum.AutoSize = true;
             this.sleepNum.Font = new System.Drawing.Font("Poppins SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sleepNum.ForeColor = System.Drawing.Color.Black;
+            this.sleepNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.sleepNum.Location = new System.Drawing.Point(25, 51);
             this.sleepNum.Name = "sleepNum";
             this.sleepNum.Size = new System.Drawing.Size(28, 36);
@@ -574,7 +529,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.liters);
             this.guna2ShadowPanel1.Controls.Add(this.waternum);
             this.guna2ShadowPanel1.Controls.Add(this.waterLabel);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(216)))), ((int)(((byte)(93)))));
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(222)))));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(23, 100);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 13;
@@ -584,23 +539,11 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel1.TabIndex = 21;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.waterDash;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(104, 8);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(125, 115);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // liters
             // 
             this.liters.AutoSize = true;
             this.liters.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liters.ForeColor = System.Drawing.Color.Black;
+            this.liters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.liters.Location = new System.Drawing.Point(25, 92);
             this.liters.Name = "liters";
             this.liters.Size = new System.Drawing.Size(53, 28);
@@ -611,7 +554,7 @@
             // 
             this.waternum.AutoSize = true;
             this.waternum.Font = new System.Drawing.Font("Poppins SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waternum.ForeColor = System.Drawing.Color.Black;
+            this.waternum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.waternum.Location = new System.Drawing.Point(25, 51);
             this.waternum.Name = "waternum";
             this.waternum.Size = new System.Drawing.Size(28, 36);
@@ -622,7 +565,7 @@
             // 
             this.waterLabel.AutoSize = true;
             this.waterLabel.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterLabel.ForeColor = System.Drawing.Color.Black;
+            this.waterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.waterLabel.Location = new System.Drawing.Point(25, 15);
             this.waterLabel.Name = "waterLabel";
             this.waterLabel.Size = new System.Drawing.Size(61, 28);
@@ -633,7 +576,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label8.Location = new System.Drawing.Point(15, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 28);
@@ -681,7 +624,7 @@
             // label26
             // 
             this.label26.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label26.Location = new System.Drawing.Point(16, 100);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(113, 23);
@@ -691,7 +634,7 @@
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Black;
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label27.Location = new System.Drawing.Point(16, 160);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(113, 23);
@@ -701,7 +644,7 @@
             // label28
             // 
             this.label28.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label28.Location = new System.Drawing.Point(16, 220);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(113, 23);
@@ -711,7 +654,7 @@
             // label29
             // 
             this.label29.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label29.Location = new System.Drawing.Point(16, 280);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(113, 23);
@@ -841,7 +784,7 @@
             // label40
             // 
             this.label40.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label40.Location = new System.Drawing.Point(16, 345);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(113, 23);
@@ -916,11 +859,69 @@
             this.guna2ShadowPanel7.Size = new System.Drawing.Size(313, 418);
             this.guna2ShadowPanel7.TabIndex = 26;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = global::NutritionTracker.Properties.Resources.download;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(16, 16);
+            this.guna2Button1.Location = new System.Drawing.Point(409, 20);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.Bisque;
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(35, 28);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackgroundImage = global::NutritionTracker.Properties.Resources.streakDash;
+            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(100, 8);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(125, 115);
+            this.guna2PictureBox3.TabIndex = 18;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackgroundImage = global::NutritionTracker.Properties.Resources.sleepDash;
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(119, 8);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(112, 107);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox2.TabIndex = 17;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.waterDash;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(104, 8);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(125, 115);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1095, 669);
             this.Controls.Add(this.guna2ShadowPanel7);
             this.Controls.Add(this.guna2ShadowPanel6);
@@ -941,15 +942,15 @@
             this.guna2ShadowPanel4.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2ShadowPanel7.ResumeLayout(false);
             this.guna2ShadowPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

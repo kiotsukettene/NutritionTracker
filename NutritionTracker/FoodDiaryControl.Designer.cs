@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.mealPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mealLbl = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.fdPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.fdLbl = new System.Windows.Forms.Label();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.servingsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.sizeLbl = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.unitLbl = new System.Windows.Forms.Label();
@@ -48,10 +48,10 @@
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
+            this.deleteBtn = new System.Windows.Forms.Label();
+            this.mealPanel.SuspendLayout();
+            this.fdPanel.SuspendLayout();
+            this.servingsPanel.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
@@ -61,19 +61,19 @@
             this.guna2Panel10.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // mealPanel
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.guna2Panel1.Controls.Add(this.mealLbl);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(142, 44);
-            this.guna2Panel1.TabIndex = 0;
+            this.mealPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.mealPanel.BorderThickness = 1;
+            this.mealPanel.Controls.Add(this.flowLayoutPanel1);
+            this.mealPanel.Controls.Add(this.mealLbl);
+            this.mealPanel.CustomBorderColor = System.Drawing.Color.Gray;
+            this.mealPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.mealPanel.Location = new System.Drawing.Point(0, 0);
+            this.mealPanel.Name = "mealPanel";
+            this.mealPanel.ShadowDecoration.Parent = this.mealPanel;
+            this.mealPanel.Size = new System.Drawing.Size(142, 44);
+            this.mealPanel.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -93,19 +93,20 @@
             this.mealLbl.Size = new System.Drawing.Size(136, 22);
             this.mealLbl.TabIndex = 69;
             this.mealLbl.Text = "Breakfast";
+            this.mealLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2Panel2
+            // fdPanel
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.fdLbl);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel2.Location = new System.Drawing.Point(141, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(260, 44);
-            this.guna2Panel2.TabIndex = 1;
+            this.fdPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.fdPanel.BorderThickness = 1;
+            this.fdPanel.Controls.Add(this.fdLbl);
+            this.fdPanel.CustomBorderColor = System.Drawing.Color.Gray;
+            this.fdPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.fdPanel.Location = new System.Drawing.Point(141, 0);
+            this.fdPanel.Name = "fdPanel";
+            this.fdPanel.ShadowDecoration.Parent = this.fdPanel;
+            this.fdPanel.Size = new System.Drawing.Size(260, 44);
+            this.fdPanel.TabIndex = 1;
             // 
             // fdLbl
             // 
@@ -117,19 +118,20 @@
             this.fdLbl.Size = new System.Drawing.Size(254, 22);
             this.fdLbl.TabIndex = 69;
             this.fdLbl.Text = "White Rice, cooked";
+            this.fdLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2Panel3
+            // servingsPanel
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.sizeLbl);
-            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.guna2Panel3.Location = new System.Drawing.Point(400, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(80, 44);
-            this.guna2Panel3.TabIndex = 2;
+            this.servingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.servingsPanel.BorderThickness = 1;
+            this.servingsPanel.Controls.Add(this.sizeLbl);
+            this.servingsPanel.CustomBorderColor = System.Drawing.Color.Gray;
+            this.servingsPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.servingsPanel.Location = new System.Drawing.Point(400, 0);
+            this.servingsPanel.Name = "servingsPanel";
+            this.servingsPanel.ShadowDecoration.Parent = this.servingsPanel;
+            this.servingsPanel.Size = new System.Drawing.Size(80, 44);
+            this.servingsPanel.TabIndex = 2;
             // 
             // sizeLbl
             // 
@@ -141,6 +143,7 @@
             this.sizeLbl.Size = new System.Drawing.Size(74, 22);
             this.sizeLbl.TabIndex = 69;
             this.sizeLbl.Text = "100";
+            this.sizeLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel4
             // 
@@ -165,6 +168,7 @@
             this.unitLbl.Size = new System.Drawing.Size(74, 22);
             this.unitLbl.TabIndex = 69;
             this.unitLbl.Text = "gram";
+            this.unitLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel5
             // 
@@ -189,6 +193,7 @@
             this.calLbl.Size = new System.Drawing.Size(74, 22);
             this.calLbl.TabIndex = 69;
             this.calLbl.Text = "Calories";
+            this.calLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel6
             // 
@@ -213,6 +218,7 @@
             this.carbLbl.Size = new System.Drawing.Size(74, 22);
             this.carbLbl.TabIndex = 69;
             this.carbLbl.Text = "Carbs";
+            this.carbLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel7
             // 
@@ -237,6 +243,7 @@
             this.fatLbl.Size = new System.Drawing.Size(74, 22);
             this.fatLbl.TabIndex = 69;
             this.fatLbl.Text = "Fat";
+            this.fatLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel8
             // 
@@ -261,10 +268,11 @@
             this.proteinLbl.Size = new System.Drawing.Size(74, 22);
             this.proteinLbl.TabIndex = 69;
             this.proteinLbl.Text = "Protein";
+            this.proteinLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2Panel9
             // 
-            this.guna2Panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.guna2Panel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel9.BorderThickness = 1;
             this.guna2Panel9.Controls.Add(this.label9);
             this.guna2Panel9.CustomBorderColor = System.Drawing.Color.Gray;
@@ -277,8 +285,11 @@
             // 
             // label9
             // 
+            this.label9.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(2, 11);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
@@ -289,9 +300,9 @@
             // 
             // guna2Panel10
             // 
-            this.guna2Panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.guna2Panel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel10.BorderThickness = 1;
-            this.guna2Panel10.Controls.Add(this.label10);
+            this.guna2Panel10.Controls.Add(this.deleteBtn);
             this.guna2Panel10.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel10.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel10.Location = new System.Drawing.Point(968, 0);
@@ -300,17 +311,21 @@
             this.guna2Panel10.Size = new System.Drawing.Size(78, 44);
             this.guna2Panel10.TabIndex = 9;
             // 
-            // label10
+            // deleteBtn
             // 
-            this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.IndianRed;
-            this.label10.Location = new System.Drawing.Point(2, 11);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 22);
-            this.label10.TabIndex = 69;
-            this.label10.Text = "Delete";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.deleteBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(2, 11);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(74, 22);
+            this.deleteBtn.TabIndex = 69;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // FoodDiaryControl
             // 
@@ -324,15 +339,15 @@
             this.Controls.Add(this.guna2Panel6);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel4);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.servingsPanel);
+            this.Controls.Add(this.fdPanel);
+            this.Controls.Add(this.mealPanel);
             this.Name = "FoodDiaryControl";
             this.Size = new System.Drawing.Size(1047, 45);
             this.Load += new System.EventHandler(this.FoodDiaryControl_Load);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
+            this.mealPanel.ResumeLayout(false);
+            this.fdPanel.ResumeLayout(false);
+            this.servingsPanel.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
@@ -346,11 +361,11 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel mealPanel;
         private System.Windows.Forms.Label mealLbl;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel fdPanel;
         private System.Windows.Forms.Label fdLbl;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel servingsPanel;
         private System.Windows.Forms.Label sizeLbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label unitLbl;
@@ -365,7 +380,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label deleteBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

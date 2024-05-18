@@ -31,10 +31,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.deleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.mealBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.nfUsername = new System.Windows.Forms.Label();
-            this.updateValues = new Guna.UI2.WinForms.Guna2Button();
             this.addToFDBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.chartCal = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.foodName = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.dbDateTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -68,11 +68,11 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.mainPanel.Controls.Add(this.guna2Button1);
+            this.mainPanel.Controls.Add(this.dbDateTime);
+            this.mainPanel.Controls.Add(this.deleteBtn);
             this.mainPanel.Controls.Add(this.label7);
             this.mainPanel.Controls.Add(this.mealBox);
             this.mainPanel.Controls.Add(this.nfUsername);
-            this.mainPanel.Controls.Add(this.updateValues);
             this.mainPanel.Controls.Add(this.addToFDBtn);
             this.mainPanel.Controls.Add(this.label3);
             this.mainPanel.Controls.Add(this.chartCal);
@@ -102,6 +102,28 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(522, 594);
             this.mainPanel.TabIndex = 0;
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.BorderColor = System.Drawing.Color.White;
+            this.deleteBtn.BorderRadius = 5;
+            this.deleteBtn.CheckedState.Parent = this.deleteBtn;
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBtn.CustomBorderColor = System.Drawing.Color.White;
+            this.deleteBtn.CustomImages.Parent = this.deleteBtn;
+            this.deleteBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.deleteBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.Black;
+            this.deleteBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.deleteBtn.HoverState.Parent = this.deleteBtn;
+            this.deleteBtn.Location = new System.Drawing.Point(240, 546);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.ShadowDecoration.Parent = this.deleteBtn;
+            this.deleteBtn.Size = new System.Drawing.Size(127, 37);
+            this.deleteBtn.TabIndex = 201;
+            this.deleteBtn.Text = "Delete ";
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // label7
             // 
@@ -149,33 +171,11 @@
             this.nfUsername.AutoSize = true;
             this.nfUsername.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nfUsername.ForeColor = System.Drawing.Color.Black;
-            this.nfUsername.Location = new System.Drawing.Point(441, 312);
+            this.nfUsername.Location = new System.Drawing.Point(190, 312);
             this.nfUsername.Name = "nfUsername";
             this.nfUsername.Size = new System.Drawing.Size(63, 23);
             this.nfUsername.TabIndex = 198;
             this.nfUsername.Text = "Calories";
-            // 
-            // updateValues
-            // 
-            this.updateValues.BorderColor = System.Drawing.Color.White;
-            this.updateValues.BorderRadius = 5;
-            this.updateValues.CheckedState.Parent = this.updateValues;
-            this.updateValues.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateValues.CustomBorderColor = System.Drawing.Color.White;
-            this.updateValues.CustomImages.Parent = this.updateValues;
-            this.updateValues.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.updateValues.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateValues.ForeColor = System.Drawing.Color.Black;
-            this.updateValues.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.updateValues.HoverState.Parent = this.updateValues;
-            this.updateValues.Location = new System.Drawing.Point(240, 546);
-            this.updateValues.Margin = new System.Windows.Forms.Padding(2);
-            this.updateValues.Name = "updateValues";
-            this.updateValues.ShadowDecoration.Parent = this.updateValues;
-            this.updateValues.Size = new System.Drawing.Size(127, 37);
-            this.updateValues.TabIndex = 197;
-            this.updateValues.Text = "Update";
-            this.updateValues.Click += new System.EventHandler(this.updateValues_Click);
             // 
             // addToFDBtn
             // 
@@ -188,7 +188,7 @@
             this.addToFDBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.addToFDBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addToFDBtn.ForeColor = System.Drawing.Color.Black;
-            this.addToFDBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.addToFDBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.addToFDBtn.HoverState.Parent = this.addToFDBtn;
             this.addToFDBtn.Location = new System.Drawing.Point(374, 546);
             this.addToFDBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -457,6 +457,7 @@
             this.servingsBox.Size = new System.Drawing.Size(82, 35);
             this.servingsBox.TabIndex = 141;
             this.servingsBox.TextChanged += new System.EventHandler(this.servingsBox_TextChanged);
+            this.servingsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.servingsBox_KeyPress);
             // 
             // label5
             // 
@@ -540,26 +541,29 @@
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
             // 
-            // guna2Button1
+            // dbDateTime
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(374, 498);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(127, 37);
-            this.guna2Button1.TabIndex = 201;
-            this.guna2Button1.Text = "Delete ";
+            this.dbDateTime.Animated = true;
+            this.dbDateTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.dbDateTime.BorderRadius = 5;
+            this.dbDateTime.BorderThickness = 1;
+            this.dbDateTime.CheckedState.Parent = this.dbDateTime;
+            this.dbDateTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dbDateTime.CustomFormat = "yyyy-MM-dd";
+            this.dbDateTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(181)))));
+            this.dbDateTime.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dbDateTime.ForeColor = System.Drawing.Color.Black;
+            this.dbDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dbDateTime.HoverState.Parent = this.dbDateTime;
+            this.dbDateTime.Location = new System.Drawing.Point(368, 307);
+            this.dbDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dbDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dbDateTime.Name = "dbDateTime";
+            this.dbDateTime.ShadowDecoration.Parent = this.dbDateTime;
+            this.dbDateTime.Size = new System.Drawing.Size(133, 28);
+            this.dbDateTime.TabIndex = 202;
+            this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dbDateTime.Value = new System.DateTime(2024, 5, 19, 0, 0, 0, 0);
             // 
             // NutritionFacts
             // 
@@ -605,10 +609,10 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label chartCal;
         private Guna.UI2.WinForms.Guna2Button addToFDBtn;
-        private Guna.UI2.WinForms.Guna2Button updateValues;
         public System.Windows.Forms.Label nfUsername;
         private Guna.UI2.WinForms.Guna2ComboBox mealBox;
         public System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button deleteBtn;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dbDateTime;
     }
 }

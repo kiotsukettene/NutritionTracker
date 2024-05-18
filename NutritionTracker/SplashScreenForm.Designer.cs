@@ -31,24 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.ProgressBar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // ProgressBar
             // 
-            this.ProgressBar.BorderColor = System.Drawing.Color.DimGray;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.BorderColor = System.Drawing.Color.White;
             this.ProgressBar.BorderRadius = 10;
             this.ProgressBar.BorderThickness = 1;
-            this.ProgressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.ProgressBar.FillColor = System.Drawing.Color.Transparent;
             this.ProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.ProgressBar.Location = new System.Drawing.Point(197, 433);
+            this.ProgressBar.Location = new System.Drawing.Point(237, 388);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
-            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(152)))), ((int)(((byte)(107)))));
+            this.ProgressBar.ProgressColor = System.Drawing.Color.Khaki;
             this.ProgressBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(152)))), ((int)(((byte)(107)))));
             this.ProgressBar.ShadowDecoration.Parent = this.ProgressBar;
-            this.ProgressBar.Size = new System.Drawing.Size(318, 28);
+            this.ProgressBar.Size = new System.Drawing.Size(265, 23);
             this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.ProgressBar.TabIndex = 121;
             this.ProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -59,33 +58,16 @@
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::NutritionTracker.Properties.Resources.NutriTrackBlack;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(197, 363);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 45);
-            this.panel2.TabIndex = 124;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::NutritionTracker.Properties.Resources.LogoBlack;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(208, 72);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 273);
-            this.panel1.TabIndex = 123;
-            // 
             // SplashScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.BackgroundImage = global::NutritionTracker.Properties.Resources.newSplash;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(731, 594);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ProgressBar);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreenForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -98,7 +80,5 @@
         #endregion
         private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
     }
 }

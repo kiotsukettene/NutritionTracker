@@ -38,6 +38,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.Controls.Add(this.failedBtn);
             this.panel1.Controls.Add(this.failedLbl);
             this.panel1.Controls.Add(this.label1);
@@ -52,7 +53,7 @@
             // 
             this.failedLbl.AutoSize = true;
             this.failedLbl.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.failedLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.failedLbl.ForeColor = System.Drawing.Color.White;
             this.failedLbl.Location = new System.Drawing.Point(81, 57);
             this.failedLbl.Name = "failedLbl";
             this.failedLbl.Size = new System.Drawing.Size(141, 19);
@@ -63,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(80, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 26);
@@ -72,13 +73,14 @@
             // 
             // failedBtn
             // 
-            this.failedBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.failedBtn.BackColor = System.Drawing.Color.Ivory;
             this.failedBtn.BorderColor = System.Drawing.Color.Transparent;
             this.failedBtn.CheckedState.Parent = this.failedBtn;
+            this.failedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.failedBtn.CustomImages.Parent = this.failedBtn;
             this.failedBtn.FillColor = System.Drawing.Color.Empty;
             this.failedBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.failedBtn.ForeColor = System.Drawing.Color.White;
+            this.failedBtn.ForeColor = System.Drawing.Color.Black;
             this.failedBtn.HoverState.Parent = this.failedBtn;
             this.failedBtn.Location = new System.Drawing.Point(35, 96);
             this.failedBtn.Name = "failedBtn";

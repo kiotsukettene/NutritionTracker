@@ -49,5 +49,10 @@ namespace NutritionTracker
         {
             RoundCorners();
         }
+
+        private void warningLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

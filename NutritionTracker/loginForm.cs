@@ -25,11 +25,11 @@ namespace NutritionTracker
         MainForm main = new MainForm();
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
+   
         public loginForm()
         {
             InitializeComponent();
-           
+            RoundCorners();
            
         }
 
@@ -84,8 +84,8 @@ namespace NutritionTracker
 
             if (username == "" || password == "")
             {
-                wm.Show();
-                wm.warningLbl.Text = "Username and Password required!!";
+                fm.Show();
+                fm.failedLbl.Text = "Username and Password required!!";
                 return;
             }
             else
@@ -189,8 +189,8 @@ namespace NutritionTracker
                     }
                     else
                     {
-                        wm.Show();
-                        wm.warningLbl.Text = "Invalid Username or Password";
+                        fm.Show();
+                        fm.failedLbl.Text = "Invalid Username or Password";
                     }
 
                     myCon.closeCon();
@@ -214,7 +214,7 @@ namespace NutritionTracker
             if (loginPassBox.UseSystemPasswordChar)
             {
                 loginPassBox.UseSystemPasswordChar = false;
-                showPassBox.Image = Properties.Resources.hidePassword;
+                showPassBox.Image = Properties.Resources.showPassword;
                 loginPassBox.Font = new Font("Poppins", 10);
 
             }
@@ -222,7 +222,7 @@ namespace NutritionTracker
             {
                 loginPassBox.UseSystemPasswordChar = true;
                 loginPassBox.Font = new Font("Poppins", 6);
-                showPassBox.Image = Properties.Resources.showPassword;
+                showPassBox.Image = Properties.Resources.hidePassword;
             }
         }
 

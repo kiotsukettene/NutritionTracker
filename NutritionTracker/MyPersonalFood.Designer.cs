@@ -328,7 +328,7 @@
             this.saveChangesBtn.ShadowDecoration.Parent = this.saveChangesBtn;
             this.saveChangesBtn.Size = new System.Drawing.Size(127, 37);
             this.saveChangesBtn.TabIndex = 86;
-            this.saveChangesBtn.Text = "Save Changes";
+            this.saveChangesBtn.Text = "Save Food";
             this.saveChangesBtn.Click += new System.EventHandler(this.saveChangesBtn_Click);
             // 
             // label27

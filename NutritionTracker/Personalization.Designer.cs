@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personalization));
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.sleepBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.waterBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.updateChangesBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label18 = new System.Windows.Forms.Label();
             this.personLastNTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,17 +48,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.personTargetWeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.personWeightTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.personInfoEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.personGoal2TxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personAgeTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personGenderTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personUserNTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personNameTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.sleepBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.waterBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.personFitnessGoalsEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,6 +71,8 @@
             this.UpdateMacrosChangesBtn = new Guna.UI2.WinForms.Guna2Button();
             this.pCalLabel = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.personFitnessGoalsEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.personInfoEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -126,10 +126,99 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(494, 560);
             this.guna2ShadowPanel1.TabIndex = 14;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(257, 427);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 26);
+            this.label17.TabIndex = 40;
+            this.label17.Text = "Sleep";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(66, 427);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 26);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Water";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // sleepBox
+            // 
+            this.sleepBox.BorderColor = System.Drawing.Color.Gray;
+            this.sleepBox.BorderRadius = 8;
+            this.sleepBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sleepBox.DefaultText = "8";
+            this.sleepBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.sleepBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.sleepBox.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.sleepBox.DisabledState.Parent = this.sleepBox;
+            this.sleepBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.sleepBox.Enabled = false;
+            this.sleepBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.sleepBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sleepBox.FocusedState.Parent = this.sleepBox;
+            this.sleepBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sleepBox.ForeColor = System.Drawing.Color.Black;
+            this.sleepBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sleepBox.HoverState.Parent = this.sleepBox;
+            this.sleepBox.Location = new System.Drawing.Point(262, 458);
+            this.sleepBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.sleepBox.Name = "sleepBox";
+            this.sleepBox.PasswordChar = '\0';
+            this.sleepBox.PlaceholderText = "";
+            this.sleepBox.SelectedText = "";
+            this.sleepBox.SelectionStart = 1;
+            this.sleepBox.ShadowDecoration.Parent = this.sleepBox;
+            this.sleepBox.Size = new System.Drawing.Size(158, 40);
+            this.sleepBox.TabIndex = 38;
+            this.sleepBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sleepBox_KeyPress);
+            // 
+            // waterBox
+            // 
+            this.waterBox.BorderColor = System.Drawing.Color.Gray;
+            this.waterBox.BorderRadius = 8;
+            this.waterBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.waterBox.DefaultText = "4";
+            this.waterBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.waterBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
+            this.waterBox.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.waterBox.DisabledState.Parent = this.waterBox;
+            this.waterBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.waterBox.Enabled = false;
+            this.waterBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.waterBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.waterBox.FocusedState.Parent = this.waterBox;
+            this.waterBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterBox.ForeColor = System.Drawing.Color.Black;
+            this.waterBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.waterBox.HoverState.Parent = this.waterBox;
+            this.waterBox.Location = new System.Drawing.Point(69, 458);
+            this.waterBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.waterBox.Name = "waterBox";
+            this.waterBox.PasswordChar = '\0';
+            this.waterBox.PlaceholderText = "";
+            this.waterBox.SelectedText = "";
+            this.waterBox.SelectionStart = 1;
+            this.waterBox.ShadowDecoration.Parent = this.waterBox;
+            this.waterBox.Size = new System.Drawing.Size(158, 40);
+            this.waterBox.TabIndex = 37;
+            this.waterBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.waterBox_KeyPress);
+            // 
             // updateChangesBtn
             // 
             this.updateChangesBtn.BorderRadius = 8;
             this.updateChangesBtn.CheckedState.Parent = this.updateChangesBtn;
+            this.updateChangesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateChangesBtn.CustomImages.Parent = this.updateChangesBtn;
             this.updateChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.updateChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -320,6 +409,7 @@
             this.personTargetWeight.ShadowDecoration.Parent = this.personTargetWeight;
             this.personTargetWeight.Size = new System.Drawing.Size(158, 40);
             this.personTargetWeight.TabIndex = 9;
+            this.personTargetWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personTargetWeight_KeyPress);
             // 
             // personWeightTxtBox
             // 
@@ -350,19 +440,7 @@
             this.personWeightTxtBox.ShadowDecoration.Parent = this.personWeightTxtBox;
             this.personWeightTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personWeightTxtBox.TabIndex = 8;
-            // 
-            // personInfoEditBtn
-            // 
-            this.personInfoEditBtn.CheckedState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
-            this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
-            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.personInfoEditBtn.Name = "personInfoEditBtn";
-            this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
-            this.personInfoEditBtn.TabIndex = 7;
-            this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
+            this.personWeightTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personWeightTxtBox_KeyPress);
             // 
             // personGoal2TxtBox
             // 
@@ -423,6 +501,7 @@
             this.personAgeTxtBox.ShadowDecoration.Parent = this.personAgeTxtBox;
             this.personAgeTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personAgeTxtBox.TabIndex = 4;
+            this.personAgeTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personAgeTxtBox_KeyPress);
             // 
             // personGenderTxtBox
             // 
@@ -513,103 +592,6 @@
             this.personNameTxtBox.ShadowDecoration.Parent = this.personNameTxtBox;
             this.personNameTxtBox.Size = new System.Drawing.Size(158, 40);
             this.personNameTxtBox.TabIndex = 1;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(257, 427);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 26);
-            this.label17.TabIndex = 40;
-            this.label17.Text = "Sleep";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(66, 427);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 26);
-            this.label19.TabIndex = 39;
-            this.label19.Text = "Water";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // sleepBox
-            // 
-            this.sleepBox.BorderColor = System.Drawing.Color.Gray;
-            this.sleepBox.BorderRadius = 8;
-            this.sleepBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sleepBox.DefaultText = "8";
-            this.sleepBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.sleepBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.sleepBox.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.sleepBox.DisabledState.Parent = this.sleepBox;
-            this.sleepBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.sleepBox.Enabled = false;
-            this.sleepBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.sleepBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sleepBox.FocusedState.Parent = this.sleepBox;
-            this.sleepBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sleepBox.ForeColor = System.Drawing.Color.Black;
-            this.sleepBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sleepBox.HoverState.Parent = this.sleepBox;
-            this.sleepBox.Location = new System.Drawing.Point(262, 458);
-            this.sleepBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.sleepBox.Name = "sleepBox";
-            this.sleepBox.PasswordChar = '\0';
-            this.sleepBox.PlaceholderText = "";
-            this.sleepBox.SelectedText = "";
-            this.sleepBox.ShadowDecoration.Parent = this.sleepBox;
-            this.sleepBox.Size = new System.Drawing.Size(158, 40);
-            this.sleepBox.TabIndex = 38;
-            // 
-            // waterBox
-            // 
-            this.waterBox.BorderColor = System.Drawing.Color.Gray;
-            this.waterBox.BorderRadius = 8;
-            this.waterBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.waterBox.DefaultText = "4";
-            this.waterBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.waterBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
-            this.waterBox.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.waterBox.DisabledState.Parent = this.waterBox;
-            this.waterBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.waterBox.Enabled = false;
-            this.waterBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.waterBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.waterBox.FocusedState.Parent = this.waterBox;
-            this.waterBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterBox.ForeColor = System.Drawing.Color.Black;
-            this.waterBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.waterBox.HoverState.Parent = this.waterBox;
-            this.waterBox.Location = new System.Drawing.Point(69, 458);
-            this.waterBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.waterBox.Name = "waterBox";
-            this.waterBox.PasswordChar = '\0';
-            this.waterBox.PlaceholderText = "";
-            this.waterBox.SelectedText = "";
-            this.waterBox.ShadowDecoration.Parent = this.waterBox;
-            this.waterBox.Size = new System.Drawing.Size(158, 40);
-            this.waterBox.TabIndex = 37;
-            // 
-            // personFitnessGoalsEditBtn
-            // 
-            this.personFitnessGoalsEditBtn.CheckedState.Parent = this.personFitnessGoalsEditBtn;
-            this.personFitnessGoalsEditBtn.HoverState.Parent = this.personFitnessGoalsEditBtn;
-            this.personFitnessGoalsEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personFitnessGoalsEditBtn.Image")));
-            this.personFitnessGoalsEditBtn.Location = new System.Drawing.Point(449, 11);
-            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.personFitnessGoalsEditBtn.Name = "personFitnessGoalsEditBtn";
-            this.personFitnessGoalsEditBtn.PressedState.Parent = this.personFitnessGoalsEditBtn;
-            this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(38, 28);
-            this.personFitnessGoalsEditBtn.TabIndex = 9;
-            this.personFitnessGoalsEditBtn.Click += new System.EventHandler(this.personFitnessGoalsEditBtn_Click);
             // 
             // label3
             // 
@@ -705,16 +687,16 @@
             this.caloComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.caloComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.caloComboBox.Enabled = false;
-            this.caloComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.caloComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.caloComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.caloComboBox.FocusedColor = System.Drawing.Color.Transparent;
             this.caloComboBox.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.caloComboBox.FocusedState.FillColor = System.Drawing.Color.Transparent;
             this.caloComboBox.FocusedState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caloComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(184)))), ((int)(((byte)(89)))));
+            this.caloComboBox.FocusedState.ForeColor = System.Drawing.Color.Black;
             this.caloComboBox.FocusedState.Parent = this.caloComboBox;
             this.caloComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caloComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.caloComboBox.ForeColor = System.Drawing.Color.Black;
             this.caloComboBox.FormattingEnabled = true;
             this.caloComboBox.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.caloComboBox.HoverState.Parent = this.caloComboBox;
@@ -740,7 +722,7 @@
             "90%",
             "95%",
             "100%"});
-            this.caloComboBox.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.caloComboBox.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.caloComboBox.ItemsAppearance.Parent = this.caloComboBox;
             this.caloComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Transparent;
             this.caloComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -764,13 +746,13 @@
             this.carbsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.carbsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.carbsComboBox.Enabled = false;
-            this.carbsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.carbsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.carbsComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.carbsComboBox.FocusedColor = System.Drawing.Color.Empty;
             this.carbsComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
             this.carbsComboBox.FocusedState.Parent = this.carbsComboBox;
             this.carbsComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carbsComboBox.ForeColor = System.Drawing.Color.DarkCyan;
+            this.carbsComboBox.ForeColor = System.Drawing.Color.Black;
             this.carbsComboBox.FormattingEnabled = true;
             this.carbsComboBox.HoverState.Parent = this.carbsComboBox;
             this.carbsComboBox.ItemHeight = 30;
@@ -819,13 +801,13 @@
             this.proteinComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.proteinComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.proteinComboBox.Enabled = false;
-            this.proteinComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.proteinComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.proteinComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proteinComboBox.FocusedColor = System.Drawing.Color.Empty;
             this.proteinComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(200)))), ((int)(((byte)(237)))));
             this.proteinComboBox.FocusedState.Parent = this.proteinComboBox;
             this.proteinComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proteinComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.proteinComboBox.ForeColor = System.Drawing.Color.Black;
             this.proteinComboBox.FormattingEnabled = true;
             this.proteinComboBox.HoverState.Parent = this.proteinComboBox;
             this.proteinComboBox.ItemHeight = 30;
@@ -874,13 +856,13 @@
             this.fatComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.fatComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fatComboBox.Enabled = false;
-            this.fatComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.fatComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.fatComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fatComboBox.FocusedColor = System.Drawing.Color.Empty;
             this.fatComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(174)))), ((int)(((byte)(243)))));
             this.fatComboBox.FocusedState.Parent = this.fatComboBox;
             this.fatComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(174)))), ((int)(((byte)(243)))));
+            this.fatComboBox.ForeColor = System.Drawing.Color.Black;
             this.fatComboBox.FormattingEnabled = true;
             this.fatComboBox.HoverState.Parent = this.fatComboBox;
             this.fatComboBox.ItemHeight = 30;
@@ -971,6 +953,7 @@
             // 
             this.UpdateMacrosChangesBtn.BorderRadius = 8;
             this.UpdateMacrosChangesBtn.CheckedState.Parent = this.UpdateMacrosChangesBtn;
+            this.UpdateMacrosChangesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateMacrosChangesBtn.CustomImages.Parent = this.UpdateMacrosChangesBtn;
             this.UpdateMacrosChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.UpdateMacrosChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1016,6 +999,7 @@
             this.pCalLabel.Size = new System.Drawing.Size(129, 22);
             this.pCalLabel.TabIndex = 38;
             this.pCalLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pCalLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pCalLabel_KeyPress);
             // 
             // guna2ShadowPanel3
             // 
@@ -1050,6 +1034,34 @@
             this.guna2ShadowPanel3.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(498, 399);
             this.guna2ShadowPanel3.TabIndex = 16;
+            // 
+            // personFitnessGoalsEditBtn
+            // 
+            this.personFitnessGoalsEditBtn.CheckedState.Parent = this.personFitnessGoalsEditBtn;
+            this.personFitnessGoalsEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.personFitnessGoalsEditBtn.HoverState.Parent = this.personFitnessGoalsEditBtn;
+            this.personFitnessGoalsEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personFitnessGoalsEditBtn.Image")));
+            this.personFitnessGoalsEditBtn.Location = new System.Drawing.Point(449, 11);
+            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.personFitnessGoalsEditBtn.Name = "personFitnessGoalsEditBtn";
+            this.personFitnessGoalsEditBtn.PressedState.Parent = this.personFitnessGoalsEditBtn;
+            this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(38, 28);
+            this.personFitnessGoalsEditBtn.TabIndex = 9;
+            this.personFitnessGoalsEditBtn.Click += new System.EventHandler(this.personFitnessGoalsEditBtn_Click);
+            // 
+            // personInfoEditBtn
+            // 
+            this.personInfoEditBtn.CheckedState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
+            this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
+            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.personInfoEditBtn.Name = "personInfoEditBtn";
+            this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
+            this.personInfoEditBtn.TabIndex = 7;
+            this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
             // 
             // Personalization
             // 

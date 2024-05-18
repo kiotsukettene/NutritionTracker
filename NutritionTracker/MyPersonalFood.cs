@@ -24,16 +24,15 @@ namespace NutritionTracker
         NutritionFacts nf = new NutritionFacts();
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
+        
         public string username;
         private double dfCal, dfCarbs, dfFat, dfProtein;
         private int dfServings;
         public MyPersonalFood()
         {
             InitializeComponent();
-            
-           
         }
+        
         #region TabPanels
         void loadForm(Form panel)
         {
@@ -168,61 +167,75 @@ namespace NutritionTracker
             myCon.openCon();
             try
             {
+                int servingSize, servingContainer, cal, carb, fat, protein;
                 string brandname = brandTxtBox.Text;
                 string foodDesc = foodDescTxtBox.Text;
-                int servingSize = int.Parse(servingValueBox.Text);
                 string servingUnit = servingUnitBox.Text;
-                int servingContainer = int.Parse(servingContainerBox.Text);
-                int cal = int.Parse(caloriesCreateBox.Text);
-                int carb = int.Parse(totalCarbCreateBox.Text);
-                int fat = int.Parse(totalFatCreateBox.Text);
-                int protein = int.Parse(totalProteinCreateBox.Text);
-                string username = usernameLbl.Text;
+                int.TryParse(servingValueBox.Text, out servingSize);
+                int.TryParse(servingContainerBox.Text, out servingContainer);
+                int.TryParse(caloriesCreateBox.Text, out cal);
+                int.TryParse(totalCarbCreateBox.Text, out carb);
+                int.TryParse(totalFatCreateBox.Text, out fat);
+                int.TryParse(totalProteinCreateBox.Text, out protein);
+                if (string.IsNullOrWhiteSpace(brandname) ||
+                        string.IsNullOrWhiteSpace(foodDesc) ||
+                        string.IsNullOrWhiteSpace(servingUnit)) 
+                {
+                    fm.Show();
+                    fm.failedLbl.Text = fm.failedLbl.Text = ("Error: All fields are required\",\"Fields Error\"");
+                }
+     
+                else
+                {
+                    myCon.openCon();
+                    string username = usernameLbl.Text;
 
-                string insertFoodQuery = @"INSERT INTO `user_personalfood`(`user_id`, `brand`, `food_desc`, `serving_size`, `serving_unit`, `serving_container`, `calories`, `carbs`, `total_fat`, `protein`)
+                    string insertFoodQuery = @"INSERT INTO `user_personalfood`(`user_id`, `brand`, `food_desc`, `serving_size`, `serving_unit`, `serving_container`, `calories`, `carbs`, `total_fat`, `protein`)
                                         SELECT user.id, @brand, @food_desc, @serving_size, @serving_unit, @serving_container, @calories, @carbs, @total_fat, @protein
                                         FROM user
                                         WHERE user.username = @username;";
-                MySqlCommand insertCommand = new MySqlCommand(insertFoodQuery, myCon.getCon());
+                    MySqlCommand insertCommand = new MySqlCommand(insertFoodQuery, myCon.getCon());
 
-                insertCommand.Parameters.Clear();
-                insertCommand.Parameters.AddWithValue("@brand", brandname);
-                insertCommand.Parameters.AddWithValue("@food_desc", foodDesc);
-                insertCommand.Parameters.AddWithValue("@serving_size", servingSize);
-                insertCommand.Parameters.AddWithValue("@serving_unit", servingUnit);
-                insertCommand.Parameters.AddWithValue("@serving_container", servingContainer);
-                insertCommand.Parameters.AddWithValue("@calories", cal);
-                insertCommand.Parameters.AddWithValue("@carbs", carb);
-                insertCommand.Parameters.AddWithValue("@total_fat", fat);
-                insertCommand.Parameters.AddWithValue("@protein", protein);
-                insertCommand.Parameters.AddWithValue("@username", username);
+                    insertCommand.Parameters.Clear();
+                    insertCommand.Parameters.AddWithValue("@brand", brandname);
+                    insertCommand.Parameters.AddWithValue("@food_desc", foodDesc);
+                    insertCommand.Parameters.AddWithValue("@serving_size", servingSize);
+                    insertCommand.Parameters.AddWithValue("@serving_unit", servingUnit);
+                    insertCommand.Parameters.AddWithValue("@serving_container", servingContainer);
+                    insertCommand.Parameters.AddWithValue("@calories", cal);
+                    insertCommand.Parameters.AddWithValue("@carbs", carb);
+                    insertCommand.Parameters.AddWithValue("@total_fat", fat);
+                    insertCommand.Parameters.AddWithValue("@protein", protein);
+                    insertCommand.Parameters.AddWithValue("@username", username);
 
-                int rows = insertCommand.ExecuteNonQuery();
+                    int rows = insertCommand.ExecuteNonQuery();
 
-                if (rows > 0)
-                {
-                    sm.Show();
-                    sm.successLbl.Text = "Insert Successful";
-                    brandTxtBox.Text = "";
-                    foodDescTxtBox.Text = "";
-                    servingValueBox.Text = "";
-                    servingUnitBox.Text = "";
-                    servingContainerBox.Text = "";
-                    caloriesCreateBox.Text = "";
-                    totalCarbCreateBox.Text = "";
-                    totalFatCreateBox.Text = "";
-                    totalProteinCreateBox.Text = "";
+                    if (rows > 0)
+                    {
+                        sm.Show();
+                        sm.successLbl.Text = "Insert Successful";
+                        brandTxtBox.Text = "";
+                        foodDescTxtBox.Text = "";
+                        servingValueBox.Text = "";
+                        servingUnitBox.Text = "";
+                        servingContainerBox.Text = "";
+                        caloriesCreateBox.Text = "";
+                        totalCarbCreateBox.Text = "";
+                        totalFatCreateBox.Text = "";
+                        totalProteinCreateBox.Text = "";
+                        myCon.closeCon();
+                        FoodSelection();
+
+                    }
+                    else
+                    {
+                        fm.Show();
+                        fm.failedLbl.Text = "Insert Failed";
+                    }
+
                     myCon.closeCon();
-                    FoodSelection();
-
                 }
-                else
-                {
-                    fm.Show();
-                    fm.failedLbl.Text = "Insert Failed";
-                }
-
-                myCon.closeCon();
+                
 
             }
             catch (Exception e)

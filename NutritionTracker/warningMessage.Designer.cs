@@ -38,6 +38,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(210)))), ((int)(((byte)(2)))));
             this.panel1.Controls.Add(this.warningBtn);
             this.panel1.Controls.Add(this.warningLbl);
             this.panel1.Controls.Add(this.label1);
@@ -50,13 +51,13 @@
             // 
             // warningBtn
             // 
-            this.warningBtn.BackColor = System.Drawing.Color.Goldenrod;
+            this.warningBtn.BackColor = System.Drawing.Color.Ivory;
             this.warningBtn.BorderColor = System.Drawing.Color.Transparent;
             this.warningBtn.CheckedState.Parent = this.warningBtn;
             this.warningBtn.CustomImages.Parent = this.warningBtn;
             this.warningBtn.FillColor = System.Drawing.Color.Empty;
             this.warningBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningBtn.ForeColor = System.Drawing.Color.White;
+            this.warningBtn.ForeColor = System.Drawing.Color.Black;
             this.warningBtn.HoverState.Parent = this.warningBtn;
             this.warningBtn.Location = new System.Drawing.Point(35, 96);
             this.warningBtn.Name = "warningBtn";
@@ -70,18 +71,19 @@
             // 
             this.warningLbl.AutoSize = true;
             this.warningLbl.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningLbl.ForeColor = System.Drawing.Color.Goldenrod;
+            this.warningLbl.ForeColor = System.Drawing.Color.Ivory;
             this.warningLbl.Location = new System.Drawing.Point(81, 57);
             this.warningLbl.Name = "warningLbl";
             this.warningLbl.Size = new System.Drawing.Size(45, 19);
             this.warningLbl.TabIndex = 8;
             this.warningLbl.Text = "Invalid";
+            this.warningLbl.Click += new System.EventHandler(this.warningLbl_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.ForeColor = System.Drawing.Color.Ivory;
             this.label1.Location = new System.Drawing.Point(80, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 26);

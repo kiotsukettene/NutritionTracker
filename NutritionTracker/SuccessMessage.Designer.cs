@@ -38,6 +38,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.Controls.Add(this.successBtn);
             this.panel1.Controls.Add(this.successLbl);
             this.panel1.Controls.Add(this.label1);
@@ -53,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(80, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 26);
@@ -65,7 +66,7 @@
             // 
             this.successLbl.AutoSize = true;
             this.successLbl.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.successLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.successLbl.ForeColor = System.Drawing.Color.White;
             this.successLbl.Location = new System.Drawing.Point(81, 57);
             this.successLbl.Name = "successLbl";
             this.successLbl.Size = new System.Drawing.Size(200, 19);
@@ -75,13 +76,16 @@
             // 
             // successBtn
             // 
-            this.successBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.successBtn.BackColor = System.Drawing.Color.Ivory;
             this.successBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.successBtn.BorderRadius = 5;
+            this.successBtn.BorderThickness = 1;
             this.successBtn.CheckedState.Parent = this.successBtn;
+            this.successBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.successBtn.CustomImages.Parent = this.successBtn;
             this.successBtn.FillColor = System.Drawing.Color.Empty;
             this.successBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.successBtn.ForeColor = System.Drawing.Color.White;
+            this.successBtn.ForeColor = System.Drawing.Color.Black;
             this.successBtn.HoverState.Parent = this.successBtn;
             this.successBtn.Location = new System.Drawing.Point(35, 96);
             this.successBtn.Name = "successBtn";

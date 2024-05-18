@@ -20,6 +20,7 @@ namespace NutritionTracker
         public SplashScreenForm()
         {
             InitializeComponent();
+            RoundCorners();
         }
         #region RoundForm
         public void RoundCorners()

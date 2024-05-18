@@ -29,14 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.showPassBox = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -45,6 +40,11 @@
             this.loginLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showPassBox = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -61,42 +61,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(484, 38);
             this.guna2Panel1.TabIndex = 21;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.close2;
-            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitBtn.CheckedState.Parent = this.exitBtn;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitBtn.CustomImages.Parent = this.exitBtn;
-            this.exitBtn.FillColor = System.Drawing.Color.Transparent;
-            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.HoverState.Parent = this.exitBtn;
-            this.exitBtn.Location = new System.Drawing.Point(452, 13);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
-            this.exitBtn.Size = new System.Drawing.Size(15, 13);
-            this.exitBtn.TabIndex = 20;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
-            // 
-            // miniBtn
-            // 
-            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minimize;
-            this.miniBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.miniBtn.CheckedState.Parent = this.miniBtn;
-            this.miniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.miniBtn.CustomImages.Parent = this.miniBtn;
-            this.miniBtn.FillColor = System.Drawing.Color.Transparent;
-            this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.miniBtn.ForeColor = System.Drawing.Color.White;
-            this.miniBtn.HoverState.Parent = this.miniBtn;
-            this.miniBtn.Location = new System.Drawing.Point(421, 7);
-            this.miniBtn.Name = "miniBtn";
-            this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
-            this.miniBtn.Size = new System.Drawing.Size(18, 23);
-            this.miniBtn.TabIndex = 19;
-            this.miniBtn.Click += new System.EventHandler(this.minimize);
             // 
             // guna2Panel2
             // 
@@ -118,23 +82,11 @@
             this.guna2Panel2.Size = new System.Drawing.Size(448, 431);
             this.guna2Panel2.TabIndex = 82;
             // 
-            // showPassBox
-            // 
-            this.showPassBox.CheckedState.Parent = this.showPassBox;
-            this.showPassBox.HoverState.Parent = this.showPassBox;
-            this.showPassBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
-            this.showPassBox.Location = new System.Drawing.Point(366, 231);
-            this.showPassBox.Margin = new System.Windows.Forms.Padding(2);
-            this.showPassBox.Name = "showPassBox";
-            this.showPassBox.PressedState.Parent = this.showPassBox;
-            this.showPassBox.Size = new System.Drawing.Size(36, 31);
-            this.showPassBox.TabIndex = 103;
-            this.showPassBox.Click += new System.EventHandler(this.loginShowBtn);
-            // 
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
@@ -164,30 +116,6 @@
             this.label4.Size = new System.Drawing.Size(135, 15);
             this.label4.TabIndex = 101;
             this.label4.Text = "Don\'t have an account?";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::NutritionTracker.Properties.Resources.password;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(51, 236);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(17, 18);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 98;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::NutritionTracker.Properties.Resources.userLog1;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(51, 141);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 18);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 97;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // label3
             // 
@@ -325,6 +253,82 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 569);
             this.panel1.TabIndex = 93;
+            // 
+            // showPassBox
+            // 
+            this.showPassBox.CheckedState.Parent = this.showPassBox;
+            this.showPassBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPassBox.HoverState.Parent = this.showPassBox;
+            this.showPassBox.Image = global::NutritionTracker.Properties.Resources.hidePassword;
+            this.showPassBox.Location = new System.Drawing.Point(366, 231);
+            this.showPassBox.Margin = new System.Windows.Forms.Padding(2);
+            this.showPassBox.Name = "showPassBox";
+            this.showPassBox.PressedState.Parent = this.showPassBox;
+            this.showPassBox.Size = new System.Drawing.Size(36, 31);
+            this.showPassBox.TabIndex = 103;
+            this.showPassBox.Click += new System.EventHandler(this.loginShowBtn);
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::NutritionTracker.Properties.Resources.password;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(51, 236);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(17, 18);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 98;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = global::NutritionTracker.Properties.Resources.userLog1;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(51, 141);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(17, 18);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 97;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.reject;
+            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.exitBtn.CheckedState.Parent = this.exitBtn;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBtn.CustomImages.Parent = this.exitBtn;
+            this.exitBtn.FillColor = System.Drawing.Color.Transparent;
+            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.exitBtn.HoverState.Parent = this.exitBtn;
+            this.exitBtn.Location = new System.Drawing.Point(437, 3);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
+            this.exitBtn.Size = new System.Drawing.Size(35, 28);
+            this.exitBtn.TabIndex = 20;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // miniBtn
+            // 
+            this.miniBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.minus11;
+            this.miniBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.miniBtn.CheckedState.Parent = this.miniBtn;
+            this.miniBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.miniBtn.CustomImages.Parent = this.miniBtn;
+            this.miniBtn.FillColor = System.Drawing.Color.Transparent;
+            this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.miniBtn.ForeColor = System.Drawing.Color.White;
+            this.miniBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.miniBtn.HoverState.Parent = this.miniBtn;
+            this.miniBtn.Location = new System.Drawing.Point(396, 3);
+            this.miniBtn.Name = "miniBtn";
+            this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
+            this.miniBtn.Size = new System.Drawing.Size(35, 28);
+            this.miniBtn.TabIndex = 19;
+            this.miniBtn.Click += new System.EventHandler(this.minimize);
             // 
             // loginForm
             // 

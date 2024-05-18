@@ -19,12 +19,13 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
 
+        private int food_id;
         private double servings, cals, carbs, fats, proteins;
         public NutritionFacts()
         {
             InitializeComponent();
+            dbDateTime.Value = DateTime.Now;
                
         }
         FoodDiary fd = new FoodDiary();
@@ -91,62 +92,123 @@ namespace NutritionTracker
 
         public void UpdateBasedOnServings()
         {
-            myCon.openCon();
-            string username = nfUsername.Text;
-            string foodname = foodName.Text;
-
-
-            string updateValuesQuery = @"SELECT serving_size, serving_unit, calories, carbs, total_fat, protein
-                                        FROM user_personalfood
-                                        JOIN user ON user.id = user_personalfood.user_id
-                                        WHERE user.username = @username AND user_personalfood.food_desc = @food_desc";
-
-            MySqlCommand cmd = new MySqlCommand(updateValuesQuery, myCon.getCon());
-            cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@username", username);
-            cmd.Parameters.AddWithValue("@food_desc", foodname);
-
-            MySqlDataReader dr = cmd.ExecuteReader();
-
-            if (dr.HasRows)
+            try
             {
-                while (dr.Read())
+                // Open the database connection
+                myCon.openCon();
+
+                // Get the username and food name from text boxes
+                string username = nfUsername.Text;
+                string foodname = foodName.Text;
+
+                // Define the query to select the food details
+                string updateValuesQuery = @"SELECT user_personalfood.id, serving_size, serving_unit, calories, carbs, total_fat, protein
+                                     FROM user_personalfood
+                                     JOIN user ON user.id = user_personalfood.user_id
+                                     WHERE user.username = @username AND user_personalfood.food_desc = @food_desc";
+
+                // Create a command object
+                MySqlCommand cmd = new MySqlCommand(updateValuesQuery, myCon.getCon());
+
+                // Clear previous parameters and add new ones
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@food_desc", foodname);
+
+                // Execute the query and get a data reader
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                // Check if any rows are returned
+                if (dr.HasRows)
                 {
-                    servings = dr.GetInt32("serving_size");
-                    string unit = dr.GetString("serving_unit");
-                    cals = dr.GetInt32("calories");
-                    carbs = dr.GetInt32("carbs");
-                    fats = dr.GetInt32("total_fat");
-                    proteins = dr.GetInt32("protein");
+                    while (dr.Read())
+                    {
+                        // Get the values from the database
+                        food_id = dr.GetInt32("id");
+                        int servings = dr.GetInt32("serving_size");
+                        string unit = dr.GetString("serving_unit");
+                        int cals = dr.GetInt32("calories");
+                        int carbs = dr.GetInt32("carbs");
+                        int fats = dr.GetInt32("total_fat");
+                        int proteins = dr.GetInt32("protein");
 
+                        MessageBox.Show(food_id.ToString());
+                        // Update the UI controls with the retrieved values
+                        unitBox.Text = unit.ToString();
 
+                        // Parse the serving size from the text box and calculate the factor
+                        double servingSize = double.Parse(servingsBox.Text);
+                        double factor = servingSize / servings;
 
-                    //servingsBox.Text = servings.ToString();
-                    unitBox.Text = unit.ToString();
-                    //calLabel.Text = cals.ToString();
-                    //carbLabel.Text = carbs.ToString();
-                    //fatLabel.Text = fats.ToString();
-                    //totalProteinLabel.Text = proteins.ToString();
+                        // Calculate the updated nutritional values
+                        int updatedCal = (int)(cals * factor);
+                        int updatedFat = (int)(fats * factor);
+                        int updatedCarb = (int)(carbs * factor);
+                        int updatedProtein = (int)(proteins * factor);
 
-                    double servingSize = double.Parse(servingsBox.Text);
-                    double factor = servingSize / servings;
-
-
-
-                    int updatedCal = (int)(cals * factor);
-                    int updatedFat = (int)(fats * factor);
-                    int updatedCarb = (int)(carbs * factor);
-                    int updatedProtein = (int)(proteins * factor);
-
-                    calLabel.Text = updatedCal.ToString();
-                    fatLabel.Text = updatedFat.ToString();
-                    carbLabel.Text = updatedCarb.ToString();
-                    totalProteinLabel.Text = updatedProtein.ToString();
-
+                        // Update the UI controls with the updated values
+                        calLabel.Text = updatedCal.ToString();
+                        fatLabel.Text = updatedFat.ToString();
+                        carbLabel.Text = updatedCarb.ToString();
+                        totalProteinLabel.Text = updatedProtein.ToString();
+                    }
                 }
+                else
+                {
+                    fm.Show();
+                    fm.failedLbl.Text = ("No matching food found for the given username and food description.");
+                }
+
+                // Close the data reader
                 dr.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that occur during the operation
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                // Close the database connection
                 myCon.closeCon();
             }
+        }
+        public event EventHandler FoodDeleted;
+        public void DeleteMyFood()
+        {
+            try
+            {
+                DateTime date = dbDateTime.Value;
+                string added_at = date.ToString("yyyy-MM-dd");
+                string username = nfUsername.Text;
+
+                myCon.openCon();
+
+                string deleteQuery = @"DELETE user_personalfood
+                                    FROM user_personalfood
+                                    JOIN user on user.id = user_personalfood.user_id
+                                    WHERE user.username = @username AND user_personalfood.id = @food_id;";
+                MySqlCommand deleteCmd = new MySqlCommand(deleteQuery, myCon.getCon());
+                deleteCmd.Parameters.Clear();
+                deleteCmd.Parameters.AddWithValue("@username", username);
+                deleteCmd.Parameters.AddWithValue("@food_id", food_id);
+
+                int rows = deleteCmd.ExecuteNonQuery();
+                
+                if (rows > 0)
+                {
+                    MessageBox.Show("Deleted Successfuly by " + food_id);
+                }
+           
+
+                myCon.closeCon();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+           
+
 
 
         }
@@ -156,7 +218,7 @@ namespace NutritionTracker
             try
             {
                 myCon.openCon();
-                DateTime date = DateTime.Now;
+                DateTime date = dbDateTime.Value;
                 string added_at = date.ToString("yyyy-MM-dd");
                 string foodname = foodName.Text;
                 string username = nfUsername.Text;
@@ -204,6 +266,29 @@ namespace NutritionTracker
             }
         }
 
+        private void servingsBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DeleteMyFood();
+        }
+
         private void updateValues_Click(object sender, EventArgs e)
         {
             UpdateBasedOnServings();
@@ -223,7 +308,10 @@ namespace NutritionTracker
 
         private void servingsBox_TextChanged(object sender, EventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(servingsBox.Text))
+            {
+                UpdateBasedOnServings();
+            }
             
         }
     }

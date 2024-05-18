@@ -59,10 +59,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(7, 133);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 2);
+            this.panel1.Size = new System.Drawing.Size(460, 1);
             this.panel1.TabIndex = 179;
             // 
             // servingSizeLbl
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
             this.Controls.Add(this.caloriesLbl);
             this.Controls.Add(this.servingSizeLbl);
             this.Controls.Add(this.panel1);
@@ -99,7 +99,7 @@
             this.Controls.Add(this.foodDescLbl);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "AddFoodConrol";
-            this.Size = new System.Drawing.Size(451, 138);
+            this.Size = new System.Drawing.Size(506, 138);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,10 +107,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label foodDescLbl;
-        private System.Windows.Forms.Label brandNameLbl;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label servingSizeLbl;
-        private System.Windows.Forms.Label caloriesLbl;
+        public System.Windows.Forms.Label foodDescLbl;
+        public System.Windows.Forms.Label brandNameLbl;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label servingSizeLbl;
+        public System.Windows.Forms.Label caloriesLbl;
     }
 }

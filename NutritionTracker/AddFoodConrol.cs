@@ -96,6 +96,5 @@ namespace NutritionTracker
             get { return fpercent; }
             set { fpercent = value; }
         }
-
     }
 }

@@ -19,7 +19,7 @@ namespace NutritionTracker
         Personalization personalize = new Personalization();
         SuccessMessage sm = new SuccessMessage();
         FailedMessage fm = new FailedMessage();
-        warningMessage wm = new warningMessage();
+     
         public int TDEE;
         public int carbs;
         public int calories;
@@ -104,7 +104,9 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Failed");
+                    fm.Show();
+                    fm.failedLbl.Text = "Failed";
+                    
                 }
                 myCon.closeCon();
             }
@@ -219,8 +221,8 @@ namespace NutritionTracker
             if (waterBox.Text == "" || sleepBox.Text == "")
             {
                 
-                wm.Show();
-                wm.warningLbl.Text = "All fields are required!\", \"Invalid Input\"";
+                fm.Show();
+                fm.failedLbl.Text = "All fields are required!\", \"Invalid Input\"";
 
             }
 

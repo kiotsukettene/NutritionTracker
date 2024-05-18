@@ -28,7 +28,7 @@ namespace NutritionTracker
 
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
+    
 
         private double defaultCalories, defaultCarbs, defaultProtein, defaultFat;
         
@@ -62,88 +62,109 @@ namespace NutritionTracker
         #region API CALL
         private async void API()
         {
+           try { 
             string foodItem = addFoodSearchBox.Text;
-
-            using (var client = new HttpClient())
-            {
-                var request = new HttpRequestMessage
+                if (string.IsNullOrEmpty(foodItem))
                 {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri($"https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?nutrition-type=logging&ingr={Uri.EscapeUriString(foodItem)}"),
-                    Headers =
+                    fm.Show();
+                    fm.failedLbl.Text = "Please input a food";
+                }
+                else
+                {
+                    using (var client = new HttpClient())
+                    {
+                        var request = new HttpRequestMessage
+                        {
+                            Method = HttpMethod.Get,
+                            RequestUri = new Uri($"https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?nutrition-type=logging&ingr={Uri.EscapeUriString(foodItem)}"),
+                            Headers =
                             {
                                 { "X-RapidAPI-Key", "4f4b45e879msh45f87075e3fb93ep11bc5ejsn9044281e5818" },
                                 { "X-RapidAPI-Host", "edamam-food-and-grocery-database.p.rapidapi.com" },
                             },
-                };
+                        };
 
-                using (var response = await client.SendAsync(request))
-                {
-                    response.EnsureSuccessStatusCode();
-                    var body = await response.Content.ReadAsStringAsync();
+                        using (var response = await client.SendAsync(request))
+                        {
+                            response.EnsureSuccessStatusCode();
+                            var body = await response.Content.ReadAsStringAsync();
 
-                    JObject json = JObject.Parse(body);
+                            JObject json = JObject.Parse(body);
 
-                    foreach (var food in json["hints"])
-                    {
-                        var foodDetails = food["food"];
-                        var nutrients = foodDetails["nutrients"];
-                        var brand = foodDetails["brand"];
-
-
-                        string foodName = foodDetails["label"].ToString();
-                        double calories = nutrients["ENERC_KCAL"] != null ? (double)nutrients["ENERC_KCAL"] : 0;
-                        double protein = nutrients["PROCNT"] != null ? (double)nutrients["PROCNT"] : 0;
-                        double fat = nutrients["FAT"] != null ? (double)nutrients["FAT"] : 0;
-                        double carbohydrates = nutrients["CHOCDF"] != null ? (double)nutrients["CHOCDF"] : 0;
-                        string brandName = brand is JValue ? (brand as JValue)?.Value?.ToString() : "Generic";
+                            if (json["hints"] == null || !json["hints"].Any())
+                            {
+                                fm.Show();
+                                fm.failedLbl.Text = "Food not found.";
+                                return; // Exit the method if the food is not found
+                            }
 
 
-                        // Calculate total macronutrients
-                        // Calculate total macronutrients
-                        double totalMacronutrients = protein + fat + carbohydrates;
+                            foreach (var food in json["hints"])
+                            {
+                                var foodDetails = food["food"];
+                                var nutrients = foodDetails["nutrients"];
+                                var brand = foodDetails["brand"];
 
-                        // Calculate percentages
-                        double proteinPercentage = totalMacronutrients > 0 ? (protein / totalMacronutrients) * 100 : 0;
-                        double fatPercentage = totalMacronutrients > 0 ? (fat / totalMacronutrients) * 100 : 0;
-                        double carbohydratesPercentage = totalMacronutrients > 0 ? (carbohydrates / totalMacronutrients) * 100 : 0;
 
-                        //Console.WriteLine($"Food: {foodName}");
-                        //Console.WriteLine($"Brand: {brand}");
-                        //Console.WriteLine($"Calories: {calories} kcal");
-                        //Console.WriteLine($"Total Fat: {fat:F2} g ({fatPercentage:F2}%)");
-                        //Console.WriteLine($"Protein: {protein:F2} g ({proteinPercentage:F2}%)");
-                        //Console.WriteLine($"Carbohydrates: {carbohydrates:F2} g ({carbohydratesPercentage:F2}%)");
-                        //Console.WriteLine("-------------------------");
+                                string foodName = foodDetails["label"].ToString();
+                                double calories = nutrients["ENERC_KCAL"] != null ? (double)nutrients["ENERC_KCAL"] : 0;
+                                double protein = nutrients["PROCNT"] != null ? (double)nutrients["PROCNT"] : 0;
+                                double fat = nutrients["FAT"] != null ? (double)nutrients["FAT"] : 0;
+                                double carbohydrates = nutrients["CHOCDF"] != null ? (double)nutrients["CHOCDF"] : 0;
+                                string brandName = brand is JValue ? (brand as JValue)?.Value?.ToString() : "Generic";
 
-                        //foodNameLbl.Text = foodName;
-                        //servingsBox.Text = 100.ToString();
-                        //unitBox.Text = "grams";
-                        //calLabel.Text = calories.ToString();
-                        //carbLabel.Text = carbLabel.ToString();
-                        //fatLabel.Text = fat.ToString();
-                        //proteinPercentLbl.Text = protein.ToString();
-                        //carbPercentLbl.Text = carbohydratesPercentage.ToString();
-                        //fatPercentLbl.Text = fatPercentage.ToString();
-                        //proteinPercentLbl.Text = proteinPercentage.ToString();
 
-                        AddFoodConrol add = new AddFoodConrol();
-                        add.FoodName = foodName;
-                        add.Calories = (int)calories;
-                        add.Brand = brandName;
-                        add.Carbs = (int)carbohydrates;
-                        add.Protein = (int)protein;
-                        add.Fat = (int)fat;
-                        add.CarbPercent = carbohydratesPercentage;
-                        add.ProteinPercent = proteinPercentage;
-                        add.FatPercent = fatPercentage;
-                        add.Serving = 100;
+                                // Calculate total macronutrients
+                                // Calculate total macronutrients
+                                double totalMacronutrients = protein + fat + carbohydrates;
 
-                        searchFoodPanel.Controls.Add(add);
-                        add.Click += AddFood_Click;
+                                // Calculate percentages
+                                double proteinPercentage = totalMacronutrients > 0 ? (protein / totalMacronutrients) * 100 : 0;
+                                double fatPercentage = totalMacronutrients > 0 ? (fat / totalMacronutrients) * 100 : 0;
+                                double carbohydratesPercentage = totalMacronutrients > 0 ? (carbohydrates / totalMacronutrients) * 100 : 0;
 
+                                //Console.WriteLine($"Food: {foodName}");
+                                //Console.WriteLine($"Brand: {brand}");
+                                //Console.WriteLine($"Calories: {calories} kcal");
+                                //Console.WriteLine($"Total Fat: {fat:F2} g ({fatPercentage:F2}%)");
+                                //Console.WriteLine($"Protein: {protein:F2} g ({proteinPercentage:F2}%)");
+                                //Console.WriteLine($"Carbohydrates: {carbohydrates:F2} g ({carbohydratesPercentage:F2}%)");
+                                //Console.WriteLine("-------------------------");
+
+                                //foodNameLbl.Text = foodName;
+                                //servingsBox.Text = 100.ToString();
+                                //unitBox.Text = "grams";
+                                //calLabel.Text = calories.ToString();
+                                //carbLabel.Text = carbLabel.ToString();
+                                //fatLabel.Text = fat.ToString();
+                                //proteinPercentLbl.Text = protein.ToString();
+                                //carbPercentLbl.Text = carbohydratesPercentage.ToString();
+                                //fatPercentLbl.Text = fatPercentage.ToString();
+                                //proteinPercentLbl.Text = proteinPercentage.ToString();
+
+                                AddFoodConrol add = new AddFoodConrol();
+                                add.FoodName = foodName;
+                                add.Calories = (int)calories;
+                                add.Brand = brandName;
+                                add.Carbs = (int)carbohydrates;
+                                add.Protein = (int)protein;
+                                add.Fat = (int)fat;
+                                add.CarbPercent = carbohydratesPercentage;
+                                add.ProteinPercent = proteinPercentage;
+                                add.FatPercent = fatPercentage;
+                                add.Serving = 100;
+
+                                searchFoodPanel.Controls.Add(add);
+                                add.Click += AddFood_Click;
+
+                            }
+                        }
                     }
-                }
+           }    }
+            catch(Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                
             }
         }
         #endregion
@@ -187,19 +208,34 @@ namespace NutritionTracker
         {
             try
             {
-                myCon.openCon();
                 DateTime date = DateTime.Now;
                 string addDate = date.ToString("yyyy-MM-dd");
                 string foodname = foodNameLbl.Text;
                 string username = usernameLbl.Text;
-                int servingSize = int.Parse(servingsBox.Text);
+                int servingSize = int.TryParse(servingsBox.Text, out int servingSizeResult) ? servingSizeResult : 0;
                 string unit = unitBox.Text;
                 string meal = mealBox.Text;
-                int cals = int.Parse(calLabel.Text);
-                int fats = int.Parse(fatLabel.Text);
-                int carbs = int.Parse(carbLabel.Text);
-                int proteins = int.Parse(totalProteinLabel.Text);
+                int cals = int.TryParse(calLabel.Text, out int calsResult) ? calsResult : 0;
+                int fats = int.TryParse(fatLabel.Text, out int fatsResult) ? fatsResult : 0;
+                int carbs = int.TryParse(carbLabel.Text, out int carbsResult) ? carbsResult : 0;
+                int proteins = int.TryParse(totalProteinLabel.Text, out int proteinsResult) ? proteinsResult : 0;
 
+                if (string.IsNullOrEmpty(foodname) ||
+                    string.IsNullOrEmpty(username) ||
+                    servingSize <= 0 ||
+                    string.IsNullOrEmpty(unit) ||
+                    string.IsNullOrEmpty(meal))
+                    
+                {
+                    fm.Show();
+                    fm.failedLbl.Text = "All fields are required!";
+                    return;
+                }
+
+                myCon.openCon();
+
+                
+              
                 string insertFoodQuery = @"INSERT INTO `user_food_diary`(user_id, `food_name`, `serving_size`, `serving_unit`, `meal`, `calories`, carbs, `fat`, `protein`, added_at) 
                                         SELECT user.id, @food_name, @serving_size, @serving_unit, @meal, @calories,@carbs, @fat, @protein, @added_at
                                         FROM user WHere user.username = @username;
@@ -332,6 +368,11 @@ namespace NutritionTracker
             API();
             searchFoodPanel.Controls.Clear();
             panel1.Visible = false;
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void AddToFoodDiaryBtn(object sender, EventArgs e)

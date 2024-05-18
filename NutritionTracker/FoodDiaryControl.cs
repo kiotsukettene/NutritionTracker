@@ -19,6 +19,7 @@ namespace NutritionTracker
         }
 
         #region Properties
+        private int foodID;
         private string meal;
         private string foodDesc;
         private int servingSize;
@@ -33,7 +34,7 @@ namespace NutritionTracker
         public string Meal
         {
             get { return meal; }
-            set { meal = value; mealLbl.Text = value; }
+            set { meal = value; mealLbl.Text = value; SetMealColor(value); }
         }
         [Category("Custom Props")]
         public string FoodDesc
@@ -77,11 +78,43 @@ namespace NutritionTracker
             get { return protein; }
             set { protein = value; proteinLbl.Text = value.ToString(); }
         }
+        public int FoodID
+        {
+            get { return foodID; } 
+            set { foodID = value; }
+        }
         #endregion
 
         private void FoodDiaryControl_Load(object sender, EventArgs e)
         {
 
         }
+        private void SetMealColor(string mealType)
+        {
+            switch (mealType.ToLower())
+            {
+                case "breakfast":
+                    mealLbl.BackColor = Color.LightSteelBlue;
+                    break;
+                case "snacks":
+                    mealLbl.BackColor = Color.LightYellow;
+                    break;
+                case "dinner":
+                    mealLbl.BackColor = Color.LightCoral;
+                    break;
+                case "lunch":
+                    mealLbl.BackColor = Color.Wheat; // LightOrange is not a standard color, use a close alternative
+                    break;
+                default:
+                    mealLbl.BackColor = SystemColors.Control; // Default color
+                    break;
+            }
+        }
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            OnDelete?.Invoke(this, EventArgs.Empty);
+
+        }
+        public event EventHandler OnDelete;
     }
 }

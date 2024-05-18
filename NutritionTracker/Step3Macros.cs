@@ -18,6 +18,9 @@ namespace NutritionTracker
     public partial class Step3Macros : Form
     {
         DBConnection myCon = new DBConnection();
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+
         private int TDEE;
         private int carbs;
         private int protein;
@@ -96,7 +99,9 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    fm.Show();
+                    fm.failedLbl.Text = "Error";
+
                 }
                 myCon.closeCon();
             }

@@ -42,7 +42,7 @@ namespace NutritionTracker
         #endregion
         private void failedBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void FailedMessage_Load(object sender, EventArgs e)

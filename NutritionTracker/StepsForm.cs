@@ -16,7 +16,7 @@ namespace NutritionTracker
     {
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
-        warningMessage wm = new warningMessage();
+    
         public string username { get;set; }
         public double BMR;
         public StepsForm(string  username) 
