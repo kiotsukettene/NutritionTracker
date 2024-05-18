@@ -89,7 +89,7 @@
             this.dbDateTime.BorderRadius = 10;
             this.dbDateTime.BorderThickness = 1;
             this.dbDateTime.CheckedState.Parent = this.dbDateTime;
-            this.dbDateTime.CustomFormat = "";
+            this.dbDateTime.CustomFormat = "yyyy-MM-dd";
             this.dbDateTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(119)))), ((int)(((byte)(181)))));
             this.dbDateTime.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dbDateTime.ForeColor = System.Drawing.Color.Black;
@@ -103,7 +103,8 @@
             this.dbDateTime.Size = new System.Drawing.Size(133, 36);
             this.dbDateTime.TabIndex = 9;
             this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dbDateTime.Value = new System.DateTime(2024, 5, 8, 0, 0, 0, 0);
+            this.dbDateTime.Value = new System.DateTime(2024, 5, 17, 0, 0, 0, 0);
+            this.dbDateTime.ValueChanged += new System.EventHandler(this.dbDateTime_ValueChanged);
             // 
             // addFoodBtn
             // 

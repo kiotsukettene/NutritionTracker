@@ -14,7 +14,9 @@ namespace NutritionTracker
 {
     public partial class StepsForm : Form
     {
-
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
         public string username { get;set; }
         public double BMR;
         public StepsForm(string  username) 
@@ -60,12 +62,14 @@ namespace NutritionTracker
         {
             if (currentWeightTxtBox.Text == "" || currentHeightTxtBox.Text == "" || ageTxtBox.Text == "")
             {
-                MessageBox.Show("All fields are required!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
 
             }
             else if (genderBox.SelectedItem == null)
             {
-                MessageBox.Show("Please choose your Gender!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {
@@ -95,7 +99,8 @@ namespace NutritionTracker
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {
@@ -112,7 +117,8 @@ namespace NutritionTracker
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {
@@ -129,7 +135,8 @@ namespace NutritionTracker
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {

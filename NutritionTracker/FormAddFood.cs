@@ -25,9 +25,12 @@ namespace NutritionTracker
     {
         DBConnection myCon = new DBConnection();
         FoodDiary fd = new FoodDiary();
-        
-    
 
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
+
+        private double defaultCalories, defaultCarbs, defaultProtein, defaultFat;
         
         public FormAddFood()
         {
@@ -148,6 +151,10 @@ namespace NutritionTracker
         {
             AddFoodConrol add = (AddFoodConrol)sender;
             int servings = 100;
+            defaultCalories = (double)add.Calories;
+            defaultProtein = (double)add.Protein;
+            defaultCarbs = (double)add.Carbs;
+            defaultFat = (double)add.Fat;
             foodNameLbl.Text = add.FoodName;
             servingsBox.Text = servings.ToString();
             unitBox.Text = "gram";
@@ -214,13 +221,14 @@ namespace NutritionTracker
                 int rows = insertFoodCmd.ExecuteNonQuery();
                 if (rows > 0)
                 {
-                    MessageBox.Show("Success");
+                 
                     loadForm(fd);
                     fd.fdUsername.Text = usernameLbl.Text;
                 }
                 else
                 {
-                    MessageBox.Show("Failed");
+                    fm.Show();
+                    fm.failedLbl.Text = "Insert Failed";
                 }
                 myCon.closeCon();
             }
@@ -233,36 +241,29 @@ namespace NutritionTracker
 
         public void UpdateNutritionValues()
         {
+            AddFoodConrol add = new AddFoodConrol();
+
+            int serving = 100;
+
+            //MessageBox.Show(lastcal.ToString());
+            //MessageBox.Show(lastfat.ToString());
+            //MessageBox.Show(lastproteins.ToString());
+            //MessageBox.Show(lastcarbs.ToString());
+
+            double servingSize = double.Parse(servingsBox.Text);
+            double factor  = servingSize / serving;
 
             
+            
+            int updatedCal = (int)(defaultCalories * factor) ;
+            int updatedFat = (int)(defaultFat * factor);
+            int updatedCarb = (int)(defaultCarbs * factor);  
+            int updatedProtein = (int)(defaultProtein * factor);
 
-            //int basecals = int.Parse(calLabel.Text);
-            //int basefats = int.Parse(fatLabel.Text);
-            //int basecarbs = int.Parse(carbLabel.Text);
-            //int baseproteins = int.Parse(totalProteinLabel.Text);
-            //int lastcal = add.Calories;
-            //int lastfat = add.Fat;
-            //int lastproteins = add.Protein;
-            //int lastcarbs = add.Carbs;
-            AddFoodConrol add = new AddFoodConrol();
-            int servingSize = int.Parse(servingsBox.Text);
-
-            add.Calories = int.Parse(calLabel.Text);
-            add.Carbs = int.Parse(carbLabel.Text);
-            add.Fat = int.Parse(fatLabel.Text);
-            add.Protein = int.Parse(totalProteinLabel.Text);
-            double factor  = servingSize / 100;
-
-
-            int calories = (int)(add.Calories * factor) ;
-            int fats = (int)(add.Fat * factor);
-            int carbs = (int)(add.Carbs * factor);  
-            int protein = (int)(add.Protein * factor);
-
-            calLabel.Text = calories.ToString();
-            fatLabel.Text = fats.ToString();
-            carbLabel.Text = carbs.ToString();
-            totalProteinLabel.Text = protein.ToString();
+            calLabel.Text = updatedCal.ToString();
+            fatLabel.Text = updatedFat.ToString();
+            carbLabel.Text = updatedCarb.ToString();
+            totalProteinLabel.Text = updatedProtein.ToString();
           
 
         }
@@ -342,12 +343,17 @@ namespace NutritionTracker
 
         private void servingsBox_TextChanged(object sender, EventArgs e)
         {
+            
+            if (!string.IsNullOrEmpty(servingsBox.Text))
+            {
+                UpdateNutritionValues();
+            }
            
         }
 
         private void updateValues_Click(object sender, EventArgs e)
         {
-            //UpdateNutritionValues();
+            
         }
     }
 }

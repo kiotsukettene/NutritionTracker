@@ -125,6 +125,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FailedMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FailedMessage.Designer.cs">
+      <DependentUpon>FailedMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodDiary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,18 @@
     <Compile Include="StepsForm.Designer.cs">
       <DependentUpon>StepsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuccessMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessMessage.Designer.cs">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="warningMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="warningMessage.Designer.cs">
+      <DependentUpon>warningMessage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFoodConrol.resx">
       <DependentUpon>AddFoodConrol.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FailedMessage.resx">
+      <DependentUpon>FailedMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoodDiary.resx">
       <DependentUpon>FoodDiary.cs</DependentUpon>
@@ -289,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StepsForm.resx">
       <DependentUpon>StepsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessMessage.resx">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="warningMessage.resx">
+      <DependentUpon>warningMessage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -426,6 +453,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

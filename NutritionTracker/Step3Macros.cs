@@ -92,7 +92,7 @@ namespace NutritionTracker
 
                 if (rows > 0 )
                 {
-                    MessageBox.Show("Insert Success");
+                    
                 }
                 else
                 {

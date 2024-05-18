@@ -37,14 +37,14 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.showBox = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.showBox = new Guna.UI2.WinForms.Guna2ImageButton();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.miniBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.signUpBtn.CustomBorderColor = System.Drawing.Color.White;
             this.signUpBtn.CustomImages.Parent = this.signUpBtn;
             this.signUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.signUpBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpBtn.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.ForeColor = System.Drawing.Color.Black;
             this.signUpBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.signUpBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,6 +262,19 @@
             this.label2.TabIndex = 103;
             this.label2.Text = "Password";
             // 
+            // showBox
+            // 
+            this.showBox.CheckedState.Parent = this.showBox;
+            this.showBox.HoverState.Parent = this.showBox;
+            this.showBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
+            this.showBox.Location = new System.Drawing.Point(369, 229);
+            this.showBox.Margin = new System.Windows.Forms.Padding(2);
+            this.showBox.Name = "showBox";
+            this.showBox.PressedState.Parent = this.showBox;
+            this.showBox.Size = new System.Drawing.Size(36, 31);
+            this.showBox.TabIndex = 104;
+            this.showBox.Click += new System.EventHandler(this.showBtn);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.White;
@@ -308,41 +321,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(484, 38);
             this.guna2Panel1.TabIndex = 92;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Location = new System.Drawing.Point(477, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 48);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Create your Account";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::NutritionTracker.Properties.Resources.bg;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 569);
-            this.panel1.TabIndex = 96;
-            // 
-            // showBox
-            // 
-            this.showBox.CheckedState.Parent = this.showBox;
-            this.showBox.HoverState.Parent = this.showBox;
-            this.showBox.Image = global::NutritionTracker.Properties.Resources.showPassword;
-            this.showBox.Location = new System.Drawing.Point(369, 229);
-            this.showBox.Margin = new System.Windows.Forms.Padding(2);
-            this.showBox.Name = "showBox";
-            this.showBox.PressedState.Parent = this.showBox;
-            this.showBox.Size = new System.Drawing.Size(36, 31);
-            this.showBox.TabIndex = 104;
-            this.showBox.Click += new System.EventHandler(this.showBtn);
-            // 
             // exitBtn
             // 
             this.exitBtn.BackgroundImage = global::NutritionTracker.Properties.Resources.close2;
@@ -378,6 +356,28 @@
             this.miniBtn.Size = new System.Drawing.Size(18, 23);
             this.miniBtn.TabIndex = 21;
             this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label1.Location = new System.Drawing.Point(477, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 48);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Create your Account";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::NutritionTracker.Properties.Resources.bg;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(445, 569);
+            this.panel1.TabIndex = 96;
             // 
             // Signup
             // 

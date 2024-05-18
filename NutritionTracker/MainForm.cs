@@ -180,7 +180,7 @@ namespace NutritionTracker
             fd.fdUsername.Text = usernameLbl.Text;
            
            
-            fd.DisplayFoodDiary();
+          
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.fdBtn.Image = Properties.Resources.add;
             this.dashboardBtn.Image = Properties.Resources.home_gray;

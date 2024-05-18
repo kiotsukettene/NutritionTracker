@@ -76,7 +76,7 @@ namespace NutritionTracker
             try
             {
                 myCon.openCon();
-                DateTime date = DateTime.Now;
+                DateTime date = dbDateTime.Value;
                 string username = fdUsername.Text;
                 string added_at = date.ToString("yyyy-MM-dd");
 
@@ -308,6 +308,11 @@ namespace NutritionTracker
         private void fdUsername_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dbDateTime_ValueChanged(object sender, EventArgs e)
+        {
+            DisplayFoodDiary();
         }
     }
 }

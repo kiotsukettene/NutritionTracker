@@ -138,6 +138,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1109, 672);
             this.mainPanel.TabIndex = 103;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // label1
             // 
@@ -282,6 +283,7 @@
             this.servingUnitBox.Name = "servingUnitBox";
             this.servingUnitBox.ShadowDecoration.Parent = this.servingUnitBox;
             this.servingUnitBox.Size = new System.Drawing.Size(165, 31);
+            this.servingUnitBox.StartIndex = 0;
             this.servingUnitBox.TabIndex = 168;
             // 
             // label29

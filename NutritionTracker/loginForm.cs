@@ -23,7 +23,9 @@ namespace NutritionTracker
         public string username;
         DBConnection myCon = new DBConnection();
         MainForm main = new MainForm();
-
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
         public loginForm()
         {
             InitializeComponent();
@@ -82,7 +84,8 @@ namespace NutritionTracker
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Username and Password required!");
+                wm.Show();
+                wm.warningLbl.Text = "Username and Password required!!";
                 return;
             }
             else
@@ -127,6 +130,7 @@ namespace NutritionTracker
                         
                         DR.Close();
 
+                        
                         string selectQuery = "SELECT data_filled FROM user WHERE username = @username";
                         MySqlCommand selectCmd = new MySqlCommand(selectQuery, myCon.getCon());
                         selectCmd.Parameters.AddWithValue("@username", username);
@@ -148,7 +152,8 @@ namespace NutritionTracker
 
                                 if (dataReader.HasRows)
                                 {
-                                    dataReader.Read();
+                                    while (dataReader.Read())
+                                    {
                                     int weight = dataReader.GetInt32("weight");
                                     int age = dataReader.GetInt32("age");
                                     int gender = dataReader.GetInt32("gender");
@@ -160,28 +165,32 @@ namespace NutritionTracker
                                     int protein = dataReader.GetInt32("protein");
                                     int water = dataReader.GetInt32("water");
                                     int sleep = dataReader.GetInt32("sleep");
-                                    
-                                    main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight,weight, water, sleep);
+
+
+                                    main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
                                     main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, water, sleep);
-                                    main.Show();
-                                    
+
+                                    }
+                            
                                 dataReader.Close();
                                 }
-
+                           
+                            main.Show();
                         }
                         else
                         {
                         StepsForm step1 = new StepsForm(username);
                         step1.Show();
                           
-                                }
-                    this.Hide();
-                                  
-                           
+                        }
+                        this.Hide();
+
+                       
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username or password");
+                        wm.Show();
+                        wm.warningLbl.Text = "Invalid Username or Password";
                     }
 
                     myCon.closeCon();
@@ -221,6 +230,7 @@ namespace NutritionTracker
         {
             string username = loginUserBox.Text;
             string password = loginPassBox.Text;
+       
             Login();
             
 

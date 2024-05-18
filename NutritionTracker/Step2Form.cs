@@ -17,7 +17,10 @@ namespace NutritionTracker
     public partial class Step2Form : Form
     {
         DBConnection myCon = new DBConnection();
-       public int activityLevel { get; set; }
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
+        public int activityLevel { get; set; }
        public int weightGoal { get; set; }
         public int targetWeightGoal { get; set; }
         public int BMR;
@@ -106,7 +109,7 @@ namespace NutritionTracker
 
                 if (rows > 0)
                 {
-                    MessageBox.Show("Insert Successfuly");
+                    
                     
                 }
                 else
@@ -238,7 +241,8 @@ namespace NutritionTracker
 
             if (activityLevelBox.Text == "" || weightGoalBox.Text == "" || targetWeightTxtBox.Text == "")
             {
-                MessageBox.Show("All fields are required!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
 
             }
 

@@ -15,7 +15,10 @@ namespace NutritionTracker
     public partial class Signup : Form
     {
         DBConnection myCon = new DBConnection();
-       
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
+
         public Signup()
         {
             InitializeComponent();
@@ -45,7 +48,8 @@ namespace NutritionTracker
 
                 if (password != confirmPass)
                 {
-                    MessageBox.Show("Password doesn't match. Please re-enter");
+                    wm.Show();
+                    wm.warningLbl.Text  = ("Password doesn't match. Please re-enter");
                     return;
                 }
                 myCon.openCon();
@@ -66,7 +70,9 @@ namespace NutritionTracker
                 {
                     if (firstname == "" || lastname == "" || username == "" || password == "" || confirmPass == "")
                     {
-                        MessageBox.Show("All fields are required!");
+                        wm.Show();
+                        wm.warningLbl.Text = "All fields are required!";
+                        
                         
                     }
                     else {
@@ -81,7 +87,7 @@ namespace NutritionTracker
 
                         if (rows > 0)
                         {
-                                MessageBox.Show("Successful");
+                            sm.successLbl.Text = "Sign up success!!";
                                 loginForm login = new loginForm();
                                 login.Show();
                                 this.Dispose();
@@ -89,7 +95,8 @@ namespace NutritionTracker
                         }
                         else
                         {
-                            Console.WriteLine("Failed to Insert");
+                            fm.Show();
+                            fm.failedLbl.Text = "Error signing up!";
                         }
                     }
                 }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Mysqlx.Connection;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,12 @@ namespace NutritionTracker
         CreateFood create = new CreateFood();
         DBConnection myCon = new DBConnection();
         NutritionFacts nf = new NutritionFacts();
+        FailedMessage fm = new FailedMessage();
+        SuccessMessage sm = new SuccessMessage();
+        warningMessage wm = new warningMessage();
         public string username;
+        private double dfCal, dfCarbs, dfFat, dfProtein;
+        private int dfServings;
         public MyPersonalFood()
         {
             InitializeComponent();
@@ -126,6 +132,13 @@ namespace NutritionTracker
         {
             PersonalFoodControl obj = (PersonalFoodControl)sender;
             loadForm(nf);
+
+            dfCal = obj.Calories;
+            dfCarbs = obj.Carbs;
+            dfProtein = obj.Protein;
+            dfFat = obj.Fat;
+            dfServings = obj.ServingSize;
+
             panel1.Visible = false;
             createFoodBtn.Visible = true;
             nf.nfUsername.Text = usernameLbl.Text;
@@ -188,7 +201,8 @@ namespace NutritionTracker
 
                 if (rows > 0)
                 {
-                    MessageBox.Show("Insert Success");
+                    sm.Show();
+                    sm.successLbl.Text = "Insert Successful";
                     brandTxtBox.Text = "";
                     foodDescTxtBox.Text = "";
                     servingValueBox.Text = "";
@@ -204,7 +218,8 @@ namespace NutritionTracker
                 }
                 else
                 {
-                    MessageBox.Show("Insert not success");
+                    fm.Show();
+                    fm.failedLbl.Text = "Insert Failed";
                 }
 
                 myCon.closeCon();
@@ -218,9 +233,35 @@ namespace NutritionTracker
             {
                 myCon.closeCon();
             }
-
-
         }
+
+        public void UpdateNutritionValues()
+        {
+            int serving = dfServings;
+
+            //MessageBox.Show(lastcal.ToString());
+            //MessageBox.Show(lastfat.ToString());
+            //MessageBox.Show(lastproteins.ToString());
+            //MessageBox.Show(lastcarbs.ToString());
+            MessageBox.Show(serving.ToString());
+
+            double servingSize = double.Parse(nf.servingsBox.Text);
+            double factor = servingSize / serving;
+
+
+
+            int updatedCal = (int)(dfCal * factor);
+            int updatedFat = (int)(dfFat * factor);
+            int updatedCarb = (int)(dfCarbs * factor);
+            int updatedProtein = (int)(dfProtein * factor);
+
+            nf.calLabel.Text = updatedCal.ToString();
+            nf.fatLabel.Text = updatedFat.ToString();
+            nf.carbLabel.Text = updatedCarb.ToString();
+            nf.totalProteinLabel.Text = updatedProtein.ToString();
+        }
+
+       
         private void MyPersonalFood_Load(object sender, EventArgs e)
         {
 
@@ -245,6 +286,11 @@ namespace NutritionTracker
             panel1.Visible = true;
             createFoodBtn.Visible = false;
             //create.label43.Text = usernameLbl.Text;
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

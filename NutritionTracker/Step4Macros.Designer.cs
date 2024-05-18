@@ -263,6 +263,7 @@
             // 
             // waterBox
             // 
+            this.waterBox.AutoSize = true;
             this.waterBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
             this.waterBox.BorderColor = System.Drawing.Color.Gray;
             this.waterBox.BorderRadius = 12;

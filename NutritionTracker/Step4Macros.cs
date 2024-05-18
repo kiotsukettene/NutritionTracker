@@ -17,7 +17,9 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         MainForm main = new MainForm();
         Personalization personalize = new Personalization();
-    
+        SuccessMessage sm = new SuccessMessage();
+        FailedMessage fm = new FailedMessage();
+        warningMessage wm = new warningMessage();
         public int TDEE;
         public int carbs;
         public int calories;
@@ -96,7 +98,8 @@ namespace NutritionTracker
 
                 if (rows > 0)
                 {
-                    MessageBox.Show("Success");
+                    sm.Show();
+                    sm.successLbl.Text = "Success!";
                    
                 }
                 else
@@ -215,7 +218,9 @@ namespace NutritionTracker
 
             if (waterBox.Text == "" || sleepBox.Text == "")
             {
-                MessageBox.Show("All fields are required!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                wm.Show();
+                wm.warningLbl.Text = "All fields are required!\", \"Invalid Input\"";
 
             }
 
@@ -240,7 +245,8 @@ namespace NutritionTracker
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {
@@ -257,7 +263,8 @@ namespace NutritionTracker
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
-                MessageBox.Show("Please enter only numeric values.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
             }
             else
             {
