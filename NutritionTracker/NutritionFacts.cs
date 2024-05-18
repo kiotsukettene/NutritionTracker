@@ -19,6 +19,8 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
+        public MyPersonalFood PersonalFoodForm { get; set; }
+       
 
         private int food_id;
         private double servings, cals, carbs, fats, proteins;
@@ -28,7 +30,7 @@ namespace NutritionTracker
             dbDateTime.Value = DateTime.Now;
                
         }
-        FoodDiary fd = new FoodDiary();
+       
         #region TabPanels
         //void loadForm(Form panel)
         //{
@@ -132,7 +134,7 @@ namespace NutritionTracker
                         int fats = dr.GetInt32("total_fat");
                         int proteins = dr.GetInt32("protein");
 
-                        MessageBox.Show(food_id.ToString());
+                       
                         // Update the UI controls with the retrieved values
                         unitBox.Text = unit.ToString();
 
@@ -173,7 +175,7 @@ namespace NutritionTracker
                 myCon.closeCon();
             }
         }
-        public event EventHandler FoodDeleted;
+        
         public void DeleteMyFood()
         {
             try
@@ -197,7 +199,10 @@ namespace NutritionTracker
                 
                 if (rows > 0)
                 {
-                    MessageBox.Show("Deleted Successfuly by " + food_id);
+                    sm.Show();
+                    sm.successLbl.Text = "Deleted Successfully";
+                   
+               
                 }
            
 
@@ -287,6 +292,13 @@ namespace NutritionTracker
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             DeleteMyFood();
+            this.Hide();
+            if (PersonalFoodForm != null)
+            {
+                PersonalFoodForm.FoodSelection();
+                PersonalFoodForm.panel1.Visible = true;
+            }
+
         }
 
         private void updateValues_Click(object sender, EventArgs e)
@@ -304,6 +316,9 @@ namespace NutritionTracker
         private void addToFDBtn_Click(object sender, EventArgs e)
         {
             InsertMyFood();
+            this.Hide();
+            PersonalFoodForm.panel1.Visible = true;
+
         }
 
         private void servingsBox_TextChanged(object sender, EventArgs e)
@@ -311,6 +326,7 @@ namespace NutritionTracker
             if (!string.IsNullOrEmpty(servingsBox.Text))
             {
                 UpdateBasedOnServings();
+               
             }
             
         }

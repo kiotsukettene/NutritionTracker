@@ -25,12 +25,15 @@ namespace NutritionTracker
         FailedMessage fm = new FailedMessage();
         SuccessMessage sm = new SuccessMessage();
         
+        
         public string username;
         private double dfCal, dfCarbs, dfFat, dfProtein;
         private int dfServings;
         public MyPersonalFood()
         {
             InitializeComponent();
+            nf.PersonalFoodForm = this;
+            
         }
         
         #region TabPanels
@@ -164,7 +167,7 @@ namespace NutritionTracker
         }
         public void InsertCreatedFood()
         {
-            myCon.openCon();
+           
             try
             {
                 int servingSize, servingContainer, cal, carb, fat, protein;

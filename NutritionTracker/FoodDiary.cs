@@ -19,6 +19,7 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
         SuccessMessage fmSuccess = new SuccessMessage();
+        
         public FoodDiary()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace NutritionTracker
             totalTxtPanel.Visible = true;
             foodDiaryPanel.Visible = true;
             fdTotalPanel.Visible = true;
+           
         }
         #region TabPanels
         public void loadForm(Form panel)

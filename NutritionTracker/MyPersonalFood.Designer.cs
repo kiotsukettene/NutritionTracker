@@ -776,6 +776,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox servingUnitBox;
         public System.Windows.Forms.FlowLayoutPanel FoodListPanel;
-        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel1;
     }
 }

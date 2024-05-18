@@ -208,7 +208,7 @@ namespace NutritionTracker
         {
             try
             {
-                DateTime date = DateTime.Now;
+                DateTime date = dbDateTime.Value;
                 string addDate = date.ToString("yyyy-MM-dd");
                 string foodname = foodNameLbl.Text;
                 string username = usernameLbl.Text;

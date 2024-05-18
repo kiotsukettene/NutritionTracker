@@ -51,12 +51,11 @@
             // 
             // failedLbl
             // 
-            this.failedLbl.AutoSize = true;
             this.failedLbl.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.failedLbl.ForeColor = System.Drawing.Color.White;
             this.failedLbl.Location = new System.Drawing.Point(81, 57);
             this.failedLbl.Name = "failedLbl";
-            this.failedLbl.Size = new System.Drawing.Size(141, 19);
+            this.failedLbl.Size = new System.Drawing.Size(276, 36);
             this.failedLbl.TabIndex = 4;
             this.failedLbl.Text = "Operation unsuccessful";
             // 
