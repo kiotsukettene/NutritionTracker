@@ -116,5 +116,11 @@ namespace NutritionTracker
 
         }
         public event EventHandler OnDelete;
+        public event EventHandler OnEdit;
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            OnEdit?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

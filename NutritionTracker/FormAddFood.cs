@@ -31,6 +31,7 @@ namespace NutritionTracker
     
 
         private double defaultCalories, defaultCarbs, defaultProtein, defaultFat;
+        public string dffoodname;
         
         public FormAddFood()
         {
@@ -176,6 +177,7 @@ namespace NutritionTracker
             defaultProtein = (double)add.Protein;
             defaultCarbs = (double)add.Carbs;
             defaultFat = (double)add.Fat;
+            dffoodname = add.FoodName;
             foodNameLbl.Text = add.FoodName;
             servingsBox.Text = servings.ToString();
             unitBox.Text = "gram";
@@ -277,7 +279,7 @@ namespace NutritionTracker
 
         public void UpdateNutritionValues()
         {
-            AddFoodConrol add = new AddFoodConrol();
+           
 
             int serving = 100;
 

@@ -19,7 +19,8 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
         SuccessMessage fmSuccess = new SuccessMessage();
-        
+    
+
         public FoodDiary()
         {
             InitializeComponent();
@@ -135,7 +136,8 @@ namespace NutritionTracker
                         totalCarbs += (int)dt.Rows[i]["carbs"];
                         totalFat += (int)dt.Rows[i]["fat"];
                         totalProtein += (int)dt.Rows[i]["protein"];
-                        InitializeFoodDiaryControl(fdc);
+                        InitializeDeleteFoodDiaryControl(fdc);
+                        InitializeEditFoodDiaryControl(fdc);
                     }
                     TotalCal.Text = totalCalories.ToString();
                     TotalCarb.Text = totalCarbs.ToString();
@@ -286,7 +288,7 @@ namespace NutritionTracker
                MessageBox.Show("Error" + e.Message);
             }
         }
-        private void InitializeFoodDiaryControl(FoodDiaryControl fdc)
+        private void InitializeDeleteFoodDiaryControl(FoodDiaryControl fdc)
         {
             fdc.OnDelete += (sender, e) =>
             {
@@ -298,6 +300,105 @@ namespace NutritionTracker
                 }
             };
         }
+        private void EditCertainFood(int foodID, FoodDiaryControl fdc)
+        {
+            try
+            {
+
+                FormAddFood add = new FormAddFood();
+                loadForm(add);
+                add.panel1.Visible = true;
+             
+                FDLabel.Visible = false;
+                add.usernameLbl.Text = fdUsername.Text;
+                
+                string username = add.usernameLbl.Text;
+               
+
+                myCon.openCon();
+
+                string selectQuery = @"SELECT food_name, serving_size, serving_unit, meal, calories, carbs, fat, protein, added_at 
+                                       FROM user_food_diary
+                                        JOIN user ON user.id = user_food_diary.user_id
+                                       WHERE user_food_diary.id = @foodID AND user.username = @username;";
+
+                MySqlCommand cmd = new MySqlCommand(selectQuery, myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@foodID", foodID);
+                cmd.Parameters.AddWithValue("@username", username);
+                //cmd.Parameters.AddWithValue("@added_at", added_at);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string foodNameEdit = dr.GetString("food_name");
+                    int servings = dr.GetInt32("serving_size");
+                    string unit = dr.GetString("serving_unit");
+                    string meal = dr.GetString("meal");
+                    double cal = dr.GetDouble("calories");
+                    double carbs = dr.GetDouble("carbs");
+                    double fats = dr.GetDouble("fat");
+                    double protein = dr.GetDouble("protein");
+                    DateTime date = dr.GetDateTime("added_at");
+                    
+                    
+                    add.foodNameLbl.Text = foodNameEdit.ToString();
+                    add.servingsBox.Text = servings.ToString();
+                    add.unitBox.Text = unit;
+                    add.mealBox.Text = meal;
+                    add.calLabel.Text = cal.ToString();
+                    add.chartCal.Text = cal.ToString();
+                    add.carbLabel.Text = carbs.ToString();
+                    add.fatLabel.Text = fats.ToString();
+                    add.totalProteinLabel.Text = protein.ToString();
+                    add.dbDateTime.Value = date;
+
+                    double totalMacronutrients = protein + fats + carbs;
+                    
+                    // Calculate percentages
+                    double proteinPercentage = totalMacronutrients > 0 ? (protein / totalMacronutrients) * 100 : 0;
+                    double fatPercentage = totalMacronutrients > 0 ? (fats / totalMacronutrients) * 100 : 0;
+                    double carbohydratesPercentage = totalMacronutrients > 0 ? (carbs / totalMacronutrients) * 100 : 0;
+
+                    
+                    add.carbPercentLbl.Text =$"{carbohydratesPercentage.ToString("F2")}%";
+                    add.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}%";
+                    add.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}%";
+
+                    //double carbP = double.Parse(add.carbPercentLbl.Text);
+                    //double fatP = double.Parse(add.fatPercentLbl.Text);
+                    //double proteinP = double.Parse(add.proteinPercentLbl.Text);
+
+                    add.chart1.Series["Series1"].Points.Clear();
+                    add.chart1.Series["Series1"].Points.AddXY("Protein", proteinPercentage);
+                    add.chart1.Series["Series1"].Points.AddXY("Fat", fatPercentage);
+                    add.chart1.Series["Series1"].Points.AddXY("Carbohydrates", carbohydratesPercentage);
+                    add.chart1.DataBind();
+
+
+                }
+                dr.Close();
+                myCon.closeCon();
+            }
+            catch (Exception e) 
+            { 
+                MessageBox.Show("Error" + e);
+            }
+        }
+        private void InitializeEditFoodDiaryControl(FoodDiaryControl fdc)
+        {
+            fdc.OnEdit += (sender, e) =>
+            {
+                var control = sender as FoodDiaryControl;
+                if (control != null)
+                {
+                    EditCertainFood(control.FoodID, control);
+                   
+                }
+            };
+        }
+
         public void SelectMacros()
         {
             myCon.openCon();

@@ -46,7 +46,7 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.proteinLbl = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.editBtn = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.deleteBtn = new System.Windows.Forms.Label();
             this.mealPanel.SuspendLayout();
@@ -274,7 +274,7 @@
             // 
             this.guna2Panel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel9.BorderThickness = 1;
-            this.guna2Panel9.Controls.Add(this.label9);
+            this.guna2Panel9.Controls.Add(this.editBtn);
             this.guna2Panel9.CustomBorderColor = System.Drawing.Color.Gray;
             this.guna2Panel9.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel9.Location = new System.Drawing.Point(887, 0);
@@ -283,20 +283,21 @@
             this.guna2Panel9.Size = new System.Drawing.Size(78, 44);
             this.guna2Panel9.TabIndex = 8;
             // 
-            // label9
+            // editBtn
             // 
-            this.label9.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(2, 11);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 22);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "Edit";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.ForeColor = System.Drawing.Color.White;
+            this.editBtn.Location = new System.Drawing.Point(2, 11);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(74, 22);
+            this.editBtn.TabIndex = 69;
+            this.editBtn.Text = "Edit";
+            this.editBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // guna2Panel10
             // 
@@ -378,7 +379,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.Label proteinLbl;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label editBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private System.Windows.Forms.Label deleteBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
