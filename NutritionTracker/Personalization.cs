@@ -253,7 +253,7 @@ namespace NutritionTracker
 
         private void updateChangesBtn_Click(object sender, EventArgs e)
         {
-            
+                
             UpdateFitnessData();
             UpdateOnDashboard();
         }

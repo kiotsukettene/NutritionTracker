@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms.Suite;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Mozilla;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,19 +15,24 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace NutritionTracker
 {
+
     public partial class FoodDiary : Form
     {
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
-        SuccessMessage fmSuccess = new SuccessMessage();
-    
+        SuccessMessage sm = new SuccessMessage();
 
+       
+        public int food_id { get; set; }
+        public string unit, meal, username;
+        public int servings;
+        public double cal, carbs, fats, protein;
         public FoodDiary()
         {
             InitializeComponent();
             addFoodBtn.Visible = true;
             FDLabel.Visible = true;
-            
+           
             totalTxtPanel.Visible = true;
             foodDiaryPanel.Visible = true;
             fdTotalPanel.Visible = true;
@@ -308,7 +314,7 @@ namespace NutritionTracker
                 FormAddFood add = new FormAddFood();
                 loadForm(add);
                 add.panel1.Visible = true;
-             
+                add.addToDiaryBtn.Visible = false;
                 FDLabel.Visible = false;
                 add.usernameLbl.Text = fdUsername.Text;
                 
@@ -317,7 +323,7 @@ namespace NutritionTracker
 
                 myCon.openCon();
 
-                string selectQuery = @"SELECT food_name, serving_size, serving_unit, meal, calories, carbs, fat, protein, added_at 
+                string selectQuery = @"SELECT user_food_diary.id, food_name, serving_size, serving_unit, meal, calories, carbs, fat, protein, added_at 
                                        FROM user_food_diary
                                         JOIN user ON user.id = user_food_diary.user_id
                                        WHERE user_food_diary.id = @foodID AND user.username = @username;";
@@ -332,6 +338,8 @@ namespace NutritionTracker
 
                 if (dr.Read())
                 {
+                    
+                    food_id = dr.GetInt32("id");
                     string foodNameEdit = dr.GetString("food_name");
                     int servings = dr.GetInt32("serving_size");
                     string unit = dr.GetString("serving_unit");
@@ -341,8 +349,9 @@ namespace NutritionTracker
                     double fats = dr.GetDouble("fat");
                     double protein = dr.GetDouble("protein");
                     DateTime date = dr.GetDateTime("added_at");
-                    
-                    
+
+
+                  
                     add.foodNameLbl.Text = foodNameEdit.ToString();
                     add.servingsBox.Text = servings.ToString();
                     add.unitBox.Text = unit;
@@ -376,6 +385,29 @@ namespace NutritionTracker
                     add.chart1.Series["Series1"].Points.AddXY("Carbohydrates", carbohydratesPercentage);
                     add.chart1.DataBind();
 
+                    //int serving = 100;
+
+                    ////MessageBox.Show(lastcal.ToString());
+                    ////MessageBox.Show(lastfat.ToString());
+                    ////MessageBox.Show(lastproteins.ToString());
+                    ////MessageBox.Show(lastcarbs.ToString());
+
+                    //double servingSize = double.Parse(add.servingsBox.Text);
+                    //double factor = servingSize / serving;
+
+
+
+                    //int updatedCal = (int)(cal * factor);l ;
+                    //int updatedFat = (int)(fats * factor);
+                    //int updatedCarb = (int)(carbs * factor);
+                    //int updatedProtein = (int)(protein * factor);
+
+                    //add.calLabel.Text = updatedCal.ToString();
+                    //add.fatLabel.Text = updatedFat.ToString();
+                    //add.carbLabel.Text = updatedCarb.ToString();
+                    //add.totalProteinLabel.Text = updatedProtein.ToString();
+
+
 
                 }
                 dr.Close();
@@ -398,6 +430,7 @@ namespace NutritionTracker
                 }
             };
         }
+
 
         public void SelectMacros()
         {
@@ -443,21 +476,86 @@ namespace NutritionTracker
                 MessageBox.Show("Error:" + e);
             }
         }
+
+        public void UpdateToDiary(int foodID, FormAddFood add)
+        {
+            try
+            {
+                
+
+                string username = add.usernameLbl.Text;
+                string foodName = add.foodNameLbl.Text;
+                int servingSize = int.Parse(add.servingsBox.Text);
+                string servingUnit = add.unitBox.Text;
+                string meal = add.mealBox.Text;
+                double calories = double.Parse(add.calLabel.Text);
+                double carbs = double.Parse(add.carbLabel.Text);
+                double fats = double.Parse(add.fatLabel.Text);
+                double protein = double.Parse(add.totalProteinLabel.Text);
+                DateTime addedAt = dbDateTime.Value;
+                myCon.openCon();
+
+                string updateQuery = @"UPDATE `user_food_diary` 
+                                    JOIN user on user.id = user_food_diary.user_id
+                                    SET
+                                        user_food_diary.serving_size = @serving_size,
+                                        user_food_diary.serving_unit = @serving_unit,
+                                        user_food_diary.meal = @meal,
+                                        user_food_diary.calories = @calories,
+                                        user_food_diary.carbs = @carbs,
+                                        user_food_diary.fat = @fat,
+                                        user_food_diary.protein = @protein,
+                                        user_food_diary.added_at = @added_at
+                                    WHERE user.username = @username AND user_food_diary.id = @food_id;
+                                        ";
+                MySqlCommand cmd = new MySqlCommand(updateQuery, myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@serving_size", servingSize);
+                cmd.Parameters.AddWithValue("@serving_unit", servingUnit);
+                cmd.Parameters.AddWithValue("@meal", meal);
+                cmd.Parameters.AddWithValue("@calories", calories);
+                cmd.Parameters.AddWithValue("@carbs", carbs);
+                cmd.Parameters.AddWithValue("@fat", fats);
+                cmd.Parameters.AddWithValue("@protein", protein);
+                cmd.Parameters.AddWithValue("@added_at", addedAt);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@food_id", foodID);
+
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    sm.Show();
+                    sm.successLbl.Text = "Update Success!";
+                   
+                }
+                else
+                {
+                    fm.Show();
+                    fm.failedLbl.Text = "Update Failed";
+                }
+                myCon.closeCon();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+        }
        
-        
+
         private void addFoodBtn_Click(object sender, EventArgs e)
         {
-            FormAddFood add = new FormAddFood();
-            loadForm(add);
-            add.panel1.Visible = false;
-            FDLabel.Visible = false;
-            add.usernameLbl.Text = fdUsername.Text;
+                FormAddFood add = new FormAddFood();
+                loadForm(add);
+                add.panel1.Visible = false;
+                FDLabel.Visible = false;
+                add.usernameLbl.Text = fdUsername.Text;
 
-            
-        }
 
-        
-        private void FoodDiary_Load(object sender, EventArgs e)
+       }
+
+
+            private void FoodDiary_Load(object sender, EventArgs e)
         {
             //DynamicFoodDiary();
             SelectMacros();

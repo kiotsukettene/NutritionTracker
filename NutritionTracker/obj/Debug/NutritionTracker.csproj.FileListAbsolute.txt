@@ -388,7 +388,6 @@ C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\Nutriti
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.FailedMessage.resources
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.FoodDiary.resources
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.FoodDiaryControl.resources
-C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.FormAddFood.resources
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.login.resources
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.loginForm.resources
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.MainForm.resources
@@ -410,3 +409,4 @@ C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\Nutriti
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\Nutritio.AD6C3C66.Up2Date
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.exe
 C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.pdb
+C:\Users\admin\Desktop\Nutrition Tracker _ 90\NutritionTracker\obj\Debug\NutritionTracker.UpdateEventArgs.resources
