@@ -153,6 +153,7 @@ namespace NutritionTracker
                         fatLabel.Text = updatedFat.ToString();
                         carbLabel.Text = updatedCarb.ToString();
                         totalProteinLabel.Text = updatedProtein.ToString();
+                        chartCal.Text = updatedCal.ToString();
                     }
                 }
                 else

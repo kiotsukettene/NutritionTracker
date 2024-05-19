@@ -233,6 +233,7 @@ namespace NutritionTracker
                     pFatLabel.Text = updateFats.ToString();
                     pProteinLabel.Text = updateProtein.ToString();
 
+
                 }
                 else
                 {

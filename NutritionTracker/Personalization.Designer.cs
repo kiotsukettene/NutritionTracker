@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.personTargetWeight = new Guna.UI2.WinForms.Guna2TextBox();
             this.personWeightTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.personInfoEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.personGoal2TxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personAgeTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personGenderTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -72,7 +73,6 @@
             this.pCalLabel = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.personFitnessGoalsEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.personInfoEditBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -442,6 +442,20 @@
             this.personWeightTxtBox.TabIndex = 8;
             this.personWeightTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personWeightTxtBox_KeyPress);
             // 
+            // personInfoEditBtn
+            // 
+            this.personInfoEditBtn.CheckedState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
+            this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
+            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.personInfoEditBtn.Name = "personInfoEditBtn";
+            this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
+            this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
+            this.personInfoEditBtn.TabIndex = 7;
+            this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
+            // 
             // personGoal2TxtBox
             // 
             this.personGoal2TxtBox.BorderColor = System.Drawing.Color.Gray;
@@ -684,13 +698,14 @@
             this.caloComboBox.BackColor = System.Drawing.Color.Transparent;
             this.caloComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.caloComboBox.BorderRadius = 17;
+            this.caloComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.caloComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.caloComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.caloComboBox.Enabled = false;
             this.caloComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.caloComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.caloComboBox.FocusedColor = System.Drawing.Color.Transparent;
-            this.caloComboBox.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.caloComboBox.FocusedColor = System.Drawing.Color.Black;
+            this.caloComboBox.FocusedState.BorderColor = System.Drawing.Color.Black;
             this.caloComboBox.FocusedState.FillColor = System.Drawing.Color.Transparent;
             this.caloComboBox.FocusedState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caloComboBox.FocusedState.ForeColor = System.Drawing.Color.Black;
@@ -699,6 +714,7 @@
             this.caloComboBox.ForeColor = System.Drawing.Color.Black;
             this.caloComboBox.FormattingEnabled = true;
             this.caloComboBox.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.caloComboBox.HoverState.ForeColor = System.Drawing.Color.Black;
             this.caloComboBox.HoverState.Parent = this.caloComboBox;
             this.caloComboBox.ItemHeight = 30;
             this.caloComboBox.Items.AddRange(new object[] {
@@ -724,11 +740,12 @@
             "100%"});
             this.caloComboBox.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.caloComboBox.ItemsAppearance.Parent = this.caloComboBox;
-            this.caloComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Transparent;
-            this.caloComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caloComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
+            this.caloComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
+            this.caloComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caloComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
             this.caloComboBox.Location = new System.Drawing.Point(381, 113);
             this.caloComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.caloComboBox.MaxDropDownItems = 50;
             this.caloComboBox.Name = "caloComboBox";
             this.caloComboBox.ShadowDecoration.Parent = this.caloComboBox;
             this.caloComboBox.Size = new System.Drawing.Size(84, 36);
@@ -743,17 +760,22 @@
             this.carbsComboBox.BackColor = System.Drawing.Color.Transparent;
             this.carbsComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.carbsComboBox.BorderRadius = 17;
+            this.carbsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.carbsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.carbsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.carbsComboBox.Enabled = false;
             this.carbsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.carbsComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.carbsComboBox.FocusedColor = System.Drawing.Color.Empty;
-            this.carbsComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(223)))), ((int)(((byte)(216)))));
+            this.carbsComboBox.FocusedColor = System.Drawing.Color.Black;
+            this.carbsComboBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.carbsComboBox.FocusedState.FillColor = System.Drawing.Color.Transparent;
+            this.carbsComboBox.FocusedState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbsComboBox.FocusedState.ForeColor = System.Drawing.Color.Black;
             this.carbsComboBox.FocusedState.Parent = this.carbsComboBox;
             this.carbsComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbsComboBox.ForeColor = System.Drawing.Color.Black;
             this.carbsComboBox.FormattingEnabled = true;
+            this.carbsComboBox.HoverState.ForeColor = System.Drawing.Color.Black;
             this.carbsComboBox.HoverState.Parent = this.carbsComboBox;
             this.carbsComboBox.ItemHeight = 30;
             this.carbsComboBox.Items.AddRange(new object[] {
@@ -777,11 +799,11 @@
             "90%",
             "95%",
             "100%"});
-            this.carbsComboBox.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.carbsComboBox.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.carbsComboBox.ItemsAppearance.Parent = this.carbsComboBox;
-            this.carbsComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Transparent;
-            this.carbsComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carbsComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
+            this.carbsComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
+            this.carbsComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbsComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
             this.carbsComboBox.Location = new System.Drawing.Point(381, 166);
             this.carbsComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.carbsComboBox.Name = "carbsComboBox";
@@ -798,17 +820,23 @@
             this.proteinComboBox.BackColor = System.Drawing.Color.Transparent;
             this.proteinComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.proteinComboBox.BorderRadius = 17;
+            this.proteinComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.proteinComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.proteinComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.proteinComboBox.Enabled = false;
             this.proteinComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.proteinComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.proteinComboBox.FocusedColor = System.Drawing.Color.Empty;
-            this.proteinComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(200)))), ((int)(((byte)(237)))));
+            this.proteinComboBox.FocusedColor = System.Drawing.Color.Black;
+            this.proteinComboBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.proteinComboBox.FocusedState.FillColor = System.Drawing.Color.Transparent;
+            this.proteinComboBox.FocusedState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinComboBox.FocusedState.ForeColor = System.Drawing.Color.Black;
             this.proteinComboBox.FocusedState.Parent = this.proteinComboBox;
             this.proteinComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proteinComboBox.ForeColor = System.Drawing.Color.Black;
             this.proteinComboBox.FormattingEnabled = true;
+            this.proteinComboBox.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.proteinComboBox.HoverState.ForeColor = System.Drawing.Color.Black;
             this.proteinComboBox.HoverState.Parent = this.proteinComboBox;
             this.proteinComboBox.ItemHeight = 30;
             this.proteinComboBox.Items.AddRange(new object[] {
@@ -832,11 +860,11 @@
             "90%",
             "95%",
             "100%"});
-            this.proteinComboBox.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.proteinComboBox.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.proteinComboBox.ItemsAppearance.Parent = this.proteinComboBox;
-            this.proteinComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Transparent;
-            this.proteinComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proteinComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
+            this.proteinComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
+            this.proteinComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
             this.proteinComboBox.Location = new System.Drawing.Point(381, 281);
             this.proteinComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.proteinComboBox.Name = "proteinComboBox";
@@ -853,17 +881,23 @@
             this.fatComboBox.BackColor = System.Drawing.Color.Transparent;
             this.fatComboBox.BorderColor = System.Drawing.Color.DimGray;
             this.fatComboBox.BorderRadius = 17;
+            this.fatComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fatComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.fatComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fatComboBox.Enabled = false;
             this.fatComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(255)))), ((int)(((byte)(238)))));
             this.fatComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fatComboBox.FocusedColor = System.Drawing.Color.Empty;
-            this.fatComboBox.FocusedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(174)))), ((int)(((byte)(243)))));
+            this.fatComboBox.FocusedColor = System.Drawing.Color.Black;
+            this.fatComboBox.FocusedState.BorderColor = System.Drawing.Color.Black;
+            this.fatComboBox.FocusedState.FillColor = System.Drawing.Color.Transparent;
+            this.fatComboBox.FocusedState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatComboBox.FocusedState.ForeColor = System.Drawing.Color.Black;
             this.fatComboBox.FocusedState.Parent = this.fatComboBox;
             this.fatComboBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fatComboBox.ForeColor = System.Drawing.Color.Black;
             this.fatComboBox.FormattingEnabled = true;
+            this.fatComboBox.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.fatComboBox.HoverState.ForeColor = System.Drawing.Color.Black;
             this.fatComboBox.HoverState.Parent = this.fatComboBox;
             this.fatComboBox.ItemHeight = 30;
             this.fatComboBox.Items.AddRange(new object[] {
@@ -887,11 +921,11 @@
             "90%",
             "95%",
             "100%"});
-            this.fatComboBox.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.fatComboBox.ItemsAppearance.BackColor = System.Drawing.Color.White;
             this.fatComboBox.ItemsAppearance.Parent = this.fatComboBox;
-            this.fatComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.Transparent;
-            this.fatComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Transparent;
+            this.fatComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
+            this.fatComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
             this.fatComboBox.Location = new System.Drawing.Point(381, 222);
             this.fatComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.fatComboBox.Name = "fatComboBox";
@@ -1048,20 +1082,6 @@
             this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(38, 28);
             this.personFitnessGoalsEditBtn.TabIndex = 9;
             this.personFitnessGoalsEditBtn.Click += new System.EventHandler(this.personFitnessGoalsEditBtn_Click);
-            // 
-            // personInfoEditBtn
-            // 
-            this.personInfoEditBtn.CheckedState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
-            this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
-            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.personInfoEditBtn.Name = "personInfoEditBtn";
-            this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
-            this.personInfoEditBtn.TabIndex = 7;
-            this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
             // 
             // Personalization
             // 

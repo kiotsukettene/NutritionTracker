@@ -37,7 +37,7 @@ namespace NutritionTracker
         public FormAddFood()
         {
             InitializeComponent();
-            MessageBox.Show(fd.food_id.ToString());
+           
 
         }
         #region TabPanels
@@ -303,7 +303,7 @@ namespace NutritionTracker
             fatLabel.Text = updatedFat.ToString();
             carbLabel.Text = updatedCarb.ToString();
             totalProteinLabel.Text = updatedProtein.ToString();
-          
+          chartCal.Text = updatedCal.ToString();
 
         }
         public void SelectMacros()
@@ -351,71 +351,7 @@ namespace NutritionTracker
             }
         }
 
-        public void UpdateToDiary(int foodID)
-        {
-            try
-            {
-                foodID = fd.food_id;
-                
-                string username = usernameLbl.Text;
-                string foodName = foodNameLbl.Text;
-                int servingSize = int.Parse(servingsBox.Text);
-                string servingUnit = unitBox.Text;
-                string meal = mealBox.Text;
-                double calories = double.Parse(calLabel.Text);
-                double carbs = double.Parse(carbLabel.Text);
-                double fats = double.Parse(fatLabel.Text);
-                double protein = double.Parse(totalProteinLabel.Text);
-                DateTime addedAt = dbDateTime.Value;
-                myCon.openCon();
-
-                string updateQuery = @"UPDATE `user_food_diary` 
-                                    JOIN user on user.id = user_food_diary.user_id
-                                    SET
-                                        user_food_diary.serving_size = @serving_size,
-                                        user_food_diary.serving_unit = @serving_unit,
-                                        user_food_diary.meal = @meal,
-                                        user_food_diary.calories = @calories,
-                                        user_food_diary.carbs = @carbs,
-                                        user_food_diary.fat = @fat,
-                                        user_food_diary.protein = @protein,
-                                        user_food_diary.added_at = @added_at
-                                    WHERE user.username = @username AND user_food_diary.id = @food_id;
-                                        ";
-                MySqlCommand cmd = new MySqlCommand(updateQuery, myCon.getCon());
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@serving_size", servingSize);
-                cmd.Parameters.AddWithValue("@serving_unit", servingUnit);
-                cmd.Parameters.AddWithValue("@meal", meal);
-                cmd.Parameters.AddWithValue("@calories", calories);
-                cmd.Parameters.AddWithValue("@carbs", carbs);
-                cmd.Parameters.AddWithValue("@fat", fats);
-                cmd.Parameters.AddWithValue("@protein", protein);
-                cmd.Parameters.AddWithValue("@added_at", addedAt);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@food_id", foodID);
-
-                int rows = cmd.ExecuteNonQuery();
-
-                if (rows > 0)
-                {
-                    sm.Show();
-                    sm.successLbl.Text = "Update Success!";
-                    loadForm(fd);
-                    fd.fdUsername.Text = usernameLbl.Text;
-                }
-                else
-                {
-                    fm.Show();
-                    fm.failedLbl.Text = "Update Failed";
-                }
-                myCon.closeCon();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e);
-            }
-        }
+       
       
 
         private void FormAddFood_Load(object sender, EventArgs e)
@@ -448,7 +384,7 @@ namespace NutritionTracker
 
         public void updateBtn_Click(object sender, EventArgs e)
         {
-           
+            fd.DisplayFoodDiary();
         }
 
         private void AddToFoodDiaryBtn(object sender, EventArgs e)

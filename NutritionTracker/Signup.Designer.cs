@@ -60,7 +60,6 @@
             this.signUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.signUpBtn.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.ForeColor = System.Drawing.Color.Black;
-            this.signUpBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.signUpBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.HoverState.Parent = this.signUpBtn;
             this.signUpBtn.Location = new System.Drawing.Point(302, 354);

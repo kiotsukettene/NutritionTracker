@@ -25,7 +25,7 @@ namespace NutritionTracker
        
         public int food_id { get; set; }
         public string unit, meal, username;
-        public int servings;
+        private double originalServingSize;
         public double cal, carbs, fats, protein;
         public FoodDiary()
         {
@@ -98,7 +98,7 @@ namespace NutritionTracker
                                     FROM user_food_diary
                                     JOIN user ON user.id = user_food_diary.user_id 
                                     WHERE user.username = @username AND user_food_diary.added_at = @added_at
-                                    ORDER by meal;";
+                                    ORDER BY FIELD(meal, 'BREAKFAST', 'lunch', 'dinner', 'snacks');";
 
                 MySqlCommand selectCmd = new MySqlCommand(selectQuery, myCon.getCon());
                 selectCmd.Parameters.Clear();
@@ -145,6 +145,7 @@ namespace NutritionTracker
                         InitializeDeleteFoodDiaryControl(fdc);
                         InitializeEditFoodDiaryControl(fdc);
                     }
+                    
                     TotalCal.Text = totalCalories.ToString();
                     TotalCarb.Text = totalCarbs.ToString();
                     TotalProtein.Text = totalProtein.ToString();
@@ -214,8 +215,6 @@ namespace NutritionTracker
                         RemainCarb.Text = carbRemain.ToString();
                         RemainFat.Text = fatRemain.ToString();
                         RemainProtein.Text = proteinRemain.ToString();
-
-
                         if (totalCalories > calGoal)
                         {
                             RemainCal.ForeColor = Color.Red;
@@ -341,7 +340,7 @@ namespace NutritionTracker
                     
                     food_id = dr.GetInt32("id");
                     string foodNameEdit = dr.GetString("food_name");
-                    int servings = dr.GetInt32("serving_size");
+                    originalServingSize = dr.GetInt32("serving_size");
                     string unit = dr.GetString("serving_unit");
                     string meal = dr.GetString("meal");
                     double cal = dr.GetDouble("calories");
@@ -353,7 +352,7 @@ namespace NutritionTracker
 
                   
                     add.foodNameLbl.Text = foodNameEdit.ToString();
-                    add.servingsBox.Text = servings.ToString();
+                    add.servingsBox.Text = originalServingSize.ToString();
                     add.unitBox.Text = unit;
                     add.mealBox.Text = meal;
                     add.calLabel.Text = cal.ToString();
@@ -385,29 +384,10 @@ namespace NutritionTracker
                     add.chart1.Series["Series1"].Points.AddXY("Carbohydrates", carbohydratesPercentage);
                     add.chart1.DataBind();
 
-                    //int serving = 100;
+                   
 
-                    ////MessageBox.Show(lastcal.ToString());
-                    ////MessageBox.Show(lastfat.ToString());
-                    ////MessageBox.Show(lastproteins.ToString());
-                    ////MessageBox.Show(lastcarbs.ToString());
-
-                    //double servingSize = double.Parse(add.servingsBox.Text);
-                    //double factor = servingSize / serving;
-
-
-
-                    //int updatedCal = (int)(cal * factor);l ;
-                    //int updatedFat = (int)(fats * factor);
-                    //int updatedCarb = (int)(carbs * factor);
-                    //int updatedProtein = (int)(protein * factor);
-
-                    //add.calLabel.Text = updatedCal.ToString();
-                    //add.fatLabel.Text = updatedFat.ToString();
-                    //add.carbLabel.Text = updatedCarb.ToString();
-                    //add.totalProteinLabel.Text = updatedProtein.ToString();
-
-
+                    add.servingsBox.TextChanged += (s, e) => UpdateNutritionalValues(add, cal, carbs, fats, protein);
+                    add.updateBtn.Click += (sender, e) => UpdateToDiary(foodID, add);
 
                 }
                 dr.Close();
@@ -416,6 +396,26 @@ namespace NutritionTracker
             catch (Exception e) 
             { 
                 MessageBox.Show("Error" + e);
+            }
+        }
+        private void UpdateNutritionalValues(FormAddFood add, double cal, double carbs, double fats, double protein)
+        {
+           
+
+            if (double.TryParse(add.servingsBox.Text, out double servingSize))
+            {
+                double factor = servingSize / originalServingSize;
+
+                int updatedCal = (int)(cal * factor);
+                int updatedFat = (int)(fats * factor);
+                int updatedCarb = (int)(carbs * factor);
+                int updatedProtein = (int)(protein * factor);
+
+                add.calLabel.Text = updatedCal.ToString();
+                add.fatLabel.Text = updatedFat.ToString();
+                add.carbLabel.Text = updatedCarb.ToString();
+                add.totalProteinLabel.Text = updatedProtein.ToString();
+                add.chartCal.Text = updatedCal.ToString();
             }
         }
         private void InitializeEditFoodDiaryControl(FoodDiaryControl fdc)
@@ -481,18 +481,17 @@ namespace NutritionTracker
         {
             try
             {
-                
-
                 string username = add.usernameLbl.Text;
                 string foodName = add.foodNameLbl.Text;
-                int servingSize = int.Parse(add.servingsBox.Text);
+                originalServingSize = double.Parse(add.servingsBox.Text);
                 string servingUnit = add.unitBox.Text;
                 string meal = add.mealBox.Text;
                 double calories = double.Parse(add.calLabel.Text);
                 double carbs = double.Parse(add.carbLabel.Text);
                 double fats = double.Parse(add.fatLabel.Text);
                 double protein = double.Parse(add.totalProteinLabel.Text);
-                DateTime addedAt = dbDateTime.Value;
+                DateTime addedAt = add.dbDateTime.Value;
+                string added_at = addedAt.ToString("yyyy-MM-dd");
                 myCon.openCon();
 
                 string updateQuery = @"UPDATE `user_food_diary` 
@@ -510,14 +509,14 @@ namespace NutritionTracker
                                         ";
                 MySqlCommand cmd = new MySqlCommand(updateQuery, myCon.getCon());
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@serving_size", servingSize);
+                cmd.Parameters.AddWithValue("@serving_size", originalServingSize);
                 cmd.Parameters.AddWithValue("@serving_unit", servingUnit);
                 cmd.Parameters.AddWithValue("@meal", meal);
                 cmd.Parameters.AddWithValue("@calories", calories);
                 cmd.Parameters.AddWithValue("@carbs", carbs);
                 cmd.Parameters.AddWithValue("@fat", fats);
                 cmd.Parameters.AddWithValue("@protein", protein);
-                cmd.Parameters.AddWithValue("@added_at", addedAt);
+                cmd.Parameters.AddWithValue("@added_at", added_at);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@food_id", foodID);
 
@@ -527,6 +526,7 @@ namespace NutritionTracker
                 {
                     sm.Show();
                     sm.successLbl.Text = "Update Success!";
+                    
                    
                 }
                 else
