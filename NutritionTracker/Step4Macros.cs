@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -154,6 +155,9 @@ namespace NutritionTracker
                                     m.carbs,
                                     m.fat,
                                     m.protein,
+                                    m.carb_percent,
+                                    m.fat_percent,
+                                    m.protein_percent,
                                     l.water,
                                     l.sleep,
                                     usr.firstname,
@@ -192,10 +196,13 @@ namespace NutritionTracker
                         int sleep = DR.GetInt32("sleep");
                         string firstname = DR.GetString("firstname");
                         string lastname = DR.GetString("lastname");
-                        
+                        int cPercent = DR.GetInt32("carb_percent");
+                        int fPercent = DR.GetInt32("fat_percent");
+                        int pPercent =  DR.GetInt32("protein_percent");
+
                         main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
                         main.DashboardRetrieveValues(firstname);
-                        main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, water, sleep);
+                        main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, cPercent, fPercent, pPercent, water, sleep);
                         main.PersonalizationRetrieveUserValues(firstname, lastname, username);
                         main.Show();
 

@@ -80,16 +80,24 @@ namespace NutritionTracker
                 int carbsData = this.carbs;
                 int proteinData = this.protein;
                 int fatData = this.fat;
+                int cPercent = (int)this.carbspercentage;
+                int fPercent = (int)this.fatpercentage;
+                int pPercent = (int)this.proteinpercentage;
+
                 string username = this.username;
-                string macroQuery = "INSERT into user_macros (user_id, calories, carbs, fat, protein)" +
-                    "SELECT user.id, @calories, @carbs, @fat, @protein FROM user WHERE user.username=@username";
+                string macroQuery = "INSERT into user_macros (user_id, calories, carbs, fat, protein, carb_percent, fat_percent, protein_percent)" +
+                    "SELECT user.id, @calories, @carbs, @fat, @protein, @carb_percent, @fat_percent, @protein_percent FROM user WHERE user.username=@username";
                 MySqlCommand cmd = new MySqlCommand(macroQuery, myCon.getCon());
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@calories", totalCalories);
                 cmd.Parameters.AddWithValue("@carbs", carbsData);
                 cmd.Parameters.AddWithValue("@fat", fatData);
                 cmd.Parameters.AddWithValue("@protein", proteinData);
+                cmd.Parameters.AddWithValue("@carb_percent", cPercent);
+                cmd.Parameters.AddWithValue("@fat_percent", fPercent);
+                cmd.Parameters.AddWithValue("@protein_percent", pPercent);
                 cmd.Parameters.AddWithValue("@username", username);
+             
 
                 int rows = cmd.ExecuteNonQuery();
 

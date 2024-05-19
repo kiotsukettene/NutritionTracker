@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -52,16 +52,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.consumedBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sleepNum = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.liters = new System.Windows.Forms.Label();
             this.waternum = new System.Windows.Forms.Label();
             this.waterLabel = new System.Windows.Forms.Label();
@@ -91,20 +94,17 @@
             this.sugarP = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.dashUsername = new System.Windows.Forms.Label();
             this.guna2ShadowPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel3.SuspendLayout();
-            this.guna2ShadowPanel2.SuspendLayout();
-            this.guna2ShadowPanel1.SuspendLayout();
-            this.guna2ShadowPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2ShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2ShadowPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // DashboardLabel
@@ -133,7 +133,6 @@
             // 
             this.guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel6.Controls.Add(this.chart1);
-            this.guna2ShadowPanel6.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel6.Controls.Add(this.dbDateTime);
             this.guna2ShadowPanel6.Controls.Add(this.label7);
             this.guna2ShadowPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
@@ -149,30 +148,30 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.DimGray;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea1.BorderColor = System.Drawing.Color.DimGray;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea5.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea5.AxisX.IsLabelAutoFit = false;
+            chartArea5.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisX.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisX.MinorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisY.IsLabelAutoFit = false;
+            chartArea5.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.AxisY.MinorGrid.LineColor = System.Drawing.Color.DimGray;
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            chartArea5.BorderColor = System.Drawing.Color.DimGray;
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
             this.chart1.Location = new System.Drawing.Point(20, 57);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(249)))), ((int)(((byte)(211)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(222)))), ((int)(((byte)(164)))));
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(222)))), ((int)(((byte)(164)))));
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
             this.chart1.Size = new System.Drawing.Size(424, 329);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";
@@ -191,7 +190,7 @@
             this.dbDateTime.ForeColor = System.Drawing.Color.Black;
             this.dbDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dbDateTime.HoverState.Parent = this.dbDateTime;
-            this.dbDateTime.Location = new System.Drawing.Point(269, 20);
+            this.dbDateTime.Location = new System.Drawing.Point(311, 20);
             this.dbDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dbDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dbDateTime.Name = "dbDateTime";
@@ -230,7 +229,7 @@
             this.guna2ShadowPanel4.Controls.Add(this.label11);
             this.guna2ShadowPanel4.Controls.Add(this.label10);
             this.guna2ShadowPanel4.Controls.Add(this.label9);
-            this.guna2ShadowPanel4.Controls.Add(this.guna2CircleProgressBar1);
+            this.guna2ShadowPanel4.Controls.Add(this.consumedBar);
             this.guna2ShadowPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
             this.guna2ShadowPanel4.Location = new System.Drawing.Point(838, 98);
             this.guna2ShadowPanel4.Name = "guna2ShadowPanel4";
@@ -283,6 +282,7 @@
             this.calRemain.Size = new System.Drawing.Size(50, 23);
             this.calRemain.TabIndex = 20;
             this.calRemain.Text = "1500";
+            this.calRemain.TextChanged += new System.EventHandler(this.calRemain_TextChanged);
             // 
             // targetWeightLabel
             // 
@@ -389,9 +389,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.label10.Location = new System.Drawing.Point(16, 225);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 21);
+            this.label10.Size = new System.Drawing.Size(88, 21);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Remaining";
+            this.label10.Text = "Consumed";
             // 
             // label9
             // 
@@ -404,20 +404,20 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Food Diary";
             // 
-            // guna2CircleProgressBar1
+            // consumedBar
             // 
-            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(59, 59);
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(130, 130);
-            this.guna2CircleProgressBar1.TabIndex = 0;
-            this.guna2CircleProgressBar1.Value = 75;
+            this.consumedBar.BackColor = System.Drawing.Color.Transparent;
+            this.consumedBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.consumedBar.Location = new System.Drawing.Point(59, 59);
+            this.consumedBar.Name = "consumedBar";
+            this.consumedBar.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
+            this.consumedBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            this.consumedBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.consumedBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.consumedBar.ShadowDecoration.Parent = this.consumedBar;
+            this.consumedBar.Size = new System.Drawing.Size(130, 130);
+            this.consumedBar.TabIndex = 0;
+            this.consumedBar.Value = 75;
             // 
             // guna2ShadowPanel3
             // 
@@ -436,6 +436,17 @@
             this.guna2ShadowPanel3.ShadowShift = 0;
             this.guna2ShadowPanel3.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel3.TabIndex = 23;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackgroundImage = global::NutritionTracker.Properties.Resources.streakDash;
+            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(100, 8);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(125, 115);
+            this.guna2PictureBox3.TabIndex = 18;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // label4
             // 
@@ -488,6 +499,18 @@
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel2.TabIndex = 22;
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackgroundImage = global::NutritionTracker.Properties.Resources.sleepDash;
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(119, 8);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(112, 107);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox2.TabIndex = 17;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -538,6 +561,18 @@
             this.guna2ShadowPanel1.ShadowShift = 0;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(246, 130);
             this.guna2ShadowPanel1.TabIndex = 21;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.waterDash;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(104, 8);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(125, 115);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // liters
             // 
@@ -859,63 +894,18 @@
             this.guna2ShadowPanel7.Size = new System.Drawing.Size(313, 418);
             this.guna2ShadowPanel7.TabIndex = 26;
             // 
-            // guna2Button1
+            // dashUsername
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(255)))), ((int)(((byte)(218)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::NutritionTracker.Properties.Resources.download;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(16, 16);
-            this.guna2Button1.Location = new System.Drawing.Point(409, 20);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.Bisque;
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(35, 28);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackgroundImage = global::NutritionTracker.Properties.Resources.streakDash;
-            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(100, 8);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
-            this.guna2PictureBox3.Size = new System.Drawing.Size(125, 115);
-            this.guna2PictureBox3.TabIndex = 18;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackgroundImage = global::NutritionTracker.Properties.Resources.sleepDash;
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(119, 8);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(112, 107);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2PictureBox2.TabIndex = 17;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackgroundImage = global::NutritionTracker.Properties.Resources.waterDash;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(104, 8);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(125, 115);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
+            this.dashUsername.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.dashUsername.Location = new System.Drawing.Point(958, 9);
+            this.dashUsername.Name = "dashUsername";
+            this.dashUsername.Size = new System.Drawing.Size(113, 23);
+            this.dashUsername.TabIndex = 27;
+            this.dashUsername.Text = "Calories";
+            this.dashUsername.Visible = false;
+            this.dashUsername.TextChanged += new System.EventHandler(this.dashUsername_TextChanged);
+            this.dashUsername.Click += new System.EventHandler(this.dashUsername_Click);
             // 
             // Dashboard
             // 
@@ -923,6 +913,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1095, 669);
+            this.Controls.Add(this.dashUsername);
             this.Controls.Add(this.guna2ShadowPanel7);
             this.Controls.Add(this.guna2ShadowPanel6);
             this.Controls.Add(this.guna2ShadowPanel4);
@@ -942,15 +933,15 @@
             this.guna2ShadowPanel4.PerformLayout();
             this.guna2ShadowPanel3.ResumeLayout(false);
             this.guna2ShadowPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2ShadowPanel7.ResumeLayout(false);
             this.guna2ShadowPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -960,7 +951,6 @@
 
         private System.Windows.Forms.Label DashboardLabel;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dbDateTime;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
@@ -973,7 +963,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private System.Windows.Forms.Label label4;
@@ -986,7 +975,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label liters;
         private System.Windows.Forms.Label waterLabel;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label sleepNum;
         public System.Windows.Forms.Label waternum;
@@ -1023,5 +1011,8 @@
         public System.Windows.Forms.Label sugarP;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel7;
+        public System.Windows.Forms.Label dashUsername;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public Guna.UI2.WinForms.Guna2CircleProgressBar consumedBar;
     }
 }

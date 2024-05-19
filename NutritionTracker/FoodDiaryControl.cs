@@ -100,7 +100,7 @@ namespace NutritionTracker
                     mealLbl.BackColor = Color.LightYellow;
                     break;
                 case "dinner":
-                    mealLbl.BackColor = Color.LightCoral;
+                    mealLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(222))))); 
                     break;
                 case "lunch":
                     mealLbl.BackColor = Color.Wheat; // LightOrange is not a standard color, use a close alternative

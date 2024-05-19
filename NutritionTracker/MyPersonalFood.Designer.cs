@@ -385,6 +385,7 @@
             this.totalProteinCreateBox.Size = new System.Drawing.Size(97, 32);
             this.totalProteinCreateBox.TabIndex = 94;
             this.totalProteinCreateBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalProteinCreateBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.totalProteinCreateBox_KeyPress);
             // 
             // totalFatCreateBox
             // 
@@ -416,6 +417,7 @@
             this.totalFatCreateBox.Size = new System.Drawing.Size(97, 32);
             this.totalFatCreateBox.TabIndex = 93;
             this.totalFatCreateBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalFatCreateBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.totalFatCreateBox_KeyPress);
             // 
             // totalCarbCreateBox
             // 
@@ -447,6 +449,7 @@
             this.totalCarbCreateBox.Size = new System.Drawing.Size(97, 32);
             this.totalCarbCreateBox.TabIndex = 92;
             this.totalCarbCreateBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.totalCarbCreateBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.totalCarbCreateBox_KeyPress);
             // 
             // caloriesCreateBox
             // 
@@ -478,6 +481,7 @@
             this.caloriesCreateBox.Size = new System.Drawing.Size(97, 32);
             this.caloriesCreateBox.TabIndex = 79;
             this.caloriesCreateBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.caloriesCreateBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.caloriesCreateBox_KeyPress);
             // 
             // label20
             // 
@@ -568,6 +572,7 @@
             this.servingValueBox.Size = new System.Drawing.Size(86, 32);
             this.servingValueBox.TabIndex = 26;
             this.servingValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.servingValueBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.servingValueBox_KeyPress);
             // 
             // label7
             // 
@@ -632,6 +637,7 @@
             this.servingContainerBox.Size = new System.Drawing.Size(85, 32);
             this.servingContainerBox.TabIndex = 29;
             this.servingContainerBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.servingContainerBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.servingContainerBox_KeyPress);
             // 
             // brandTxtBox
             // 

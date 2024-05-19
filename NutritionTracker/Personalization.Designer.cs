@@ -809,7 +809,6 @@
             this.carbsComboBox.Name = "carbsComboBox";
             this.carbsComboBox.ShadowDecoration.Parent = this.carbsComboBox;
             this.carbsComboBox.Size = new System.Drawing.Size(84, 36);
-            this.carbsComboBox.StartIndex = 9;
             this.carbsComboBox.TabIndex = 29;
             this.carbsComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -870,7 +869,6 @@
             this.proteinComboBox.Name = "proteinComboBox";
             this.proteinComboBox.ShadowDecoration.Parent = this.proteinComboBox;
             this.proteinComboBox.Size = new System.Drawing.Size(84, 36);
-            this.proteinComboBox.StartIndex = 4;
             this.proteinComboBox.TabIndex = 30;
             this.proteinComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -931,7 +929,6 @@
             this.fatComboBox.Name = "fatComboBox";
             this.fatComboBox.ShadowDecoration.Parent = this.fatComboBox;
             this.fatComboBox.Size = new System.Drawing.Size(84, 36);
-            this.fatComboBox.StartIndex = 4;
             this.fatComboBox.TabIndex = 31;
             this.fatComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1138,10 +1135,6 @@
         public System.Windows.Forms.Label pCarbLabel;
         public System.Windows.Forms.Label pFatLabel;
         public System.Windows.Forms.Label pProteinLabel;
-        private Guna.UI2.WinForms.Guna2ComboBox caloComboBox;
-        private Guna.UI2.WinForms.Guna2ComboBox carbsComboBox;
-        private Guna.UI2.WinForms.Guna2ComboBox proteinComboBox;
-        private Guna.UI2.WinForms.Guna2ComboBox fatComboBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -1149,5 +1142,9 @@
         private Guna.UI2.WinForms.Guna2Button UpdateMacrosChangesBtn;
         public Guna.UI2.WinForms.Guna2TextBox pCalLabel;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
+        public Guna.UI2.WinForms.Guna2ComboBox caloComboBox;
+        public Guna.UI2.WinForms.Guna2ComboBox carbsComboBox;
+        public Guna.UI2.WinForms.Guna2ComboBox proteinComboBox;
+        public Guna.UI2.WinForms.Guna2ComboBox fatComboBox;
     }
 }

@@ -139,7 +139,7 @@ namespace NutritionTracker
                         
                        if (dataFilled == 1)
                         {
-                            string userDataQuery = @"SELECT u.weight, u.age, u.gender, u.weight_goal, u.target_weight, m.calories, m.carbs, m.fat, m.protein, l.water, l.sleep
+                            string userDataQuery = @"SELECT u.weight, u.age, u.gender, u.weight_goal, u.target_weight, m.calories, m.carbs, m.fat, m.protein, m.carb_percent, m.fat_percent, m.protein_percent, l.water, l.sleep
                                                     FROM user_fitnessdata u
                                                     JOIN user_macros m ON u.user_id = m.user_id
                                                     JOIN user_lifestyle l ON u.user_id = l.user_id
@@ -165,10 +165,13 @@ namespace NutritionTracker
                                     int protein = dataReader.GetInt32("protein");
                                     int water = dataReader.GetInt32("water");
                                     int sleep = dataReader.GetInt32("sleep");
+                                    int cPercent = dataReader.GetInt32("carb_percent");
+                                    int fPercent = dataReader.GetInt32("fat_percent");
+                                    int pPercent = dataReader.GetInt32("protein_percent");
 
 
                                     main.DashboardRetrieveStepsData(calories, carbs, protein, fat, targetWeight, weight, water, sleep);
-                                    main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, water, sleep);
+                                    main.PersonalizationRetrieveData(calories, carbs, protein, fat, targetWeight, weight, age, gender, weightGoal, cPercent, fPercent, pPercent, water, sleep);
 
                                     }
                             

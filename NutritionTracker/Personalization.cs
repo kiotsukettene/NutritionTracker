@@ -163,83 +163,84 @@ namespace NutritionTracker
         {
             try
             {
-                // Get the selected percentage indices
-                int carbsPercentageIndex = carbsComboBox.SelectedIndex;
-                int fatsPercentageIndex = fatComboBox.SelectedIndex;
-                int proteinPercentageIndex = proteinComboBox.SelectedIndex;
+                // Get the selected percentage values and remove the '%' symbol
+                string carbsText = carbsComboBox.Text.TrimEnd('%');
+                string fatText = fatComboBox.Text.TrimEnd('%');
+                string proteinText = proteinComboBox.Text.TrimEnd('%');
 
-                // Calculate the percentages based on the indices
-                double carbsPercentage = (carbsPercentageIndex + 1) * 5; // 50% for carbs
-                double fatsPercentage = (fatsPercentageIndex + 1) * 5; // 25% for fats
-                double proteinPercentage = (proteinPercentageIndex + 1) * 5; // 25% for protein
+                // Parse the integer values
+                int carbsPercent = int.Parse(carbsText);
+                int fatPercent = int.Parse(fatText);
+                int proteinPercent = int.Parse(proteinText);
 
-                double totalPercentage = (carbsPercentage + fatsPercentage + proteinPercentage);
-
+                // Check if the total percentage is 100%
+                double totalPercentage = carbsPercent + fatPercent + proteinPercent;
                 if (Math.Abs(totalPercentage - 100) > 0.01) // Consider a small margin of error
                 {
                     throw new InvalidOperationException("The total percentage must be 100%. Please adjust the combo box selections.");
-
                 }
 
+                // Get the updated calorie value
                 if (!int.TryParse(pCalLabel.Text, out int updateCalories))
                 {
                     throw new FormatException("Invalid calorie value.");
                 }
 
-
-                // Get the updated calorie value
-                //int updateCalories = int.Parse(pCalLabel.Text);
-
                 // Calculate the macros based on the updated calorie value
-                int updateCarbs = (int)((carbsPercentage / 100) * updateCalories / 4);
-                int updateFats = (int)((fatsPercentage / 100) * updateCalories / 9);
-                int updateProtein = (int)((proteinPercentage / 100) * updateCalories / 4);
-
-                pCarbLabel.Text = updateCarbs.ToString();
-                pFatLabel.Text = updateFats.ToString();
-                pProteinLabel.Text = updateProtein.ToString();
+                int updateCarbs = (int)((carbsPercent / 100.0) * updateCalories / 4);
+                int updateFats = (int)((fatPercent / 100.0) * updateCalories / 9);
+                int updateProtein = (int)((proteinPercent / 100.0) * updateCalories / 4);
 
                 string username = personUserNTxtBox.Text;
 
                 myCon.openCon();
 
-                //query
+                // Update the user_macros table
                 string updateMacrosQuery = @"UPDATE user_macros 
-                                JOIN user ON user.id = user_macros.user_id 
-                                SET user_macros.calories = @new_calories,
-                                user_macros.carbs = @new_carbs,
-                                user_macros.fat = @new_fat,
-                                user_macros.protein = @new_protein 
-                                WHERE user.username = @username
-                                ";
+                     JOIN user ON user.id = user_macros.user_id 
+                     SET user_macros.calories = @new_calories,
+                     user_macros.carbs = @new_carbs,
+                     user_macros.fat = @new_fat,
+                     user_macros.protein = @new_protein,
+                     user_macros.carb_percent = @carb_percent,
+                     user_macros.fat_percent = @fat_percent,
+                     user_macros.protein_percent = @protein_percent
+                     WHERE user.username = @username";
 
                 MySqlCommand updateMacrosCmd = new MySqlCommand(updateMacrosQuery, myCon.getCon());
-                updateMacrosCmd.Parameters.Clear();
                 updateMacrosCmd.Parameters.AddWithValue("@new_calories", updateCalories);
                 updateMacrosCmd.Parameters.AddWithValue("@new_carbs", updateCarbs);
                 updateMacrosCmd.Parameters.AddWithValue("@new_fat", updateFats);
                 updateMacrosCmd.Parameters.AddWithValue("@new_protein", updateProtein);
+                updateMacrosCmd.Parameters.AddWithValue("@carb_percent", carbsPercent);
+                updateMacrosCmd.Parameters.AddWithValue("@fat_percent", fatPercent);
+                updateMacrosCmd.Parameters.AddWithValue("@protein_percent", proteinPercent);
                 updateMacrosCmd.Parameters.AddWithValue("@username", username);
 
                 int rows = updateMacrosCmd.ExecuteNonQuery();
                 if (rows > 0)
                 {
-                    
+                    // Show success message and update UI elements
                     sm.Show();
                     sm.successLbl.Text = "Update Successfully";
                     UpdateMacrosChangesBtn.Visible = false;
                     pCalLabel.BorderThickness = 0;
+
                     pCarbLabel.Text = updateCarbs.ToString();
                     pFatLabel.Text = updateFats.ToString();
                     pProteinLabel.Text = updateProtein.ToString();
 
-
+                    carbsComboBox.Text = carbsPercent.ToString();
+                    proteinComboBox.Text = proteinPercent.ToString();
+                    fatComboBox.Text = fatPercent.ToString();
                 }
                 else
                 {
+                    // Show error message
                     fm.Show();
                     fm.failedLbl.Text = "Error Update";
                 }
+
                 myCon.closeCon();
             }
             catch (Exception ex)
@@ -247,7 +248,6 @@ namespace NutritionTracker
                 MessageBox.Show("Error:" + ex.Message);
             }
         }
-
 
 
 

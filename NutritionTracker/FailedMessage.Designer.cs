@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.failedBtn = new Guna.UI2.WinForms.Guna2Button();
             this.failedLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.failedBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +48,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 148);
             this.panel1.TabIndex = 0;
+            // 
+            // failedBtn
+            // 
+            this.failedBtn.BackColor = System.Drawing.Color.Ivory;
+            this.failedBtn.BorderColor = System.Drawing.Color.Ivory;
+            this.failedBtn.CheckedState.Parent = this.failedBtn;
+            this.failedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.failedBtn.CustomImages.Parent = this.failedBtn;
+            this.failedBtn.FillColor = System.Drawing.Color.Empty;
+            this.failedBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.failedBtn.ForeColor = System.Drawing.Color.Black;
+            this.failedBtn.HoverState.Parent = this.failedBtn;
+            this.failedBtn.Location = new System.Drawing.Point(35, 96);
+            this.failedBtn.Name = "failedBtn";
+            this.failedBtn.ShadowDecoration.Parent = this.failedBtn;
+            this.failedBtn.Size = new System.Drawing.Size(71, 27);
+            this.failedBtn.TabIndex = 5;
+            this.failedBtn.Text = "OK";
+            this.failedBtn.Click += new System.EventHandler(this.failedBtn_Click);
             // 
             // failedLbl
             // 
@@ -69,25 +88,6 @@
             this.label1.Size = new System.Drawing.Size(63, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Failed";
-            // 
-            // failedBtn
-            // 
-            this.failedBtn.BackColor = System.Drawing.Color.Ivory;
-            this.failedBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.failedBtn.CheckedState.Parent = this.failedBtn;
-            this.failedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.failedBtn.CustomImages.Parent = this.failedBtn;
-            this.failedBtn.FillColor = System.Drawing.Color.Empty;
-            this.failedBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.failedBtn.ForeColor = System.Drawing.Color.Black;
-            this.failedBtn.HoverState.Parent = this.failedBtn;
-            this.failedBtn.Location = new System.Drawing.Point(35, 96);
-            this.failedBtn.Name = "failedBtn";
-            this.failedBtn.ShadowDecoration.Parent = this.failedBtn;
-            this.failedBtn.Size = new System.Drawing.Size(71, 27);
-            this.failedBtn.TabIndex = 5;
-            this.failedBtn.Text = "OK";
-            this.failedBtn.Click += new System.EventHandler(this.failedBtn_Click);
             // 
             // panel2
             // 

@@ -57,7 +57,7 @@ namespace NutritionTracker
                 DataTable dt = new DataTable();
                 MySqlDataAdapter sqladp = new MySqlDataAdapter(cmd);
                 sqladp.Fill(dt);
-                myCon.closeCon();
+               
 
                 if (dt.Rows.Count > 0)
                 {
@@ -83,6 +83,7 @@ namespace NutritionTracker
                     fm.failedLbl.Text = "No data found for the specified food description.";
                  
                 }
+                myCon.closeCon();
             }
             catch (Exception ex)
             {

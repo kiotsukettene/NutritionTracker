@@ -151,9 +151,12 @@ namespace NutritionTracker
                     TotalProtein.Text = totalProtein.ToString();
                     TotalFat.Text = totalFat.ToString();
 
+                  
+
                     UpdateRemainingGoals(username, totalCalories, totalCarbs, totalFat, totalProtein);
 
-
+                 
+                    
 
                 }
                 else
@@ -180,10 +183,11 @@ namespace NutritionTracker
             }
            
         }
-        private void UpdateRemainingGoals(string username, int totalCalories, int totalCarbs, int totalFat, int totalProtein)
+        public void UpdateRemainingGoals(string username, int totalCalories, int totalCarbs, int totalFat, int totalProtein)
         {
             try
             {
+               
                 MySqlCommand cmd = new MySqlCommand(@"SELECT calories, carbs, fat, protein 
                                                             FROM user_macros 
                                                             JOIN user ON user.id = user_macros.user_id 
@@ -251,7 +255,7 @@ namespace NutritionTracker
 
 
                     dr.Close();
-                
+             
 
                 }
                 myCon.closeCon();
