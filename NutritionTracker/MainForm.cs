@@ -86,9 +86,7 @@ namespace NutritionTracker
             dash.weightLbl.Text = weight.ToString();
             dash.waternum.Text = water.ToString();
             dash.sleepNum.Text = sleep.ToString();
-            dash.calRemain.Text = TDEE.ToString();
-            dash.proteinRemain.Text = protein.ToString();
-            dash.carbRemain.Text = carbs.ToString();
+           
         }
          public void PersonalizationRetrieveData(int TDEE, int carbs, int protein, int fat, int targetWeight, int weight, int age, int gender, string weightGoal, int cPercent, int fPercent, int pPercent,int water, int sleep)
          {
@@ -144,9 +142,7 @@ namespace NutritionTracker
 
             dash.chartData();
             dash.RemainingMacros();
-            personalize.carbsComboBox.Text = dash.carbP.Text;
-            personalize.fatComboBox.Text = dash.fatP.Text.ToString();
-            personalize.proteinComboBox.Text = dash.proteinP.Text.ToString();
+            dash.SelectMacros();
             personalFood.usernameLbl.Text = personalize.personUserNTxtBox.Text;
             create.createUserLabel.Text = personalize.personUserNTxtBox.Text;
             fd.fdUsername.Text = personalize.personUserNTxtBox.Text;
@@ -159,6 +155,7 @@ namespace NutritionTracker
         {
             fd.DisplayFoodDiary();
             loadForm(dash);
+            dash.SelectMacros();
             dash.chartData();
             dash.RemainingMacros();
             dash.dashUsername.Text = usernameLbl.Text;
@@ -172,10 +169,7 @@ namespace NutritionTracker
             dash.waternum.Text = personalize.waterBox.Text;
             dash.sleepNum.Text = personalize.sleepBox.Text;
 
-            personalize.carbsComboBox.Text = dash.carbP.Text;
-            personalize.fatComboBox.Text = dash.fatP.Text;
-            personalize.proteinComboBox.Text = dash.proteinP.Text;
-
+    
 
             calculatorBtn.Image = Properties.Resources.calc_gray;
             this.dashboardBtn.Image = global::NutritionTracker.Properties.Resources.home__1_;
@@ -190,6 +184,7 @@ namespace NutritionTracker
         private void fdBtn_Click(object sender, EventArgs e)
         {
             loadForm(fd);
+            dash.SelectMacros();
             fd.DisplayFoodDiary();
             dash.chartData();
             dash.RemainingMacros();
@@ -214,6 +209,7 @@ namespace NutritionTracker
         private void personalizationBtn_Click(object sender, EventArgs e)
         {
             loadForm(personalize);
+            dash.SelectMacros();
 
             personalize.carbsComboBox.Text = dash.carbP.Text.ToString();
             personalize.fatComboBox.Text = dash.fatP.Text.ToString();

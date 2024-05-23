@@ -52,6 +52,10 @@ namespace NutritionTracker
         private void StepsForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
+            currentWeightTxtBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+            currentHeightTxtBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+            ageTxtBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+            genderBox.KeyDown += new KeyEventHandler(comboBox_KeyDown);
         }
 
         #endregion
@@ -145,6 +149,23 @@ namespace NutritionTracker
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                guna2Button1.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void comboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                guna2Button1.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.DashboardLabel = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.addFoodSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -80,9 +80,10 @@
             this.DashboardLabel.AutoSize = true;
             this.DashboardLabel.Font = new System.Drawing.Font("Poppins SemiBold", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashboardLabel.ForeColor = System.Drawing.Color.Black;
-            this.DashboardLabel.Location = new System.Drawing.Point(12, 9);
+            this.DashboardLabel.Location = new System.Drawing.Point(16, 11);
+            this.DashboardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DashboardLabel.Name = "DashboardLabel";
-            this.DashboardLabel.Size = new System.Drawing.Size(415, 58);
+            this.DashboardLabel.Size = new System.Drawing.Size(529, 74);
             this.DashboardLabel.TabIndex = 8;
             this.DashboardLabel.Text = "Add Food To Food Diary\r\n";
             // 
@@ -99,11 +100,11 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(83)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(408, 100);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(544, 123);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(104, 37);
+            this.guna2Button1.Size = new System.Drawing.Size(139, 46);
             this.guna2Button1.TabIndex = 18;
             this.guna2Button1.Text = "Search";
             this.guna2Button1.Click += new System.EventHandler(this.searchBtn);
@@ -127,15 +128,15 @@
             this.addFoodSearchBox.ForeColor = System.Drawing.Color.Black;
             this.addFoodSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.addFoodSearchBox.HoverState.Parent = this.addFoodSearchBox;
-            this.addFoodSearchBox.Location = new System.Drawing.Point(20, 98);
-            this.addFoodSearchBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.addFoodSearchBox.Location = new System.Drawing.Point(27, 121);
+            this.addFoodSearchBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.addFoodSearchBox.Name = "addFoodSearchBox";
             this.addFoodSearchBox.PasswordChar = '\0';
             this.addFoodSearchBox.PlaceholderForeColor = System.Drawing.Color.White;
             this.addFoodSearchBox.PlaceholderText = "";
             this.addFoodSearchBox.SelectedText = "";
             this.addFoodSearchBox.ShadowDecoration.Parent = this.addFoodSearchBox;
-            this.addFoodSearchBox.Size = new System.Drawing.Size(374, 38);
+            this.addFoodSearchBox.Size = new System.Drawing.Size(499, 47);
             this.addFoodSearchBox.TabIndex = 17;
             // 
             // label1
@@ -144,15 +145,16 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(22, 67);
+            this.label1.Location = new System.Drawing.Point(29, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 18);
+            this.label1.Size = new System.Drawing.Size(295, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "Search our food database by name ";
             // 
             // mainPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.mainPanel.Controls.Add(this.idLabel);
             this.mainPanel.Controls.Add(this.usernameLbl);
             this.mainPanel.Controls.Add(this.label4);
@@ -165,8 +167,9 @@
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1110, 669);
+            this.mainPanel.Size = new System.Drawing.Size(1480, 823);
             this.mainPanel.TabIndex = 24;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -175,9 +178,10 @@
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idLabel.ForeColor = System.Drawing.Color.Black;
-            this.idLabel.Location = new System.Drawing.Point(872, 20);
+            this.idLabel.Location = new System.Drawing.Point(1163, 25);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(77, 23);
+            this.idLabel.Size = new System.Drawing.Size(101, 30);
             this.idLabel.TabIndex = 198;
             this.idLabel.Text = "Username";
             this.idLabel.Visible = false;
@@ -187,9 +191,10 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.ForeColor = System.Drawing.Color.Black;
-            this.usernameLbl.Location = new System.Drawing.Point(955, 22);
+            this.usernameLbl.Location = new System.Drawing.Point(1273, 27);
+            this.usernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(77, 23);
+            this.usernameLbl.Size = new System.Drawing.Size(101, 30);
             this.usernameLbl.TabIndex = 195;
             this.usernameLbl.Text = "Username";
             this.usernameLbl.Visible = false;
@@ -199,9 +204,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(18, 148);
+            this.label4.Location = new System.Drawing.Point(24, 182);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 37);
+            this.label4.Size = new System.Drawing.Size(244, 48);
             this.label4.TabIndex = 164;
             this.label4.Text = "Matching Foods:";
             // 
@@ -209,9 +215,10 @@
             // 
             this.searchFoodPanel.AutoScroll = true;
             this.searchFoodPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(255)))), ((int)(((byte)(242)))));
-            this.searchFoodPanel.Location = new System.Drawing.Point(25, 188);
+            this.searchFoodPanel.Location = new System.Drawing.Point(33, 231);
+            this.searchFoodPanel.Margin = new System.Windows.Forms.Padding(4);
             this.searchFoodPanel.Name = "searchFoodPanel";
-            this.searchFoodPanel.Size = new System.Drawing.Size(487, 453);
+            this.searchFoodPanel.Size = new System.Drawing.Size(649, 558);
             this.searchFoodPanel.TabIndex = 90;
             // 
             // BackBtn
@@ -228,11 +235,11 @@
             this.BackBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
             this.BackBtn.HoverState.Parent = this.BackBtn;
-            this.BackBtn.Location = new System.Drawing.Point(1042, 9);
-            this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.BackBtn.Location = new System.Drawing.Point(1389, 11);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.ShadowDecoration.Parent = this.BackBtn;
-            this.BackBtn.Size = new System.Drawing.Size(44, 34);
+            this.BackBtn.Size = new System.Drawing.Size(59, 42);
             this.BackBtn.TabIndex = 89;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
@@ -268,9 +275,10 @@
             this.panel1.Controls.Add(this.fatLabel);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Controls.Add(this.updateBtn);
-            this.panel1.Location = new System.Drawing.Point(528, 48);
+            this.panel1.Location = new System.Drawing.Point(704, 59);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 621);
+            this.panel1.Size = new System.Drawing.Size(776, 764);
             this.panel1.TabIndex = 195;
             // 
             // dbDateTime
@@ -287,12 +295,13 @@
             this.dbDateTime.ForeColor = System.Drawing.Color.Black;
             this.dbDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dbDateTime.HoverState.Parent = this.dbDateTime;
-            this.dbDateTime.Location = new System.Drawing.Point(422, 323);
+            this.dbDateTime.Location = new System.Drawing.Point(563, 398);
+            this.dbDateTime.Margin = new System.Windows.Forms.Padding(4);
             this.dbDateTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dbDateTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dbDateTime.Name = "dbDateTime";
             this.dbDateTime.ShadowDecoration.Parent = this.dbDateTime;
-            this.dbDateTime.Size = new System.Drawing.Size(133, 28);
+            this.dbDateTime.Size = new System.Drawing.Size(177, 34);
             this.dbDateTime.TabIndex = 196;
             this.dbDateTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dbDateTime.Value = new System.DateTime(2024, 5, 19, 0, 0, 0, 0);
@@ -306,15 +315,14 @@
             this.addToDiaryBtn.CustomBorderColor = System.Drawing.Color.White;
             this.addToDiaryBtn.CustomImages.Parent = this.addToDiaryBtn;
             this.addToDiaryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.addToDiaryBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToDiaryBtn.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addToDiaryBtn.ForeColor = System.Drawing.Color.Black;
-            this.addToDiaryBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.addToDiaryBtn.HoverState.Parent = this.addToDiaryBtn;
-            this.addToDiaryBtn.Location = new System.Drawing.Point(431, 544);
-            this.addToDiaryBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addToDiaryBtn.Location = new System.Drawing.Point(575, 670);
+            this.addToDiaryBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addToDiaryBtn.Name = "addToDiaryBtn";
             this.addToDiaryBtn.ShadowDecoration.Parent = this.addToDiaryBtn;
-            this.addToDiaryBtn.Size = new System.Drawing.Size(127, 37);
+            this.addToDiaryBtn.Size = new System.Drawing.Size(169, 46);
             this.addToDiaryBtn.TabIndex = 195;
             this.addToDiaryBtn.Text = "Add to Diary";
             this.addToDiaryBtn.Click += new System.EventHandler(this.AddToFoodDiaryBtn);
@@ -324,9 +332,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(322, 386);
+            this.label7.Location = new System.Drawing.Point(429, 475);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 23);
+            this.label7.Size = new System.Drawing.Size(36, 30);
             this.label7.TabIndex = 194;
             this.label7.Text = "for";
             // 
@@ -336,9 +345,10 @@
             this.chartCal.BackColor = System.Drawing.Color.Transparent;
             this.chartCal.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartCal.ForeColor = System.Drawing.Color.Black;
-            this.chartCal.Location = new System.Drawing.Point(257, 150);
+            this.chartCal.Location = new System.Drawing.Point(343, 185);
+            this.chartCal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chartCal.Name = "chartCal";
-            this.chartCal.Size = new System.Drawing.Size(56, 48);
+            this.chartCal.Size = new System.Drawing.Size(69, 60);
             this.chartCal.TabIndex = 191;
             this.chartCal.Text = "113";
             // 
@@ -364,13 +374,13 @@
             "Dinner",
             "Snacks"});
             this.mealBox.ItemsAppearance.Parent = this.mealBox;
-            this.mealBox.Location = new System.Drawing.Point(376, 380);
-            this.mealBox.Margin = new System.Windows.Forms.Padding(2);
+            this.mealBox.Location = new System.Drawing.Point(501, 468);
+            this.mealBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mealBox.Name = "mealBox";
             this.mealBox.ShadowDecoration.Parent = this.mealBox;
-            this.mealBox.Size = new System.Drawing.Size(135, 34);
+            this.mealBox.Size = new System.Drawing.Size(179, 34);
             this.mealBox.StartIndex = 0;
-            this.mealBox.TabIndex = 193;
+            this.mealBox.TabIndex = 176;
             // 
             // label3
             // 
@@ -378,9 +388,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(225, 189);
+            this.label3.Location = new System.Drawing.Point(305, 233);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 42);
+            this.label3.Size = new System.Drawing.Size(145, 53);
             this.label3.TabIndex = 192;
             this.label3.Text = "Calories";
             // 
@@ -389,9 +400,10 @@
             this.foodNameLbl.AutoSize = true;
             this.foodNameLbl.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodNameLbl.ForeColor = System.Drawing.Color.Black;
-            this.foodNameLbl.Location = new System.Drawing.Point(18, 28);
+            this.foodNameLbl.Location = new System.Drawing.Point(24, 34);
+            this.foodNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.foodNameLbl.Name = "foodNameLbl";
-            this.foodNameLbl.Size = new System.Drawing.Size(157, 42);
+            this.foodNameLbl.Size = new System.Drawing.Size(196, 53);
             this.foodNameLbl.TabIndex = 170;
             this.foodNameLbl.Text = "Food Name";
             // 
@@ -400,9 +412,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 323);
+            this.label2.Location = new System.Drawing.Point(27, 398);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 37);
+            this.label2.Size = new System.Drawing.Size(219, 48);
             this.label2.TabIndex = 171;
             this.label2.Text = "Nutrition Facts";
             // 
@@ -411,18 +424,20 @@
             this.proteinPercentLbl.AutoSize = true;
             this.proteinPercentLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proteinPercentLbl.ForeColor = System.Drawing.Color.Black;
-            this.proteinPercentLbl.Location = new System.Drawing.Point(427, 271);
+            this.proteinPercentLbl.Location = new System.Drawing.Point(569, 334);
+            this.proteinPercentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.proteinPercentLbl.Name = "proteinPercentLbl";
-            this.proteinPercentLbl.Size = new System.Drawing.Size(63, 23);
+            this.proteinPercentLbl.Size = new System.Drawing.Size(82, 30);
             this.proteinPercentLbl.TabIndex = 190;
             this.proteinPercentLbl.Text = "Calories";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(25, 362);
+            this.panel2.Location = new System.Drawing.Point(33, 446);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(530, 2);
+            this.panel2.Size = new System.Drawing.Size(707, 2);
             this.panel2.TabIndex = 172;
             // 
             // carbPercentLbl
@@ -430,9 +445,10 @@
             this.carbPercentLbl.AutoSize = true;
             this.carbPercentLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbPercentLbl.ForeColor = System.Drawing.Color.Black;
-            this.carbPercentLbl.Location = new System.Drawing.Point(427, 248);
+            this.carbPercentLbl.Location = new System.Drawing.Point(569, 305);
+            this.carbPercentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.carbPercentLbl.Name = "carbPercentLbl";
-            this.carbPercentLbl.Size = new System.Drawing.Size(63, 23);
+            this.carbPercentLbl.Size = new System.Drawing.Size(82, 30);
             this.carbPercentLbl.TabIndex = 189;
             this.carbPercentLbl.Text = "Calories";
             // 
@@ -441,9 +457,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(27, 386);
+            this.label5.Location = new System.Drawing.Point(36, 475);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.Size = new System.Drawing.Size(91, 30);
             this.label5.TabIndex = 173;
             this.label5.Text = "Servings:";
             // 
@@ -452,9 +469,10 @@
             this.fatPercentLbl.AutoSize = true;
             this.fatPercentLbl.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fatPercentLbl.ForeColor = System.Drawing.Color.Black;
-            this.fatPercentLbl.Location = new System.Drawing.Point(427, 225);
+            this.fatPercentLbl.Location = new System.Drawing.Point(569, 277);
+            this.fatPercentLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fatPercentLbl.Name = "fatPercentLbl";
-            this.fatPercentLbl.Size = new System.Drawing.Size(63, 23);
+            this.fatPercentLbl.Size = new System.Drawing.Size(82, 30);
             this.fatPercentLbl.TabIndex = 188;
             this.fatPercentLbl.Text = "Calories";
             // 
@@ -477,15 +495,15 @@
             this.servingsBox.ForeColor = System.Drawing.Color.Black;
             this.servingsBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.servingsBox.HoverState.Parent = this.servingsBox;
-            this.servingsBox.Location = new System.Drawing.Point(105, 380);
-            this.servingsBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.servingsBox.Location = new System.Drawing.Point(140, 468);
+            this.servingsBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.servingsBox.Name = "servingsBox";
             this.servingsBox.PasswordChar = '\0';
             this.servingsBox.PlaceholderForeColor = System.Drawing.Color.Turquoise;
             this.servingsBox.PlaceholderText = "";
             this.servingsBox.SelectedText = "";
             this.servingsBox.ShadowDecoration.Parent = this.servingsBox;
-            this.servingsBox.Size = new System.Drawing.Size(82, 35);
+            this.servingsBox.Size = new System.Drawing.Size(109, 43);
             this.servingsBox.TabIndex = 174;
             this.servingsBox.TextChanged += new System.EventHandler(this.servingsBox_TextChanged);
             // 
@@ -497,19 +515,21 @@
             this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton3.HoverState.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.Location = new System.Drawing.Point(411, 278);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(548, 342);
+            this.guna2CircleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CircleButton3.Name = "guna2CircleButton3";
             this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton3.ShadowDecoration.Parent = this.guna2CircleButton3;
-            this.guna2CircleButton3.Size = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton3.Size = new System.Drawing.Size(13, 12);
             this.guna2CircleButton3.TabIndex = 187;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(25, 424);
+            this.panel3.Location = new System.Drawing.Point(33, 522);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(530, 2);
+            this.panel3.Size = new System.Drawing.Size(707, 2);
             this.panel3.TabIndex = 175;
             // 
             // guna2CircleButton2
@@ -520,11 +540,12 @@
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton2.HoverState.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(411, 254);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(548, 313);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.ShadowDecoration.Parent = this.guna2CircleButton2;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton2.Size = new System.Drawing.Size(13, 12);
             this.guna2CircleButton2.TabIndex = 186;
             // 
             // label6
@@ -532,9 +553,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(30, 443);
+            this.label6.Location = new System.Drawing.Point(40, 545);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 23);
+            this.label6.Size = new System.Drawing.Size(85, 30);
             this.label6.TabIndex = 176;
             this.label6.Text = "Calories";
             // 
@@ -546,11 +568,12 @@
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(411, 230);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(548, 283);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(13, 12);
             this.guna2CircleButton1.TabIndex = 185;
             // 
             // calLabel
@@ -558,9 +581,10 @@
             this.calLabel.AutoSize = true;
             this.calLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calLabel.ForeColor = System.Drawing.Color.Black;
-            this.calLabel.Location = new System.Drawing.Point(164, 443);
+            this.calLabel.Location = new System.Drawing.Point(219, 545);
+            this.calLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.calLabel.Name = "calLabel";
-            this.calLabel.Size = new System.Drawing.Size(26, 23);
+            this.calLabel.Size = new System.Drawing.Size(33, 30);
             this.calLabel.TabIndex = 177;
             this.calLabel.Text = "113";
             // 
@@ -583,25 +607,26 @@
             this.unitBox.ForeColor = System.Drawing.Color.Black;
             this.unitBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.unitBox.HoverState.Parent = this.unitBox;
-            this.unitBox.Location = new System.Drawing.Point(195, 380);
-            this.unitBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.unitBox.Location = new System.Drawing.Point(260, 468);
+            this.unitBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.unitBox.Name = "unitBox";
             this.unitBox.PasswordChar = '\0';
             this.unitBox.PlaceholderForeColor = System.Drawing.Color.Turquoise;
             this.unitBox.PlaceholderText = "";
             this.unitBox.SelectedText = "";
             this.unitBox.ShadowDecoration.Parent = this.unitBox;
-            this.unitBox.Size = new System.Drawing.Size(100, 35);
-            this.unitBox.TabIndex = 184;
+            this.unitBox.Size = new System.Drawing.Size(133, 43);
+            this.unitBox.TabIndex = 175;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(30, 483);
+            this.label8.Location = new System.Drawing.Point(40, 594);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 23);
+            this.label8.Size = new System.Drawing.Size(115, 30);
             this.label8.TabIndex = 178;
             this.label8.Text = "Total Carbs";
             // 
@@ -610,9 +635,10 @@
             this.totalProteinLabel.AutoSize = true;
             this.totalProteinLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalProteinLabel.ForeColor = System.Drawing.Color.Black;
-            this.totalProteinLabel.Location = new System.Drawing.Point(164, 558);
+            this.totalProteinLabel.Location = new System.Drawing.Point(219, 687);
+            this.totalProteinLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalProteinLabel.Name = "totalProteinLabel";
-            this.totalProteinLabel.Size = new System.Drawing.Size(24, 23);
+            this.totalProteinLabel.Size = new System.Drawing.Size(31, 30);
             this.totalProteinLabel.TabIndex = 183;
             this.totalProteinLabel.Text = "--";
             // 
@@ -621,9 +647,10 @@
             this.carbLabel.AutoSize = true;
             this.carbLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbLabel.ForeColor = System.Drawing.Color.Black;
-            this.carbLabel.Location = new System.Drawing.Point(164, 483);
+            this.carbLabel.Location = new System.Drawing.Point(219, 594);
+            this.carbLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.carbLabel.Name = "carbLabel";
-            this.carbLabel.Size = new System.Drawing.Size(30, 23);
+            this.carbLabel.Size = new System.Drawing.Size(40, 30);
             this.carbLabel.TabIndex = 179;
             this.carbLabel.Text = "5 g";
             // 
@@ -632,9 +659,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(30, 558);
+            this.label12.Location = new System.Drawing.Point(40, 687);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 23);
+            this.label12.Size = new System.Drawing.Size(123, 30);
             this.label12.TabIndex = 182;
             this.label12.Text = "Total Protein";
             // 
@@ -643,9 +671,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(30, 518);
+            this.label10.Location = new System.Drawing.Point(40, 638);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 23);
+            this.label10.Size = new System.Drawing.Size(90, 30);
             this.label10.TabIndex = 180;
             this.label10.Text = "Total Fat";
             // 
@@ -654,49 +683,51 @@
             this.fatLabel.AutoSize = true;
             this.fatLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fatLabel.ForeColor = System.Drawing.Color.Black;
-            this.fatLabel.Location = new System.Drawing.Point(164, 518);
+            this.fatLabel.Location = new System.Drawing.Point(219, 638);
+            this.fatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fatLabel.Name = "fatLabel";
-            this.fatLabel.Size = new System.Drawing.Size(29, 23);
+            this.fatLabel.Size = new System.Drawing.Size(39, 30);
             this.fatLabel.TabIndex = 181;
             this.fatLabel.Text = "2 g";
             // 
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisY.IsLabelAutoFit = false;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            chartArea1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(105, 77);
+            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Poppins", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.AxisX.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            chartArea2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(55)))), ((int)(((byte)(92)))));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            this.chart1.Location = new System.Drawing.Point(140, 95);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))))};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            series1.CustomProperties = "DoughnutRadius=30, PieLabelStyle=Disabled";
-            series1.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(357, 230);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
+            series2.CustomProperties = "DoughnutRadius=30, PieLabelStyle=Disabled";
+            series2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(476, 283);
             this.chart1.TabIndex = 169;
             this.chart1.Text = "chart1";
             // 
@@ -713,23 +744,24 @@
             this.updateBtn.ForeColor = System.Drawing.Color.Black;
             this.updateBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.updateBtn.HoverState.Parent = this.updateBtn;
-            this.updateBtn.Location = new System.Drawing.Point(431, 544);
-            this.updateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.updateBtn.Location = new System.Drawing.Point(575, 670);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.ShadowDecoration.Parent = this.updateBtn;
-            this.updateBtn.Size = new System.Drawing.Size(127, 37);
+            this.updateBtn.Size = new System.Drawing.Size(169, 46);
             this.updateBtn.TabIndex = 197;
             this.updateBtn.Text = "Uodate to Diary";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // FormAddFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1110, 669);
+            this.ClientSize = new System.Drawing.Size(1480, 823);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddFood";
             this.Text = "FormAddFood";
             this.Load += new System.EventHandler(this.FormAddFood_Load);

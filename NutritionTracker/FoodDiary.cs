@@ -32,7 +32,7 @@ namespace NutritionTracker
             InitializeComponent();
             addFoodBtn.Visible = true;
             FDLabel.Visible = true;
-           
+            dbDateTime.Value = DateTime.Now;
             totalTxtPanel.Visible = true;
             foodDiaryPanel.Visible = true;
             fdTotalPanel.Visible = true;
@@ -374,9 +374,9 @@ namespace NutritionTracker
                     double carbohydratesPercentage = totalMacronutrients > 0 ? (carbs / totalMacronutrients) * 100 : 0;
 
                     
-                    add.carbPercentLbl.Text =$"{carbohydratesPercentage.ToString("F2")}%";
-                    add.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}%";
-                    add.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}%";
+                    add.carbPercentLbl.Text =$"{carbohydratesPercentage.ToString("F2")}% Carbs";
+                    add.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}% Fat";
+                    add.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}% Protein";
 
                     //double carbP = double.Parse(add.carbPercentLbl.Text);
                     //double fatP = double.Parse(add.fatPercentLbl.Text);

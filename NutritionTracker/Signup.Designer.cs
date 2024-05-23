@@ -58,15 +58,15 @@
             this.signUpBtn.CustomBorderColor = System.Drawing.Color.White;
             this.signUpBtn.CustomImages.Parent = this.signUpBtn;
             this.signUpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.signUpBtn.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpBtn.Font = new System.Drawing.Font("Poppins SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.ForeColor = System.Drawing.Color.Black;
-            this.signUpBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpBtn.HoverState.Font = new System.Drawing.Font("Poppins SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpBtn.HoverState.Parent = this.signUpBtn;
-            this.signUpBtn.Location = new System.Drawing.Point(302, 354);
-            this.signUpBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.signUpBtn.Location = new System.Drawing.Point(403, 436);
+            this.signUpBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signUpBtn.Name = "signUpBtn";
             this.signUpBtn.ShadowDecoration.Parent = this.signUpBtn;
-            this.signUpBtn.Size = new System.Drawing.Size(110, 38);
+            this.signUpBtn.Size = new System.Drawing.Size(147, 47);
             this.signUpBtn.TabIndex = 88;
             this.signUpBtn.Text = "Signup";
             this.signUpBtn.Click += new System.EventHandler(this.loginBtn);
@@ -89,15 +89,15 @@
             this.confirmTxtBox.ForeColor = System.Drawing.Color.Black;
             this.confirmTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.confirmTxtBox.HoverState.Parent = this.confirmTxtBox;
-            this.confirmTxtBox.Location = new System.Drawing.Point(38, 301);
-            this.confirmTxtBox.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.confirmTxtBox.Location = new System.Drawing.Point(51, 370);
+            this.confirmTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.confirmTxtBox.Name = "confirmTxtBox";
             this.confirmTxtBox.PasswordChar = '\0';
             this.confirmTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.confirmTxtBox.PlaceholderText = "";
             this.confirmTxtBox.SelectedText = "";
             this.confirmTxtBox.ShadowDecoration.Parent = this.confirmTxtBox;
-            this.confirmTxtBox.Size = new System.Drawing.Size(374, 45);
+            this.confirmTxtBox.Size = new System.Drawing.Size(499, 55);
             this.confirmTxtBox.TabIndex = 87;
             this.confirmTxtBox.UseSystemPasswordChar = true;
             // 
@@ -119,16 +119,17 @@
             this.lastNameTxtBox.ForeColor = System.Drawing.Color.Black;
             this.lastNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lastNameTxtBox.HoverState.Parent = this.lastNameTxtBox;
-            this.lastNameTxtBox.Location = new System.Drawing.Point(38, 86);
-            this.lastNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.lastNameTxtBox.Location = new System.Drawing.Point(51, 106);
+            this.lastNameTxtBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.lastNameTxtBox.Name = "lastNameTxtBox";
             this.lastNameTxtBox.PasswordChar = '\0';
             this.lastNameTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.lastNameTxtBox.PlaceholderText = "Lastname";
             this.lastNameTxtBox.SelectedText = "";
             this.lastNameTxtBox.ShadowDecoration.Parent = this.lastNameTxtBox;
-            this.lastNameTxtBox.Size = new System.Drawing.Size(374, 45);
-            this.lastNameTxtBox.TabIndex = 86;
+            this.lastNameTxtBox.Size = new System.Drawing.Size(499, 55);
+            this.lastNameTxtBox.TabIndex = 84;
+            this.lastNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lastNameTxtBox_KeyPress);
             // 
             // firstNameTxtBox
             // 
@@ -148,16 +149,17 @@
             this.firstNameTxtBox.ForeColor = System.Drawing.Color.Black;
             this.firstNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstNameTxtBox.HoverState.Parent = this.firstNameTxtBox;
-            this.firstNameTxtBox.Location = new System.Drawing.Point(38, 29);
-            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.firstNameTxtBox.Location = new System.Drawing.Point(51, 36);
+            this.firstNameTxtBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.firstNameTxtBox.Name = "firstNameTxtBox";
             this.firstNameTxtBox.PasswordChar = '\0';
             this.firstNameTxtBox.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.firstNameTxtBox.PlaceholderText = "Firstname";
             this.firstNameTxtBox.SelectedText = "";
             this.firstNameTxtBox.ShadowDecoration.Parent = this.firstNameTxtBox;
-            this.firstNameTxtBox.Size = new System.Drawing.Size(374, 45);
-            this.firstNameTxtBox.TabIndex = 85;
+            this.firstNameTxtBox.Size = new System.Drawing.Size(499, 55);
+            this.firstNameTxtBox.TabIndex = 83;
+            this.firstNameTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firstNameTxtBox_KeyPress);
             // 
             // passwordTxtBox
             // 
@@ -177,16 +179,16 @@
             this.passwordTxtBox.ForeColor = System.Drawing.Color.Black;
             this.passwordTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTxtBox.HoverState.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Location = new System.Drawing.Point(38, 221);
-            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.passwordTxtBox.Location = new System.Drawing.Point(51, 272);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '\0';
             this.passwordTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.passwordTxtBox.PlaceholderText = "";
             this.passwordTxtBox.SelectedText = "";
             this.passwordTxtBox.ShadowDecoration.Parent = this.passwordTxtBox;
-            this.passwordTxtBox.Size = new System.Drawing.Size(374, 45);
-            this.passwordTxtBox.TabIndex = 84;
+            this.passwordTxtBox.Size = new System.Drawing.Size(499, 55);
+            this.passwordTxtBox.TabIndex = 86;
             this.passwordTxtBox.UseSystemPasswordChar = true;
             // 
             // userNameTxtBox
@@ -207,16 +209,16 @@
             this.userNameTxtBox.ForeColor = System.Drawing.Color.Black;
             this.userNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNameTxtBox.HoverState.Parent = this.userNameTxtBox;
-            this.userNameTxtBox.Location = new System.Drawing.Point(38, 143);
-            this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userNameTxtBox.Location = new System.Drawing.Point(51, 176);
+            this.userNameTxtBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.userNameTxtBox.Name = "userNameTxtBox";
             this.userNameTxtBox.PasswordChar = '\0';
             this.userNameTxtBox.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.userNameTxtBox.PlaceholderText = "Username";
             this.userNameTxtBox.SelectedText = "";
             this.userNameTxtBox.ShadowDecoration.Parent = this.userNameTxtBox;
-            this.userNameTxtBox.Size = new System.Drawing.Size(374, 45);
-            this.userNameTxtBox.TabIndex = 83;
+            this.userNameTxtBox.Size = new System.Drawing.Size(499, 55);
+            this.userNameTxtBox.TabIndex = 85;
             this.userNameTxtBox.Enter += new System.EventHandler(this.userNameTxtBox_Enter);
             // 
             // guna2Panel2
@@ -233,10 +235,11 @@
             this.guna2Panel2.Controls.Add(this.signUpBtn);
             this.guna2Panel2.Controls.Add(this.lastNameTxtBox);
             this.guna2Panel2.Controls.Add(this.confirmTxtBox);
-            this.guna2Panel2.Location = new System.Drawing.Point(453, 102);
+            this.guna2Panel2.Location = new System.Drawing.Point(604, 126);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(448, 431);
+            this.guna2Panel2.Size = new System.Drawing.Size(597, 530);
             this.guna2Panel2.TabIndex = 93;
             // 
             // label3
@@ -244,20 +247,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(34, 274);
+            this.label3.Location = new System.Drawing.Point(45, 337);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 23);
+            this.label3.Size = new System.Drawing.Size(168, 30);
             this.label3.TabIndex = 105;
-            this.label3.Text = "Current Password";
+            this.label3.Text = "Confirm Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(34, 194);
+            this.label2.Location = new System.Drawing.Point(45, 239);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 23);
+            this.label2.Size = new System.Drawing.Size(94, 30);
             this.label2.TabIndex = 103;
             this.label2.Text = "Password";
             // 
@@ -267,11 +272,11 @@
             this.showBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showBox.HoverState.Parent = this.showBox;
             this.showBox.Image = global::NutritionTracker.Properties.Resources.hidePassword;
-            this.showBox.Location = new System.Drawing.Point(369, 229);
-            this.showBox.Margin = new System.Windows.Forms.Padding(2);
+            this.showBox.Location = new System.Drawing.Point(492, 282);
+            this.showBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showBox.Name = "showBox";
             this.showBox.PressedState.Parent = this.showBox;
-            this.showBox.Size = new System.Drawing.Size(36, 31);
+            this.showBox.Size = new System.Drawing.Size(48, 38);
             this.showBox.TabIndex = 104;
             this.showBox.Click += new System.EventHandler(this.showBtn);
             // 
@@ -284,18 +289,18 @@
             this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(268, 405);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(357, 498);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(76, 21);
+            this.guna2Button1.Size = new System.Drawing.Size(101, 26);
             this.guna2Button1.TabIndex = 103;
             this.guna2Button1.Text = "Login";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -303,11 +308,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(117, 408);
+            this.label4.Location = new System.Drawing.Point(121, 498);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 15);
+            this.label4.Size = new System.Drawing.Size(236, 30);
             this.label4.TabIndex = 102;
             this.label4.Text = "Already have an account?";
             // 
@@ -316,10 +322,11 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.exitBtn);
             this.guna2Panel1.Controls.Add(this.miniBtn);
-            this.guna2Panel1.Location = new System.Drawing.Point(425, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(567, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(484, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(645, 47);
             this.guna2Panel1.TabIndex = 92;
             // 
             // exitBtn
@@ -333,10 +340,11 @@
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.exitBtn.ForeColor = System.Drawing.Color.White;
             this.exitBtn.HoverState.Parent = this.exitBtn;
-            this.exitBtn.Location = new System.Drawing.Point(437, 3);
+            this.exitBtn.Location = new System.Drawing.Point(583, 4);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.ShadowDecoration.Parent = this.exitBtn;
-            this.exitBtn.Size = new System.Drawing.Size(35, 28);
+            this.exitBtn.Size = new System.Drawing.Size(47, 34);
             this.exitBtn.TabIndex = 22;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
             // 
@@ -351,10 +359,11 @@
             this.miniBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.miniBtn.ForeColor = System.Drawing.Color.White;
             this.miniBtn.HoverState.Parent = this.miniBtn;
-            this.miniBtn.Location = new System.Drawing.Point(396, 3);
+            this.miniBtn.Location = new System.Drawing.Point(528, 4);
+            this.miniBtn.Margin = new System.Windows.Forms.Padding(4);
             this.miniBtn.Name = "miniBtn";
             this.miniBtn.ShadowDecoration.Parent = this.miniBtn;
-            this.miniBtn.Size = new System.Drawing.Size(35, 28);
+            this.miniBtn.Size = new System.Drawing.Size(47, 34);
             this.miniBtn.TabIndex = 21;
             this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click_1);
             // 
@@ -363,9 +372,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Location = new System.Drawing.Point(477, 51);
+            this.label1.Location = new System.Drawing.Point(636, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 48);
+            this.label1.Size = new System.Drawing.Size(381, 60);
             this.label1.TabIndex = 95;
             this.label1.Text = "Create your Account";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -376,21 +386,23 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(445, 569);
+            this.panel1.Size = new System.Drawing.Size(593, 700);
             this.panel1.TabIndex = 96;
             // 
             // Signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(908, 569);
+            this.ClientSize = new System.Drawing.Size(1211, 700);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";

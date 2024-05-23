@@ -278,6 +278,49 @@ namespace NutritionTracker
         private void Step2Form_Load(object sender, EventArgs e)
         {
             RoundCorners();
+            activityLevelBox.KeyDown += new KeyEventHandler(comboBox_KeyDown);
+            weightGoalBox.KeyDown += new KeyEventHandler(comboBox_KeyDown);
+            targetWeightTxtBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+        }
+
+        private void weightGoalBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void comboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                calculateMacrosBtn.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                calculateMacrosBtn.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void targetWeightTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter only numeric values.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -162,7 +162,7 @@ namespace NutritionTracker
 
             nf.fatPercentLbl.Text = $"{fatPercentage.ToString("F2")}% Fat";
             nf.proteinPercentLbl.Text = $"{proteinPercentage.ToString("F2")}% Protein";
-            nf.carbPercentLbl.Text = $"{carbohydratesPercentage.ToString("F2")}% Carb";
+            nf.carbPercentLbl.Text = $"{carbohydratesPercentage.ToString("F2")}% Carbs";
 
         }
         public void InsertCreatedFood()

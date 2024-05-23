@@ -82,9 +82,10 @@
             this.DashboardLabel.AutoSize = true;
             this.DashboardLabel.Font = new System.Drawing.Font("Poppins SemiBold", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashboardLabel.ForeColor = System.Drawing.Color.Black;
-            this.DashboardLabel.Location = new System.Drawing.Point(14, 1);
+            this.DashboardLabel.Location = new System.Drawing.Point(19, 1);
+            this.DashboardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DashboardLabel.Name = "DashboardLabel";
-            this.DashboardLabel.Size = new System.Drawing.Size(215, 58);
+            this.DashboardLabel.Size = new System.Drawing.Size(277, 74);
             this.DashboardLabel.TabIndex = 10;
             this.DashboardLabel.Text = "Personalize";
             // 
@@ -115,15 +116,15 @@
             this.guna2ShadowPanel1.Controls.Add(this.personUserNTxtBox);
             this.guna2ShadowPanel1.Controls.Add(this.personNameTxtBox);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(30, 68);
-            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(40, 84);
+            this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 13;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.ShadowDepth = 0;
             this.guna2ShadowPanel1.ShadowShift = 0;
             this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(494, 560);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(659, 689);
             this.guna2ShadowPanel1.TabIndex = 14;
             // 
             // label17
@@ -131,10 +132,9 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(257, 427);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(343, 526);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 26);
+            this.label17.Size = new System.Drawing.Size(69, 34);
             this.label17.TabIndex = 40;
             this.label17.Text = "Sleep";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -144,10 +144,9 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(66, 427);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(88, 526);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 26);
+            this.label19.Size = new System.Drawing.Size(74, 34);
             this.label19.TabIndex = 39;
             this.label19.Text = "Water";
             this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -157,7 +156,7 @@
             this.sleepBox.BorderColor = System.Drawing.Color.Gray;
             this.sleepBox.BorderRadius = 8;
             this.sleepBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sleepBox.DefaultText = "8";
+            this.sleepBox.DefaultText = "9";
             this.sleepBox.DisabledState.BorderColor = System.Drawing.Color.Transparent;
             this.sleepBox.DisabledState.FillColor = System.Drawing.Color.Transparent;
             this.sleepBox.DisabledState.ForeColor = System.Drawing.Color.White;
@@ -171,16 +170,15 @@
             this.sleepBox.ForeColor = System.Drawing.Color.Black;
             this.sleepBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.sleepBox.HoverState.Parent = this.sleepBox;
-            this.sleepBox.Location = new System.Drawing.Point(262, 458);
-            this.sleepBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.sleepBox.Location = new System.Drawing.Point(349, 564);
+            this.sleepBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.sleepBox.Name = "sleepBox";
             this.sleepBox.PasswordChar = '\0';
             this.sleepBox.PlaceholderText = "";
             this.sleepBox.SelectedText = "";
-            this.sleepBox.SelectionStart = 1;
             this.sleepBox.ShadowDecoration.Parent = this.sleepBox;
-            this.sleepBox.Size = new System.Drawing.Size(158, 40);
-            this.sleepBox.TabIndex = 38;
+            this.sleepBox.Size = new System.Drawing.Size(211, 49);
+            this.sleepBox.TabIndex = 9;
             this.sleepBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sleepBox_KeyPress);
             // 
             // waterBox
@@ -202,16 +200,16 @@
             this.waterBox.ForeColor = System.Drawing.Color.Black;
             this.waterBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.waterBox.HoverState.Parent = this.waterBox;
-            this.waterBox.Location = new System.Drawing.Point(69, 458);
-            this.waterBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.waterBox.Location = new System.Drawing.Point(92, 564);
+            this.waterBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.waterBox.Name = "waterBox";
             this.waterBox.PasswordChar = '\0';
             this.waterBox.PlaceholderText = "";
             this.waterBox.SelectedText = "";
             this.waterBox.SelectionStart = 1;
             this.waterBox.ShadowDecoration.Parent = this.waterBox;
-            this.waterBox.Size = new System.Drawing.Size(158, 40);
-            this.waterBox.TabIndex = 37;
+            this.waterBox.Size = new System.Drawing.Size(211, 49);
+            this.waterBox.TabIndex = 8;
             this.waterBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.waterBox_KeyPress);
             // 
             // updateChangesBtn
@@ -221,13 +219,14 @@
             this.updateChangesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateChangesBtn.CustomImages.Parent = this.updateChangesBtn;
             this.updateChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.updateChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateChangesBtn.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateChangesBtn.ForeColor = System.Drawing.Color.Black;
             this.updateChangesBtn.HoverState.Parent = this.updateChangesBtn;
-            this.updateChangesBtn.Location = new System.Drawing.Point(308, 515);
+            this.updateChangesBtn.Location = new System.Drawing.Point(389, 634);
+            this.updateChangesBtn.Margin = new System.Windows.Forms.Padding(4);
             this.updateChangesBtn.Name = "updateChangesBtn";
             this.updateChangesBtn.ShadowDecoration.Parent = this.updateChangesBtn;
-            this.updateChangesBtn.Size = new System.Drawing.Size(123, 36);
+            this.updateChangesBtn.Size = new System.Drawing.Size(186, 44);
             this.updateChangesBtn.TabIndex = 36;
             this.updateChangesBtn.Text = "Update Changes";
             this.updateChangesBtn.Visible = false;
@@ -238,10 +237,9 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(259, 340);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(345, 418);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 26);
+            this.label18.Size = new System.Drawing.Size(60, 34);
             this.label18.TabIndex = 35;
             this.label18.Text = "Goal";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -265,26 +263,25 @@
             this.personLastNTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personLastNTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personLastNTxtBox.HoverState.Parent = this.personLastNTxtBox;
-            this.personLastNTxtBox.Location = new System.Drawing.Point(69, 200);
-            this.personLastNTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personLastNTxtBox.Location = new System.Drawing.Point(92, 246);
+            this.personLastNTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personLastNTxtBox.Name = "personLastNTxtBox";
             this.personLastNTxtBox.PasswordChar = '\0';
             this.personLastNTxtBox.PlaceholderText = "";
             this.personLastNTxtBox.SelectedText = "";
             this.personLastNTxtBox.SelectionStart = 10;
             this.personLastNTxtBox.ShadowDecoration.Parent = this.personLastNTxtBox;
-            this.personLastNTxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personLastNTxtBox.TabIndex = 34;
+            this.personLastNTxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personLastNTxtBox.TabIndex = 3;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(259, 253);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(345, 311);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(157, 26);
+            this.label16.Size = new System.Drawing.Size(200, 34);
             this.label16.TabIndex = 32;
             this.label16.Text = "Target Weight (kg)";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -294,10 +291,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(258, 169);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(344, 208);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 26);
+            this.label11.Size = new System.Drawing.Size(131, 34);
             this.label11.TabIndex = 31;
             this.label11.Text = "Weight (kg)";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -307,10 +303,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(66, 340);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(88, 418);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 26);
+            this.label10.Size = new System.Drawing.Size(88, 34);
             this.label10.TabIndex = 30;
             this.label10.Text = "Gender";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -320,10 +315,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(258, 84);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(344, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 26);
+            this.label9.Size = new System.Drawing.Size(54, 34);
             this.label9.TabIndex = 29;
             this.label9.Text = "Age";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -333,10 +327,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(64, 253);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(85, 311);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 26);
+            this.label8.Size = new System.Drawing.Size(116, 34);
             this.label8.TabIndex = 28;
             this.label8.Text = "Username";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -346,10 +339,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(65, 169);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(87, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 26);
+            this.label4.Size = new System.Drawing.Size(118, 34);
             this.label4.TabIndex = 27;
             this.label4.Text = "Last Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -359,10 +351,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(66, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(88, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.Size = new System.Drawing.Size(119, 34);
             this.label2.TabIndex = 26;
             this.label2.Text = "First Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -372,10 +363,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(25, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 48);
+            this.label1.Size = new System.Drawing.Size(189, 60);
             this.label1.TabIndex = 25;
             this.label1.Text = "About Me";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -399,16 +389,16 @@
             this.personTargetWeight.ForeColor = System.Drawing.Color.Black;
             this.personTargetWeight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personTargetWeight.HoverState.Parent = this.personTargetWeight;
-            this.personTargetWeight.Location = new System.Drawing.Point(263, 283);
-            this.personTargetWeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personTargetWeight.Location = new System.Drawing.Point(351, 348);
+            this.personTargetWeight.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personTargetWeight.Name = "personTargetWeight";
             this.personTargetWeight.PasswordChar = '\0';
             this.personTargetWeight.PlaceholderText = "";
             this.personTargetWeight.SelectedText = "";
             this.personTargetWeight.SelectionStart = 5;
             this.personTargetWeight.ShadowDecoration.Parent = this.personTargetWeight;
-            this.personTargetWeight.Size = new System.Drawing.Size(158, 40);
-            this.personTargetWeight.TabIndex = 9;
+            this.personTargetWeight.Size = new System.Drawing.Size(211, 49);
+            this.personTargetWeight.TabIndex = 5;
             this.personTargetWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personTargetWeight_KeyPress);
             // 
             // personWeightTxtBox
@@ -430,16 +420,16 @@
             this.personWeightTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personWeightTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personWeightTxtBox.HoverState.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.Location = new System.Drawing.Point(262, 200);
-            this.personWeightTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personWeightTxtBox.Location = new System.Drawing.Point(349, 246);
+            this.personWeightTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personWeightTxtBox.Name = "personWeightTxtBox";
             this.personWeightTxtBox.PasswordChar = '\0';
             this.personWeightTxtBox.PlaceholderText = "";
             this.personWeightTxtBox.SelectedText = "";
             this.personWeightTxtBox.SelectionStart = 5;
             this.personWeightTxtBox.ShadowDecoration.Parent = this.personWeightTxtBox;
-            this.personWeightTxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personWeightTxtBox.TabIndex = 8;
+            this.personWeightTxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personWeightTxtBox.TabIndex = 4;
             this.personWeightTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personWeightTxtBox_KeyPress);
             // 
             // personInfoEditBtn
@@ -448,11 +438,11 @@
             this.personInfoEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.personInfoEditBtn.HoverState.Parent = this.personInfoEditBtn;
             this.personInfoEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personInfoEditBtn.Image")));
-            this.personInfoEditBtn.Location = new System.Drawing.Point(443, 11);
-            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.personInfoEditBtn.Location = new System.Drawing.Point(591, 14);
+            this.personInfoEditBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personInfoEditBtn.Name = "personInfoEditBtn";
             this.personInfoEditBtn.PressedState.Parent = this.personInfoEditBtn;
-            this.personInfoEditBtn.Size = new System.Drawing.Size(38, 28);
+            this.personInfoEditBtn.Size = new System.Drawing.Size(51, 34);
             this.personInfoEditBtn.TabIndex = 7;
             this.personInfoEditBtn.Click += new System.EventHandler(this.personInfoEditBtn_Click);
             // 
@@ -475,16 +465,16 @@
             this.personGoal2TxtBox.ForeColor = System.Drawing.Color.Black;
             this.personGoal2TxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personGoal2TxtBox.HoverState.Parent = this.personGoal2TxtBox;
-            this.personGoal2TxtBox.Location = new System.Drawing.Point(262, 371);
-            this.personGoal2TxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personGoal2TxtBox.Location = new System.Drawing.Point(349, 457);
+            this.personGoal2TxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personGoal2TxtBox.Name = "personGoal2TxtBox";
             this.personGoal2TxtBox.PasswordChar = '\0';
             this.personGoal2TxtBox.PlaceholderText = "";
             this.personGoal2TxtBox.SelectedText = "";
             this.personGoal2TxtBox.SelectionStart = 11;
             this.personGoal2TxtBox.ShadowDecoration.Parent = this.personGoal2TxtBox;
-            this.personGoal2TxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personGoal2TxtBox.TabIndex = 6;
+            this.personGoal2TxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personGoal2TxtBox.TabIndex = 7;
             // 
             // personAgeTxtBox
             // 
@@ -505,16 +495,16 @@
             this.personAgeTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personAgeTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personAgeTxtBox.HoverState.Parent = this.personAgeTxtBox;
-            this.personAgeTxtBox.Location = new System.Drawing.Point(263, 115);
-            this.personAgeTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personAgeTxtBox.Location = new System.Drawing.Point(351, 142);
+            this.personAgeTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personAgeTxtBox.Name = "personAgeTxtBox";
             this.personAgeTxtBox.PasswordChar = '\0';
             this.personAgeTxtBox.PlaceholderText = "";
             this.personAgeTxtBox.SelectedText = "";
             this.personAgeTxtBox.SelectionStart = 12;
             this.personAgeTxtBox.ShadowDecoration.Parent = this.personAgeTxtBox;
-            this.personAgeTxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personAgeTxtBox.TabIndex = 4;
+            this.personAgeTxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personAgeTxtBox.TabIndex = 2;
             this.personAgeTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personAgeTxtBox_KeyPress);
             // 
             // personGenderTxtBox
@@ -536,16 +526,16 @@
             this.personGenderTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personGenderTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personGenderTxtBox.HoverState.Parent = this.personGenderTxtBox;
-            this.personGenderTxtBox.Location = new System.Drawing.Point(69, 371);
-            this.personGenderTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personGenderTxtBox.Location = new System.Drawing.Point(92, 457);
+            this.personGenderTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personGenderTxtBox.Name = "personGenderTxtBox";
             this.personGenderTxtBox.PasswordChar = '\0';
             this.personGenderTxtBox.PlaceholderText = "";
             this.personGenderTxtBox.SelectedText = "";
             this.personGenderTxtBox.SelectionStart = 6;
             this.personGenderTxtBox.ShadowDecoration.Parent = this.personGenderTxtBox;
-            this.personGenderTxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personGenderTxtBox.TabIndex = 3;
+            this.personGenderTxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personGenderTxtBox.TabIndex = 6;
             // 
             // personUserNTxtBox
             // 
@@ -566,16 +556,16 @@
             this.personUserNTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personUserNTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personUserNTxtBox.HoverState.Parent = this.personUserNTxtBox;
-            this.personUserNTxtBox.Location = new System.Drawing.Point(70, 283);
-            this.personUserNTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personUserNTxtBox.Location = new System.Drawing.Point(93, 348);
+            this.personUserNTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personUserNTxtBox.Name = "personUserNTxtBox";
             this.personUserNTxtBox.PasswordChar = '\0';
             this.personUserNTxtBox.PlaceholderText = "";
             this.personUserNTxtBox.SelectedText = "";
             this.personUserNTxtBox.SelectionStart = 5;
             this.personUserNTxtBox.ShadowDecoration.Parent = this.personUserNTxtBox;
-            this.personUserNTxtBox.Size = new System.Drawing.Size(158, 40);
-            this.personUserNTxtBox.TabIndex = 2;
+            this.personUserNTxtBox.Size = new System.Drawing.Size(211, 49);
+            this.personUserNTxtBox.TabIndex = 10;
             // 
             // personNameTxtBox
             // 
@@ -596,15 +586,15 @@
             this.personNameTxtBox.ForeColor = System.Drawing.Color.Black;
             this.personNameTxtBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personNameTxtBox.HoverState.Parent = this.personNameTxtBox;
-            this.personNameTxtBox.Location = new System.Drawing.Point(70, 115);
-            this.personNameTxtBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.personNameTxtBox.Location = new System.Drawing.Point(93, 142);
+            this.personNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.personNameTxtBox.Name = "personNameTxtBox";
             this.personNameTxtBox.PasswordChar = '\0';
             this.personNameTxtBox.PlaceholderText = "";
             this.personNameTxtBox.SelectedText = "";
             this.personNameTxtBox.SelectionStart = 10;
             this.personNameTxtBox.ShadowDecoration.Parent = this.personNameTxtBox;
-            this.personNameTxtBox.Size = new System.Drawing.Size(158, 40);
+            this.personNameTxtBox.Size = new System.Drawing.Size(211, 49);
             this.personNameTxtBox.TabIndex = 1;
             // 
             // label3
@@ -612,10 +602,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(26, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(35, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 31);
+            this.label3.Size = new System.Drawing.Size(119, 39);
             this.label3.TabIndex = 14;
             this.label3.Text = "My Goals";
             // 
@@ -624,10 +613,9 @@
             this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label5.Location = new System.Drawing.Point(28, 295);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(37, 363);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 22);
+            this.label5.Size = new System.Drawing.Size(172, 27);
             this.label5.TabIndex = 18;
             this.label5.Text = "Protein";
             // 
@@ -636,10 +624,9 @@
             this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label6.Location = new System.Drawing.Point(28, 236);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(37, 290);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 22);
+            this.label6.Size = new System.Drawing.Size(172, 27);
             this.label6.TabIndex = 19;
             this.label6.Text = "Fat";
             // 
@@ -648,10 +635,9 @@
             this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label7.Location = new System.Drawing.Point(28, 180);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(37, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 22);
+            this.label7.Size = new System.Drawing.Size(172, 27);
             this.label7.TabIndex = 20;
             this.label7.Text = "Carbohydrates";
             // 
@@ -659,10 +645,9 @@
             // 
             this.pCarbLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pCarbLabel.ForeColor = System.Drawing.Color.Black;
-            this.pCarbLabel.Location = new System.Drawing.Point(190, 180);
-            this.pCarbLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pCarbLabel.Location = new System.Drawing.Point(253, 222);
             this.pCarbLabel.Name = "pCarbLabel";
-            this.pCarbLabel.Size = new System.Drawing.Size(129, 22);
+            this.pCarbLabel.Size = new System.Drawing.Size(172, 27);
             this.pCarbLabel.TabIndex = 25;
             this.pCarbLabel.Text = "700";
             this.pCarbLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -671,10 +656,9 @@
             // 
             this.pFatLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pFatLabel.ForeColor = System.Drawing.Color.Black;
-            this.pFatLabel.Location = new System.Drawing.Point(190, 236);
-            this.pFatLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pFatLabel.Location = new System.Drawing.Point(253, 290);
             this.pFatLabel.Name = "pFatLabel";
-            this.pFatLabel.Size = new System.Drawing.Size(129, 22);
+            this.pFatLabel.Size = new System.Drawing.Size(172, 27);
             this.pFatLabel.TabIndex = 26;
             this.pFatLabel.Text = "500";
             this.pFatLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -683,10 +667,9 @@
             // 
             this.pProteinLabel.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pProteinLabel.ForeColor = System.Drawing.Color.Black;
-            this.pProteinLabel.Location = new System.Drawing.Point(190, 295);
-            this.pProteinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pProteinLabel.Location = new System.Drawing.Point(253, 363);
             this.pProteinLabel.Name = "pProteinLabel";
-            this.pProteinLabel.Size = new System.Drawing.Size(129, 22);
+            this.pProteinLabel.Size = new System.Drawing.Size(172, 27);
             this.pProteinLabel.TabIndex = 27;
             this.pProteinLabel.Text = "180";
             this.pProteinLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -743,12 +726,12 @@
             this.caloComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
             this.caloComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caloComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
-            this.caloComboBox.Location = new System.Drawing.Point(381, 113);
-            this.caloComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.caloComboBox.Location = new System.Drawing.Point(508, 139);
+            this.caloComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.caloComboBox.MaxDropDownItems = 50;
             this.caloComboBox.Name = "caloComboBox";
             this.caloComboBox.ShadowDecoration.Parent = this.caloComboBox;
-            this.caloComboBox.Size = new System.Drawing.Size(84, 36);
+            this.caloComboBox.Size = new System.Drawing.Size(111, 36);
             this.caloComboBox.StartIndex = 19;
             this.caloComboBox.TabIndex = 28;
             this.caloComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -804,11 +787,11 @@
             this.carbsComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
             this.carbsComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbsComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
-            this.carbsComboBox.Location = new System.Drawing.Point(381, 166);
-            this.carbsComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.carbsComboBox.Location = new System.Drawing.Point(508, 204);
+            this.carbsComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carbsComboBox.Name = "carbsComboBox";
             this.carbsComboBox.ShadowDecoration.Parent = this.carbsComboBox;
-            this.carbsComboBox.Size = new System.Drawing.Size(84, 36);
+            this.carbsComboBox.Size = new System.Drawing.Size(111, 36);
             this.carbsComboBox.TabIndex = 29;
             this.carbsComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -864,11 +847,11 @@
             this.proteinComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
             this.proteinComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proteinComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
-            this.proteinComboBox.Location = new System.Drawing.Point(381, 281);
-            this.proteinComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.proteinComboBox.Location = new System.Drawing.Point(508, 346);
+            this.proteinComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.proteinComboBox.Name = "proteinComboBox";
             this.proteinComboBox.ShadowDecoration.Parent = this.proteinComboBox;
-            this.proteinComboBox.Size = new System.Drawing.Size(84, 36);
+            this.proteinComboBox.Size = new System.Drawing.Size(111, 36);
             this.proteinComboBox.TabIndex = 30;
             this.proteinComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -924,11 +907,11 @@
             this.fatComboBox.ItemsAppearance.SelectedBackColor = System.Drawing.Color.White;
             this.fatComboBox.ItemsAppearance.SelectedFont = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fatComboBox.ItemsAppearance.SelectedForeColor = System.Drawing.Color.Black;
-            this.fatComboBox.Location = new System.Drawing.Point(381, 222);
-            this.fatComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fatComboBox.Location = new System.Drawing.Point(508, 273);
+            this.fatComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fatComboBox.Name = "fatComboBox";
             this.fatComboBox.ShadowDecoration.Parent = this.fatComboBox;
-            this.fatComboBox.Size = new System.Drawing.Size(84, 36);
+            this.fatComboBox.Size = new System.Drawing.Size(111, 36);
             this.fatComboBox.TabIndex = 31;
             this.fatComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -937,10 +920,9 @@
             this.label12.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label12.Location = new System.Drawing.Point(28, 116);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(37, 143);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 22);
+            this.label12.Size = new System.Drawing.Size(172, 27);
             this.label12.TabIndex = 32;
             this.label12.Text = "Calories";
             // 
@@ -948,10 +930,9 @@
             // 
             this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(15, 70);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(20, 86);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 22);
+            this.label13.Size = new System.Drawing.Size(172, 27);
             this.label13.TabIndex = 33;
             this.label13.Text = "Macronutrients";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -960,10 +941,9 @@
             // 
             this.label14.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(190, 70);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(253, 86);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 22);
+            this.label14.Size = new System.Drawing.Size(172, 27);
             this.label14.TabIndex = 34;
             this.label14.Text = "Total";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -972,10 +952,9 @@
             // 
             this.label15.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(358, 70);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(477, 86);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(129, 22);
+            this.label15.Size = new System.Drawing.Size(172, 27);
             this.label15.TabIndex = 35;
             this.label15.Text = "Percent";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -987,13 +966,14 @@
             this.UpdateMacrosChangesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdateMacrosChangesBtn.CustomImages.Parent = this.UpdateMacrosChangesBtn;
             this.UpdateMacrosChangesBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(187)))), ((int)(((byte)(133)))));
-            this.UpdateMacrosChangesBtn.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateMacrosChangesBtn.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateMacrosChangesBtn.ForeColor = System.Drawing.Color.Black;
             this.UpdateMacrosChangesBtn.HoverState.Parent = this.UpdateMacrosChangesBtn;
-            this.UpdateMacrosChangesBtn.Location = new System.Drawing.Point(341, 344);
+            this.UpdateMacrosChangesBtn.Location = new System.Drawing.Point(442, 423);
+            this.UpdateMacrosChangesBtn.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateMacrosChangesBtn.Name = "UpdateMacrosChangesBtn";
             this.UpdateMacrosChangesBtn.ShadowDecoration.Parent = this.UpdateMacrosChangesBtn;
-            this.UpdateMacrosChangesBtn.Size = new System.Drawing.Size(123, 36);
+            this.UpdateMacrosChangesBtn.Size = new System.Drawing.Size(177, 44);
             this.UpdateMacrosChangesBtn.TabIndex = 37;
             this.UpdateMacrosChangesBtn.Text = "Update Changes";
             this.UpdateMacrosChangesBtn.Visible = false;
@@ -1019,15 +999,15 @@
             this.pCalLabel.ForeColor = System.Drawing.Color.Black;
             this.pCalLabel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pCalLabel.HoverState.Parent = this.pCalLabel;
-            this.pCalLabel.Location = new System.Drawing.Point(190, 121);
-            this.pCalLabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pCalLabel.Location = new System.Drawing.Point(253, 149);
+            this.pCalLabel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pCalLabel.Name = "pCalLabel";
             this.pCalLabel.PasswordChar = '\0';
             this.pCalLabel.PlaceholderText = "";
             this.pCalLabel.SelectedText = "";
             this.pCalLabel.SelectionStart = 4;
             this.pCalLabel.ShadowDecoration.Parent = this.pCalLabel;
-            this.pCalLabel.Size = new System.Drawing.Size(129, 22);
+            this.pCalLabel.Size = new System.Drawing.Size(172, 27);
             this.pCalLabel.TabIndex = 38;
             this.pCalLabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.pCalLabel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pCalLabel_KeyPress);
@@ -1055,15 +1035,15 @@
             this.guna2ShadowPanel3.Controls.Add(this.personFitnessGoalsEditBtn);
             this.guna2ShadowPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.guna2ShadowPanel3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ShadowPanel3.Location = new System.Drawing.Point(550, 135);
-            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ShadowPanel3.Location = new System.Drawing.Point(733, 166);
+            this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ShadowPanel3.Name = "guna2ShadowPanel3";
             this.guna2ShadowPanel3.Radius = 13;
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel3.ShadowDepth = 0;
             this.guna2ShadowPanel3.ShadowShift = 0;
             this.guna2ShadowPanel3.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel3.Size = new System.Drawing.Size(498, 399);
+            this.guna2ShadowPanel3.Size = new System.Drawing.Size(664, 491);
             this.guna2ShadowPanel3.TabIndex = 16;
             // 
             // personFitnessGoalsEditBtn
@@ -1072,25 +1052,27 @@
             this.personFitnessGoalsEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.personFitnessGoalsEditBtn.HoverState.Parent = this.personFitnessGoalsEditBtn;
             this.personFitnessGoalsEditBtn.Image = ((System.Drawing.Image)(resources.GetObject("personFitnessGoalsEditBtn.Image")));
-            this.personFitnessGoalsEditBtn.Location = new System.Drawing.Point(449, 11);
-            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.personFitnessGoalsEditBtn.Location = new System.Drawing.Point(599, 14);
+            this.personFitnessGoalsEditBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.personFitnessGoalsEditBtn.Name = "personFitnessGoalsEditBtn";
             this.personFitnessGoalsEditBtn.PressedState.Parent = this.personFitnessGoalsEditBtn;
-            this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(38, 28);
+            this.personFitnessGoalsEditBtn.Size = new System.Drawing.Size(51, 34);
             this.personFitnessGoalsEditBtn.TabIndex = 9;
             this.personFitnessGoalsEditBtn.Click += new System.EventHandler(this.personFitnessGoalsEditBtn_Click);
             // 
             // Personalization
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(1095, 669);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ClientSize = new System.Drawing.Size(1460, 823);
             this.Controls.Add(this.guna2ShadowPanel3);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.DashboardLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Personalization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personalization";
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();

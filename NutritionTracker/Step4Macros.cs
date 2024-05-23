@@ -99,8 +99,7 @@ namespace NutritionTracker
 
                 if (rows > 0)
                 {
-                    sm.Show();
-                    sm.successLbl.Text = "Success!";
+                    
                    
                 }
                 else
@@ -246,7 +245,18 @@ namespace NutritionTracker
 
         private void Step4Macros_Load(object sender, EventArgs e)
         {
-          
+            waterBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+            sleepBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
+        }
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if Enter key is pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Trigger the button click event
+                submitLastStep.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
         }
 
         private void waterBox_KeyPress(object sender, KeyPressEventArgs e)

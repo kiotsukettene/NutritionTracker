@@ -132,7 +132,18 @@ namespace NutritionTracker
 
         private void Step3Macros_Load(object sender, EventArgs e)
         {
-           
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(Form_KeyDown);
+        }
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if Enter key is pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Simulate a click event for the button
+                step3btn.PerformClick();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
         }
     }
 }

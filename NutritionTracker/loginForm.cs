@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,18 @@ namespace NutritionTracker
         DBConnection myCon = new DBConnection();
         MainForm main = new MainForm();
         FailedMessage fm = new FailedMessage();
-        SuccessMessage sm = new SuccessMessage();
+       
    
         public loginForm()
         {
             InitializeComponent();
             RoundCorners();
+            loginformBtn.Click += new EventHandler(LoginBtn);
            
+            loginformBtn.KeyDown += new KeyEventHandler(guna2Button3_KeyDown);
+            loginUserBox.KeyDown += new KeyEventHandler(loginUserBox_KeyDown);
+            loginPassBox.KeyDown += new KeyEventHandler(loginPassBox_KeyDown);
+
         }
 
         #region RoundForm
@@ -72,6 +78,7 @@ namespace NutritionTracker
         private void loginForm_Load(object sender, EventArgs e)
         {
             RoundCorners();
+
         
         }
 
@@ -184,7 +191,6 @@ namespace NutritionTracker
                         {
                         StepsForm step1 = new StepsForm(username);
                         step1.Show();
-                          
                         }
                         this.Hide();
 
@@ -246,5 +252,39 @@ namespace NutritionTracker
             signup.Show();
             this.Hide();
         }
+
+        private void loginEnterBtn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginBtn(sender, e);
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+        private void loginUserBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+                this.Hide();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void loginPassBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+                this.Hide();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
     }
 }
+

@@ -38,15 +38,16 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.successBtn);
             this.panel1.Controls.Add(this.successLbl);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(369, 148);
+            this.panel1.Size = new System.Drawing.Size(492, 182);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -63,10 +64,11 @@
             this.successBtn.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.successBtn.ForeColor = System.Drawing.Color.Black;
             this.successBtn.HoverState.Parent = this.successBtn;
-            this.successBtn.Location = new System.Drawing.Point(35, 96);
+            this.successBtn.Location = new System.Drawing.Point(47, 118);
+            this.successBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.successBtn.Name = "successBtn";
             this.successBtn.ShadowDecoration.Parent = this.successBtn;
-            this.successBtn.Size = new System.Drawing.Size(71, 27);
+            this.successBtn.Size = new System.Drawing.Size(95, 33);
             this.successBtn.TabIndex = 3;
             this.successBtn.Text = "OK";
             this.successBtn.Click += new System.EventHandler(this.successBtn_Click);
@@ -76,9 +78,10 @@
             this.successLbl.AutoSize = true;
             this.successLbl.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.successLbl.ForeColor = System.Drawing.Color.White;
-            this.successLbl.Location = new System.Drawing.Point(81, 57);
+            this.successLbl.Location = new System.Drawing.Point(108, 70);
+            this.successLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.successLbl.Name = "successLbl";
-            this.successLbl.Size = new System.Drawing.Size(200, 19);
+            this.successLbl.Size = new System.Drawing.Size(252, 25);
             this.successLbl.TabIndex = 2;
             this.successLbl.Text = "Operation Completed successfully";
             this.successLbl.Click += new System.EventHandler(this.successLbl_Click);
@@ -86,11 +89,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 36);
+            this.label1.Location = new System.Drawing.Point(107, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 26);
+            this.label1.Size = new System.Drawing.Size(89, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Success";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -99,20 +103,22 @@
             // 
             this.panel2.BackgroundImage = global::NutritionTracker.Properties.Resources.check2;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Location = new System.Drawing.Point(35, 36);
+            this.panel2.Location = new System.Drawing.Point(47, 44);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(44, 40);
+            this.panel2.Size = new System.Drawing.Size(59, 49);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // SuccessMessage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(369, 148);
+            this.ClientSize = new System.Drawing.Size(492, 182);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SuccessMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuccessMessage";

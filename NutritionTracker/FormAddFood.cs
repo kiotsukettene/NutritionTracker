@@ -37,6 +37,7 @@ namespace NutritionTracker
         public FormAddFood()
         {
             InitializeComponent();
+            dbDateTime.Value = DateTime.Now;
            
 
         }
@@ -186,9 +187,9 @@ namespace NutritionTracker
             carbLabel.Text = add.Carbs.ToString();
             fatLabel.Text = add.Fat.ToString();
             totalProteinLabel.Text = add.Protein.ToString();
-            proteinPercentLbl.Text = $"{add.ProteinPercent.ToString("F2")}%";
-            carbPercentLbl.Text = $"{add.CarbPercent.ToString("F2")}%";
-            fatPercentLbl.Text = $"{add.FatPercent.ToString("F2")}%";
+            proteinPercentLbl.Text = $"{add.ProteinPercent.ToString("F2")}% Protein";
+            carbPercentLbl.Text = $"{add.CarbPercent.ToString("F2")}% Carbs";
+            fatPercentLbl.Text = $"{add.FatPercent.ToString("F2")}% Fats";
             chartCal.Text = add.Calories.ToString();
 
             int protein = int.Parse(totalProteinLabel.Text);

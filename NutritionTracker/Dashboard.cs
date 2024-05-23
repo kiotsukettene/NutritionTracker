@@ -30,6 +30,7 @@ namespace NutritionTracker
         public Dashboard()
         {
             InitializeComponent();
+            dbDateTime.Value = DateTime.Now;
           
             //this.TDEE = TDEE;
             //this.carbs = carbs;
@@ -70,22 +71,23 @@ namespace NutritionTracker
                 myCon.openCon();
                 string username = dashUsername.Text;
 
-                MySqlCommand cmd = new MySqlCommand(@"SELECT 
-                             DATE_FORMAT(ufd.added_at, '%Y-%m-%d') AS dateOnly, 
-                             SUM(ufd.calories) AS totalCalories, 
-                             um.calories AS targetCalories
-                         FROM 
-                             user_food_diary ufd
-                         JOIN 
-                             user u ON u.id = ufd.user_id
-                         JOIN 
-                             user_macros um ON u.id = um.user_id
-                         WHERE 
-                             u.username = @username
-                         GROUP BY 
-                             dateOnly, um.calories
-                         ORDER BY 
-                             dateOnly;", myCon.getCon());
+                MySqlCommand cmd = new MySqlCommand(@"
+     SELECT 
+         DATE_FORMAT(ufd.added_at, '%Y-%m-%d') AS dateOnly, 
+         SUM(ufd.calories) AS totalCalories, 
+         um.calories AS targetCalories
+     FROM 
+         user_food_diary ufd
+     JOIN 
+         user u ON u.id = ufd.user_id
+     JOIN 
+         user_macros um ON u.id = um.user_id
+     WHERE 
+         u.username = @username
+     GROUP BY 
+         dateOnly, um.calories
+     ORDER BY 
+         dateOnly;", myCon.getCon());
                 cmd.Parameters.AddWithValue("@username", username);
 
                 DataTable dt = new DataTable();
@@ -104,7 +106,8 @@ namespace NutritionTracker
                 chart1.Series["Target Calories"].ChartType = SeriesChartType.Line;
                 chart1.Series["Target Calories"].Color = Color.Red;
 
-                // If dt is null or has zero rows, add hardcoded values
+                List<DateTime> intakeDates = new List<DateTime>();
+
                 if (dt == null || dt.Rows.Count == 0)
                 {
                     // Clear existing "Series1" if it exists
@@ -145,11 +148,14 @@ namespace NutritionTracker
 
                         chart1.Series["Total Calories"].Points.AddXY(dateOnly, totalCalories);
                         chart1.Series["Target Calories"].Points.AddXY(dateOnly, targetCalories);
+
+                        // Add date to the intakeDates list
+                        intakeDates.Add(DateTime.Parse(dateOnly));
                     }
 
                     // Set maximum Y value to the target calories
                     int maxTargetCalories = Convert.ToInt32(dt.Rows[0]["targetCalories"]);
-                    chart1.ChartAreas[0].AxisY.Maximum = maxTargetCalories + 500;
+                    chart1.ChartAreas[0].AxisY.Maximum = maxTargetCalories + 1000;
 
                     // Set chart properties
                     chart1.ChartAreas[0].AxisX.Interval = 1;
@@ -159,6 +165,10 @@ namespace NutritionTracker
                     // Update chart
                     chart1.DataBind();
                 }
+
+                // Calculate and display streak
+                int streak = CalculateStreakFromChart(intakeDates);
+                streakLabel.Text = streak.ToString();
             }
             catch (Exception ex)
             {
@@ -168,6 +178,29 @@ namespace NutritionTracker
             {
                 myCon.closeCon();
             }
+        }
+
+        private int CalculateStreakFromChart(List<DateTime> intakeDates)
+        {
+            if (intakeDates == null || intakeDates.Count == 0) return 0; // No entries, no streak
+
+            intakeDates.Sort(); // Ensure the dates are sorted in ascending order
+
+            int streak = 1;
+            for (int i = intakeDates.Count - 1; i > 0; i--)
+            {
+                if ((intakeDates[i] - intakeDates[i - 1]).TotalDays == 1)
+                {
+                    streak++;
+                }
+                else
+                {
+                    streak = 0;
+                    break;
+                }
+            }
+
+            return streak;
         }
 
 
@@ -185,13 +218,11 @@ namespace NutritionTracker
                                      SUM(ufd.carbs) AS totalCarbs,
                                      SUM(ufd.fat) AS totalFat,
                                      SUM(ufd.protein) AS totalProtein,
-                                     um.calories AS SuperTotalCal,
-                                     um.carb_percent as CarbPercent,
-                                     um.fat_percent as FatPercent,
-                                     um.protein_percent as ProteinPercent
+                                     um.calories AS SuperTotalCal
+                                    
                                  FROM 
                                      user_food_diary ufd
-                                LEFT JOIN 
+                                JOIN 
                                     user_macros um ON um.user_id = ufd.user_id
                                  JOIN 
                                      user ON user.id = ufd.user_id
@@ -211,9 +242,7 @@ namespace NutritionTracker
                         int totalFat = reader.IsDBNull(reader.GetOrdinal("totalFat")) ? 0 : reader.GetInt32("totalFat");
                         int totalProtein = reader.IsDBNull(reader.GetOrdinal("totalProtein")) ? 0 : reader.GetInt32("totalProtein");
                         int SuperTotalCal = reader.IsDBNull(reader.GetOrdinal("SuperTotalCal")) ? 0 : reader.GetInt32("SuperTotalCal");
-                        int cPercent = reader.IsDBNull(reader.GetOrdinal("CarbPercent")) ? 0 : reader.GetInt32("CarbPercent");
-                        int fPercent = reader.IsDBNull(reader.GetOrdinal("FatPercent")) ? 0 : reader.GetInt32("FatPercent");
-                        int pPercent = reader.IsDBNull(reader.GetOrdinal("ProteinPercent")) ? 0 : reader.GetInt32("ProteinPercent");
+                      
 
                         consumedBar.Maximum = SuperTotalCal;
                         consumedBar.Minimum = 0;
@@ -224,9 +253,7 @@ namespace NutritionTracker
                         fatRemain.Text = totalFat.ToString();
                         proteinRemain.Text = totalProtein.ToString();
 
-                        carbP.Text = cPercent.ToString() + "%";
-                        fatP.Text = fPercent.ToString() + "%";
-                        proteinP.Text = pPercent.ToString() + "%";
+                     
                     }
                 }
             }
@@ -240,6 +267,46 @@ namespace NutritionTracker
             }
         }
 
+        public void SelectMacros()
+        {
+            myCon.openCon();
+            string username = dashUsername.Text;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(@"SELECT carb_percent, fat_percent, protein_percent
+                                                    FROM user_macros 
+                                                    JOIN user ON user.id = user_macros.user_id 
+                                                    WHERE username = @username;", myCon.getCon());
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@username", username);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        int cPercent = dr.GetInt32("carb_percent");
+                        int fPercent = dr.GetInt32("fat_percent");
+                        int pPercent = dr.GetInt32("protein_percent");
+
+
+
+
+                        carbP.Text = cPercent.ToString() + "%";
+                        fatP.Text = fPercent.ToString() + "%";
+                        proteinP.Text = pPercent.ToString() + "%";
+
+                    }
+                    dr.Close();
+                }
+                myCon.closeCon();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
         private void Dashboard_Load(object sender, EventArgs e)
         {
             
@@ -265,6 +332,11 @@ namespace NutritionTracker
         private void calRemain_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dbDateTime_ValueChanged(object sender, EventArgs e)
+        {
+            RemainingMacros();
         }
     }
 }

@@ -18,12 +18,17 @@ namespace NutritionTracker
     {
         DBConnection myCon = new DBConnection();
         FailedMessage fm = new FailedMessage();
-        SuccessMessage sm = new SuccessMessage();
+      
         
         public Signup()
         {
             InitializeComponent();
             RoundCorners();
+            firstNameTxtBox.KeyDown += new KeyEventHandler(firstNameTxtBox_KeyDown);
+            lastNameTxtBox.KeyDown += new KeyEventHandler(lastNameTxtBox_KeyDown);
+            userNameTxtBox.KeyDown += new KeyEventHandler(userNameTxtBox_KeyDown);
+            passwordTxtBox.KeyDown += new KeyEventHandler(passwordTxtBox_KeyDown);
+            confirmTxtBox.KeyDown += new KeyEventHandler(confirmTxtBox_KeyDown);
         }
         #region Exit and Min Button
         private void miniBtn_Click(object sender, EventArgs e)
@@ -114,7 +119,7 @@ namespace NutritionTracker
 
                         if (rows > 0)
                         {
-                            sm.successLbl.Text = "Sign up success!!";
+                            
                                 loginForm login = new loginForm();
                                 login.Show();
                                 this.Dispose();
@@ -141,6 +146,8 @@ namespace NutritionTracker
         private void loginBtn(object sender, EventArgs e)
         {
             SignUp();
+            this.Hide();
+          
             
         }
 
@@ -190,6 +197,91 @@ namespace NutritionTracker
         {
             this.WindowState = FormWindowState.Minimized;
 
+        }
+
+        private void firstNameTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter letters only.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lastNameTxtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                fm.Show();
+                fm.failedLbl.Text = "Please enter letters only.\", \"Invalid Input";
+            }
+            else
+            {
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void firstNameTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SignUp();
+                this.Dispose();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void lastNameTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SignUp();
+                this.Dispose();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void userNameTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SignUp();
+                this.Dispose();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void passwordTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SignUp();
+                this.Dispose();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
+        }
+
+        private void confirmTxtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SignUp();
+                this.Dispose();
+                e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
+            }
         }
     }
 }

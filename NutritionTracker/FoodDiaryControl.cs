@@ -97,7 +97,7 @@ namespace NutritionTracker
                     mealLbl.BackColor = Color.LightSteelBlue;
                     break;
                 case "snacks":
-                    mealLbl.BackColor = Color.LightYellow;
+                    mealLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(139)))));
                     break;
                 case "dinner":
                     mealLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(222))))); 
