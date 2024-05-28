@@ -1,205 +1,205 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|c:\\users\\admin\\desktop\\nutrition tracker _ 90\\nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\fooddiary.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\formaddfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\nutritionfacts.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|c:\\users\\admin\\desktop\\nutritiontrackersuperdone\\nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\mypersonalfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step3macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiarycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\fooddiary.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\fooddiary.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\formaddfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\formaddfood.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\addfoodconrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step4macros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\splashscreenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\stepsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\step2form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\warningmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\failedmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\nutritionfacts.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\nutritionfacts.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\createfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\successmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\personalfoodcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\stepsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\stepsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\stepsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A53D5A-4155-4EC5-B593-D79698DD81C3}|NutritionTracker\\NutritionTracker.csproj|solutionrelative:nutritiontracker\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -210,7 +210,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -226,11 +226,48 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "loginForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\loginForm.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\loginForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\loginForm.cs",
+              "RelativeToolTip": "NutritionTracker\\loginForm.cs",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAnwNwAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:46:38.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "SplashScreenForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SplashScreenForm.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\SplashScreenForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SplashScreenForm.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\SplashScreenForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T18:18:04.698Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Step2Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step2Form.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Step2Form.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step2Form.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\Step2Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T09:14:53.703Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Personalization.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Personalization.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Personalization.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Personalization.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Personalization.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Personalization.cs [Design]",
               "RelativeToolTip": "NutritionTracker\\Personalization.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T06:57:33.374Z",
@@ -238,48 +275,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Dashboard.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Dashboard.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\Dashboard.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Personalization.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Personalization.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Personalization.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Personalization.cs",
+              "RelativeToolTip": "NutritionTracker\\Personalization.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAcwK8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T18:00:29.627Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MainForm.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\MainForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MainForm.cs",
-              "RelativeToolTip": "NutritionTracker\\MainForm.cs",
-              "ViewState": "AQIAANEAAAAAAAAAAAAYwOwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T18:19:07.064Z",
+              "WhenOpened": "2024-05-13T16:04:04.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Step3Macros.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step3Macros.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Step3Macros.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step3Macros.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\Step3Macros.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "Signup.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Signup.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Signup.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Signup.cs*",
+              "RelativeToolTip": "NutritionTracker\\Signup.cs*",
+              "ViewState": "AQIAAPwAAAAAAAAAAAASwAYBAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T04:12:47.509Z",
+              "WhenOpened": "2024-05-12T10:31:38.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Signup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Signup.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Signup.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Signup.cs [Design]*",
+              "RelativeToolTip": "NutritionTracker\\Signup.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:31:36.29Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "loginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\loginForm.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\loginForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\loginForm.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\loginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T10:46:37.074Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NutritionFacts.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\NutritionFacts.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\NutritionFacts.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T15:13:28.908Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MyPersonalFood.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MyPersonalFood.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\MyPersonalFood.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MyPersonalFood.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\MyPersonalFood.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:37:00.828Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\login.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\login.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\login.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T19:08:07.15Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MainForm.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\MainForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MainForm.cs [Design]",
               "RelativeToolTip": "NutritionTracker\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T17:27:38.483Z",
@@ -287,37 +373,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "loginForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\loginForm.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\loginForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\loginForm.cs",
-              "RelativeToolTip": "NutritionTracker\\loginForm.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAIwLMAAAAbAAAA",
+              "DocumentIndex": 12,
+              "Title": "FormAddFood.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\FormAddFood.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\FormAddFood.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:46:38.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-08T18:34:06.998Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
+              "Title": "FoodDiary.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\FoodDiary.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\FoodDiary.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:22:50.188Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Dashboard.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Dashboard.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T18:00:29.627Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Step4Macros.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step4Macros.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step4Macros.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Step4Macros.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step4Macros.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step4Macros.cs",
               "RelativeToolTip": "NutritionTracker\\Step4Macros.cs",
-              "ViewState": "AQIAALwAAAAAAAAAAAAhwMwAAABkAAAA",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAYwMwAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T17:30:37.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Step3Macros.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step3Macros.cs",
+              "DocumentIndex": 16,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MainForm.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\MainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MainForm.cs",
+              "RelativeToolTip": "NutritionTracker\\MainForm.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAAANYAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T18:19:07.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Step3Macros.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step3Macros.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Step3Macros.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step3Macros.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step3Macros.cs [Design]",
+              "RelativeToolTip": "NutritionTracker\\Step3Macros.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T04:12:47.509Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\DBConnection.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\DBConnection.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\DBConnection.cs",
+              "RelativeToolTip": "NutritionTracker\\DBConnection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T06:35:58.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MyPersonalFood.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MyPersonalFood.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\MyPersonalFood.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\MyPersonalFood.cs",
+              "RelativeToolTip": "NutritionTracker\\MyPersonalFood.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAYwLgAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T06:17:16.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Step3Macros.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step3Macros.cs",
+              "RelativeDocumentMoniker": "NutritionTracker\\Step3Macros.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step3Macros.cs",
               "RelativeToolTip": "NutritionTracker\\Step3Macros.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAowE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -326,36 +486,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MyPersonalFood.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MyPersonalFood.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\MyPersonalFood.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MyPersonalFood.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\MyPersonalFood.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T18:37:00.828Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MyPersonalFood.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MyPersonalFood.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\MyPersonalFood.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\MyPersonalFood.cs",
-              "RelativeToolTip": "NutritionTracker\\MyPersonalFood.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAIwLgAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T06:17:16.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "Dashboard.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Dashboard.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Dashboard.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Dashboard.cs",
               "RelativeToolTip": "NutritionTracker\\Dashboard.cs",
               "ViewState": "AQIAAJUAAAAAAAAAAAAqwP8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -364,97 +499,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Personalization.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Personalization.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Personalization.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Personalization.cs",
-              "RelativeToolTip": "NutritionTracker\\Personalization.cs",
-              "ViewState": "AQIAAJ4AAAAAAAAAAAAqwKMAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T16:04:04.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "loginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\loginForm.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\loginForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\loginForm.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\loginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:46:37.074Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FoodDiary.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\FoodDiary.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\FoodDiary.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T18:22:50.188Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "FailedMessage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FailedMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FailedMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FailedMessage.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FailedMessage.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\FailedMessage.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\FailedMessage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T06:38:52.05Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-18T06:38:52.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "SuccessMessage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SuccessMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SuccessMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\SuccessMessage.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SuccessMessage.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\SuccessMessage.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\SuccessMessage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T06:17:02.073Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-18T06:17:02.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Signup.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Signup.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Signup.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Signup.cs",
-              "RelativeToolTip": "NutritionTracker\\Signup.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAewI4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:31:38.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Signup.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Signup.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Signup.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Signup.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\Signup.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T10:31:36.29Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "FoodDiary.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FoodDiary.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.cs",
               "RelativeToolTip": "NutritionTracker\\FoodDiary.cs",
               "ViewState": "AQIAANwAAAAAAAAAAAAQwPMAAACXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -463,60 +534,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "FoodDiaryControl.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiaryControl.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiaryControl.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FoodDiaryControl.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiaryControl.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiaryControl.cs",
               "RelativeToolTip": "NutritionTracker\\FoodDiaryControl.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAADwvxMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T12:58:29.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-18T12:58:29.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "FoodDiaryControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiaryControl.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiaryControl.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FoodDiaryControl.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiaryControl.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\FoodDiaryControl.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiaryControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T17:11:46.025Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-16T17:11:46.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormAddFood.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\FormAddFood.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\FormAddFood.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T18:34:06.998Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "NutritionFacts.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\NutritionFacts.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\NutritionFacts.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T15:13:28.908Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "FormAddFood.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FormAddFood.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.cs",
               "RelativeToolTip": "NutritionTracker\\FormAddFood.cs",
               "ViewState": "AQIAACMAAAAAAAAAAADwv6sAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -525,11 +570,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "NutritionFacts.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\NutritionFacts.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.cs",
               "RelativeToolTip": "NutritionTracker\\NutritionFacts.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAqwEgAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -538,11 +583,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "FoodDiary.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.Designer.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FoodDiary.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FoodDiary.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FoodDiary.Designer.cs",
               "RelativeToolTip": "NutritionTracker\\FoodDiary.Designer.cs",
               "ViewState": "AQIAAHsAAAAAAAAAAAAhwI4AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -551,11 +596,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "FormAddFood.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.Designer.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FormAddFood.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FormAddFood.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FormAddFood.Designer.cs",
               "RelativeToolTip": "NutritionTracker\\FormAddFood.Designer.cs",
               "ViewState": "AQIAAPAAAAAAAAAAAAAhwAMBAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -564,11 +609,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "AddFoodConrol.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\AddFoodConrol.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\AddFoodConrol.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\AddFoodConrol.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\AddFoodConrol.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\AddFoodConrol.cs",
               "RelativeToolTip": "NutritionTracker\\AddFoodConrol.cs",
               "ViewState": "AQIAAFIAAAAAAAAAAAAhwFcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -576,33 +621,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "StepsForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\StepsForm.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\StepsForm.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\StepsForm.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-09T03:17:31.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "AddFoodConrol.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\AddFoodConrol.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\AddFoodConrol.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\AddFoodConrol.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\AddFoodConrol.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\AddFoodConrol.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\AddFoodConrol.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T08:33:14.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "Step4Macros.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step4Macros.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step4Macros.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Step4Macros.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step4Macros.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step4Macros.cs [Design]",
               "RelativeToolTip": "NutritionTracker\\Step4Macros.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T17:06:38.009Z",
@@ -610,56 +655,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Step2Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step2Form.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\Step2Form.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step2Form.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\Step2Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T09:14:53.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "SplashScreenForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SplashScreenForm.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\SplashScreenForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SplashScreenForm.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\SplashScreenForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T18:18:04.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "PersonalFoodControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\PersonalFoodControl.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\PersonalFoodControl.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\PersonalFoodControl.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\PersonalFoodControl.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\PersonalFoodControl.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\PersonalFoodControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T05:59:36.989Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "SplashScreenForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SplashScreenForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SplashScreenForm.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\SplashScreenForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SplashScreenForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SplashScreenForm.cs",
               "RelativeToolTip": "NutritionTracker\\SplashScreenForm.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAUwBYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T18:18:06.125Z"
+              "WhenOpened": "2024-05-11T18:18:06.125Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Program.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Program.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Program.cs",
               "RelativeToolTip": "NutritionTracker\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -667,33 +691,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "warningMessage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\warningMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\warningMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\warningMessage.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\warningMessage.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\warningMessage.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\warningMessage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T06:42:33.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\login.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\login.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\login.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T19:08:07.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "StepsForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\StepsForm.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\StepsForm.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\StepsForm.cs",
               "RelativeToolTip": "NutritionTracker\\StepsForm.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -701,23 +714,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Step2Form.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step2Form.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step2Form.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\Step2Form.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\Step2Form.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\Step2Form.cs",
               "RelativeToolTip": "NutritionTracker\\Step2Form.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T04:50:09.413Z"
+              "WhenOpened": "2024-05-09T04:50:09.413Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "warningMessage.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\warningMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\warningMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\warningMessage.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\warningMessage.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\warningMessage.cs",
               "RelativeToolTip": "NutritionTracker\\warningMessage.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAApwDMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -725,35 +739,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "CreateFood.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\CreateFood.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\CreateFood.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\CreateFood.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\CreateFood.cs [Design]",
-              "RelativeToolTip": "NutritionTracker\\CreateFood.cs [Design]",
+              "RelativeToolTip": "..\\Nutrition Tracker _ 90\\NutritionTracker\\CreateFood.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T13:10:39.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "FailedMessage.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FailedMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FailedMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\FailedMessage.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\FailedMessage.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\FailedMessage.cs",
               "RelativeToolTip": "NutritionTracker\\FailedMessage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T06:50:03.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-18T06:50:03.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "NutritionFacts.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.Designer.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\NutritionFacts.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\NutritionFacts.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\NutritionFacts.Designer.cs",
               "RelativeToolTip": "NutritionTracker\\NutritionFacts.Designer.cs",
               "ViewState": "AQIAAJEAAAAAAAAAAAAowJEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -762,11 +775,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "CreateFood.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\CreateFood.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\CreateFood.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\CreateFood.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\CreateFood.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\CreateFood.cs",
               "RelativeToolTip": "NutritionTracker\\CreateFood.cs",
               "ViewState": "AQIAAGIAAAAAAAAAAAAAAFkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -774,36 +787,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "SuccessMessage.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SuccessMessage.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SuccessMessage.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\SuccessMessage.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\SuccessMessage.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\SuccessMessage.cs",
               "RelativeToolTip": "NutritionTracker\\SuccessMessage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T06:49:35.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "DBConnection.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\DBConnection.cs",
-              "RelativeDocumentMoniker": "NutritionTracker\\DBConnection.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\DBConnection.cs",
-              "RelativeToolTip": "NutritionTracker\\DBConnection.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T06:35:58.173Z"
+              "WhenOpened": "2024-05-18T06:49:35.581Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 47,
               "Title": "PersonalFoodControl.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\PersonalFoodControl.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\PersonalFoodControl.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\PersonalFoodControl.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\PersonalFoodControl.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\PersonalFoodControl.cs",
               "RelativeToolTip": "NutritionTracker\\PersonalFoodControl.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAQwFcAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -813,9 +813,9 @@
               "$type": "Document",
               "DocumentIndex": 48,
               "Title": "StepsForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\StepsForm.Designer.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\StepsForm.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\StepsForm.Designer.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\StepsForm.Designer.cs",
               "RelativeToolTip": "NutritionTracker\\StepsForm.Designer.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAqwHMAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -825,13 +825,14 @@
               "$type": "Document",
               "DocumentIndex": 49,
               "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\login.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\login.cs",
               "RelativeDocumentMoniker": "NutritionTracker\\login.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\Nutrition Tracker _ 90\\NutritionTracker\\login.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\NutritionTrackerSuperDone\\NutritionTracker\\login.cs",
               "RelativeToolTip": "NutritionTracker\\login.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAADwvxcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T19:09:54.403Z"
+              "WhenOpened": "2024-05-08T19:09:54.403Z",
+              "EditorCaption": ""
             }
           ]
         }

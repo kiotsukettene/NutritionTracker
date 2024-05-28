@@ -271,7 +271,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 Login();
-                this.Hide();
+         
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
@@ -281,7 +281,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 Login();
-                this.Hide();
+              
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }

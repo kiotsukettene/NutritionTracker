@@ -163,30 +163,34 @@ namespace NutritionTracker
         {
             try
             {
-                // Get the selected percentage values and remove the '%' symbol
+          
                 string carbsText = carbsComboBox.Text.TrimEnd('%');
                 string fatText = fatComboBox.Text.TrimEnd('%');
                 string proteinText = proteinComboBox.Text.TrimEnd('%');
 
-                // Parse the integer values
+               
                 int carbsPercent = int.Parse(carbsText);
                 int fatPercent = int.Parse(fatText);
                 int proteinPercent = int.Parse(proteinText);
 
-                // Check if the total percentage is 100%
+               
                 double totalPercentage = carbsPercent + fatPercent + proteinPercent;
-                if (Math.Abs(totalPercentage - 100) > 0.01) // Consider a small margin of error
+                if (Math.Abs(totalPercentage - 100) > 0.01) 
                 {
-                    throw new InvalidOperationException("The total percentage must be 100%. Please adjust the combo box selections.");
+                    fm.Show();
+                    fm.failedLbl.Text = ("The total percentage must be 100%. Please adjust the combo box selections.");
+                    return;
                 }
 
-                // Get the updated calorie value
                 if (!int.TryParse(pCalLabel.Text, out int updateCalories))
                 {
-                    throw new FormatException("Invalid calorie value.");
+                    fm.Show();
+                    fm.failedLbl.Text = "Invalid calorie value.";
+                    return;
+           
                 }
 
-                // Calculate the macros based on the updated calorie value
+            
                 int updateCarbs = (int)((carbsPercent / 100.0) * updateCalories / 4);
                 int updateFats = (int)((fatPercent / 100.0) * updateCalories / 9);
                 int updateProtein = (int)((proteinPercent / 100.0) * updateCalories / 4);
@@ -195,7 +199,7 @@ namespace NutritionTracker
 
                 myCon.openCon();
 
-                // Update the user_macros table
+              
                 string updateMacrosQuery = @"UPDATE user_macros 
                      JOIN user ON user.id = user_macros.user_id 
                      SET user_macros.calories = @new_calories,
@@ -220,7 +224,7 @@ namespace NutritionTracker
                 int rows = updateMacrosCmd.ExecuteNonQuery();
                 if (rows > 0)
                 {
-                    // Show success message and update UI elements
+               
                     sm.Show();
                     sm.successLbl.Text = "Update Successfully";
                     UpdateMacrosChangesBtn.Visible = false;
@@ -233,10 +237,14 @@ namespace NutritionTracker
                     carbsComboBox.Text = carbsPercent.ToString();
                     proteinComboBox.Text = proteinPercent.ToString();
                     fatComboBox.Text = fatPercent.ToString();
+
+                    carbsComboBox.Enabled = false;
+                    fatComboBox.Enabled = false;
+                    proteinComboBox.Enabled = false;
                 }
                 else
                 {
-                    // Show error message
+           
                     fm.Show();
                     fm.failedLbl.Text = "Error Update";
                 }
@@ -279,12 +287,13 @@ namespace NutritionTracker
         private void personFitnessGoalsEditBtn_Click(object sender, EventArgs e)
         {
             UpdateMacrosChangesBtn.Visible = true;
-            caloComboBox.Enabled = true;
+            
             carbsComboBox.Enabled = true;
             fatComboBox.Enabled = true;
             proteinComboBox.Enabled = true;
             pCalLabel.Enabled = true;
             pCalLabel.BorderThickness = 1;
+
 
 
         }
@@ -405,6 +414,11 @@ namespace NutritionTracker
             {
                 e.Handled = true;
             }
+        }
+
+        private void caloComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -146,7 +146,7 @@ namespace NutritionTracker
         private void loginBtn(object sender, EventArgs e)
         {
             SignUp();
-            this.Hide();
+            
           
             
         }
@@ -239,7 +239,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 SignUp();
-                this.Dispose();
+                
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
@@ -249,7 +249,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 SignUp();
-                this.Dispose();
+               
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
@@ -259,7 +259,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 SignUp();
-                this.Dispose();
+                
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
@@ -269,7 +269,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 SignUp();
-                this.Dispose();
+               
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
@@ -279,7 +279,7 @@ namespace NutritionTracker
             if (e.KeyCode == Keys.Enter)
             {
                 SignUp();
-                this.Dispose();
+         
                 e.SuppressKeyPress = true; // Prevents the "ding" sound when Enter is pressed
             }
         }
